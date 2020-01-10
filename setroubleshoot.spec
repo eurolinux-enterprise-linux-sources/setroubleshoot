@@ -1,7 +1,7 @@
 Summary: Helps troubleshoot SELinux problems
 Name: setroubleshoot
 Version: 3.0.47
-Release: 11%{?dist}
+Release: 12%{?dist}
 License: GPLv2+
 Group: Applications/System
 URL: https://fedorahosted.org/setroubleshoot
@@ -23,6 +23,8 @@ Patch7: setroubleshoot-sealert-a.patch
 # https://bugzilla.redhat.com/show_bug.cgi?id=814601
 Patch8: setroubleshoot-set_translation_domain.patch
 Patch9: setroubleshoot-update-POTFILES.patch
+# https://bugzilla.redhat.com/show_bug.cgi?id=1339183
+Patch10: setroubleshoot-commands-getoutput-getstatusoutput.patch
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
 BuildRequires: perl-XML-Parser
 BuildRequires: libcap-ng-devel
@@ -102,6 +104,7 @@ touch --no-create %{_datadir}/icons/hicolor
 %patch7 -p1 -b .sealert-a
 %patch8 -p1 -b .set_translation_domain
 %patch9 -p1 -b .update-POTFILES
+%patch10 -p1 -b .commands_output
 # update translatins as the last step
 %patch1 -p1 -b .updatetrans
 
@@ -226,6 +229,10 @@ Setroubleshoot documentation package
 %{pkgdocdir}/setroubleshoot*
 
 %changelog
+* Thu May 26 2016 Petr Lautrbach <plautrba@redhat.com> - 3.0.47-12
+- Don't use command.get*output()
+Resolves: CVE-2016-4445
+
 * Wed Mar 09 2016 Petr Lautrbach <plautrba@redhat.com> 3.0.47-11
 - Update translations
 Resolves: rhbz#814601

@@ -1,0 +1,91 @@
+diff --git a/src/SetroubleshootFixit.py b/src/SetroubleshootFixit.py
+index a810151..3f5ce0f 100644
+--- a/src/SetroubleshootFixit.py
++++ b/src/SetroubleshootFixit.py
+@@ -14,9 +14,12 @@ class RunFix(slip.dbus.service.Object):
+         
+     @dbus.service.method ("org.fedoraproject.SetroubleshootFixit", in_signature='ss', out_signature='s')
+     def run_fix(self, local_id, analysis_id):
+-        import commands
+-        command = "sealert -f %s -P %s" % ( local_id, analysis_id)
+-        return commands.getoutput(command)
++        from subprocess import Popen, PIPE
++        out, err = Popen(['sealert', '-f', local_id, '-P', analysis_id], stdout=PIPE, stderr=PIPE, universal_newlines=True).communicate()
++        if out != '' and err != '':
++            out += "\n"
++        out += err
++        return out
+ 
+ if __name__ == "__main__":
+     mainloop = gobject.MainLoop ()
+diff --git a/src/audit_data.py b/src/audit_data.py
+index 471fa72..b405949 100644
+--- a/src/audit_data.py
++++ b/src/audit_data.py
+@@ -850,9 +850,13 @@ class AVC:
+ 
+             else:
+                 if path.startswith("/") == False and inodestr:
+-                    import commands
+-                    command = "locate -b '\%s'" % path 
+-                    rc, output = commands.getstatusoutput(command)
++                    from subprocess import Popen, PIPE
++                    try:
++                        locate = Popen(['locate', '-b', '\%s' % path], stdout=PIPE, universal_newlines=True)
++                        output = locate.communicate()[0]
++                        rc = locate.wait()
++                    except:
++                        rc = -1
+                     if rc == 0:
+                         ino = int(inodestr)
+                         for file in output.split("\n"):
+diff --git a/src/sealert b/src/sealert
+index 23e1bd7..edbf8e7 100755
+--- a/src/sealert
++++ b/src/sealert
+@@ -146,7 +146,7 @@ def fix_lookup_id(local_id, analysis_id):
+         async_rpc.add_errback(query_alerts_error)
+ 
+     def query_alerts_callback(sigs):
+-        import commands
++        from subprocess import Popen, PIPE
+         for siginfo in sigs.signature_list:
+             for plugin  in siginfo.plugin_list:
+                 if analysis_id == plugin.analysis_id:
+@@ -156,12 +156,18 @@ def fix_lookup_id(local_id, analysis_id):
+                         cl.main_loop.quit()
+                         return
+                     siginfo.update_derived_template_substitutions()
+-                    command = siginfo.substitute(p.get_fix_cmd(siginfo.audit_event, plugin.args))
+-                    rc, output = commands.getstatusoutput(command)
++                    command = siginfo.substitute_array(p.get_fix_cmd(siginfo.audit_event, plugin.args).split())
++                    try:
++                        p = Popen(command, stdout=PIPE, universal_newlines=True)
++                        (output, err) = p.communicate()
++                        rc = p.wait()
++                    except e:
++                        rc = -1
++                        err = str(e)
+                     if rc == 0:
+-                        print _("Successfully ran %s" % command)
++                        print _("Successfully ran %s" % " ".join(command))
+                     else:
+-                        print output
++                        print err
+                     cl.main_loop.quit()
+                     return
+         print _("Plugin %s not valid for %s id") % (analysis_id, local_id)
+diff --git a/src/signature.py b/src/signature.py
+index 7611d46..73c79fd 100755
+--- a/src/signature.py
++++ b/src/signature.py
+@@ -464,6 +464,9 @@ class SEFaultSignatureInfo(XmlSerialize):
+     def substitute(self, txt):
+         return Template(txt).safe_substitute(self.template_substitutions)
+ 
++    def substitute_array(self, args):
++        return [self.substitute(txt) for txt in args]
++
+     def format_details(self):
+         env = self.environment
+ 
