@@ -1,7 +1,7 @@
 Summary: Helps troubleshoot SELinux problems
 Name: setroubleshoot
 Version: 3.0.47
-Release: 9.1%{?dist}
+Release: 11%{?dist}
 License: GPLv2+
 Group: Applications/System
 URL: https://fedorahosted.org/setroubleshoot
@@ -20,6 +20,9 @@ Patch5: setroubleshoot-sealert-vV-store_true.patch
 Patch6: setroubleshoot-get_rpm_nvr_by_.patch
 # https://bugzilla.redhat.com/show_bug.cgi?id=787139
 Patch7: setroubleshoot-sealert-a.patch
+# https://bugzilla.redhat.com/show_bug.cgi?id=814601
+Patch8: setroubleshoot-set_translation_domain.patch
+Patch9: setroubleshoot-update-POTFILES.patch
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
 BuildRequires: perl-XML-Parser
 BuildRequires: libcap-ng-devel
@@ -91,13 +94,16 @@ touch --no-create %{_datadir}/icons/hicolor
 %prep
 %setup -q
 %patch -p1 -b .seapplet
-%patch1 -p1 -b .updatetrans
 %patch2 -p1 -b .fixman
 %patch3 -p1 -b .rhel6
 %patch4 -p1 -b .rhel6.4
 %patch5 -p1 -b .sealert-vV
 %patch6 -p1 -b .get_rpm_nvr_by
 %patch7 -p1 -b .sealert-a
+%patch8 -p1 -b .set_translation_domain
+%patch9 -p1 -b .update-POTFILES
+# update translatins as the last step
+%patch1 -p1 -b .updatetrans
 
 %build
 %configure
@@ -220,6 +226,14 @@ Setroubleshoot documentation package
 %{pkgdocdir}/setroubleshoot*
 
 %changelog
+* Wed Mar 09 2016 Petr Lautrbach <plautrba@redhat.com> 3.0.47-11
+- Update translations
+Resolves: rhbz#814601
+
+* Thu Jan 28 2016 Petr Lautrbach <plautrba@redhat.com> 3.0.47-10
+- sealert: Initialize translation domain in Gtk.Builder
+Resolves: rhbz#814601
+
 * Thu Apr 23 2015 Petr Lautrbach <plautrba@redhat.com> 3.0.47-9.1
 - sealert: view additional information in output of sealert -a and sealert -l
 Resolves:#787139

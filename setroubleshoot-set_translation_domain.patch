@@ -1,0 +1,24 @@
+diff --git a/src/browser.py b/src/browser.py
+index e7d29ac..582d929 100644
+--- a/src/browser.py
++++ b/src/browser.py
+@@ -156,6 +156,7 @@ class BrowserApplet:
+ 
+         self.read_config()
+         builder = gtk.Builder()
++        builder.set_translation_domain("setroubleshoot")
+         builder.add_from_file("/usr/share/setroubleshoot/gui/browser.glade") 
+         self.plugins = load_plugins()
+ 
+@@ -754,9 +755,9 @@ class BrowserApplet:
+ 
+         self.alert_count_label.set_label(_("Alert %d of %d" % (self.current_alert + 1, len(self.alert_list))))
+         if alert.evaluate_filter_for_user(self.username) == "ignore":
+-		self.ignore_button.set_label("Notify")
++		self.ignore_button.set_label(_("Notify"))
+ 	else:
+-		self.ignore_button.set_label("Ignore")
++		self.ignore_button.set_label(_("Ignore"))
+         
+     def on_close_button_clicked(self, widget):
+         gtk.main_quit()
