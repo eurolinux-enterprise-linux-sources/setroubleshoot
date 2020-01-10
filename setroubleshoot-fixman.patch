@@ -1,0 +1,79 @@
+diff -up setroubleshoot-3.0.47/doc/sealert.8.fixman setroubleshoot-3.0.47/doc/sealert.8
+--- setroubleshoot-3.0.47/doc/sealert.8.fixman	2011-02-17 14:42:49.000000000 -0500
++++ setroubleshoot-3.0.47/doc/sealert.8	2012-05-12 06:52:24.289330675 -0400
+@@ -4,7 +4,7 @@ sealert \- setroubleshoot client tool
+ 
+ .SH "SYNOPSIS"
+ .B sealert
+-.I [\-b] [-f local_id] [-h] [-H] [-s] [-S] [\-l id] [\-a file] [-v] [-V] [-u] [-p] [-P plugin_name]
++.I [\-b] [-f local_id] [-h] [-s] [-S] [\-l id] [\-a file] [-u] [-p] [-P plugin_name]
+ 
+ .SH "DESCRIPTION"
+ This manual page describes the
+@@ -54,8 +54,7 @@ useful when setroubleshootd is being run
+ the GUI desktop alert facility. The -a analyze option is equivalent to
+ the "Scan Logfile" command in the browser. The log file is scanned for
+ audit messages, analysis is performed, alerts generated, and then
+-written to stdout. In both cases the -H option can be used to cause the
+-alert to be written out in HTML format rather than the default plain text. 
++written to stdout. 
+ 
+ .SH "LOG FILE SCANNING"
+ You may ask sealert to parse a file accumulating all the audit
+@@ -93,9 +92,6 @@ Execute the fix command for the avc with
+ .B \-h \-\-help           
+ Show this message
+ .TP 
+-.B \-H \-\-html_output    
+-Ouput in html, Used with the -a or -l option
+-.TP 
+ .B \-s \-\-service        
+ Start sealert service,  Usually used by dbus.
+ .TP 
+@@ -108,11 +104,6 @@ Lookup alert by id, if id is wildcard *
+ .B \-a \-\-analyze file   
+ Scan a log file, analyze it's AVC's
+ .TP 
+-.B \-v \-\-verbose        
+-Start in verbose mode
+-.B \-V \-\-debug        
+-Start in debug mode (i.e. very verbose)
+-.TP 
+ .B \-u \-\-user        
+ logon as user
+ .TP 
+diff -up setroubleshoot-3.0.47/doc/setroubleshootd.8.fixman setroubleshoot-3.0.47/doc/setroubleshootd.8
+--- setroubleshoot-3.0.47/doc/setroubleshootd.8.fixman	2011-02-17 14:42:48.000000000 -0500
++++ setroubleshoot-3.0.47/doc/setroubleshootd.8	2012-05-12 06:51:44.554273920 -0400
+@@ -4,7 +4,7 @@ setroubleshootd \- setroubleshoot daemon
+ 
+ .SH "SYNOPSIS"
+ .B setroubleshootd
+-.I [\-b] [-\f] [\-h] [\H] [\-s] [-S] [\-l id] [\-a file] [-v] [-V] [-u] [-p]
++.I [-\f] [\-h] [\-c config]
+ 
+ .SH "DESCRIPTION"
+ This manual page describes the
+@@ -30,9 +30,6 @@ new alert has been seen.
+ 
+ .SH "OPTIONS"
+ .TP 
+-.B \-b \-\-browser        
+-Launch the browser
+-.TP 
+ .B \-f \-\-nofork
+ Do not fork the daemon
+ .TP 
+@@ -41,12 +38,6 @@ Show this message
+ .TP 
+ .B \-c \-\-config
+ section.option=value	set a configuration value
+-.TP 
+-.B \-v \-\-verbose
+-log INFO level and higher messages to console
+-.TP 
+-.B \-V \-\-debug
+-log DEBUG level and higher messages to console
+ 
+ .SH "AUTHOR"
+ This man page was written by Dan Walsh <dwalsh@redhat.com>.

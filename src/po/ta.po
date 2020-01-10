@@ -1,0 +1,799 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Translators:
+# Dimitris Glezos <glezos@indifex.com>, 2011.
+# Felix <ifelix@redhat.com>, 2006.
+# Felix I <ifelix25@gmail.com>, 2011.
+# I felix <ifelix@redhat.com>, 2007.
+msgid ""
+msgstr ""
+"Project-Id-Version: setroubleshoot\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2012-01-11 08:39-0500\n"
+"PO-Revision-Date: 2011-12-06 13:13+0000\n"
+"Last-Translator: dwalsh <dwalsh@redhat.com>\n"
+"Language-Team: Tamil <tamil-users@lists.fedoraproject.org>\n"
+"Language: ta\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1)\n"
+
+#: ../setroubleshoot.desktop.in.h:1
+msgid "SELinux Troubleshooter"
+msgstr "எதிர்காலத்தில் விழிப்பூட்டலை நிராகரி"
+
+#: ../setroubleshoot.desktop.in.h:2
+msgid "Troubleshoot SELinux access denials"
+msgstr "நிர்வாகியை அறிவி"
+
+#: ../src/audit_data.py:884
+#, python-format
+msgid "port %s"
+msgstr "துறை %s"
+
+#: ../src/audit_data.py:886 ../src/browser.py:716 ../src/browser.py:791
+#: ../src/rpc.py:544 ../src/util.py:223
+msgid "Unknown"
+msgstr "தெரியாதது"
+
+#: ../src/audit_data.py:976
+#, python-format
+msgid ""
+"%s \n"
+"**** Invalid AVC allowed in current policy ***\n"
+msgstr ""
+"%s \n"
+"**** தவறான AVC நடப்பு பாலிசியில் அனுமதிக்கப்பட்டுள்ளது ***\n"
+
+#: ../src/audit_data.py:978
+#, python-format
+msgid ""
+"%s \n"
+"**** Invalid AVC dontaudited in current policy.  'semodule -B' will turn on "
+"dontaudit rules. ***\n"
+msgstr ""
+"%s \n"
+"**** நடப்பு பாலிசியில் தவறான AVC .  'semodule -B' ஆனது டோன்ட்டிட் விதிகளுக்கு "
+"துங்கும். ***\n"
+
+#: ../src/audit_data.py:980
+msgid "Must call policy_init first"
+msgstr "_init முதலில் பாலிசி அழைக்க வேண்டும்"
+
+#: ../src/audit_data.py:982
+#, python-format
+msgid ""
+"%s \n"
+"**** Invalid AVC bad target context. ***\n"
+msgstr ""
+"%s \n"
+"**** தவறான AVC சிக்கலான அலக்கு உரை ***\n"
+
+#: ../src/audit_data.py:984
+#, python-format
+msgid ""
+"%s \n"
+"**** Invalid AVC bad source context. ***\n"
+msgstr ""
+"%s \n"
+"**** தவறான AVC சிக்கலான மூல உரை ***\n"
+
+#: ../src/audit_data.py:986
+#, python-format
+msgid ""
+"%s \n"
+"**** Invalid AVC bad type class ***\n"
+msgstr ""
+"%s \n"
+"**** தவறான AVC சிக்கலான வகை பிரிவு ***\n"
+
+#: ../src/audit_data.py:988
+#, python-format
+msgid ""
+"%s \n"
+"**** Invalid AVC bad permission ***\n"
+msgstr ""
+"%s \n"
+"**** தவறான AVC சிக்கலான அனுமதி ***\n"
+
+#: ../src/audit_data.py:990
+msgid "Error during access vector computation"
+msgstr "அணுகல் பதிப்பு கணக்கீட்டின் போது பிழை"
+
+#: ../src/browser.py:250
+msgid "#"
+msgstr "#"
+
+#: ../src/browser.py:250
+msgid "Source Process"
+msgstr "மூல செயல்பாடு"
+
+#: ../src/browser.py:250
+msgid "Attempted Access"
+msgstr "முயன்ற அணுகல்"
+
+#: ../src/browser.py:250
+msgid "On this"
+msgstr "இதில்"
+
+#: ../src/browser.py:250
+msgid "Occurred"
+msgstr "ஏற்பட்டது"
+
+#: ../src/browser.py:250 ../src/run_cmd.py:418
+msgid "Status"
+msgstr "நிலை"
+
+#: ../src/browser.py:322 ../src/browser.py:799
+msgid "Notify"
+msgstr "அறிவி"
+
+#: ../src/browser.py:326 ../src/browser.py:797 ../gui/browser.glade.h:27
+msgid "Ignore"
+msgstr "புறக்கணி"
+
+#: ../src/browser.py:363
+msgid "<b>If you were trying to...</b>"
+msgstr ""
+
+#: ../src/browser.py:372
+msgid "<b>Then this is the solution.</b>"
+msgstr ""
+
+#: ../src/browser.py:391 ../src/browser.py:527
+msgid "If "
+msgstr "ஆல்"
+
+#: ../src/browser.py:479
+msgid ""
+"Plugin\n"
+"Details"
+msgstr ""
+"செருகி \n"
+"விவரங்கள்"
+
+#: ../src/browser.py:494
+msgid ""
+"Report\n"
+"Bug"
+msgstr ""
+"முடிவு\n"
+"பிழை"
+
+#: ../src/browser.py:522
+#, python-format
+msgid "Plugin: %s "
+msgstr "செருகி: %s "
+
+#: ../src/browser.py:580
+msgid "Unable to grant access."
+msgstr "அணுகலை வழங்க முடியவில்லை."
+
+#: ../src/browser.py:611 ../src/browser.py:753
+#, python-format
+msgid "Alert %d of %d"
+msgstr "%d ஆல் %dக்கு எச்சரிக்கை"
+
+#: ../src/browser.py:736
+#, python-format
+msgid "On this %s:"
+msgstr "இந்த %s-இல்:"
+
+#: ../src/browser.py:784 ../src/browser.py:790 ../src/signature.py:396
+msgid "N/A"
+msgstr "N/A"
+
+#: ../src/browser.py:831 ../src/browser.py:832 ../gui/browser.glade.h:31
+msgid "No Alerts"
+msgstr "விழிப்பூட்டல்கள் இல்லை"
+
+#: ../src/browser.py:850
+msgid "SELinux has detected a problem."
+msgstr "SELinux ஒரு சிக்கல் ஏற்பட்டது."
+
+#: ../src/browser.py:955
+msgid "Sealert Error"
+msgstr "Sealert பிழை"
+
+#: ../src/browser.py:966
+msgid "Sealert Message"
+msgstr "Sealert செய்திகள்"
+
+#. -----------------------------------------------------------------------------
+#: ../src/errcode.py:70
+msgid "signature not found"
+msgstr "கையொப்பத்தை காணவில்லை"
+
+#: ../src/errcode.py:71
+msgid "multiple signatures matched"
+msgstr "பல கையொப்பங்கள் பொருத்தமாக உள்ளது"
+
+#: ../src/errcode.py:72
+msgid "id not found"
+msgstr "id ஐ காணவில்லை"
+
+#: ../src/errcode.py:73
+msgid "database not found"
+msgstr "தரவுத்தளத்தை காணவில்லை"
+
+#: ../src/errcode.py:74
+msgid "item is not a member"
+msgstr "உருப்படி ஒரு உறுப்பினர் அல்ல"
+
+#: ../src/errcode.py:75
+msgid "illegal to change user"
+msgstr "தவறான முறையில் பயனரை மாற்றவும்"
+
+#: ../src/errcode.py:76
+msgid "method not found"
+msgstr "முறையை காண முடியவில்லை"
+
+#: ../src/errcode.py:77
+msgid "cannot create GUI"
+msgstr "GUI ஐ உருவாக்க முடியவில்லை"
+
+#: ../src/errcode.py:78
+msgid "value unknown"
+msgstr "தெரியாத மதிப்பு"
+
+#: ../src/errcode.py:79
+msgid "cannot open file"
+msgstr "கோப்பினை திறக்க முடியவில்லை"
+
+#: ../src/errcode.py:80
+msgid "invalid email address"
+msgstr "தவறான மின்னஞ்சல் முகவரி"
+
+#. gobject IO Errors
+#: ../src/errcode.py:83
+msgid "socket error"
+msgstr "சாக்கெட் பிழை"
+
+#: ../src/errcode.py:84
+msgid "connection has been broken"
+msgstr "இணைப்பு முறிந்துள்ளது"
+
+#: ../src/errcode.py:85
+msgid "Invalid request. The file descriptor is not open"
+msgstr "தவறான கோரிக்கை. கோப்பு விளக்கி திறக்கவில்லை"
+
+#: ../src/errcode.py:87
+msgid "insufficient permission to modify user"
+msgstr "பயனரை திருத்த போதுமான அனுமதி இல்லை"
+
+#: ../src/errcode.py:88
+msgid "authentication failed"
+msgstr "அங்கீகாரிக்க முடியவில்லை"
+
+#: ../src/errcode.py:89
+msgid "user prohibited"
+msgstr "பயனர் புறக்கணிக்கப்பட்டது"
+
+#: ../src/errcode.py:90
+msgid "not authenticated"
+msgstr "அங்கீகரிக்கவில்லை"
+
+#: ../src/errcode.py:91
+msgid "user lookup failed"
+msgstr "பயனரை தேட முடியவில்லை"
+
+#: ../src/gui_utils.py:53 ../src/sealert:545
+#, c-format, python-format
+msgid "Opps, %s hit an error!"
+msgstr "%s ஒரு பிழையை கொண்டுள்ளது"
+
+#: ../src/gui_utils.py:55 ../gui/fail_dialog.glade.h:1
+msgid "Error"
+msgstr "பிழை"
+
+#: ../src/Plugin.py:79
+msgid ""
+"you want to allow $SOURCE_BASE_PATH to have $ACCESS access on the "
+"$TARGET_BASE_PATH $TARGET_CLASS"
+msgstr ""
+"$SOURCE_BASE_PATH ஐ $ACCESS அணுகலை $TARGET_BASE_PATH $TARGET_CLASS இல் "
+"அனுமதிக்க விருப்பவும்"
+
+#: ../src/run_cmd.py:180
+msgid "Input: "
+msgstr "உள்ளீடு:"
+
+#: ../src/run_cmd.py:267
+msgid "Enter Password"
+msgstr "கடவுச்சொல் உள்ளிடவும்"
+
+#: ../src/run_cmd.py:280
+msgid "Password: "
+msgstr "கடவுச்சொல்:"
+
+#: ../src/run_cmd.py:379
+msgid "SELinux Fix"
+msgstr "SELinux திருத்தம்"
+
+#: ../src/run_cmd.py:390
+msgid "Command"
+msgstr "கட்டளை"
+
+#: ../src/run_cmd.py:400
+msgid "Run Command"
+msgstr "கட்டளையை இயக்குதல்"
+
+#: ../src/run_cmd.py:403
+msgid "Stop Command"
+msgstr "கட்டளையை நிறுத்துதல்"
+
+#: ../src/run_cmd.py:425
+msgid "Warning: You are responsible for verifying this command is correct"
+msgstr "எச்சரிக்கை: நீங்கள் இந்த கட்டளை சரியானதா என சோதிக்கவும்"
+
+#: ../src/run_cmd.py:467
+msgid "Not Run Yet"
+msgstr "இன்னும் இயங்கவில்லை"
+
+#: ../src/run_cmd.py:478
+msgid "Running..."
+msgstr "இயங்குகிறது..."
+
+#: ../src/run_cmd.py:493
+#, python-format
+msgid "Interrupted, exit on signal %d"
+msgstr "இடைஞ்சல், சிக்னல் %d வெளியேறுகிறது"
+
+#: ../src/run_cmd.py:495
+msgid "Success"
+msgstr "வெற்றி"
+
+#: ../src/run_cmd.py:497
+#, python-format
+msgid "Failed, exit status = %d"
+msgstr "செயலிழக்கப்பட்டது, வெளியேற்ற நிலை = %d"
+
+#: ../src/run_cmd.py:499
+msgid "Done: "
+msgstr "முடிந்தது:"
+
+#: ../src/server.py:202
+#, python-format
+msgid " For complete SELinux messages. run sealert -l %s"
+msgstr "முழு SELinux செய்திகளுக்கு. sealert -l %sஐ இயக்கவும்"
+
+#: ../src/server.py:401
+#, python-format
+msgid "The user (%s) cannot modify data for (%s)"
+msgstr "பயனர் (%s) (%s)க்கு தரவை மாற்ற முடியாது"
+
+#: ../src/server.py:465 ../src/sealert:296
+msgid "Started"
+msgstr "துவக்கப்பட்டது"
+
+#: ../src/server.py:512
+msgid "AVC"
+msgstr "AVC"
+
+#: ../src/server.py:579
+msgid "Audit Listener"
+msgstr "தணிக்கை கேட்போர்"
+
+#: ../src/signature.py:75
+msgid "Never Ignore"
+msgstr "ஒருபோதும் தவிர்க்க வேண்டாம்"
+
+#: ../src/signature.py:76
+msgid "Ignore Always"
+msgstr "எப்போதும் தவிர்க்கவும்"
+
+#: ../src/signature.py:77
+msgid "Ignore After First Alert"
+msgstr "முதல் எச்சரிக்கைக்கு பின் தவிர்க்கவும்"
+
+#: ../src/signature.py:196
+msgid "directory"
+msgstr "அடைவு"
+
+#: ../src/signature.py:197
+msgid "semaphore"
+msgstr "சேமஃபோர்"
+
+#: ../src/signature.py:198
+msgid "shared memory"
+msgstr "பகிரப்பட்ட நினைவகம்"
+
+#: ../src/signature.py:199
+msgid "message queue"
+msgstr "செய்தி வரிசை"
+
+#: ../src/signature.py:200
+msgid "message"
+msgstr "செய்தி"
+
+#: ../src/signature.py:201
+msgid "file"
+msgstr "கோப்பு"
+
+#: ../src/signature.py:202
+msgid "socket"
+msgstr "சாக்கெட்"
+
+#: ../src/signature.py:203
+msgid "process"
+msgstr "செயல்பாடு"
+
+#: ../src/signature.py:204
+msgid "filesystem"
+msgstr "கோப்புமுறைமை"
+
+#: ../src/signature.py:205
+msgid "node"
+msgstr "முனை"
+
+#: ../src/signature.py:206
+msgid "capability"
+msgstr "திறன்"
+
+#: ../src/signature.py:381
+#, python-format
+msgid "%s has a permissive type (%s). This access was not denied."
+msgstr "%s ஒரு அனுமதி வகை (%s). அந்த அணுகல் மறுக்கப்படவில்லை."
+
+#: ../src/signature.py:384
+msgid "SELinux is in permissive mode. This access was not denied."
+msgstr "SELinux is in permissive mode. This access was not denied."
+
+#: ../src/signature.py:469
+msgid "Additional Information:\n"
+msgstr "கூடுதல் தகவல்:\n"
+
+#: ../src/signature.py:470
+msgid "Source Context"
+msgstr "மூல சூழல்"
+
+#: ../src/signature.py:471
+msgid "Target Context"
+msgstr "இலக்கு சூழல்"
+
+#: ../src/signature.py:472
+msgid "Target Objects"
+msgstr "இலக்கு பொருட்கள்"
+
+#: ../src/signature.py:473
+msgid "Source"
+msgstr "மூலம்"
+
+#: ../src/signature.py:474
+msgid "Source Path"
+msgstr "மூல பாதை"
+
+#: ../src/signature.py:475
+msgid "Port"
+msgstr "துறை"
+
+#: ../src/signature.py:476
+msgid "Host"
+msgstr "புரவலன்"
+
+#: ../src/signature.py:477
+msgid "Source RPM Packages"
+msgstr "மூல RPM தொகுப்புகள்"
+
+#: ../src/signature.py:478
+msgid "Target RPM Packages"
+msgstr "இலக்கு RPM தொகுப்புகள்"
+
+#: ../src/signature.py:479
+msgid "Policy RPM"
+msgstr "பாலிசி RPM"
+
+#: ../src/signature.py:480
+msgid "Selinux Enabled"
+msgstr "Selinux செயல்படுத்தப்பட்டது"
+
+#: ../src/signature.py:481
+msgid "Policy Type"
+msgstr "பாலிசி வகை"
+
+#: ../src/signature.py:482
+msgid "Enforcing Mode"
+msgstr "வலியுறுத்தும் முறை"
+
+#: ../src/signature.py:483
+msgid "Host Name"
+msgstr "புரவலன் பெயர்"
+
+#: ../src/signature.py:484
+msgid "Platform"
+msgstr "தளம்"
+
+#: ../src/signature.py:485
+msgid "Alert Count"
+msgstr "எச்சரிக்கை எண்ணிக்கை"
+
+#: ../src/signature.py:486
+msgid "First Seen"
+msgstr "முதல் பார்வை"
+
+#: ../src/signature.py:487
+msgid "Last Seen"
+msgstr "கடைசி பார்வை"
+
+#: ../src/signature.py:488
+msgid "Local ID"
+msgstr "உள்ளமை குறியீடு"
+
+#: ../src/signature.py:490
+msgid "Raw Audit Messages"
+msgstr "Raw Audit செய்திகள்"
+
+#: ../src/signature.py:540
+#, python-format
+msgid ""
+"\n"
+"\n"
+"*****  Plugin %s (%.4s confidence) suggests  "
+msgstr ""
+"\n"
+"\n"
+"*****  கூடுதல்இணைப்பு %s (%.4s உறுதியானவை) ஆலோசனைகள்"
+
+#: ../src/signature.py:543
+msgid "*"
+msgstr "*"
+
+#: ../src/signature.py:544
+msgid "\n"
+msgstr "\n"
+
+#: ../src/signature.py:546
+msgid ""
+"\n"
+"If "
+msgstr ""
+"\n"
+"ஆல்"
+
+#: ../src/signature.py:548
+msgid ""
+"\n"
+"Then "
+msgstr ""
+"\n"
+"பின் "
+
+#: ../src/signature.py:551
+msgid ""
+"\n"
+"Do\n"
+msgstr ""
+"\n"
+"செய்\n"
+
+#: ../src/signature.py:553
+msgid ""
+"\n"
+"\n"
+msgstr ""
+"\n"
+"\n"
+
+#: ../src/updater.py:18
+#, python-format
+msgid "current: %s "
+msgstr "நடப்பு: %s "
+
+#: ../src/updater.py:27
+#, python-format
+msgid "newer: %s "
+msgstr "புதிய: %s "
+
+#: ../src/seapplet.c:187
+msgid "New SELinux security alert"
+msgstr "புதிய SELinux பாதுகாப்பு எச்சரிக்கை"
+
+#: ../src/seapplet.c:187
+msgid "AVC denial, click icon to view"
+msgstr "AVC மறுப்பு, சின்னத்தை சொடுக்கி பார்க்கவும்"
+
+#: ../src/seapplet.c:193 ../src/seapplet.c:244
+msgid "Dismiss"
+msgstr "நீக்கு"
+
+#: ../src/seapplet.c:203 ../src/seapplet.c:254
+msgid "Show"
+msgstr "காட்டு"
+
+#. set tooltip
+#: ../src/seapplet.c:439 ../src/sealert:66
+msgid "SELinux AVC denial, click to view"
+msgstr "SELinux AVC மறுப்பு, சொடுக்கி பார்க்கவும்"
+
+#: ../src/sealert:106
+msgid "SELinux not enabled, sealert will not run on non SELinux systems"
+msgstr ""
+"SELinux செயல்படுத்தப்படுவில்லை, SELinux கணினிகள் இல்லாதவற்றில் எச்சரிக்கை இயங்காது"
+
+#: ../src/sealert:155
+msgid "Not fixable."
+msgstr "பொருந்தக் கூடாத."
+
+#: ../src/sealert:162
+#, c-format
+msgid "Successfully ran %s"
+msgstr "வெற்றிகரமாக இயங்கும்  %s"
+
+#: ../src/sealert:167
+#, c-format
+msgid "Plugin %s not valid for %s id"
+msgstr "கூடுதல்இணைப்பு %s ஆனது %s idக்கு ஏற்றதல்ல"
+
+#: ../src/setroubleshootd:82
+msgid "SELinux not enabled, setroubleshootd exiting..."
+msgstr "SELinux செயல்படுத்தப்படவில்லை, setroubleshootd வெளியேறுகிறது..."
+
+#: ../src/setroubleshootd:113
+#, c-format
+msgid "fork #1 failed: %d (%s)"
+msgstr "fork #1 தோல்வியுற்றது: %d (%s)"
+
+#: ../gui/browser.glade.h:1
+msgid ""
+"Copyright (c) 2010 \n"
+"Thomas Liu <tliu@redhat.com>\n"
+"Máirín Duffy <duffy@redhat.com>\n"
+"Daniel Walsh <dwalsh@redhat.com>\n"
+"John Dennis <jdennis@redhat.com>\n"
+msgstr ""
+"Copyright (c) 2010 \n"
+"Thomas Liu <tliu@redhat.com>\n"
+"Máirín Duffy <duffy@redhat.com>\n"
+"Daniel Walsh <dwalsh@redhat.com>\n"
+"John Dennis <jdennis@redhat.com>\n"
+
+#: ../gui/browser.glade.h:7
+msgid "SETroubleshoot Alert List"
+msgstr "SETroubleshoot  விழிப்பூட்டு பட்டியல்"
+
+#: ../gui/browser.glade.h:8
+msgid "Troubleshoot"
+msgstr "சிக்கல்நீக்கு"
+
+#: ../gui/browser.glade.h:9
+msgid "Troubleshoot selected alert"
+msgstr "தேர்ந்தெடுக்கப்பட்ட பிழைத்திருத்த விழிப்பூட்டல்"
+
+#: ../gui/browser.glade.h:10
+msgid "Delete Selected Alerts"
+msgstr "தேர்ந்தெடுக்கப்பட்ட விழிப்பூட்டல்களை அழி"
+
+#: ../gui/browser.glade.h:11
+msgid "SETroubleshoot Details Window"
+msgstr "SETroubleshoot விவர சாளரம்"
+
+#: ../gui/browser.glade.h:12
+msgid "SELinux Alert Browser"
+msgstr "SELinux விழிப்பூட்டல் உலாவி"
+
+#: ../gui/browser.glade.h:13
+msgid "<b>SELinux has detected a problem.</b>"
+msgstr "<b>SELinux ஒரு சிக்கலை கண்டுபிடித்தது.</b>"
+
+#: ../gui/browser.glade.h:14
+msgid "Would you like to receive alerts?"
+msgstr "இந்த விழிப்பூட்டல்களை நீங்கள் பெற விரும்புகிறீர்களா?"
+
+#: ../gui/browser.glade.h:15
+msgid "Yes"
+msgstr "ஆம்"
+
+#: ../gui/browser.glade.h:16
+msgid "Turn on alert pop-ups."
+msgstr "விழிப்பூட்டல் பாப்-அப்புகளை துவக்கவும்."
+
+#: ../gui/browser.glade.h:17
+msgid "No"
+msgstr "இல்லை"
+
+#: ../gui/browser.glade.h:18
+msgid "Turn off alert pop-ups."
+msgstr "விழிப்பூட்டல் பாப்-அப்புகளை நிறுத்தவும்."
+
+#: ../gui/browser.glade.h:19
+msgid "The source process:"
+msgstr "மூல செயல்:"
+
+#: ../gui/browser.glade.h:20
+msgid "Attempted this access:"
+msgstr "இந்த அணுகல் முயற்சிக்கப்பட்டது:"
+
+#: ../gui/browser.glade.h:21
+msgid "On this file:"
+msgstr "இந்த கோப்பில்:"
+
+#: ../gui/browser.glade.h:22
+msgid "label"
+msgstr "அட்டவணை"
+
+#: ../gui/browser.glade.h:23
+msgid ""
+"Read alert troubleshoot information.  May require administrative privileges "
+"to remedy."
+msgstr ""
+"Read alert troubleshoot information.  May require administrative privileges "
+"to remedy."
+
+#: ../gui/browser.glade.h:24
+msgid "Notify Admin"
+msgstr "நிர்வாகியை அறிவி"
+
+#: ../gui/browser.glade.h:25
+msgid "Email alert to system administrator."
+msgstr "கணினி நிர்வாகிக்கு மின்னஞ்சல் விழிப்பூட்டல்"
+
+#: ../gui/browser.glade.h:26
+msgid "Details"
+msgstr "விவரங்கள்"
+
+#: ../gui/browser.glade.h:28
+msgid "Ignore alert in the future."
+msgstr "எதிர்காலத்தில் விழிப்பூட்டலை நிராகரி"
+
+#: ../gui/browser.glade.h:29
+msgid "Delete current alert from the database."
+msgstr "தறவுத்தளத்திலிருந்து நடப்பு விழிப்பூட்டலை அழிக்கவும்."
+
+#: ../gui/browser.glade.h:30
+msgid "Show previous alert."
+msgstr "முந்தைய விழிப்பூட்டலை காட்டு."
+
+#: ../gui/browser.glade.h:32
+msgid "Show next alert."
+msgstr "அடுத்த விழிப்பூட்டலை காட்டு"
+
+#: ../gui/browser.glade.h:33
+msgid "List All Alerts"
+msgstr "அனைத்து விழிப்பூட்டல்களின் பட்டியல்"
+
+#: ../gui/browser.glade.h:34
+msgid "List all alerts in the database."
+msgstr "தரவுத்தளத்திலுள்ள அனைத்து விழிப்பூட்டல்களின் பட்டியல்"
+
+#: ../gui/bug_report.glade.h:1
+msgid "Review and Submit Bug Report"
+msgstr "மறுபார்வை மற்றும் பிழை விவரத்தை சமர்பி"
+
+#: ../gui/bug_report.glade.h:2
+msgid "<span size='large' weight='bold'>Review and Submit Bug Report</span>"
+msgstr ""
+"<span size='large' weight='bold'>மறுபார்வை மற்றும் பிழைக் குறிப்பை சமர்பி</span>"
+
+#: ../gui/bug_report.glade.h:3
+msgid ""
+"You may wish to review the error output that will be included in this bug "
+"report and modify it to exclude any sensitive data below."
+msgstr ""
+"அந்த பிழை வெளிப்பாட்டை நீங்கள் மறுபார்வையிட வேண்டும் அது இந்த பிழைக் குறிப்பு மற்றும் "
+"ஏதாவது நுண்ணிய தரவு மாற்றியமைக்கப்பட்டதையும் சேர்ந்திருக்க வேண்டும்."
+
+#: ../gui/bug_report.glade.h:4
+msgid "Included error output:"
+msgstr "பிழை வெளியேற்றையும் சேர்த்து:"
+
+#: ../gui/bug_report.glade.h:5
+msgid "Submit Report"
+msgstr "விவரத்தை சமர்பிக்கவும்"
+
+#: ../gui/fail_dialog.glade.h:2 ../gui/success_dialog.glade.h:2
+msgid ""
+"This operation was completed.  The quick brown fox jumped over the lazy dog."
+msgstr ""
+"செயல்பாடு முடிவடைந்தது. விரைவான ப்ரவுன் நரியானது சோம்பேரி நாயிற்கு மேல் தாவிச் "
+"சென்றது."
+
+#: ../gui/success_dialog.glade.h:1
+msgid "Success!"
+msgstr "வெற்றி!"
+
+#: ../gui/success_dialog.glade.h:3
+msgid "button"
+msgstr "பொத்தான்"

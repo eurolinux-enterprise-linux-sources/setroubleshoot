@@ -1,0 +1,27 @@
+diff -up setroubleshoot-3.0.47/src/sedispatch.c.rhel6 setroubleshoot-3.0.47/src/sedispatch.c
+--- setroubleshoot-3.0.47/src/sedispatch.c.rhel6	2012-06-14 14:23:54.161184641 -0400
++++ setroubleshoot-3.0.47/src/sedispatch.c	2012-06-14 14:24:03.809205603 -0400
+@@ -173,9 +173,9 @@ static void dump_whole_record(auparse_st
+ 	auparse_first_record(au);
+ 	do {
+ 		rec = auparse_get_record_text(au);
+-		size += strlen(rec);
++		size += strlen(rec) + 1;
+ 	} while (auparse_next_record(au) > 0);
+-	tmp = malloc(size);
++	tmp = calloc(1, size+1);
+ 	if (!tmp) {
+ 		syslog(LOG_ERR,"sedispatch out of memory\n");
+ 		return;
+@@ -183,9 +183,10 @@ static void dump_whole_record(auparse_st
+ 	auparse_first_record(au);
+ 	end=stpcpy(tmp, auparse_get_record_text(au));
+ 	while (auparse_next_record(au) > 0) {
++		*end++='\n';
+ 		end=stpcpy(end, auparse_get_record_text(au));
+ 	}
+-
++	*end='\n';
+ 	if (! dbusconn) {
+ 		dbusconn=init_dbus();
+ 	}

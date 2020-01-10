@@ -1,0 +1,236 @@
+diff -Nur setroubleshoot_old/ChangeLog setroubleshoot-3.0.47/ChangeLog
+--- setroubleshoot_old/ChangeLog	2011-02-17 20:42:48.000000000 +0100
++++ setroubleshoot-3.0.47/ChangeLog	2012-11-19 09:14:55.462817134 +0100
+@@ -1,3 +1,174 @@
++Mon Nov 19 2012 Miroslav Grepl <mgrepl@redhat.com> - 3.0.47-6
++- Update changelog
++
++Mon Oct 15 2012 Miroslav Grepl <mgrepl@redhat.com> - 3.0.47-5
++- Remove README and AUTHOR files
++Resolves:#788196
++
++Thu Jun 27 2012 Miroslav Grepl <mgrepl@redhat.com> - 3.0.47-4
++- Make sealert working if description contains parenthesis
++- Remove -H from man page
++Resolves:#788196
++
++* Thu Jun 14 2012  <dwalsh@redhat.com> - 3.0.47-3
++- Sedispatch is not handling audit messages correctly,
++this fix allows setroubleshoot to process alerts.
++Resolves: #575686
++
++Sat May 12 2012  <dwalsh@redhat.com> - 3.0.47-2
++- Update to latest translations
++- Fixes for man pages
++Resolves: #575686
++
++* Tue Jan 17 2012  <dwalsh@redhat.com> - 3.0.47-1
++- Update to latest translations
++- Fixes for memory leaks
++Resolves: #581971
++Resolves: #757857
++
++Tue Jan 10 2012  <dwalsh@redhat.com> - 3.0.46-1
++- Update to latest translations
++
++Tue Dec 19 2011  <dwalsh@redhat.com> - 3.0.45-1
++- Patch from Mgrepl to stop printable from crashing if None is passed in
++- Update to latest translations
++
++Mon Dec 8 2011  <dwalsh@redhat.com> - 3.0.44-1
++- Update to latest translations
++- Fix memory leak in sedispatch
++
++Mon Dec 5 2011  <dwalsh@redhat.com> - 3.0.43-1
++- Update to latest translations
++
++Fri Nov 11 2011  <dwalsh@redhat.com> - 3.0.42-1
++- Set the gobject prg_name for better integration into the desktop
++
++Fri Nov 4 2011  <dwalsh@redhat.com> - 3.0.41-1
++- Don't report to syslog when sedispatch gets an signal to exit.
++
++Wed Oct 26 2011  <dwalsh@redhat.com> - 3.0.40-1
++- Apply Miroslav patch that rewrites sealert option handling with using
++optparse. Fixing conflicting options problems.
++- Fix requires to include pygtk2-libglade
++
++Thu Oct 6 2011  <dwalsh@redhat.com> - 3.0.38-2.1
++- Require setroubleshoot-plugins > 3.0.0
++Resolves: #743583
++
++Thu Sep 15 2011 Miroslav Grepl  <mgrepl@redhat.com> - 3.0.38-2
++- Needs to require libreport-gtk and pygtk2-libglade
++- sealert analyze option can not be used with another option
++- Fix setroubleshootd man page
++
++Wed Jul 13 2011  <dwalsh@redhat.com> - 3.0.38-1
++- Remove dependancy on X from sedispatch
++- Setroubleshoot-server no longer requires X
++
++
++Fri Jun 24 2011  <dwalsh@redhat.com> - 3.0.37-1
++- Move serverconnection.py and FixIt commands from setroubleshoot to
++setroubleshoot-server
++- Remove run_cmd.py
++- Make work on RHEL6
++Resolves: #541634
++- Ignore errors from disabled IPv6
++Resolves: #674770
++
++Mon May 24 2011  <dwalsh@redhat.com> - 3.0.35-1
++- Make work on RHEL6
++- Fix if Button to allow user to select full button
++
++Mon Apr 18 2011  <dwalsh@redhat.com> - 3.0.33-1
++- Stop translating strings into bogus hex strings
++
++Mon Apr 11 2011  <dwalsh@redhat.com> - 3.0.31-1
++- Allow browser to close even if windows are still open
++- Cleanup imports in gui_utils.py
++
++Tue Mar 1 2011  <dwalsh@redhat.com> - 3.0.30-1
++- Change seapplet to only check for AVCs on login, if checkonlogin flag is
++turned on in ~/.setroubleshoot file
++- Fix list_all_alerts bug causing crash on bad type
++
++Mon Feb 21 2011  <dwalsh@redhat.com> - 3.0.29-1
++- Fix handling of "/" in alert list
++- Update translations
++
++Fri Feb 18 2011  <dwalsh@redhat.com> - 3.0.28-1
++- Tighten up screen to fit on little screens
++
++Wed Feb 16 2011  <dwalsh@redhat.com> - 3.0.27-1
++- Remove dependance on gnome python modules
++- Update translations
++
++Wed Feb 9 2011  <dwalsh@redhat.com> - 3.0.26-1
++- Cleanup handling of  current_alert
++- Change Details button to say Plugin\nDetails
++
++Wed Feb 09 2011 Fedora Release Engineering <rel-eng@lists.fedoraproject.org>
++- 3.0.25-2
++- Rebuilt for https://fedoraproject.org/wiki/Fedora_15_Mass_Rebuild
++
++Wed Jan 26 2011  <dwalsh@redhat.com> - 3.0.25-1
++-  Turn off sensitivity of details button when no AVC's exist
++
++Mon Jan 24 2011  <dwalsh@redhat.com> - 3.0.24-1
++- Add ProtocolError from xmlrpclib so Bugzilla reporting throwing an error
++will work.
++
++Tue Jan 18 2011  <dwalsh@redhat.com> - 3.0.23-1
++- Fixup for allow_execstack have to add pid to avc struct
++
++* Tue Jan 18 2011  <dwalsh@redhat.com> - 3.0.22-1
++- Fix email_alerts to work with new infrastructure
++
++Fri Jan 7 2011  <dwalsh@redhat.com> - 3.0.20-1
++- Added details button and context as tooltips to gui on front end for
++advanced users
++
++Thu Jan 6 2011  <dwalsh@redhat.com> - 3.0.19-1
++- Fix man page to reflect change in gui
++- Fix sealert -fixit call to import load_plugins
++- update translations
++- Fix handling of empty tpath in gui
++
++Thu Dec 23 2010  <dwalsh@redhat.com> - 3.0.17-1
++- Fix dbus Introspect handling
++- Make sealert use terminal for errors when in terminal mode
++
++Wed Dec 22 2010  <dwalsh@redhat.com> - 3.0.16-1
++- Update Translations
++
++Thu Dec 2 2010  <dwalsh@redhat.com> - 3.0.15-1
++- Fix Details Button
++- Fix table display
++- Handle situations when you have no spath and tpath
++
++Mon Nov 29 2010  <dwalsh@redhat.com> - 3.0.14-1
++- Fix dbus config file to allow console to use sealert
++
++Mon Nov 29 2010  <dwalsh@redhat.com> - 3.0.13-1
++- setroubleshoot will create /var/run/setroubleshoot if it does not exist
++
++Wed Nov 24 2010  <dwalsh@redhat.com> - 3.0.12-2
++- Ghost /var/run/setroubleshoot
++
++Tue Nov 23 2010  <dwalsh@redhat.com> - 3.0.12-1
++- Update translations
++- Allow seapplet to check for updates
++
++Mon Nov 22 2010  <dwalsh@redhat.com> - 3.0.11-1
++- Better handling of tracebacks in terminal mode
++- Fix up messages on process and capability avc messages
++- Update translations
++
++Fri Nov 19 2010  <dwalsh@redhat.com> - 3.0.9-1
++- Fix config name
++
++Wed Nov 17 2010  <dwalsh@redhat.com> - 3.0.8-1
++- Fix crash in sealert with missing log_*
++- Report bugzillas in english
++
+ 2010-11-9 Dan Walsh <dwalsh@redhat.com>
+ - Add details button
+ - Fix deleteall
+diff -Nur setroubleshoot_old/Makefile.am setroubleshoot-3.0.47/Makefile.am
+--- setroubleshoot_old/Makefile.am	2011-02-17 20:42:47.000000000 +0100
++++ setroubleshoot-3.0.47/Makefile.am	2012-10-18 10:44:55.387026473 +0200
+@@ -46,8 +46,6 @@
+ 	AUTHORS		\
+ 	COPYING		\
+ 	ChangeLog	\
+-	NEWS		\
+-	README		\
+ 	TODO		\
+ 	$(NULL)
+ 
+diff -Nur setroubleshoot_old/Makefile.in setroubleshoot-3.0.47/Makefile.in
+--- setroubleshoot_old/Makefile.in	2012-01-17 19:44:48.000000000 +0100
++++ setroubleshoot-3.0.47/Makefile.in	2012-10-18 10:44:40.018979005 +0200
+@@ -32,9 +32,9 @@
+ PRE_UNINSTALL = :
+ POST_UNINSTALL = :
+ subdir = .
+-DIST_COMMON = README $(am__configure_deps) $(srcdir)/Makefile.am \
++DIST_COMMON = $(am__configure_deps) $(srcdir)/Makefile.am \
+ 	$(srcdir)/Makefile.in $(top_srcdir)/configure AUTHORS COPYING \
+-	ChangeLog INSTALL NEWS TODO depcomp install-sh missing \
++	ChangeLog INSTALL TODO depcomp install-sh missing \
+ 	py-compile
+ ACLOCAL_M4 = $(top_srcdir)/aclocal.m4
+ am__aclocal_m4_deps = $(top_srcdir)/configure.ac
+@@ -317,8 +317,6 @@
+ 	AUTHORS		\
+ 	COPYING		\
+ 	ChangeLog	\
+-	NEWS		\
+-	README		\
+ 	TODO		\
+ 	$(NULL)
+ 
+diff -Nur setroubleshoot_old/NEWS setroubleshoot-3.0.47/NEWS
+--- setroubleshoot_old/NEWS	2011-02-17 20:42:47.000000000 +0100
++++ setroubleshoot-3.0.47/NEWS	1970-01-01 01:00:00.000000000 +0100
+@@ -1 +0,0 @@
+-FIXME: need to author this
+diff -Nur setroubleshoot_old/README setroubleshoot-3.0.47/README
+--- setroubleshoot_old/README	2011-02-17 20:42:50.000000000 +0100
++++ setroubleshoot-3.0.47/README	1970-01-01 01:00:00.000000000 +0100
+@@ -1 +0,0 @@
+-FIXME: need to author this
+diff -Nur setroubleshoot_old/src/util.py setroubleshoot-3.0.47/src/util.py
+--- setroubleshoot_old/src/util.py	2012-01-17 19:42:13.000000000 +0100
++++ setroubleshoot-3.0.47/src/util.py	2012-09-27 15:17:03.590856913 +0200
+@@ -269,7 +269,7 @@
+ 
+ 
+ def get_rpm_nvr_by_file_path_temporary(name):
+-    if name is None:
++    if name is None or not os.path.exists(name):
+         return None
+ 
+     nvr = None

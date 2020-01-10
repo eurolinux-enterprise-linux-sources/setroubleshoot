@@ -1,0 +1,39 @@
+diff --git a/src/util.py b/src/util.py
+index d289cca..1cda68f 100755
+--- a/src/util.py
++++ b/src/util.py
+@@ -259,25 +259,25 @@ def get_rpm_nvr_by_name_temporary(name):
+ 
+     nvr = None
+     try:
+-        import commands
+-        rc, output = commands.getstatusoutput("rpm -q %s" % name)
+-        if rc == 0:
+-            nvr = output
++        import subprocess
++        nvr = subprocess.Popen(["rpm", "-q", name], stdout=subprocess.PIPE).communicate()[0].rstrip()
+     except:
+         log_plugin.exception("failed to retrieve rpm info for %s", name)
+     return nvr
+ 
+ 
+ def get_rpm_nvr_by_file_path_temporary(name):
+-    if name is None or not os.path.exists(name):
++    if name is None:
++        return None
++
++    name = os.path.abspath(name)
++    if not os.path.exists(name):
+         return None
+ 
+     nvr = None
+     try:
+-        import commands
+-        rc, output = commands.getstatusoutput("rpm -qf %s" % name)
+-        if rc == 0:
+-            nvr = output
++        import subprocess
++        nvr = subprocess.Popen(["rpm", "-qf", name], stdout=subprocess.PIPE).communicate()[0].rstrip()
+     except:
+         log_plugin.exception("failed to retrieve rpm info for %s", name)
+     return nvr

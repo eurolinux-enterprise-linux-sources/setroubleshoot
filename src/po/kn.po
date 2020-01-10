@@ -1,0 +1,800 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Translators:
+# Dimitris Glezos <glezos@indifex.com>, 2011.
+# shankar Prasad <svenkate@redhat.com>, 2006.
+# Shankar Prasad <svenkate@redhat.com>, 2008, 2009.
+# shanky <prasad.mvs@gmail.com>, 2011.
+msgid ""
+msgstr ""
+"Project-Id-Version: setroubleshoot\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2012-01-11 08:39-0500\n"
+"PO-Revision-Date: 2011-12-06 13:13+0000\n"
+"Last-Translator: dwalsh <dwalsh@redhat.com>\n"
+"Language-Team: Kannada (http://www.transifex.net/projects/p/fedora/team/"
+"kn/)\n"
+"Language: kn\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0\n"
+
+#: ../setroubleshoot.desktop.in.h:1
+msgid "SELinux Troubleshooter"
+msgstr "SELinux ತೊಂದರೆನಿವಾರಕ"
+
+#: ../setroubleshoot.desktop.in.h:2
+msgid "Troubleshoot SELinux access denials"
+msgstr "SELinux ತೊಂದರೆನಿವಾರಕದ ನಿಲುಕಣಾ ನಿರಾಕರಣೆಗಳು"
+
+#: ../src/audit_data.py:884
+#, python-format
+msgid "port %s"
+msgstr "ಸಂಪರ್ಕಸ್ಥಾನ %s"
+
+#: ../src/audit_data.py:886 ../src/browser.py:716 ../src/browser.py:791
+#: ../src/rpc.py:544 ../src/util.py:223
+msgid "Unknown"
+msgstr "ಅಜ್ಞಾತ"
+
+#: ../src/audit_data.py:976
+#, python-format
+msgid ""
+"%s \n"
+"**** Invalid AVC allowed in current policy ***\n"
+msgstr ""
+"%s \n"
+"**** ಪ್ರಸಕ್ತ ಪಾಲಿಸಿಯಲ್ಲಿ ಅಮಾನ್ಯವಾದ AVC ಗೆ ಅನುಮತಿ ಇದೆ ***\n"
+
+#: ../src/audit_data.py:978
+#, python-format
+msgid ""
+"%s \n"
+"**** Invalid AVC dontaudited in current policy.  'semodule -B' will turn on "
+"dontaudit rules. ***\n"
+msgstr ""
+"%s \n"
+"**** ಪ್ರಸಕ್ತ ಪಾಲಿಸಿಯಲ್ಲಿ ಅಮಾನ್ಯವಾದ AVC ಗೆ donotaudited ಇದೆ.  'semodule -B' "
+"ಎನ್ನುವುದು dontaudit ನಿಯಮಗಳಲ್ಲಿ ಆನ್ ಆಗುತ್ತದೆ. ***\n"
+
+#: ../src/audit_data.py:980
+msgid "Must call policy_init first"
+msgstr "policy_init ಅನ್ನು ಮೊದಲು ಕರೆಯಬೇಕು"
+
+#: ../src/audit_data.py:982
+#, python-format
+msgid ""
+"%s \n"
+"**** Invalid AVC bad target context. ***\n"
+msgstr ""
+"%s \n"
+"**** ಅಮಾನ್ಯವಾದ AVC ಸರಿಯಲ್ಲದ ನಿರ್ದೇಶಿತ ಸನ್ನಿವೇಶ. ***\n"
+
+#: ../src/audit_data.py:984
+#, python-format
+msgid ""
+"%s \n"
+"**** Invalid AVC bad source context. ***\n"
+msgstr ""
+"%s \n"
+"**** ಅಮಾನ್ಯವಾದ AVC ಸರಿಯಲ್ಲದ ಆಕರ ಸನ್ನಿವೇಶ. ***\n"
+
+#: ../src/audit_data.py:986
+#, python-format
+msgid ""
+"%s \n"
+"**** Invalid AVC bad type class ***\n"
+msgstr ""
+"%s \n"
+"**** ಅಮಾನ್ಯವಾದ AVC ಸರಿಯಲ್ಲದ ಪ್ರಕಾರದ ವರ್ಗ ***\n"
+
+#: ../src/audit_data.py:988
+#, python-format
+msgid ""
+"%s \n"
+"**** Invalid AVC bad permission ***\n"
+msgstr ""
+"%s \n"
+"**** ಅಮಾನ್ಯವಾದ AVC ಸರಿಯಲ್ಲದ ಅನುಮತಿ ***\n"
+
+#: ../src/audit_data.py:990
+msgid "Error during access vector computation"
+msgstr "ವೆಕ್ಟರ್ ಕಂಪ್ಯೂಟೇಶನ್ ಅನ್ನು ನಿಲುಕಿಸಿಕೊಳ್ಳುವಾಗ ದೋಷ ಉಂಟಾಗಿದೆ"
+
+#: ../src/browser.py:250
+msgid "#"
+msgstr "#"
+
+#: ../src/browser.py:250
+msgid "Source Process"
+msgstr "ಆಕರ  ಪ್ರಕ್ರಿಯೆ"
+
+#: ../src/browser.py:250
+msgid "Attempted Access"
+msgstr "ಪ್ರಯತ್ನಿಸಿದಾಗ ಯಶಸ್ವಿ"
+
+#: ../src/browser.py:250
+msgid "On this"
+msgstr "ಇಲ್ಲಿ"
+
+#: ../src/browser.py:250
+msgid "Occurred"
+msgstr "ಸಂಭವಿಸಿದ್ದು"
+
+#: ../src/browser.py:250 ../src/run_cmd.py:418
+msgid "Status"
+msgstr "ಸ್ಥಿತಿ"
+
+#: ../src/browser.py:322 ../src/browser.py:799
+msgid "Notify"
+msgstr "ಸೂಚಿಸು"
+
+#: ../src/browser.py:326 ../src/browser.py:797 ../gui/browser.glade.h:27
+msgid "Ignore"
+msgstr "ಆಲಕ್ಷಿಸು"
+
+#: ../src/browser.py:363
+msgid "<b>If you were trying to...</b>"
+msgstr ""
+
+#: ../src/browser.py:372
+msgid "<b>Then this is the solution.</b>"
+msgstr ""
+
+#: ../src/browser.py:391 ../src/browser.py:527
+msgid "If "
+msgstr "ಎಲ್ಲಿಯಾದರೂ "
+
+#: ../src/browser.py:479
+msgid ""
+"Plugin\n"
+"Details"
+msgstr ""
+"ಪ್ಲಗ್‌ಇನ್\n"
+"ವಿವರಗಳು"
+
+#: ../src/browser.py:494
+msgid ""
+"Report\n"
+"Bug"
+msgstr ""
+"ದೋಷವನ್ನು\n"
+"ವರದಿ ಮಾಡು"
+
+#: ../src/browser.py:522
+#, python-format
+msgid "Plugin: %s "
+msgstr "ಪ್ಲಗ್‌ಇನ್: %s "
+
+#: ../src/browser.py:580
+msgid "Unable to grant access."
+msgstr "ಅನುಮತಿಯನ್ನು ನೀಡಲು ಸಾಧ್ಯವಾಗಿಲ್ಲ."
+
+#: ../src/browser.py:611 ../src/browser.py:753
+#, python-format
+msgid "Alert %d of %d"
+msgstr "%d ನ ಎಚ್ಚರಿಕೆ, %d ನಲ್ಲಿ"
+
+#: ../src/browser.py:736
+#, python-format
+msgid "On this %s:"
+msgstr "ಈ %s ನಲ್ಲಿ:"
+
+#: ../src/browser.py:784 ../src/browser.py:790 ../src/signature.py:396
+msgid "N/A"
+msgstr "ಅನ್ವಯಿಸದ"
+
+#: ../src/browser.py:831 ../src/browser.py:832 ../gui/browser.glade.h:31
+msgid "No Alerts"
+msgstr "ಯಾವುದೆ ಎಚ್ಚರಿಕೆಗಳಿಲ್ಲ"
+
+#: ../src/browser.py:850
+msgid "SELinux has detected a problem."
+msgstr "SELinux ಗೆ ಒಂದು ತೊಂದರೆ ಕಂಡು ಬಂದಿದೆ."
+
+#: ../src/browser.py:955
+msgid "Sealert Error"
+msgstr "Sealert ದೋಷ"
+
+#: ../src/browser.py:966
+msgid "Sealert Message"
+msgstr "Sealert ಸಂದೇಶಗಳು"
+
+#. -----------------------------------------------------------------------------
+#: ../src/errcode.py:70
+msgid "signature not found"
+msgstr "ಸಹಿಯು ಕಂಡು ಬಂದಿಲ್ಲ"
+
+#: ../src/errcode.py:71
+msgid "multiple signatures matched"
+msgstr "ಅನೇಕ ಸಹಿಗಳು ತಾಳೆಯಾಗಿವೆ"
+
+#: ../src/errcode.py:72
+msgid "id not found"
+msgstr "id ಕಂಡು ಬಂದಿಲ್ಲ"
+
+#: ../src/errcode.py:73
+msgid "database not found"
+msgstr "ದತ್ತಸಂಚಯ ಕಂಡು ಬಂದಿಲ್ಲ"
+
+#: ../src/errcode.py:74
+msgid "item is not a member"
+msgstr "ಅಂಶವು ಒಂದು ಸದಸ್ಯವಾಗಿಲ್ಲ"
+
+#: ../src/errcode.py:75
+msgid "illegal to change user"
+msgstr "ಬಳಕೆದಾರನನ್ನು ಬದಲಾಯಿಸುವುದು ಅಸಿಂಧು"
+
+#: ../src/errcode.py:76
+msgid "method not found"
+msgstr "ವಿಧಾನವು ಕಂಡುಬಂದಿಲ್ಲ"
+
+#: ../src/errcode.py:77
+msgid "cannot create GUI"
+msgstr "GUI ಅನ್ನು ನಿರ್ಮಿಸಲಾಗಿಲ್ಲ"
+
+#: ../src/errcode.py:78
+msgid "value unknown"
+msgstr "ಮೌಲ್ಯವು ತಿಳಿದಿಲ್ಲ"
+
+#: ../src/errcode.py:79
+msgid "cannot open file"
+msgstr "ಕಡತವನ್ನು ತೆರೆಯಲಾಗಿಲ್ಲ"
+
+#: ../src/errcode.py:80
+msgid "invalid email address"
+msgstr "ಅಮಾನ್ಯ ಇ ಮೈಲ್ ವಿಳಾಸ"
+
+#. gobject IO Errors
+#: ../src/errcode.py:83
+msgid "socket error"
+msgstr "ಸಾಕೆಟ್ ದೋಷ"
+
+#: ../src/errcode.py:84
+msgid "connection has been broken"
+msgstr "ಸಂಪರ್ಕವು ತುಂಡರಿಸಲ್ಪಟ್ಟಿದೆ"
+
+#: ../src/errcode.py:85
+msgid "Invalid request. The file descriptor is not open"
+msgstr "ಅಮಾನ್ಯ ಮನವಿ. ಕಡತ ವಿವರಕವು ತೆರೆಯಲ್ಪಟ್ಟಿಲ್ಲ"
+
+#: ../src/errcode.py:87
+msgid "insufficient permission to modify user"
+msgstr "ಬಳಕೆದಾರನನ್ನು ಮಾರ್ಪಡಿಸಲು ಸಾಕಷ್ಟು ಅನುಮತಿ ಇಲ್ಲ"
+
+#: ../src/errcode.py:88
+msgid "authentication failed"
+msgstr "ದೃಢೀಕರಣ ವಿಫಲಗೊಂಡಿದೆ"
+
+#: ../src/errcode.py:89
+msgid "user prohibited"
+msgstr "ಬಳಕೆದಾರನನ್ನು ನಿರ್ಬಂಧಿಸಲಾಗಿದೆ"
+
+#: ../src/errcode.py:90
+msgid "not authenticated"
+msgstr "ದೃಢೀಕರಿಸಲಾಗಿಲ್ಲ"
+
+#: ../src/errcode.py:91
+msgid "user lookup failed"
+msgstr "ಬಳಕೆದಾರ ನೋಡುವಿಕೆಯು ವಿಫಲಗೊಂಡಿದೆ"
+
+#: ../src/gui_utils.py:53 ../src/sealert:545
+#, c-format, python-format
+msgid "Opps, %s hit an error!"
+msgstr "ಅಯ್ಯೋ, %s ಕ್ಕೆ ಒಂದು ದೋಷ ಎದುರಾಗಿದೆ!"
+
+#: ../src/gui_utils.py:55 ../gui/fail_dialog.glade.h:1
+msgid "Error"
+msgstr "ದೋಷ"
+
+#: ../src/Plugin.py:79
+msgid ""
+"you want to allow $SOURCE_BASE_PATH to have $ACCESS access on the "
+"$TARGET_BASE_PATH $TARGET_CLASS"
+msgstr ""
+"$TARGET_BASE_PATH $TARGET_CLASS ನಲ್ಲಿ $ACCESS ನಿಲುಕಣೆಯನ್ನು ಹೊಂದುವಂತೆ ನೀವು "
+"$SOURCE_BASE_PATH ಅನ್ನು ಅನುಮತಿಸಬಯಸುವಿರಾ"
+
+#: ../src/run_cmd.py:180
+msgid "Input: "
+msgstr "ಇನ್‌ಪುಟ್: "
+
+#: ../src/run_cmd.py:267
+msgid "Enter Password"
+msgstr "ಗುಪ್ತಪದವನ್ನು ನಮೂದಿಸಿ"
+
+#: ../src/run_cmd.py:280
+msgid "Password: "
+msgstr "ಗುಪ್ತಪದ: "
+
+#: ../src/run_cmd.py:379
+msgid "SELinux Fix"
+msgstr "SELinux ಪರಿಹಾರ"
+
+#: ../src/run_cmd.py:390
+msgid "Command"
+msgstr "ಆಜ್ಞೆ"
+
+#: ../src/run_cmd.py:400
+msgid "Run Command"
+msgstr "ಆಜ್ಞೆಯನ್ನು ಚಲಾಯಿಸು"
+
+#: ../src/run_cmd.py:403
+msgid "Stop Command"
+msgstr "ಆಜ್ಞೆಯನ್ನು ನಿಲ್ಲಿಸು"
+
+#: ../src/run_cmd.py:425
+msgid "Warning: You are responsible for verifying this command is correct"
+msgstr "ಎಚ್ಚರಿಕೆ: ಈ ಆಜ್ಞೆಯು ಸರಿ ಇದೆಯೆ ಎಂದು ಪರಿಶೀಲಿಸುವ ಜವಾಬ್ದಾರಿಯು ನಿಮ್ಮ ಮೇಲಿದೆ"
+
+#: ../src/run_cmd.py:467
+msgid "Not Run Yet"
+msgstr "ಇನ್ನೂ ಚಲಾಯಿಸಲ್ಪಟ್ಟಿಲ್ಲ"
+
+#: ../src/run_cmd.py:478
+msgid "Running..."
+msgstr "ಚಾಲನೆಯಲ್ಲಿದೆ..."
+
+#: ../src/run_cmd.py:493
+#, python-format
+msgid "Interrupted, exit on signal %d"
+msgstr "ತಡೆಯಲಾಗಿದೆ, %d ಸೂಚನೆ ನಂತರ ನಿರ್ಗಮಿಸುತ್ತದೆ"
+
+#: ../src/run_cmd.py:495
+msgid "Success"
+msgstr "ಯಶಸ್ವಿಯಾಗಿದೆ"
+
+#: ../src/run_cmd.py:497
+#, python-format
+msgid "Failed, exit status = %d"
+msgstr "ವಿಫಲಗೊಂಡಿದೆ, ನಿರ್ಗಮನ ಸ್ಥಿತಿ = %d"
+
+#: ../src/run_cmd.py:499
+msgid "Done: "
+msgstr "ಆಯಿತು: "
+
+#: ../src/server.py:202
+#, python-format
+msgid " For complete SELinux messages. run sealert -l %s"
+msgstr " ಸಂಪೂರ್ಣ SELinux ಸಂದೇಶಗಳಿಗಾಗಿ. sealert -l %s ಅನ್ನು ಚಲಾಯಿಸಿ"
+
+#: ../src/server.py:401
+#, python-format
+msgid "The user (%s) cannot modify data for (%s)"
+msgstr "ಬಳಕೆದಾರ (%s) ನು (%s) ಗಾಗಿ ದತ್ತಾಂಶವನ್ನು ಮಾರ್ಪಡಿಸಲಾಗುವುದಿಲ್ಲ"
+
+#: ../src/server.py:465 ../src/sealert:296
+msgid "Started"
+msgstr "ಆರಂಭಗೊಂಡಿದೆ"
+
+#: ../src/server.py:512
+msgid "AVC"
+msgstr "AVC"
+
+#: ../src/server.py:579
+msgid "Audit Listener"
+msgstr "ಆಡಿಟ್ ಆಲಿಸುವವ"
+
+#: ../src/signature.py:75
+msgid "Never Ignore"
+msgstr "ಎಂದಿಗೂ ಅಲಕ್ಷಿಸದಿರು"
+
+#: ../src/signature.py:76
+msgid "Ignore Always"
+msgstr "ಪ್ರತಿಬಾರಿಯೂ ಆಲಕ್ಷಿಸು"
+
+#: ../src/signature.py:77
+msgid "Ignore After First Alert"
+msgstr "ಮೊದಲ ಎಚ್ಚರಿಕೆಯ ನಂತರ ಅಲಕ್ಷಿಸು"
+
+#: ../src/signature.py:196
+msgid "directory"
+msgstr "ಕೋಶ"
+
+#: ../src/signature.py:197
+msgid "semaphore"
+msgstr "ಸೆಮಾಫೋರ್"
+
+#: ../src/signature.py:198
+msgid "shared memory"
+msgstr "ಹಂಚಲಾದ ಮೆಮೊರಿ"
+
+#: ../src/signature.py:199
+msgid "message queue"
+msgstr "ಸಂದೇಶದ ಸರತಿ"
+
+#: ../src/signature.py:200
+msgid "message"
+msgstr "ಸಂದೇಶ"
+
+#: ../src/signature.py:201
+msgid "file"
+msgstr "ಕಡತ"
+
+#: ../src/signature.py:202
+msgid "socket"
+msgstr "ಸಾಕೆಟ್"
+
+#: ../src/signature.py:203
+msgid "process"
+msgstr "ಪ್ರಕ್ರಿಯೆ"
+
+#: ../src/signature.py:204
+msgid "filesystem"
+msgstr "ಕಡತವ್ಯವಸ್ಥೆ"
+
+#: ../src/signature.py:205
+msgid "node"
+msgstr "ನೋಡ್"
+
+#: ../src/signature.py:206
+msgid "capability"
+msgstr "ಸಾಮರ್ಥ್ಯ"
+
+#: ../src/signature.py:381
+#, python-format
+msgid "%s has a permissive type (%s). This access was not denied."
+msgstr ""
+"%s ಅನುಮತಿ ಪೂರ್ವಕವಾದ ಬಗೆಯನ್ನು ಹೊಂದಿದೆ (%s). ಈ ಅನುಮತಿಯನ್ನು ನಿರಾಕರಿಸಲಾಗಿರಲಿಲ್ಲ."
+
+#: ../src/signature.py:384
+msgid "SELinux is in permissive mode. This access was not denied."
+msgstr "SELinux ಅನುಮತಿಪೂರ್ವಕ ಕ್ರಮದಲ್ಲಿದೆ. ಈ ಅನುಮತಿಯನ್ನು ನಿರಾಕರಿಸಲಾಗಿರಲಿಲ್ಲ."
+
+#: ../src/signature.py:469
+msgid "Additional Information:\n"
+msgstr "ಹೆಚ್ಚುವರಿ ಮಾಹಿತಿ:\n"
+
+#: ../src/signature.py:470
+msgid "Source Context"
+msgstr "ಆಕರ ಸನ್ನಿವೇಶ"
+
+#: ../src/signature.py:471
+msgid "Target Context"
+msgstr "ಉದ್ದೇಶಿತ ಸನ್ನಿವೇಶ"
+
+#: ../src/signature.py:472
+msgid "Target Objects"
+msgstr "ಉದ್ದೇಶಿತ ವಸ್ತುಗಳು"
+
+#: ../src/signature.py:473
+msgid "Source"
+msgstr "ಆಕರ"
+
+#: ../src/signature.py:474
+msgid "Source Path"
+msgstr "ಆಕರ ಪಥ"
+
+#: ../src/signature.py:475
+msgid "Port"
+msgstr "ಸಂಪರ್ಕಸ್ಥಾನ"
+
+#: ../src/signature.py:476
+msgid "Host"
+msgstr "ಅತಿಥೇಯ"
+
+#: ../src/signature.py:477
+msgid "Source RPM Packages"
+msgstr "ಆಕರ RPM ಪ್ಯಾಕೇಜ್‍ಗಳು"
+
+#: ../src/signature.py:478
+msgid "Target RPM Packages"
+msgstr "ಉದ್ದೇಶಿತ RPM ಪ್ಯಾಕೇಜ್‍ಗಳು"
+
+#: ../src/signature.py:479
+msgid "Policy RPM"
+msgstr "ಪಾಲಿಸಿ RPM"
+
+#: ../src/signature.py:480
+msgid "Selinux Enabled"
+msgstr "Selinux ಶಕ್ತಗೊಂಡ"
+
+#: ../src/signature.py:481
+msgid "Policy Type"
+msgstr "ಪಾಲಿಸಿಯ ಬಗೆ"
+
+#: ../src/signature.py:482
+msgid "Enforcing Mode"
+msgstr "ಒತ್ತಾಯಪೂರ್ವಕ ಕ್ರಮ"
+
+#: ../src/signature.py:483
+msgid "Host Name"
+msgstr "ಅತಿಥೇಯದ ಹೆಸರು"
+
+#: ../src/signature.py:484
+msgid "Platform"
+msgstr "ಪ್ಲಾಟ್‍ಫಾರ್ಮ್"
+
+#: ../src/signature.py:485
+msgid "Alert Count"
+msgstr "ಎಚ್ಚರಿಕೆಗಳ ಲೆಕ್ಕ"
+
+#: ../src/signature.py:486
+msgid "First Seen"
+msgstr "ಮೊದಲು ನೋಡಿದ"
+
+#: ../src/signature.py:487
+msgid "Last Seen"
+msgstr "ಕಡೆಯ ಬಾರಿಗೆ ನೋಡಿದ"
+
+#: ../src/signature.py:488
+msgid "Local ID"
+msgstr "ಸ್ಥಳೀಯ ಐಡಿ"
+
+#: ../src/signature.py:490
+msgid "Raw Audit Messages"
+msgstr "ಕಚ್ಛಾ ಆಡಿಟ್ ಸಂದೇಶಗಳು"
+
+#: ../src/signature.py:540
+#, python-format
+msgid ""
+"\n"
+"\n"
+"*****  Plugin %s (%.4s confidence) suggests  "
+msgstr ""
+"\n"
+"\n"
+"*****  %s (%.4s confidence) ಎಂಬ ಪ್ಲಗ್‌ಇನ್ ಇದನ್ನು ಸಲಹೆ ಮಾಡುತ್ತದೆ "
+
+#: ../src/signature.py:543
+msgid "*"
+msgstr "*"
+
+#: ../src/signature.py:544
+msgid "\n"
+msgstr "\n"
+
+#: ../src/signature.py:546
+msgid ""
+"\n"
+"If "
+msgstr ""
+"\n"
+"ಎಲ್ಲಿಯಾದರೂ "
+
+#: ../src/signature.py:548
+msgid ""
+"\n"
+"Then "
+msgstr ""
+"\n"
+"ಆದರೆ "
+
+#: ../src/signature.py:551
+msgid ""
+"\n"
+"Do\n"
+msgstr ""
+"\n"
+"ಹೀಗೆ ಮಾಡು\n"
+
+#: ../src/signature.py:553
+msgid ""
+"\n"
+"\n"
+msgstr ""
+"\n"
+"\n"
+
+#: ../src/updater.py:18
+#, python-format
+msgid "current: %s "
+msgstr "ಪ್ರಸಕ್ತ: %s "
+
+#: ../src/updater.py:27
+#, python-format
+msgid "newer: %s "
+msgstr "ಹೊಸತು: %s "
+
+#: ../src/seapplet.c:187
+msgid "New SELinux security alert"
+msgstr "ಹೊಸ SELinux ಸುರಕ್ಷತಾ ಎಚ್ಚರಿಕೆ"
+
+#: ../src/seapplet.c:187
+msgid "AVC denial, click icon to view"
+msgstr "AVC ನಿರಾಕರಣೆ, ನೋಡಲು ಚಿಹ್ನೆಯ ಮೇಲೆ ಕ್ಲಿಕ್ಕಿಸಿ"
+
+#: ../src/seapplet.c:193 ../src/seapplet.c:244
+msgid "Dismiss"
+msgstr "ವಜಾಗೊಳಿಸು"
+
+#: ../src/seapplet.c:203 ../src/seapplet.c:254
+msgid "Show"
+msgstr "ತೋರಿಸು"
+
+#. set tooltip
+#: ../src/seapplet.c:439 ../src/sealert:66
+msgid "SELinux AVC denial, click to view"
+msgstr "SELinux AVC ನಿರಾಕರಣೆ, ನೋಡಲು ಕ್ಲಿಕ್ಕಿಸಿ"
+
+#: ../src/sealert:106
+msgid "SELinux not enabled, sealert will not run on non SELinux systems"
+msgstr ""
+"SELinux ಅನ್ನು ಶಕ್ತಗೊಂಡಿಲ್ಲ, SELinux ಅಲ್ಲದ ವ್ಯವಸ್ಥೆಗಳಲ್ಲಿ sealert ಚಲಾಯಿತಗೊಳ್ಳುವುದಿಲ್ಲ"
+
+#: ../src/sealert:155
+msgid "Not fixable."
+msgstr "ಸರಿಪಡಿಸಲು ಸಾಧ್ಯವಿಲ್ಲ."
+
+#: ../src/sealert:162
+#, c-format
+msgid "Successfully ran %s"
+msgstr "%s ಅನ್ನು ಯಶಸ್ವಿಯಾಗಿ ಚಲಾಯಿಸಲಾಗಿದೆ"
+
+#: ../src/sealert:167
+#, c-format
+msgid "Plugin %s not valid for %s id"
+msgstr "%s ಎನ್ನುವುದು %s id ಗೆ ಮಾನ್ಯವಾದ ಪ್ಲಗ್‌ಇನ್ ಆಗಿಲ್ಲ"
+
+#: ../src/setroubleshootd:82
+msgid "SELinux not enabled, setroubleshootd exiting..."
+msgstr "SELinux ಅನ್ನು ಶಕ್ತಗೊಳಿಸಲಾಗಿಲ್ಲ, setroubleshootd ನಿರ್ಮಿಸುತ್ತಿದೆ..."
+
+#: ../src/setroubleshootd:113
+#, c-format
+msgid "fork #1 failed: %d (%s)"
+msgstr "ಫೋರ್ಕ್ #1 ವಿಫಲಗೊಂಡಿದೆ: %d (%s)"
+
+#: ../gui/browser.glade.h:1
+msgid ""
+"Copyright (c) 2010 \n"
+"Thomas Liu <tliu@redhat.com>\n"
+"Máirín Duffy <duffy@redhat.com>\n"
+"Daniel Walsh <dwalsh@redhat.com>\n"
+"John Dennis <jdennis@redhat.com>\n"
+msgstr ""
+"ಹಕ್ಕು  (c) 2010 \n"
+"Thomas Liu <tliu@redhat.com>\n"
+"Máirín Duffy <duffy@redhat.com>\n"
+"Daniel Walsh <dwalsh@redhat.com>\n"
+"John Dennis <jdennis@redhat.com>\n"
+
+#: ../gui/browser.glade.h:7
+msgid "SETroubleshoot Alert List"
+msgstr "SEtroubleshoot ಎಚ್ಚರಿಕೆ ಪಟ್ಟಿ"
+
+#: ../gui/browser.glade.h:8
+msgid "Troubleshoot"
+msgstr "ತೊಂದರೆನಿವಾರಣೆ"
+
+#: ../gui/browser.glade.h:9
+msgid "Troubleshoot selected alert"
+msgstr "ಆಯ್ಕೆ ಮಾಡಲಾದ ಎಚ್ಚರಿಕೆಯ ದೋಷನಿವಾರಣೆ ಮಾಡು"
+
+#: ../gui/browser.glade.h:10
+msgid "Delete Selected Alerts"
+msgstr "ಆಯ್ಕೆ ಮಾಡಲಾದ ಎಚ್ಚರಿಕೆಗಳನ್ನು ಅಳಿಸಿ"
+
+#: ../gui/browser.glade.h:11
+msgid "SETroubleshoot Details Window"
+msgstr "SETroubleshoot ವಿವರಗಳ ವಿಂಡೊ"
+
+#: ../gui/browser.glade.h:12
+msgid "SELinux Alert Browser"
+msgstr "SELinux ಎಚ್ಚರಿಕೆಯ ವೀಕ್ಷಕ"
+
+#: ../gui/browser.glade.h:13
+msgid "<b>SELinux has detected a problem.</b>"
+msgstr "<b>SELinux ಗೆ ಒಂದು ತೊಂದರೆ ಕಂಡು ಬಂದಿದೆ.</b>"
+
+#: ../gui/browser.glade.h:14
+msgid "Would you like to receive alerts?"
+msgstr "ನೀವು ಎಚ್ಚರಿಕೆಗಳನ್ನು ಪಡೆಯಲು ಬಯಸುತ್ತೀರೆ?"
+
+#: ../gui/browser.glade.h:15
+msgid "Yes"
+msgstr "ಹೌದು"
+
+#: ../gui/browser.glade.h:16
+msgid "Turn on alert pop-ups."
+msgstr "ಎಚ್ಚರಿಕೆ ಪುಟಿಕೆಗಳನ್ನು ಆನ್ ಮಾಡು."
+
+#: ../gui/browser.glade.h:17
+msgid "No"
+msgstr "ಇಲ್ಲ"
+
+#: ../gui/browser.glade.h:18
+msgid "Turn off alert pop-ups."
+msgstr "ಎಚ್ಚರಿಕೆ ಪುಟಿಕೆಗಳನ್ನು ಆಫ್‌ ಮಾಡು."
+
+#: ../gui/browser.glade.h:19
+msgid "The source process:"
+msgstr "ಮೂಲ ಪ್ರಕ್ರಿಯೆಯು ಹೀಗಿದೆ:"
+
+#: ../gui/browser.glade.h:20
+msgid "Attempted this access:"
+msgstr "ಈ ನಿಲುಕಣೆಗಾಗಿ ಪ್ರಯತ್ನಿಸಲಾಗಿದೆ:"
+
+#: ../gui/browser.glade.h:21
+msgid "On this file:"
+msgstr "ಈ ಕಡತದಲ್ಲಿ:"
+
+#: ../gui/browser.glade.h:22
+msgid "label"
+msgstr "ಲೇಬಲ್"
+
+#: ../gui/browser.glade.h:23
+msgid ""
+"Read alert troubleshoot information.  May require administrative privileges "
+"to remedy."
+msgstr ""
+"ಎಚ್ಚರಿಕೆ ತೊಂದರೆ ನಿವಾರಣೆ ಮಾಹಿತಿಯನ್ನು ತೋರಿಸು.  ಇದಕ್ಕೆ ವ್ಯವಸ್ಥಾಪಕರ ಅಧಿಕಾರಗಳ ಅಗತ್ಯ "
+"ಬೀಳಬಹುದು."
+
+#: ../gui/browser.glade.h:24
+msgid "Notify Admin"
+msgstr "ವ್ಯವಸ್ಥಾಪಕರಿಗೆ ಸೂಚಿಸಿ"
+
+#: ../gui/browser.glade.h:25
+msgid "Email alert to system administrator."
+msgstr "ಎಚ್ಚರಿಕೆಯನ್ನು ವ್ಯವಸ್ಥೆಯ ನಿರ್ವಾಹಕರಿಗೆ ಕಳುಹಿಸು."
+
+#: ../gui/browser.glade.h:26
+msgid "Details"
+msgstr "ವಿವರಗಳು"
+
+#: ../gui/browser.glade.h:28
+msgid "Ignore alert in the future."
+msgstr "ಭವಿಷ್ಯದಲ್ಲಿ ಎಚ್ಚರಿಕೆಗಳು ಕಡೆಗಣಿಸಿ."
+
+#: ../gui/browser.glade.h:29
+msgid "Delete current alert from the database."
+msgstr "ಪ್ರಸಕ್ತ ಎಚ್ಚರಿಕೆಯನ್ನು ದತ್ತಸಂಚಯದಿಂದ ಅಳಿಸಿಹಾಕು."
+
+#: ../gui/browser.glade.h:30
+msgid "Show previous alert."
+msgstr "ಹಿಂದಿನ ಎಚ್ಚರಿಕೆಯನ್ನು ತೋರಿಸು."
+
+#: ../gui/browser.glade.h:32
+msgid "Show next alert."
+msgstr "ಮುಂದಿನ ಎಚ್ಚರಿಕೆಯನ್ನು ತೋರಿಸು."
+
+#: ../gui/browser.glade.h:33
+msgid "List All Alerts"
+msgstr "ಎಲ್ಲಾ ಎಚ್ಚರಿಕೆಗಳ ಪಟ್ಟಿ"
+
+#: ../gui/browser.glade.h:34
+msgid "List all alerts in the database."
+msgstr "ಎಲ್ಲಾ ಎಚ್ಚರಿಕೆಗಳನ್ನು ದತ್ತಸಂಚಯದಲ್ಲಿ ಪಟ್ಟಿ ಮಾಡು."
+
+#: ../gui/bug_report.glade.h:1
+msgid "Review and Submit Bug Report"
+msgstr "ದೋಷ ವರದಿಯನ್ನು ಅವಲೋಕಿಸಿ ಹಾಗು ಸಲ್ಲಿಸಿ"
+
+#: ../gui/bug_report.glade.h:2
+msgid "<span size='large' weight='bold'>Review and Submit Bug Report</span>"
+msgstr ""
+"<span size='large' weight='bold'>ದೋಷ ವರದಿಯನ್ನು ಅವಲೋಕಿಸಿ ಹಾಗು ಸಲ್ಲಿಸಿ</span>"
+
+#: ../gui/bug_report.glade.h:3
+msgid ""
+"You may wish to review the error output that will be included in this bug "
+"report and modify it to exclude any sensitive data below."
+msgstr ""
+"ನೀವು ಬಯಸಿದಲ್ಲಿ ಈ ದೋಷ ವರದಿಯಲ್ಲಿ ಸೇರಿಸಲಾಗುವ ದೋಷದ ಔಟ್‌ಪುಟ್ ಅನ್ನು ಅವಲೋಕಿಸಬಹುದು ಹಾಗು "
+"ಅದರಲ್ಲಿ ಯಾವುದೆ ಸೂಕ್ಷ್ಮಸಂವೇದಿ ಮಾಹಿತಿಯು ಇರದಂತೆ ಮಾರ್ಪಡಿಸಬಹುದು."
+
+#: ../gui/bug_report.glade.h:4
+msgid "Included error output:"
+msgstr "ದೋಷ ಔಟ್‌ಪುಟ್ ಅನ್ನು ಅಡಕಗೊಳಿಸಲಾಗಿದೆ:"
+
+#: ../gui/bug_report.glade.h:5
+msgid "Submit Report"
+msgstr "ಒಂದು ವರದಿಯನ್ನು ಸಲ್ಲಿಸಿ"
+
+#: ../gui/fail_dialog.glade.h:2 ../gui/success_dialog.glade.h:2
+msgid ""
+"This operation was completed.  The quick brown fox jumped over the lazy dog."
+msgstr ""
+"ಈ ಕಾರ್ಯವನ್ನು ಪೂರ್ಣಗೊಳಿಸಲಾಗಿದೆ.  The quick brown fox jumped over the lazy dog."
+
+#: ../gui/success_dialog.glade.h:1
+msgid "Success!"
+msgstr "ಯಶಸ್ವಿಯಾಗಿದೆ!"
+
+#: ../gui/success_dialog.glade.h:3
+msgid "button"
+msgstr "ಗುಂಡಿ"

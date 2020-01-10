@@ -1,0 +1,39 @@
+diff -up setroubleshoot-3.0.15/src/seapplet.c.old setroubleshoot-3.0.15/src/seapplet.c
+--- setroubleshoot-3.0.15/src/seapplet.c.old	2010-11-05 13:51:55.000000000 -0400
++++ setroubleshoot-3.0.15/src/seapplet.c	2010-12-13 17:31:39.000000000 -0500
+@@ -110,7 +110,8 @@ DONE:
+ 
+ static void show_notification_now(sealert *alert) {
+ 		GError *err = NULL;
+-//	notify_notification_attach_to_status_icon (alert->notify, alert->trayIcon);
++	notify_notification_attach_to_status_icon (alert->notify, alert->trayIcon);
++		
+ 	notify_notification_show (alert->notify, &err);
+ 	if (err) {
+ 		g_warning ("Error showing notification: %s", err->message);
+@@ -184,7 +185,10 @@ static void show_star(gpointer ptr, int 
+ 	if ((! gtk_status_icon_get_visible (alert->trayIcon) || red ) &&
+ 		alert->need_bubble == FALSE) {
+ 		gtk_status_icon_set_visible(alert->trayIcon, TRUE);
+-		alert->notify = notify_notification_new(_("New SELinux security alert"),_("AVC denial, click icon to view"), red ? file : GTK_STOCK_DIALOG_WARNING);
++		alert->notify = notify_notification_new_with_status_icon(_("New SELinux security alert"),
++									 _("AVC denial, click icon to view"),
++									 red ? file : GTK_STOCK_DIALOG_WARNING,
++									   alert->trayIcon);
+ 		if (!red) {
+ 			notify_notification_set_timeout (alert->notify, NOTIFY_EXPIRES_DEFAULT);
+ 
+@@ -233,9 +237,10 @@ static void show_login_star(gpointer ptr
+ 	char title[50];
+ 	sprintf(title, P_("%d New Security Alert", "%d New Security Alerts", yellow+red), yellow+red);
+ 	gtk_status_icon_set_visible(alert->trayIcon, TRUE);
+-	alert->notify = notify_notification_new(title,
+-						msg,
+-						red ? file : GTK_STOCK_DIALOG_WARNING);
++	alert->notify = notify_notification_new_with_status_icon(title,
++								 msg,
++								 red ? file : GTK_STOCK_DIALOG_WARNING,
++								   alert->trayIcon);
+ 	if (!red) {
+ 		notify_notification_set_timeout (alert->notify, NOTIFY_EXPIRES_DEFAULT);
+ 
