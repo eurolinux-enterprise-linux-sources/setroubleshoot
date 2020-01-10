@@ -1,7 +1,7 @@
 Summary: Helps troubleshoot SELinux problems
 Name: setroubleshoot
 Version: 3.0.47
-Release: 6%{?dist}.1
+Release: 9.1%{?dist}
 License: GPLv2+
 Group: Applications/System
 URL: https://fedorahosted.org/setroubleshoot
@@ -14,8 +14,12 @@ Patch1: setroubleshoot-po.patch
 Patch2: setroubleshoot-fixman.patch
 Patch3: setroubleshoot-rhel6.patch
 Patch4: setroubleshoot-rhel6.4.patch
+# https://bugzilla.redhat.com/show_bug.cgi?id=1098068
+Patch5: setroubleshoot-sealert-vV-store_true.patch
 # https://bugzilla.redhat.com/show_bug.cgi?id=1203352
 Patch6: setroubleshoot-get_rpm_nvr_by_.patch
+# https://bugzilla.redhat.com/show_bug.cgi?id=787139
+Patch7: setroubleshoot-sealert-a.patch
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
 BuildRequires: perl-XML-Parser
 BuildRequires: libcap-ng-devel
@@ -91,7 +95,9 @@ touch --no-create %{_datadir}/icons/hicolor
 %patch2 -p1 -b .fixman
 %patch3 -p1 -b .rhel6
 %patch4 -p1 -b .rhel6.4
+%patch5 -p1 -b .sealert-vV
 %patch6 -p1 -b .get_rpm_nvr_by
+%patch7 -p1 -b .sealert-a
 
 %build
 %configure
@@ -214,16 +220,24 @@ Setroubleshoot documentation package
 %{pkgdocdir}/setroubleshoot*
 
 %changelog
-* Fri Mar 20 2015 Petr Lautrbach <plautrba@redhat.com> 3.0.47-6.1
+* Thu Apr 23 2015 Petr Lautrbach <plautrba@redhat.com> 3.0.47-9.1
+- sealert: view additional information in output of sealert -a and sealert -l
+Resolves:#787139
+
+* Fri Mar 20 2015 Petr Lautrbach <plautrba@redhat.com> 3.0.47-8
 - Fix get_rpm_nvr_*_temporary functions
 Resolves:#1203352
+
+* Sat Feb 28 2015 Petr Lautrbach <plautrba@redhat.com> 3.0.47-7
+- sealert: use action=store_true for -v and -V options
+Resolves:#1098068
 
 * Mon Nov 19 2012 Miroslav Grepl <mgrepl@redhat.com> - 3.0.47-6
 - Update changelog
 Resolves:#788196
 
 * Mon Oct 15 2012 Miroslav Grepl <mgrepl@redhat.com> - 3.0.47-5
-- Remove README and AUTHOR files
+- Remove README and NEWS files
 Resolves:#788196
 
 * Thu Jun 27 2012 Miroslav Grepl <mgrepl@redhat.com> - 3.0.47-4

@@ -1,0 +1,20 @@
+diff --git a/src/sealert b/src/sealert
+index b4cc941..23e1bd7 100755
+--- a/src/sealert
++++ b/src/sealert
+@@ -188,6 +188,7 @@ def command_line_lookup_id(local_id, html=False):
+     def query_alerts_callback(sigs):
+         for siginfo in sigs.signature_list:
+             print siginfo.format_text()
++            print siginfo.format_details()
+         cl.main_loop.quit()
+ 
+     def query_alerts_error(method, errno, strerror):
+@@ -529,6 +530,7 @@ class ScanLogfile:
+         for siginfo in sigs.signature_list:
+             print seperator
+             print siginfo.format_text()
++            print siginfo.format_details()
+ 
+ def do_analyze_logfile(logfile_path):
+     import selinux.audit2why as audit2why

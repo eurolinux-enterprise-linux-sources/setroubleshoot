@@ -1,0 +1,16 @@
+diff --git a/src/sealert b/src/sealert
+index 5904718..b4cc941 100755
+--- a/src/sealert
++++ b/src/sealert
+@@ -582,9 +582,9 @@ if __name__ == '__main__':
+                             help="Lookup alert by id, id may be wildcard * to lookup all alerts")
+         parser.add_option("-a", "--analyze", dest="analyze",  default=False,
+                             help="Scan a log file, analyze it's AVC's", metavar="FILE")
+-        parser.add_option("-v", "--verbose", action="store_false", dest="verbose", default=False,
++        parser.add_option("-v", "--verbose", action="store_true", dest="verbose", default=False,
+                             help="log INFO level and higher messages to console")
+-        parser.add_option("-V", "--debug", action="store_false", dest="debug", default=False,
++        parser.add_option("-V", "--debug", action="store_true", dest="debug", default=False,
+                             help="log DEBUG level and higher messages to console")
+         parser.add_option("-u", "--user",  dest="user", default=False,
+                             help="logon user name")
