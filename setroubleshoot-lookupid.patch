@@ -1,0 +1,17 @@
+diff --git a/src/sealert b/src/sealert
+index edbf8e7..ed13ebd 100755
+--- a/src/sealert
++++ b/src/sealert
+@@ -709,7 +709,11 @@ if __name__ == '__main__':
+                 proxy_obj = bus.get_object(dbus_system_bus_name, dbus_system_object_path)
+                 iface = dbus.Interface(proxy_obj, dbus_system_interface)
+                 iface.start()
+-                command_line_lookup_id(local_id)
++                try:
++                    command_line_lookup_id(local_id)
++                except Exception as e:
++                    iface.finish()
++                    raise e
+                 iface.finish()
+             except ValueError, e:
+                 print >> sys.stderr, e

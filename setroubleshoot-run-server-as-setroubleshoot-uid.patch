@@ -1,0 +1,63 @@
+From 0d0351bee441d0d424f8e85b008ac73d22cddb12 Mon Sep 17 00:00:00 2001
+From: Petr Lautrbach <plautrba@redhat.com>
+Date: Tue, 18 Oct 2016 18:17:11 +0200
+Subject: [PATCH] setroubleshootd: run server with setroubleshoot uid instead
+ of root
+
+---
+ org.fedoraproject.Setroubleshootd.conf    | 4 +++-
+ org.fedoraproject.Setroubleshootd.service | 2 +-
+ src/server.py                             | 4 ++--
+ 3 files changed, 6 insertions(+), 4 deletions(-)
+
+diff --git a/org.fedoraproject.Setroubleshootd.conf b/org.fedoraproject.Setroubleshootd.conf
+index 7a4a283..f25e4c7 100644
+--- a/org.fedoraproject.Setroubleshootd.conf
++++ b/org.fedoraproject.Setroubleshootd.conf
+@@ -4,8 +4,10 @@
+  "-//freedesktop//DTD D-BUS Bus Configuration 1.0//EN"
+  "http://www.freedesktop.org/standards/dbus/1.0/busconfig.dtd">
+ <busconfig>
+-	<policy user="root">
++	<policy user="setroubleshoot">
+ 		<allow own="org.fedoraproject.Setroubleshootd"/>
++	</policy>
++	<policy user="root">
+ 		<allow send_destination="org.fedoraproject.Setroubleshootd"/>
+ 	</policy>
+ 	<policy at_console="true">
+diff --git a/org.fedoraproject.Setroubleshootd.service b/org.fedoraproject.Setroubleshootd.service
+index 8a2d57b..05c2c39 100644
+--- a/org.fedoraproject.Setroubleshootd.service
++++ b/org.fedoraproject.Setroubleshootd.service
+@@ -1,4 +1,4 @@
+ [D-BUS Service]
+ Name=org.fedoraproject.Setroubleshootd
+ Exec=/usr/sbin/setroubleshootd -f 
+-User=root
++User=setroubleshoot
+diff --git a/src/server.py b/src/server.py
+index 02b362c..4b2161a 100755
+--- a/src/server.py
++++ b/src/server.py
+@@ -574,7 +574,7 @@ def RunFaultServer():
+         
+         database_filename = get_config('database','filename')
+         database_filepath = make_database_filepath(database_filename)
+-        assure_file_ownership_permissions(database_filepath, 0600, 'root', 'root')
++        assure_file_ownership_permissions(database_filepath, 0600, 'setroubleshoot')
+         host_database = SETroubleshootDatabase(database_filepath, database_filename,
+                                                friendly_name=_("Audit Listener"))
+         host_database.set_notify(client_notifier)
+@@ -633,7 +633,7 @@ def RunFaultServer():
+         # Initialize the email recipient list
+         from setroubleshoot.signature import SEEmailRecipientSet
+         email_recipients = SEEmailRecipientSet()
+-        assure_file_ownership_permissions(email_recipients_filepath, 0600, 'root', 'root')
++        assure_file_ownership_permissions(email_recipients_filepath, 0600, 'setroubleshoot')
+         try:
+             email_recipients.parse_recipient_file(email_recipients_filepath)
+         except ProgramError, e:
+-- 
+1.8.3.1
+

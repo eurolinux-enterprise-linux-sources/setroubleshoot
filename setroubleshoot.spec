@@ -1,7 +1,7 @@
 Summary: Helps troubleshoot SELinux problems
 Name: setroubleshoot
 Version: 3.0.47
-Release: 12%{?dist}
+Release: 14%{?dist}
 License: GPLv2+
 Group: Applications/System
 URL: https://fedorahosted.org/setroubleshoot
@@ -25,6 +25,10 @@ Patch8: setroubleshoot-set_translation_domain.patch
 Patch9: setroubleshoot-update-POTFILES.patch
 # https://bugzilla.redhat.com/show_bug.cgi?id=1339183
 Patch10: setroubleshoot-commands-getoutput-getstatusoutput.patch
+# https://bugzilla.redhat.com/show_bug.cgi?id=1349435
+Patch11: setroubleshoot-run-server-as-setroubleshoot-uid.patch
+# https://bugzilla.redhat.com/show_bug.cgi?id=1394905
+Patch12: setroubleshoot-lookupid.patch
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
 BuildRequires: perl-XML-Parser
 BuildRequires: libcap-ng-devel
@@ -61,6 +65,7 @@ Requires: xdg-utils
 %define pkgconfigdir  %{_sysconfdir}/%{name}
 %define pkglogdir     %{_localstatedir}/log/%{name}
 %global pkgdatabase   %{pkgvardatadir}/setroubleshoot_database.xml
+%define username      setroubleshoot
 
 %description
 setroubleshoot GUI. Application that allows you to view setroubleshoot-server 
@@ -105,6 +110,8 @@ touch --no-create %{_datadir}/icons/hicolor
 %patch8 -p1 -b .set_translation_domain
 %patch9 -p1 -b .update-POTFILES
 %patch10 -p1 -b .commands_output
+%patch11 -p1 -b .run-as-setroubleshoot
+%patch12 -p1 -b .lookupid
 # update translatins as the last step
 %patch1 -p1 -b .updatetrans
 
@@ -137,6 +144,7 @@ BuildRequires: setools-devel >= 3.3.6-3
 BuildRequires: python-devel
 Requires: python-slip-dbus
 
+Requires(pre):    /usr/sbin/useradd /usr/sbin/groupadd
 Requires(post):   /sbin/chkconfig
 Requires(post):   /sbin/service
 Requires(preun):  /sbin/chkconfig
@@ -148,6 +156,9 @@ are generated an alert can be generated that will give information
 about the problem and help track its resolution. Alerts can be configured
 to user preference. The same tools can be run on existing log files.
 
+%pre server
+getent passwd %{username} >/dev/null || useradd -r -U -s /sbin/nologin -d %{pkgvardatadir} %{username}
+
 %post server
 /sbin/service auditd reload >/dev/null 2>&1 || :
 
@@ -156,9 +167,9 @@ if [ $1 = 0 ]; then
    /sbin/service auditd reload >/dev/null 2>&1 || :
 fi
 
-%triggerun server -- %{name}-server < 2.1.1
-/sbin/service %{name} stop >/dev/null 2>&1 || :
-chkconfig --del %{name}  || :
+%triggerun server -- %{name}-server < 3.2.24
+chown -R setroubleshoot:setroubleshoot %{pkgvardatadir}
+chown -R setroubleshoot:setroubleshoot %{pkglogdir}
 
 %clean 
 rm -rf %{buildroot}
@@ -200,13 +211,13 @@ rm -rf %{buildroot}
 %{pkgdatadir}/SetroubleshootFixit.py*
 %{pkgdatadir}/updater.py*
 %config(noreplace) %{pkgconfigdir}/%{name}.conf
-%dir %{pkglogdir}
+%attr(-,setroubleshoot,setroubleshoot) %dir %{pkglogdir}
 %config(noreplace) %{_sysconfdir}/logrotate.d/%{name}
 %config(noreplace) %{_sysconfdir}/dbus-1/system.d/org.fedoraproject.Setroubleshootd.conf
-%dir %{pkgrundir}
-%dir %{pkgvardatadir}
-%ghost %attr(0600,root,root) %{pkgdatabase}
-%ghost %attr(0644,root,root) %{pkgvardatadir}/email_alert_recipients
+%attr(0711,setroubleshoot,setroubleshoot) %dir %{pkgrundir}
+%attr(0700,setroubleshoot,setroubleshoot) %dir %{pkgvardatadir}
+%ghost %attr(0600,setroubleshoot,setroubleshoot) %{pkgdatabase}
+%ghost %attr(0644,setroubleshoot,setroubleshoot) %{pkgvardatadir}/email_alert_recipients
 %{_mandir}/man8/sealert.8.gz
 %{_mandir}/man8/sedispatch.8.gz
 %{_mandir}/man8/setroubleshootd.8.gz
@@ -229,6 +240,14 @@ Setroubleshoot documentation package
 %{pkgdocdir}/setroubleshoot*
 
 %changelog
+* Fri Nov 25 2016 Petr Lautrbach <plautrba@redhat.com> - 3.0.47-14
+- sealert: call finish() after command_line_lookup_id()
+Resolves: rhbz#1394905
+
+* Tue Oct 25 2016 Petr Lautrbach <plautrba@redhat.com> - 3.0.47-13.1
+- setroubleshootd is set to be run as setroubleshoot user instead of root user
+Resolves: rhbz#1349435
+
 * Thu May 26 2016 Petr Lautrbach <plautrba@redhat.com> - 3.0.47-12
 - Don't use command.get*output()
 Resolves: CVE-2016-4445
