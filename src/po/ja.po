@@ -18,11 +18,11 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-10-31 20:57+0100\n"
+"POT-Creation-Date: 2017-11-20 17:15+0100\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"PO-Revision-Date: 2017-09-01 08:30-0400\n"
+"PO-Revision-Date: 2017-12-04 09:26-0500\n"
 "Last-Translator: Copied by Zanata <copied-by-zanata@zanata.org>\n"
 "Language-Team: Japanese (http://www.transifex.com/projects/p/fedora/language/"
 "ja/)\n"
@@ -129,7 +129,7 @@ msgstr "試行したアクセス:"
 
 #: ../src/setroubleshoot/browser.py:213 ../gui/browser.glade.h:12
 msgid "SETroubleshoot Details Window"
-msgstr "SETroubleshootの詳細のウィンドウ"
+msgstr "SETroubleshoot の詳細のウィンドウ"
 
 #: ../src/setroubleshoot/browser.py:216 ../gui/browser.glade.h:16
 msgid "Would you like to receive alerts?"
@@ -327,7 +327,7 @@ msgstr "認証は失敗しました"
 
 #: ../src/setroubleshoot/errcode.py:98
 msgid "user prohibited"
-msgstr "ユーザーは禁止されています。"
+msgstr "ユーザーは禁止されています"
 
 #: ../src/setroubleshoot/errcode.py:99
 msgid "not authenticated"
@@ -351,16 +351,17 @@ msgid ""
 "If you want to allow $SOURCE_BASE_PATH to have $ACCESS access on the "
 "$TARGET_BASE_PATH $TARGET_CLASS"
 msgstr ""
+"$TARGET_BASE_PATH $TARGET_CLASS で、$SOURCE_BASE_PATH が $ACCESS アクセスするのを許可する場合"
 
 #: ../src/setroubleshoot/server.py:214
 #, python-format
 msgid " For complete SELinux messages run: sealert -l %s"
-msgstr ""
+msgstr "完全な SELinux メッセージを見るには、sealert -l %s を実行します"
 
 #: ../src/setroubleshoot/server.py:401
 #, python-format
 msgid "The user (%s) cannot modify data for (%s)"
-msgstr "ユーザー(%s) は (%s) 用のデータを修正できません。"
+msgstr "ユーザー(%s) は (%s) 用のデータを修正できません"
 
 #: ../src/setroubleshoot/server.py:465 ../src/sealert:299
 msgid "Started"
@@ -388,7 +389,7 @@ msgstr "最初の通知以後は無視"
 
 #: ../src/setroubleshoot/signature.py:199
 msgid "directory"
-msgstr "ディレクトリ"
+msgstr "ディレクトリー"
 
 #: ../src/setroubleshoot/signature.py:200
 msgid "semaphore"
@@ -420,7 +421,7 @@ msgstr "プロセス"
 
 #: ../src/setroubleshoot/signature.py:207
 msgid "process2"
-msgstr ""
+msgstr "process2"
 
 #: ../src/setroubleshoot/signature.py:208
 msgid "filesystem"
@@ -432,60 +433,60 @@ msgstr "ノード"
 
 #: ../src/setroubleshoot/signature.py:210
 msgid "capability"
-msgstr "能力"
+msgstr "機能"
 
 #: ../src/setroubleshoot/signature.py:211
 msgid "capability2"
-msgstr ""
+msgstr "capability2"
 
 #: ../src/setroubleshoot/signature.py:388
 #, python-format
 msgid "%s has a permissive type (%s). This access was not denied."
-msgstr "%s は許容タイプ (%s) を持ちます。このアクセスは拒否されませんでした。"
+msgstr "%s には許容タイプ (%s) があります。このアクセスは拒否されませんでした。"
 
 #: ../src/setroubleshoot/signature.py:391
 msgid "SELinux is in permissive mode. This access was not denied."
-msgstr "SELinuxはpermissiveモードです。このアクセスは拒否されませんでした。"
+msgstr "SELinux は permissive モードです。このアクセスは拒否されませんでした。"
 
 #: ../src/setroubleshoot/signature.py:445
 #, python-format
 msgid "SELinux is preventing %s from using the %s access on a process."
-msgstr "SELinux により %s がプロセスにおいて %s アクセスを使用できません"
+msgstr "SELinux により、%s がプロセスにおいて %s アクセスを使用できません。"
 
 #: ../src/setroubleshoot/signature.py:445
 #, python-format
 msgid "SELinux is preventing %s from using the '%s' accesses on a process."
-msgstr "SELinux により %s がプロセスにおいて '%s' アクセスを使用できません"
+msgstr "SELinux により、%s がプロセスにおいて '%s' アクセスを使用できません。"
 
 #: ../src/setroubleshoot/signature.py:448
 #, python-format
 msgid "SELinux is preventing %s from using the %s capability."
-msgstr "SELinux により %s が %s 能力を使用できません"
+msgstr "SELinux により、%s が %s 能力を使用できません。"
 
 #: ../src/setroubleshoot/signature.py:448
 #, python-format
 msgid "SELinux is preventing %s from using the '%s' capabilities."
-msgstr "SELinux により %s が '%s' 能力を使用できません"
+msgstr "SELinux により、%s が '%s' 能力を使用できません。"
 
 #: ../src/setroubleshoot/signature.py:450
 #, python-format
 msgid "SELinux is preventing %s from %s access on the %s labeled %s."
-msgstr "SELinux で %s による %s アクセスが %s ラベルの付いた %s では行えない設定になっています。"
+msgstr "SELinux により、%s による %s アクセスが、%s ラベルの付いた %s で拒否されました。"
 
 #: ../src/setroubleshoot/signature.py:450
 #, python-format
 msgid "SELinux is preventing %s from '%s' accesses on the %s labeled %s."
-msgstr "SELinux により %s が '%s' アクセスを %s のラベルがついた %s で拒否されました。"
+msgstr "SELinux により、%s による '%s' アクセスが、%s のラベルが付いた %s で拒否されました。"
 
 #: ../src/setroubleshoot/signature.py:451
 #, python-format
 msgid "SELinux is preventing %s from %s access on the %s %s."
-msgstr "SELinux により %s が %s アクセスを %s %s においてできません"
+msgstr "SELinux により、%s による %s アクセスが、%s %s で拒否されました。"
 
 #: ../src/setroubleshoot/signature.py:451
 #, python-format
 msgid "SELinux is preventing %s from '%s' accesses on the %s %s."
-msgstr "SELinux により %s が '%s' アクセスを %s %s においてできません"
+msgstr "SELinux により、%s による '%s' アクセスが、%s %s で拒否されました。"
 
 #: ../src/setroubleshoot/signature.py:483
 msgid "Additional Information:\n"
@@ -652,12 +653,12 @@ msgstr "修正不可です。"
 #: ../src/sealert:163
 #, c-format
 msgid "Successfully ran %s"
-msgstr "%s を正常に実行しました。"
+msgstr "%s を正常に実行しました"
 
 #: ../src/sealert:170
 #, c-format
 msgid "Plugin %s not valid for %s id"
-msgstr "プラグイン %s は %s id には認められていません。"
+msgstr "プラグイン %s は %s id には認められていません"
 
 #: ../src/setroubleshootd:73
 msgid "SELinux not enabled, setroubleshootd exiting..."
@@ -684,19 +685,19 @@ msgstr ""
 
 #: ../gui/browser.glade.h:9
 msgid "Troubleshoot selected alert"
-msgstr "SETroubleshootが選択した警告"
+msgstr "SETroubleshoot が選択した警告"
 
 #: ../gui/browser.glade.h:10
 msgid "Delete"
-msgstr ""
+msgstr "削除"
 
 #: ../gui/browser.glade.h:11
 msgid "Delete Selected Alerts"
-msgstr "選択されたアラートを削除"
+msgstr "選択したアラートを削除"
 
 #: ../gui/browser.glade.h:13
 msgid "Close"
-msgstr ""
+msgstr "閉じる"
 
 #: ../gui/browser.glade.h:15
 msgid "<b>SELinux has detected a problem.</b>"
@@ -722,11 +723,11 @@ msgstr "label"
 msgid ""
 "Read alert troubleshoot information.  May require administrative privileges "
 "to remedy."
-msgstr "トラブルシューティングに関する情報をお読みください。多くの場合、トラブルを解決するには、root権限が必要です。"
+msgstr "トラブルシューティングに関する情報をお読みください。多くの場合、トラブルを解決するには、root 権限が必要です。"
 
 #: ../gui/browser.glade.h:27
 msgid "Email alert to system administrator."
-msgstr "Eメールでシステム管理者に通知"
+msgstr "E メールでシステム管理者に通知"
 
 #: ../gui/browser.glade.h:31
 msgid "Delete current alert from the database."
@@ -734,7 +735,7 @@ msgstr "現在の通知をデータベースから削除"
 
 #: ../gui/browser.glade.h:32
 msgid "Previous"
-msgstr ""
+msgstr "前へ"
 
 #: ../gui/browser.glade.h:33
 msgid "Show previous alert."
@@ -742,7 +743,7 @@ msgstr "前の通知を表示"
 
 #: ../gui/browser.glade.h:35
 msgid "Next"
-msgstr ""
+msgstr "次へ"
 
 #: ../gui/browser.glade.h:36
 msgid "Show next alert."
@@ -764,7 +765,7 @@ msgstr "<span size='large' weight='bold'>確認とバグ報告の提出</span>"
 msgid ""
 "You may wish to review the error output that will be included in this bug "
 "report and modify it to exclude any sensitive data below."
-msgstr "このバグ報告に含まれるエラー出力を確認して、以下のような機密情報を排除するために それを修正すると良いでしょう。"
+msgstr "このバグ報告に含まれるエラー出力を確認して、以下のような機密情報を排除するためにそれを修正すると良いでしょう。"
 
 #: ../gui/bug_report.glade.h:4
 msgid "Included error output:"

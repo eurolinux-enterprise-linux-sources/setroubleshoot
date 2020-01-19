@@ -1,0 +1,38 @@
+From dab1592e4f77f0782641c9409f7d64d2dd57481a Mon Sep 17 00:00:00 2001
+From: Vit Mojzis <vmojzis@redhat.com>
+Date: Mon, 6 Aug 2018 15:21:25 +0200
+Subject: [PATCH 2/3] framework: Fix AVC.__typeMatch to handle aliases properly
+
+Resolves: rhbz#1459844, rhbz#1459835, rhbz#1459875
+---
+ framework/src/setroubleshoot/audit_data.py | 13 +++++++++++--
+ 1 file changed, 11 insertions(+), 2 deletions(-)
+
+diff --git a/framework/src/setroubleshoot/audit_data.py b/framework/src/setroubleshoot/audit_data.py
+index a48422c..a27e33b 100644
+--- a/framework/src/setroubleshoot/audit_data.py
++++ b/framework/src/setroubleshoot/audit_data.py
+@@ -701,9 +701,18 @@ class AVC:
+ 
+ 
+     def __typeMatch(self, context, type_list):
++        # get array of context type and it's aliases
++        try:
++            _info = info(TYPE, context.type)[0]
++            ctypes = _info.get('aliases', [])
++            ctypes.append(_info['name'])
++        except RuntimeError, IndexError:
++            ctypes = [context.type]
++
+         for type in type_list:
+-            if re.match(type, context.type):
+-                return True
++            for t in ctypes:
++                if re.match(type, t):
++                    return True
+         return False
+ 
+     def matches_source_types(self, type_list):
+-- 
+2.14.3
+

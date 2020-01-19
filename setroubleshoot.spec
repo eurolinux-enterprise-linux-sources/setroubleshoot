@@ -1,6 +1,6 @@
 Summary: Helps troubleshoot SELinux problems
 Name: setroubleshoot
-Version: 3.2.29
+Version: 3.2.30
 Release: 3%{?dist}
 License: GPLv2+
 Group: Applications/System
@@ -11,11 +11,11 @@ Source1: %{name}.tmpfiles
 # $ cd setroubleshoot
 # $ git format-patch setroubleshoot-%{version}...origin/stable -- framework
 # $ declare -i p=1; for i in 00*.patch; do echo Patch$p: $i; p=p+1; done
-Patch1: 0001-framework-setroubleshoot-Do-not-change-if_string-0-t.patch
-Patch2: 0002-Update-translations.patch
-Patch3: 0003-framework-Update-Japanese-translations.patch
 # https://bugzilla.redhat.com/show_bug.cgi?id=1449665
 # Patch100: setroubleshoot-po.patch
+Patch1: 0001-Update-translations.patch
+Patch2: 0002-framework-Fix-AVC.__typeMatch-to-handle-aliases-prop.patch
+Patch3: 0003-framework-fix-allowed_target_types.patch
 BuildRequires: perl-XML-Parser
 BuildRequires: libcap-ng-devel
 BuildRequires: intltool gettext python
@@ -126,7 +126,8 @@ about the problem and help track its resolution. Alerts can be configured
 to user preference. The same tools can be run on existing log files.
 
 %pre server
-getent passwd %{username} >/dev/null || useradd -r -U -s /sbin/nologin -d %{pkgvardatadir} %{username}
+getent group %{username} >/dev/null || groupadd -r %{username}
+getent passwd %{username} >/dev/null || useradd -r -g %{username} -s /sbin/nologin -d %{pkgvardatadir} %{username}
 
 %post server
 %systemd_post auditd.service
@@ -189,6 +190,19 @@ rm -rf %{buildroot}
 %doc AUTHORS COPYING ChangeLog DBUS.md NEWS README TODO
 
 %changelog
+* Tue Jul 31 2018 Vit Mojzis <vmojzis@redhat.com> - 3.2.30-3
+- Check for the existence of setroubleshoot group separately (#1478118)
+- Fix AVC.__typeMatch to handle aliases properly (#1459844, #1459835, #1459875)
+- Fix allowed_target_types (#1460642, #1460648)
+
+* Mon Jul 30 2018 Vit Mojzis <vmojzis@redhat.com> - 3.2.30-2
+- Update translations (#1569462)
+
+* Tue May 15 2018 Vit Mojzis <vmojzis@redhat.com> - 3.2.30-1
+- Fix summary and "if" text for AVCs with unknown target path (#1437772)
+- Remove unused booleans.py file
+- src/sealert: Finish dbus communication after error (#1461486)
+
 * Mon Dec 04 2017 Vit Mojzis <vmojzis@redhat.com> - 3.2.29-3
 - Update Japanese translations (#1481227)
 
