@@ -1,7 +1,7 @@
 From dab1592e4f77f0782641c9409f7d64d2dd57481a Mon Sep 17 00:00:00 2001
 From: Vit Mojzis <vmojzis@redhat.com>
 Date: Mon, 6 Aug 2018 15:21:25 +0200
-Subject: [PATCH 2/3] framework: Fix AVC.__typeMatch to handle aliases properly
+Subject: [PATCH 2/7] framework: Fix AVC.__typeMatch to handle aliases properly
 
 Resolves: rhbz#1459844, rhbz#1459835, rhbz#1459875
 ---
@@ -34,5 +34,5 @@ index a48422c..a27e33b 100644
  
      def matches_source_types(self, type_list):
 -- 
-2.14.3
+2.17.2
 

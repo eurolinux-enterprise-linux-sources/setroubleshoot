@@ -1,7 +1,7 @@
 From c8c7acfda523138e6a139e8a3d659317843db387 Mon Sep 17 00:00:00 2001
 From: Vit Mojzis <vmojzis@redhat.com>
 Date: Mon, 6 Aug 2018 15:33:25 +0200
-Subject: [PATCH 3/3] framework: fix allowed_target_types
+Subject: [PATCH 3/7] framework: fix allowed_target_types
 
 search() returns None when no rule is found. This causes exception when
 trying to use the result of search() as an array.
@@ -28,5 +28,5 @@ index a27e33b..8b65915 100644
          for t in types:
              if t in all_attributes:
 -- 
-2.14.3
+2.17.2
 

@@ -1,0 +1,64 @@
+From 6579915bac134b4076811ca990fc84603a3ce93b Mon Sep 17 00:00:00 2001
+From: Vit Mojzis <vmojzis@redhat.com>
+Date: Fri, 4 Jan 2019 11:20:37 +0100
+Subject: [PATCH 6/7] framework: Add active polling for acquiring policy file
+
+setroubleshoot server crashes when the policy file is used by other
+process. Include 10s active polling for the policy file.
+
+Failure to open /sys/fs/selinux/policy by sepolicy results in ValueError
+"unable to open /sys/fs/selinux/policy: Device or resource busy".
+
+Resolves: rhbz#1583241
+---
+ framework/src/setroubleshoot/server.py | 25 +++++++++++++++++++++++--
+ 1 file changed, 23 insertions(+), 2 deletions(-)
+
+diff --git a/framework/src/setroubleshoot/server.py b/framework/src/setroubleshoot/server.py
+index e320ae2..9a784de 100755
+--- a/framework/src/setroubleshoot/server.py
++++ b/framework/src/setroubleshoot/server.py
+@@ -116,6 +116,12 @@ def sighandler(signum, frame):
+     import sys    
+     sys.exit()
+ 
++def polling_failled_handler(signum, frame):
++    log_debug("received signal=%s" % signum)
++    syslog.syslog(syslog.LOG_ERR, "/sys/fs/selinux/policy is in use by another process. Exiting!")
++    sys.exit(1)
++
++
+ def make_instance_id():
+     import time
+     hostname = get_hostname()
+@@ -698,10 +704,25 @@ def goodbye(database):
+     audit2why.finish()
+ 
+ def RunFaultServer(timeout=10):
+-    # FIXME
+-    audit2why.init()
++    signal.alarm(timeout)
++    sigalrm_handler = signal.signal(signal.SIGALRM, polling_failled_handler)
++    # polling for /sys/fs/selinux/policy file
++    while True:
++        try:
++            audit2why.init()
++            signal.alarm(0)
++            break
++        # retry if init() failed to open /sys/fs/selinux/policy
++        except ValueError as e:
++            # The value error contains the following error message,
++            # followed by strerror string (which can differ with localization)
++            if "unable to open /sys/fs/selinux/policy" in str(e):
++                continue
++            raise e
++
+     global host_database, analysis_queue, email_recipients
+ 
++    signal.signal(signal.SIGALRM, sigalrm_handler)
+     signal.signal(signal.SIGHUP, sighandler)
+     signal.signal(signal.SIGQUIT, sighandler)
+     signal.signal(signal.SIGTERM, sighandler)
+-- 
+2.17.2
+

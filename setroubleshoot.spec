@@ -1,7 +1,7 @@
 Summary: Helps troubleshoot SELinux problems
 Name: setroubleshoot
 Version: 3.2.30
-Release: 3%{?dist}
+Release: 7%{?dist}
 License: GPLv2+
 Group: Applications/System
 URL: https://pagure.io/setroubleshoot
@@ -16,6 +16,10 @@ Source1: %{name}.tmpfiles
 Patch1: 0001-Update-translations.patch
 Patch2: 0002-framework-Fix-AVC.__typeMatch-to-handle-aliases-prop.patch
 Patch3: 0003-framework-fix-allowed_target_types.patch
+Patch4: 0004-framework-catch-exceptions-caused-by-lookup_signatur.patch 
+Patch5: 0005-framework-Fix-translation-of-hex-values-in-AVCs.patch
+Patch6: 0006-framework-Add-active-polling-for-acquiring-policy-fi.patch
+Patch7: 0007-Update-translations.patch
 BuildRequires: perl-XML-Parser
 BuildRequires: libcap-ng-devel
 BuildRequires: intltool gettext python
@@ -63,15 +67,12 @@ to user preference. The same tools can be run on existing log files.
 
 %post
 touch --no-create %{_datadir}/icons/hicolor || :
-dbus-send --system /com/redhat/setroubleshootd com.redhat.SEtroubleshootdIface.restart string:'rpm install' >/dev/null 2>&1 || :
-%systemd_post auditd.service
 
 %postun
 if [ $1 -eq 0 ] ; then
 touch --no-create %{_datadir}/icons/hicolor || :
 %{_bindir}/gtk-update-icon-cache --quiet %{_datadir}/icons/hicolor || :
 fi
-%systemd_postun_with_restart auditd.service
 
 %posttrans
 %{_bindir}/gtk-update-icon-cache --quiet %{_datadir}/icons/hicolor || :
@@ -130,10 +131,10 @@ getent group %{username} >/dev/null || groupadd -r %{username}
 getent passwd %{username} >/dev/null || useradd -r -g %{username} -s /sbin/nologin -d %{pkgvardatadir} %{username}
 
 %post server
-%systemd_post auditd.service
+/sbin/service auditd reload >/dev/null 2>&1 || :
 
 %postun server
-%systemd_postun_with_restart auditd.service
+/sbin/service auditd reload >/dev/null 2>&1 || :
 
 %triggerun server -- %{name}-server < 3.2.24
 chown -R setroubleshoot:setroubleshoot %{pkgvardatadir}
@@ -190,6 +191,19 @@ rm -rf %{buildroot}
 %doc AUTHORS COPYING ChangeLog DBUS.md NEWS README TODO
 
 %changelog
+* Tue Jun 11 2019 Vit Mojzis <vmojzis@redhat.com> - 3.2.30-7
+- Update translations (#1688268)
+
+* Mon Mar 11 2019 Vit Mojzis <vmojzis@redhat.com> - 3.2.30-6
+- Add active polling for acquiring policy file (#1583241)
+
+* Thu Mar 07 2019 Vit Mojzis <vmojzis@redhat.com> - 3.2.30-5
+- Update scriptlets to reload auditd service (#1383955)
+
+* Tue Feb 26 2019 Vit Mojzis <vmojzis@redhat.com> - 3.2.30-4
+- Catch exceptions caused by lookup_signature (#1636369, #1627908)
+- Fix translation of hex values in AVCs (#1477236)
+
 * Tue Jul 31 2018 Vit Mojzis <vmojzis@redhat.com> - 3.2.30-3
 - Check for the existence of setroubleshoot group separately (#1478118)
 - Fix AVC.__typeMatch to handle aliases properly (#1459844, #1459835, #1459875)
