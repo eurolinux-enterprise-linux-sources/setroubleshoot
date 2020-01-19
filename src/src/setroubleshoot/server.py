@@ -48,14 +48,17 @@ import systemd.journal
 from setroubleshoot.config import parse_config_setting, get_config
 
 domain = get_config('general', 'i18n_text_domain')
+localedir = get_config('general', 'i18n_locale_dir')
 kwargs = {}
 if sys.version_info < (3,):
     kwargs['unicode'] = True
 gettext.install(domain    = domain,
-                localedir = get_config('general', 'i18n_locale_dir'),
+                localedir = localedir,
                 **kwargs)
 
-translation=gettext.translation(domain, fallback=True)
+translation=gettext.translation(domain    = domain,
+                                localedir = localedir,
+                                fallback  = True)
 
 try:
     _ = translation.ugettext # This raises exception in Python3, succ. in Py2
@@ -575,7 +578,7 @@ Return an alert with summary, audit events, fix suggestions
         plugins = []
         for plugin, args in alert_plugins:
             plugins.append((
-                _("If ") + alert.substitute(plugin.get_if_text(avc, args)),
+                alert.substitute(plugin.get_if_text(avc, args)),
                 alert.substitute(plugin.get_then_text(avc, args)),
                 alert.substitute(plugin.get_do_text(avc, args)),
                 plugin.analysis_id,

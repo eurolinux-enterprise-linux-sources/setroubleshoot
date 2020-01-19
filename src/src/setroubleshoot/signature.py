@@ -22,8 +22,16 @@ import syslog
 from subprocess import *
 import setroubleshoot.default_encoding_utf8
 import gettext
-translation=gettext.translation('setroubleshoot-plugins', fallback=True)
-_=translation.ugettext
+from setroubleshoot.config import parse_config_setting, get_config
+
+translation=gettext.translation(domain    = get_config('general', 'i18n_text_domain'),
+                                localedir = get_config('general', 'i18n_locale_dir'),
+                                fallback  = True)
+
+try:
+    _ = translation.ugettext # Unicode version of gettext for Py2
+except AttributeError:
+    _ = translation.gettext # Python3 (uses unicode by default)
 
 __all__ = [
            'SignatureMatch',
@@ -47,10 +55,8 @@ __all__ = [
            ]
 
 if __name__ == "__main__":
-    import gettext
-    from setroubleshoot.config import parse_config_setting, get_config
     gettext.install(domain    = get_config('general', 'i18n_text_domain'),
-		    localedir = get_config('general', 'i18n_locale_dir'))
+                    localedir = get_config('general', 'i18n_locale_dir'))
 
 from gettext import ngettext as P_
 from setroubleshoot.config import get_config
@@ -198,6 +204,7 @@ class_dict['msg']     = _("message")
 class_dict['file']    = _("file")
 class_dict['socket']  = _("socket")
 class_dict['process'] = _("process")
+class_dict['process2'] = _("process2")
 class_dict['filesystem'] = _("filesystem")
 class_dict['node'] = _("node")
 class_dict['capability'] = _("capability")
@@ -434,7 +441,7 @@ class SEFaultSignatureInfo(XmlSerialize):
         return cmp(y[0].priority,x[0].priority)
 
     def summary(self):
-        if self.tclass == "process":
+        if self.tclass in ["process", "process2"]:
             return P_(_("SELinux is preventing %s from using the %s access on a process."), _("SELinux is preventing %s from using the '%s' accesses on a process."), len(self.sig.access)) % (self.spath, ", ".join(self.sig.access))
 
         if self.tclass in ["capability", "capability2"]:
@@ -456,6 +463,7 @@ class SEFaultSignatureInfo(XmlSerialize):
                 for p  in self.plugins:
                     if solution.analysis_id == p.analysis_id:
                         total_priority += p.priority
+                        p.init_args(tuple(solution.args))
                         plugins.append((p, tuple(solution.args)))
                         break
 
@@ -566,7 +574,7 @@ class SEFaultSignatureInfo(XmlSerialize):
                 text +=  _("*")
             text +=  _("\n")
             txt = self.substitute(p.get_if_text(self.audit_event.records, args)).decode('utf-8')
-            text +=  _("\nIf ") + txt[0].lower() + txt[1:]
+            text +=  _("\n") + txt[0].lower() + txt[1:]
             txt = self.substitute(p.get_then_text(self.audit_event.records, args)).decode('utf-8')
             text +=  _("\nThen ") + txt[0].lower() + txt[1:]
 

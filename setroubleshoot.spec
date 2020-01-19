@@ -1,6 +1,6 @@
 Summary: Helps troubleshoot SELinux problems
 Name: setroubleshoot
-Version: 3.2.28
+Version: 3.2.29
 Release: 3%{?dist}
 License: GPLv2+
 Group: Applications/System
@@ -11,9 +11,11 @@ Source1: %{name}.tmpfiles
 # $ cd setroubleshoot
 # $ git format-patch setroubleshoot-%{version}...origin/stable -- framework
 # $ declare -i p=1; for i in 00*.patch; do echo Patch$p: $i; p=p+1; done
-Patch1: 0001-framework-improve-obtaining-AVC-object-path.patch
+Patch1: 0001-framework-setroubleshoot-Do-not-change-if_string-0-t.patch
+Patch2: 0002-Update-translations.patch
+Patch3: 0003-framework-Update-Japanese-translations.patch
 # https://bugzilla.redhat.com/show_bug.cgi?id=1449665
-Patch100: setroubleshoot-po.patch
+# Patch100: setroubleshoot-po.patch
 BuildRequires: perl-XML-Parser
 BuildRequires: libcap-ng-devel
 BuildRequires: intltool gettext python
@@ -187,6 +189,26 @@ rm -rf %{buildroot}
 %doc AUTHORS COPYING ChangeLog DBUS.md NEWS README TODO
 
 %changelog
+* Mon Dec 04 2017 Vit Mojzis <vmojzis@redhat.com> - 3.2.29-3
+- Update Japanese translations (#1481227)
+
+* Mon Nov 20 2017 Vit Mojzis <vmojzis@redhat.com> - 3.2.29-2
+- Do not change if_string[0] to lowercase
+- Update translations (#1481227)
+
+* Wed Nov 01 2017 Vit Mojzis <vmojzis@redhat.com> - 3.2.29-1
+- Fix sealert message for process2 (#1507909)
+- Remove additional "If " string from plugin messages (#1177347)
+- Fix semi-translated messages (#1332126)
+- Make labels on GtkButtons translatable
+- Set translation domain for Gtk.Builder() object to have strings correctly translated (#1370100)
+- Do not split If sentences to framework and plugins (#1177347)
+- Don't stop when the plugin directory is empty
+- Change "check_for_man" return value upon failure
+- Fix "plugin details" message content
+- Add "init_args" function to Plugin 
+- Fix sealert crash when setroubleshootd fails to start (#1405003) 
+
 * Thu May 25 2017 Petr Lautrbach <plautrba@redhat.com> - 3.2.28-3
 - Update translations.
 

@@ -22,14 +22,26 @@ import gettext
 from math import pi
 from subprocess import *
 from gettext import ngettext as P_
+import sys, os
 from setroubleshoot.config import parse_config_setting, get_config
 domain = get_config('general', 'i18n_text_domain')
+localedir = get_config('general', 'i18n_locale_dir')
+
+kwargs = {}
+if sys.version_info < (3,):
+    kwargs['unicode'] = True
 gettext.install(domain    = domain,
-                unicode = True,
-                localedir = get_config('general', 'i18n_locale_dir'))
-translation=gettext.translation(domain, fallback=True)
-_=translation.ugettext
-import sys, os
+                localedir = localedir,
+                **kwargs)
+
+translation=gettext.translation(domain    = domain,
+                                localedir = localedir,
+                                fallback  = True)
+try:
+    _ = translation.ugettext # This raises exception in Python3, succ. in Py2
+except AttributeError:
+    _ = translation.gettext # Python3
+
 from xml.dom import minidom
 from xmlrpclib  import ProtocolError
 import gtk, glib
@@ -159,7 +171,7 @@ class BrowserApplet:
 
         self.read_config()
         builder = gtk.Builder()
-#        builder.set_translation_domain("setroubleshoot")
+        builder.set_translation_domain(domain)
         builder.add_from_file("/usr/share/setroubleshoot/gui/browser.glade") 
         self.plugins = load_plugins()
 
@@ -410,7 +422,7 @@ class BrowserApplet:
 
     def add_row(self, plugin, alert, args):
         avc = alert.audit_event.records
-        if_text = _("If ") + alert.substitute(plugin.get_if_text(avc, args))
+        if_text = alert.substitute(plugin.get_if_text(avc, args))
         then_text = alert.substitute(plugin.get_then_text(avc, args))
         then_text += "\n" + alert.substitute(plugin.get_do_text(avc, args))
 
@@ -545,8 +557,8 @@ class BrowserApplet:
            msg = ""
            for i in plugin.get_problem_description(avc, args).split("\n"):
                msg += alert.substitute(i.strip()) + "\n"
-           message += html_to_text(msg)
-           message += alert.substitute(_("If ") + plugin.get_if_text(avc, args)) + "\n"
+           message += html_to_text(msg) + "\n\n"
+           message += alert.substitute(plugin.get_if_text(avc, args)) + "\n"
            message += alert.substitute(plugin.get_then_text(avc, args)) + "\n"
            message += alert.substitute(plugin.get_do_text(avc, args)) + "\n"
 #           message += alert.substitute(alert.format_details()) + "\n"

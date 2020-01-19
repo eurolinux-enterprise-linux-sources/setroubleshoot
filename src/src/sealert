@@ -41,9 +41,12 @@ import slip.dbus.service
 
 from setroubleshoot.config import parse_config_setting, get_config
 domain = get_config('general', 'i18n_text_domain')
+kwargs = {}
+if sys.version_info < (3,):
+    kwargs['unicode'] = True
 gettext.install(domain    = domain,
-                unicode = True,
-                localedir = get_config('general', 'i18n_locale_dir'))
+                localedir = get_config('general', 'i18n_locale_dir'),
+                **kwargs)
 
 syslog.openlog(sys.argv[0])
 from setroubleshoot.errcode import *
@@ -673,6 +676,10 @@ if __name__ == '__main__':
                 iface.finish()
             except ValueError, e:
                 print >> sys.stderr, e
+                sys.exit(3)
+            except dbus.exceptions.DBusException as e:
+                print("Unable to establish connection to setroubleshoot daemon!\n" +
+                      "Check output of 'journalctl -t setroubleshoot' for more details.")
                 sys.exit(3)
 
             sys.exit()

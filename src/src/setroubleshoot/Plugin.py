@@ -20,8 +20,17 @@
 #
 
 import gettext
-translation=gettext.translation('setroubleshoot-plugins', fallback=True)
-_=translation.ugettext
+from setroubleshoot.config import parse_config_setting, get_config
+
+translation=gettext.translation(domain    = get_config('general', 'i18n_text_domain'),
+                                localedir = get_config('general', 'i18n_locale_dir'),
+                                fallback  = True)
+
+try:
+    _ = translation.ugettext # Unicode version of gettext for Py2
+except AttributeError:
+    _ = translation.gettext # Python3 (uses unicode by default)
+
 from setroubleshoot.signature import *
 from setroubleshoot.util import *
 
@@ -78,7 +87,7 @@ o
         """
     summary = ""
     problem_description = ""
-    if_text = _('you want to allow $SOURCE_BASE_PATH to have $ACCESS access on the $TARGET_BASE_PATH $TARGET_CLASS')
+    if_text = _('If you want to allow $SOURCE_BASE_PATH to have $ACCESS access on the $TARGET_BASE_PATH $TARGET_CLASS')
     then_text = "No default"
     do_text = "No default"
         
@@ -89,9 +98,12 @@ o
         self.fixable = False
         self.button_text = ""
         self.report_bug = False
+
+    def init_args(self, args):
+        pass
         
     def get_problem_description(self, avc, args):
-        return self.if_text
+        return self.problem_description
 
     def get_if_text(self, avc, args):
         return self.if_text
@@ -128,4 +140,4 @@ o
         man_page = name.split("_")[0] + "_selinux"
         if os.path.isfile("/usr/share/man/man8/%s.8.gz" % man_page):
             return man_page
-        return None
+        return ""
