@@ -1,0 +1,833 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# 
+# Translators:
+# Dimitris Glezos <glezos@indifex.com>, 2011
+# Rahul Bhalerao <b.rahul.pm@gmail.com>, 2006
+# Sandeep Shedmake <sandeep.shedmake@gmail.com>, 2008-2009
+# sandeeps <sshedmak@redhat.com>, 2008, 2009, 2012
+# sandeeps <sshedmak@redhat.com>, 2008-2009,2011-2013
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-01-15 16:27+0100\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2013-11-20 06:29-0500\n"
+"Last-Translator: dwalsh <dwalsh@redhat.com>\n"
+"Language-Team: Marathi (http://www.transifex.com/projects/p/fedora/language/"
+"mr/)\n"
+"Language: mr\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Zanata 3.8.3\n"
+
+#: ../setroubleshoot.desktop.in.h:1
+msgid "SELinux Troubleshooter"
+msgstr "SELinux त्रुटीनिवारक"
+
+#: ../setroubleshoot.desktop.in.h:2
+msgid "Troubleshoot SELinux access denials"
+msgstr "SELinux प्रवेश नकाराचे त्रुटी निर्धारण करा"
+
+#: ../setroubleshoot.desktop.in.h:3
+msgid "policy;security;selinux;avc;permission;mac;alert;sealert;"
+msgstr "धोरण;सुरक्षा;selinux;avc;परवानगी;mac;सतर्कता;sealert;"
+
+#: ../src/setroubleshoot/audit_data.py:903
+#, python-format
+msgid "port %s"
+msgstr "%s पोर्ट करा"
+
+#: ../src/setroubleshoot/audit_data.py:905
+#: ../src/setroubleshoot/browser.py:747 ../src/setroubleshoot/browser.py:822
+#: ../src/setroubleshoot/rpc.py:528 ../src/setroubleshoot/util.py:229
+msgid "Unknown"
+msgstr "अपरिचित"
+
+#: ../src/setroubleshoot/audit_data.py:995
+#, python-format
+msgid "%s \n"
+"**** Invalid AVC allowed in current policy ***\n"
+msgstr "%s \n"
+"**** सध्याच्या धोरणामध्ये अवैध AVC स्वीकारले ***\n"
+
+#: ../src/setroubleshoot/audit_data.py:997
+#, python-format
+msgid ""
+"%s \n"
+"**** Invalid AVC dontaudited in current policy.  'semodule -B' will turn on "
+"dontaudit rules. ***\n"
+msgstr ""
+"%s \n"
+"**** सध्याच्या धोरणात अवैध AVC dontaudited आढळले.  'semodule -B' dontaudit "
+"नियम सक्रिय करेल. ***\n"
+
+#: ../src/setroubleshoot/audit_data.py:999
+msgid "Must call policy_init first"
+msgstr "पहिले policy_init कॉल करणे आवश्यक"
+
+#: ../src/setroubleshoot/audit_data.py:1001
+#, python-format
+msgid "%s \n"
+"**** Invalid AVC bad target context. ***\n"
+msgstr "%s \n"
+"**** अवैध AVC अयोग्य लक्ष्य संदर्भ. ***\n"
+
+#: ../src/setroubleshoot/audit_data.py:1003
+#, python-format
+msgid "%s \n"
+"**** Invalid AVC bad source context. ***\n"
+msgstr "%s \n"
+"**** अवैध AVC अयोग्य स्रोत संदर्भ. ***\n"
+
+#: ../src/setroubleshoot/audit_data.py:1005
+#, python-format
+msgid "%s \n"
+"**** Invalid AVC bad type class ***\n"
+msgstr "%s \n"
+"**** अवैध AVC अयोग्य टाइप क्लास् ***\n"
+
+#: ../src/setroubleshoot/audit_data.py:1007
+#, python-format
+msgid "%s \n"
+"**** Invalid AVC bad permission ***\n"
+msgstr "%s \n"
+"**** अवैध AVC अयोग्य परवानगी ***\n"
+
+#: ../src/setroubleshoot/audit_data.py:1009
+msgid "Error during access vector computation"
+msgstr "ॲकसेस् वेक्टर कम्प्यूटेशनकरीता प्रवेशवेळी त्रुटी"
+
+#: ../src/setroubleshoot/browser.py:171 ../gui/browser.glade.h:12
+msgid "SELinux Alert Browser"
+msgstr "SELinux सतर्कता ब्राउजर"
+
+#: ../src/setroubleshoot/browser.py:175 ../gui/browser.glade.h:19
+msgid "The source process:"
+msgstr "स्रोत प्रक्रिया:"
+
+#: ../src/setroubleshoot/browser.py:180 ../gui/browser.glade.h:15
+msgid "Yes"
+msgstr "होय"
+
+#: ../src/setroubleshoot/browser.py:182 ../gui/browser.glade.h:17
+msgid "No"
+msgstr "नाही"
+
+#: ../src/setroubleshoot/browser.py:187 ../gui/browser.glade.h:20
+msgid "Attempted this access:"
+msgstr "प्रवेश करण्याचा प्रयत्न केला:"
+
+#: ../src/setroubleshoot/browser.py:201 ../gui/browser.glade.h:11
+msgid "SETroubleshoot Details Window"
+msgstr "SETroubleshoot तपशील पटल"
+
+#: ../src/setroubleshoot/browser.py:204 ../gui/browser.glade.h:14
+msgid "Would you like to receive alerts?"
+msgstr "सतर्कता स्वीकारायला आवडेल?"
+
+#: ../src/setroubleshoot/browser.py:208 ../gui/browser.glade.h:24
+msgid "Notify Admin"
+msgstr "प्रशासकाला सूचीत करा"
+
+#: ../src/setroubleshoot/browser.py:211 ../src/setroubleshoot/browser.py:217
+#: ../gui/browser.glade.h:8
+msgid "Troubleshoot"
+msgstr "त्रुटीनिवारन"
+
+#: ../src/setroubleshoot/browser.py:214 ../gui/browser.glade.h:26
+msgid "Details"
+msgstr "तपशील"
+
+#: ../src/setroubleshoot/browser.py:221 ../gui/browser.glade.h:7
+msgid "SETroubleshoot Alert List"
+msgstr "SETroubleshoot सतर्कता सूची"
+
+#: ../src/setroubleshoot/browser.py:223 ../gui/browser.glade.h:33
+msgid "List All Alerts"
+msgstr "सर्व सतर्कता दाखवा"
+
+#: ../src/setroubleshoot/browser.py:270
+msgid "#"
+msgstr "#"
+
+#: ../src/setroubleshoot/browser.py:270
+msgid "Source Process"
+msgstr "स्रोत प्रोसेस्"
+
+#: ../src/setroubleshoot/browser.py:270
+msgid "Attempted Access"
+msgstr "प्रवेश करण्याचे प्रयत्न केले"
+
+#: ../src/setroubleshoot/browser.py:270
+msgid "On this"
+msgstr "यावर"
+
+#: ../src/setroubleshoot/browser.py:270
+msgid "Occurred"
+msgstr "घडले"
+
+#: ../src/setroubleshoot/browser.py:270 ../src/run_cmd.py:406
+msgid "Status"
+msgstr "स्थिती"
+
+#: ../src/setroubleshoot/browser.py:344 ../src/setroubleshoot/browser.py:786
+#: ../src/setroubleshoot/browser.py:830
+msgid "Notify"
+msgstr "सूचीत करा"
+
+#: ../src/setroubleshoot/browser.py:345
+msgid "Notify alert in the future."
+msgstr "भविष्यात सतर्कता सूचीत करा."
+
+#: ../src/setroubleshoot/browser.py:348 ../src/setroubleshoot/browser.py:788
+#: ../src/setroubleshoot/browser.py:828 ../gui/browser.glade.h:27
+msgid "Ignore"
+msgstr "दुर्लक्ष करा"
+
+#: ../src/setroubleshoot/browser.py:349 ../gui/browser.glade.h:28
+msgid "Ignore alert in the future."
+msgstr "भविष्यात सतर्कताकडे दुर्लक्ष करा."
+
+#: ../src/setroubleshoot/browser.py:385
+msgid "<b>If you were trying to...</b>"
+msgstr "<b>खालीलचा प्रयत्न करत असल्यास...</b>"
+
+#: ../src/setroubleshoot/browser.py:394
+msgid "<b>Then this is the solution.</b>"
+msgstr "<b>या पर्यायचा वापर करा.</b>"
+
+#: ../src/setroubleshoot/browser.py:413 ../src/setroubleshoot/browser.py:549
+msgid "If "
+msgstr "जर"
+
+#: ../src/setroubleshoot/browser.py:501
+msgid "Plugin\n"
+"Details"
+msgstr "प्लगइन\n"
+"तपशील"
+
+#: ../src/setroubleshoot/browser.py:516
+msgid "Report\n"
+"Bug"
+msgstr "बग\n"
+"सादर करा"
+
+#: ../src/setroubleshoot/browser.py:544
+#, python-format
+msgid "Plugin: %s "
+msgstr "प्लगइन: %s "
+
+#: ../src/setroubleshoot/browser.py:611
+msgid "Unable to grant access."
+msgstr "प्रवेश देण्यास अशक्य."
+
+#: ../src/setroubleshoot/browser.py:642 ../src/setroubleshoot/browser.py:784
+#, python-format
+msgid "Alert %d of %d"
+msgstr "सतर्कता %d पैकी %d"
+
+#: ../src/setroubleshoot/browser.py:767
+#, python-format
+msgid "On this %s:"
+msgstr "या %s वर:"
+
+#: ../src/setroubleshoot/browser.py:815 ../src/setroubleshoot/browser.py:821
+#: ../src/setroubleshoot/signature.py:391
+msgid "N/A"
+msgstr "N/A"
+
+#: ../src/setroubleshoot/browser.py:862 ../src/setroubleshoot/browser.py:863
+#: ../gui/browser.glade.h:31
+msgid "No Alerts"
+msgstr "सतर्कता नाही"
+
+#: ../src/setroubleshoot/browser.py:881
+msgid "SELinux has detected a problem."
+msgstr "SELinux ला अडचण आढळली."
+
+#: ../src/setroubleshoot/browser.py:987
+msgid "Sealert Error"
+msgstr "Sealert त्रुटी"
+
+#: ../src/setroubleshoot/browser.py:998
+msgid "Sealert Message"
+msgstr "Sealert संदेश"
+
+#. -----------------------------------------------------------------------------
+#: ../src/setroubleshoot/errcode.py:71
+msgid "signature not found"
+msgstr "स्वाक्षरी आढळली नाही"
+
+#: ../src/setroubleshoot/errcode.py:72
+msgid "multiple signatures matched"
+msgstr "एकापेक्षा जास्त स्वाक्षरी जुळले"
+
+#: ../src/setroubleshoot/errcode.py:73
+msgid "id not found"
+msgstr "id आढळले नाही"
+
+#: ../src/setroubleshoot/errcode.py:74
+msgid "database not found"
+msgstr "माहितीकोष आढळले नाही"
+
+#: ../src/setroubleshoot/errcode.py:75
+msgid "item is not a member"
+msgstr "घटक सदस्य नाही"
+
+#: ../src/setroubleshoot/errcode.py:76
+msgid "illegal to change user"
+msgstr "वापरकर्ता बदलविणे अवैध आहे"
+
+#: ../src/setroubleshoot/errcode.py:77
+msgid "method not found"
+msgstr "पध्दती आढळली नाही"
+
+#: ../src/setroubleshoot/errcode.py:78
+msgid "cannot create GUI"
+msgstr "GUI बनवू शकत नाही"
+
+#: ../src/setroubleshoot/errcode.py:79
+msgid "value unknown"
+msgstr "अपरिचित मुल्य"
+
+#: ../src/setroubleshoot/errcode.py:80
+msgid "cannot open file"
+msgstr "फाइल उघडू शकत नाही"
+
+#: ../src/setroubleshoot/errcode.py:81
+msgid "invalid email address"
+msgstr "अवैध ईमेल पत्ता"
+
+#. gobject IO Errors
+#: ../src/setroubleshoot/errcode.py:84
+msgid "socket error"
+msgstr "सॉकेट त्रुटी"
+
+#: ../src/setroubleshoot/errcode.py:85
+msgid "connection has been broken"
+msgstr "जुळवणी थुटली"
+
+#: ../src/setroubleshoot/errcode.py:86
+msgid "Invalid request. The file descriptor is not open"
+msgstr "अवैध विनंती. फाइल वर्णकर्ता उघडे नाही"
+
+#: ../src/setroubleshoot/errcode.py:88
+msgid "insufficient permission to modify user"
+msgstr "वापकर्ता संपादन करीता अपूरे परवानगी"
+
+#: ../src/setroubleshoot/errcode.py:89
+msgid "authentication failed"
+msgstr "अधिप्रमाणन अपयशी"
+
+#: ../src/setroubleshoot/errcode.py:90
+msgid "user prohibited"
+msgstr "वापरकर्ता प्रतिबंधीत आहे"
+
+#: ../src/setroubleshoot/errcode.py:91
+msgid "not authenticated"
+msgstr "अधिप्रमाणनीत नाही"
+
+#: ../src/setroubleshoot/errcode.py:92
+msgid "user lookup failed"
+msgstr "वापरकर्ता लूकअप अपयशी"
+
+#: ../src/setroubleshoot/gui_utils.py:53 ../src/sealert:531
+#, c-format, python-format
+msgid "Opps, %s hit an error!"
+msgstr "अरेच्छा, %s ला त्रुटी आढळली!"
+
+#: ../src/setroubleshoot/gui_utils.py:55 ../gui/fail_dialog.glade.h:1
+msgid "Error"
+msgstr "त्रुटी"
+
+#: ../src/setroubleshoot/Plugin.py:81
+msgid ""
+"you want to allow $SOURCE_BASE_PATH to have $ACCESS access on the "
+"$TARGET_BASE_PATH $TARGET_CLASS"
+msgstr ""
+"$SOURCE_BASE_PATH ला $TARGET_BASE_PATH $TARGET_CLASS करीता $ACCESS प्रवेश "
+"द्याचे आहे"
+
+#: ../src/run_cmd.py:172
+msgid "Input: "
+msgstr "इंपुट: "
+
+#: ../src/run_cmd.py:255
+msgid "Enter Password"
+msgstr "पासवर्ड प्रविष्ट करा"
+
+#: ../src/run_cmd.py:268
+msgid "Password: "
+msgstr "पासवर्ड: "
+
+#: ../src/run_cmd.py:367
+msgid "SELinux Fix"
+msgstr "SELinux निर्धारण"
+
+#: ../src/run_cmd.py:378
+msgid "Command"
+msgstr "आदेश"
+
+#: ../src/run_cmd.py:388
+msgid "Run Command"
+msgstr "आदेश चालवा"
+
+#: ../src/run_cmd.py:391
+msgid "Stop Command"
+msgstr "आदेश थांबवा"
+
+#: ../src/run_cmd.py:413
+msgid "Warning: You are responsible for verifying this command is correct"
+msgstr "सावधानी: हा आदेश सदोषीत नाही याच्या तपासणी करीता तुम्ही कारणीभूत आहे"
+
+#: ../src/run_cmd.py:455
+msgid "Not Run Yet"
+msgstr "अजून कार्यरत नाही"
+
+#: ../src/run_cmd.py:466
+msgid "Running..."
+msgstr "कार्यरत आहे..."
+
+#: ../src/run_cmd.py:481
+#, python-format
+msgid "Interrupted, exit on signal %d"
+msgstr "अडविले गेले, संकेल %d प्राप्त झाल्यास बाहेर पडा"
+
+#: ../src/run_cmd.py:483
+msgid "Success"
+msgstr "यश"
+
+#: ../src/run_cmd.py:485
+#, python-format
+msgid "Failed, exit status = %d"
+msgstr "अपयशी, बाहेर पडण्याची स्थिती = %d"
+
+#: ../src/run_cmd.py:487
+msgid "Done: "
+msgstr "पूर्ण झाले: "
+
+#: ../src/setroubleshoot/server.py:191
+#, python-format
+msgid " For complete SELinux messages. run sealert -l %s"
+msgstr " पूर्णतया SELinux संदेश करीता. sealert -l %s चालवा"
+
+#: ../src/setroubleshoot/server.py:377
+#, python-format
+msgid "The user (%s) cannot modify data for (%s)"
+msgstr "(%s) करीता वापरकर्ता (%s) माहिती संपादीत करू शकत नाही"
+
+#: ../src/setroubleshoot/server.py:440 ../src/sealert:291
+msgid "Started"
+msgstr "सुरू झाले"
+
+#: ../src/setroubleshoot/server.py:487
+msgid "AVC"
+msgstr "AVC"
+
+#: ../src/setroubleshoot/server.py:553
+msgid "Audit Listener"
+msgstr "ऑडिट श्रोता"
+
+#: ../src/setroubleshoot/signature.py:74
+msgid "Never Ignore"
+msgstr "कधिही दुर्लक्ष करू नका"
+
+#: ../src/setroubleshoot/signature.py:75
+msgid "Ignore Always"
+msgstr "नेहमी टाळा"
+
+#: ../src/setroubleshoot/signature.py:76
+msgid "Ignore After First Alert"
+msgstr "पहिल्या सतर्कतानंतर दुर्लक्ष करा"
+
+#: ../src/setroubleshoot/signature.py:193
+msgid "directory"
+msgstr "डिरेक्ट्री"
+
+#: ../src/setroubleshoot/signature.py:194
+msgid "semaphore"
+msgstr "सिमाफोर"
+
+#: ../src/setroubleshoot/signature.py:195
+msgid "shared memory"
+msgstr "शेअर्ड् मेमरी"
+
+#: ../src/setroubleshoot/signature.py:196
+msgid "message queue"
+msgstr "संदेश रांग"
+
+#: ../src/setroubleshoot/signature.py:197
+msgid "message"
+msgstr "संदेश"
+
+#: ../src/setroubleshoot/signature.py:198
+msgid "file"
+msgstr "फाइल"
+
+#: ../src/setroubleshoot/signature.py:199
+msgid "socket"
+msgstr "सॉकेट"
+
+#: ../src/setroubleshoot/signature.py:200
+msgid "process"
+msgstr "प्रोसेस्"
+
+#: ../src/setroubleshoot/signature.py:201
+msgid "filesystem"
+msgstr "फाइलसिस्टम"
+
+#: ../src/setroubleshoot/signature.py:202
+msgid "node"
+msgstr "नोड"
+
+#: ../src/setroubleshoot/signature.py:203
+msgid "capability"
+msgstr "सहत्वता"
+
+#: ../src/setroubleshoot/signature.py:376
+#, python-format
+msgid "%s has a permissive type (%s). This access was not denied."
+msgstr "%s चे permissive प्रकार (%s) आहे. हा प्रवेश नकारला गेला नाही."
+
+#: ../src/setroubleshoot/signature.py:379
+msgid "SELinux is in permissive mode. This access was not denied."
+msgstr "SELinux आता permissive मोडमध्ये आहे. हे प्रवेश नकारले नाही."
+
+#: ../src/setroubleshoot/signature.py:432
+#, python-format
+msgid "SELinux is preventing %s from using the %s access on a process."
+msgstr "SELinux %s ला प्रोसेसवरील %s प्रवेशकरीता थांबवत आहे."
+
+#: ../src/setroubleshoot/signature.py:432
+#, python-format
+msgid "SELinux is preventing %s from using the '%s' accesses on a process."
+msgstr "SELinux %s ला प्रोसेसवरील '%s' प्रवेशपासून वापर थांबवत आहे."
+
+#: ../src/setroubleshoot/signature.py:435
+#, python-format
+msgid "SELinux is preventing %s from using the %s capability."
+msgstr "SELinux %s ला %s सहत्वता वापरण्यापासून थांबवत आहे."
+
+#: ../src/setroubleshoot/signature.py:435
+#, python-format
+msgid "SELinux is preventing %s from using the '%s' capabilities."
+msgstr "SELinux %s ला '%s' क्षमता वापरण्यापासून थांबवत आहे."
+
+#: ../src/setroubleshoot/signature.py:437
+#, python-format
+msgid "SELinux is preventing %s from %s access on the %s labeled %s."
+msgstr "SELinux %s ला रोखत आहे, %s प्रवेशपासून, %s लेबल असलेल्या %s वरील."
+
+#: ../src/setroubleshoot/signature.py:437
+#, python-format
+msgid "SELinux is preventing %s from '%s' accesses on the %s labeled %s."
+msgstr ""
+
+#: ../src/setroubleshoot/signature.py:438
+#, python-format
+msgid "SELinux is preventing %s from %s access on the %s %s."
+msgstr "SELinux %s ला %s प्रवेश पासून थांबवत आहे, %s %s वरील."
+
+#: ../src/setroubleshoot/signature.py:438
+#, python-format
+msgid "SELinux is preventing %s from '%s' accesses on the %s %s."
+msgstr "SELinux %s ला '%s' प्रवेश पासून थांबवत आहे, %s %s वरील."
+
+#: ../src/setroubleshoot/signature.py:469
+msgid "Additional Information:\n"
+msgstr "अगाऊ माहिती:\n"
+
+#: ../src/setroubleshoot/signature.py:470
+msgid "Source Context"
+msgstr "स्त्रोत संदर्भ"
+
+#: ../src/setroubleshoot/signature.py:471
+msgid "Target Context"
+msgstr "लक्ष्य संदर्भ"
+
+#: ../src/setroubleshoot/signature.py:472
+msgid "Target Objects"
+msgstr "लक्ष्य घटक"
+
+#: ../src/setroubleshoot/signature.py:473
+msgid "Source"
+msgstr "स्त्रोत"
+
+#: ../src/setroubleshoot/signature.py:474
+msgid "Source Path"
+msgstr "स्त्रोत मार्ग"
+
+#: ../src/setroubleshoot/signature.py:475
+msgid "Port"
+msgstr "पोर्ट"
+
+#: ../src/setroubleshoot/signature.py:477
+#: ../src/setroubleshoot/signature.py:479
+msgid "Host"
+msgstr "यजमान"
+
+#: ../src/setroubleshoot/signature.py:480
+msgid "Source RPM Packages"
+msgstr "स्त्रोत RPM संकुल"
+
+#: ../src/setroubleshoot/signature.py:481
+msgid "Target RPM Packages"
+msgstr "लक्ष्य RPM संकुल"
+
+#: ../src/setroubleshoot/signature.py:482
+msgid "Policy RPM"
+msgstr "करार RPM"
+
+#: ../src/setroubleshoot/signature.py:483
+msgid "Selinux Enabled"
+msgstr "Selinux कार्यान्वित"
+
+#: ../src/setroubleshoot/signature.py:484
+msgid "Policy Type"
+msgstr "कराराचा प्रकार"
+
+#: ../src/setroubleshoot/signature.py:485
+msgid "Enforcing Mode"
+msgstr "बाध्यकारी पध्दती"
+
+#: ../src/setroubleshoot/signature.py:487
+#: ../src/setroubleshoot/signature.py:489
+msgid "Host Name"
+msgstr "यजमान नाव"
+
+#: ../src/setroubleshoot/signature.py:494
+#: ../src/setroubleshoot/signature.py:496
+msgid "Platform"
+msgstr "प्लॅटफार्म"
+
+#: ../src/setroubleshoot/signature.py:497
+msgid "Alert Count"
+msgstr "सतर्कता संख्या"
+
+#: ../src/setroubleshoot/signature.py:499
+msgid "First Seen"
+msgstr "पहिल्यांदा आढळले"
+
+#: ../src/setroubleshoot/signature.py:500
+msgid "Last Seen"
+msgstr "शेवटच्यावेळी आढळले"
+
+#: ../src/setroubleshoot/signature.py:501
+msgid "Local ID"
+msgstr "स्थानीक ID"
+
+#: ../src/setroubleshoot/signature.py:503
+msgid "Raw Audit Messages"
+msgstr "मुळ ऑडीट संदेश"
+
+#: ../src/setroubleshoot/signature.py:557
+#, python-format
+msgid "\n"
+"\n"
+"*****  Plugin %s (%.4s confidence) suggests   "
+msgstr "\n"
+"\n"
+"*****  प्लगइन %s (%.4s काँफिडंस) सूचविते   "
+
+#: ../src/setroubleshoot/signature.py:560
+msgid "*"
+msgstr "*"
+
+#: ../src/setroubleshoot/signature.py:561
+msgid "\n"
+msgstr "\n"
+
+#: ../src/setroubleshoot/signature.py:563
+msgid "\n"
+"If "
+msgstr "\n"
+"असे असते "
+
+#: ../src/setroubleshoot/signature.py:565
+msgid "\n"
+"Then "
+msgstr "\n"
+"तर मग "
+
+#: ../src/setroubleshoot/signature.py:568
+msgid "\n"
+"Do\n"
+msgstr "\n"
+"करा\n"
+
+#: ../src/setroubleshoot/signature.py:570
+msgid "\n"
+"\n"
+msgstr "\n"
+"\n"
+
+#: ../src/updater.py:18
+#, python-format
+msgid "current: %s "
+msgstr "सध्या: %s "
+
+#: ../src/updater.py:27
+#, python-format
+msgid "newer: %s "
+msgstr "नवीन: %s "
+
+#: ../src/seapplet.c:189
+msgid "New SELinux security alert"
+msgstr "नवीन SELinux सुरक्षा सतर्कता"
+
+#: ../src/seapplet.c:189
+msgid "AVC denial, click icon to view"
+msgstr "AVC नकार, पहाण्याकरीता चिन्हावर क्लिक करा"
+
+#: ../src/seapplet.c:195 ../src/seapplet.c:246
+msgid "Dismiss"
+msgstr "वगळा"
+
+#: ../src/seapplet.c:205 ../src/seapplet.c:256
+msgid "Show"
+msgstr "दाखवा"
+
+#. set tooltip
+#: ../src/seapplet.c:440 ../src/sealert:64
+msgid "SELinux AVC denial, click to view"
+msgstr "SELinux AVC नकार, पहाण्याकरीता क्लिक करा"
+
+#: ../src/sealert:103
+msgid "SELinux not enabled, sealert will not run on non SELinux systems"
+msgstr "SELinux सुरू नाही, sealert विना SELinux प्रणालींवर चालणार नाही"
+
+#: ../src/sealert:150
+msgid "Not fixable."
+msgstr "निवारणजोगी नाही."
+
+#: ../src/sealert:157
+#, c-format
+msgid "Successfully ran %s"
+msgstr "%s यशस्वीरित्या चालवले"
+
+#: ../src/sealert:162
+#, c-format
+msgid "Plugin %s not valid for %s id"
+msgstr "प्लगइन %s वैध नाही, %s id करीता"
+
+#: ../src/setroubleshootd:73
+msgid "SELinux not enabled, setroubleshootd exiting..."
+msgstr "SELinux समर्थीत नाही, setroubleshootd बंद होत आहे..."
+
+#: ../src/setroubleshootd:105
+#, c-format
+msgid "fork #1 failed: %d (%s)"
+msgstr "फोर्क #1 अपयशी: %d (%s)"
+
+#: ../gui/browser.glade.h:1
+msgid ""
+"Copyright (c) 2010 \n"
+"Thomas Liu <tliu@redhat.com>\n"
+"Máirín Duffy <duffy@redhat.com>\n"
+"Daniel Walsh <dwalsh@redhat.com>\n"
+"John Dennis <jdennis@redhat.com>\n"
+msgstr ""
+"सर्वहक्कस्वाधीन (c) 2010 \n"
+"थोमस लिऊ <tliu@redhat.com>\n"
+"मैरिन डफ्फि <duffy@redhat.com>\n"
+"डॅनिएल वॉल्श <dwalsh@redhat.com>\n"
+"जॉन डेनिस <jdennis@redhat.com>\n"
+
+#: ../gui/browser.glade.h:9
+msgid "Troubleshoot selected alert"
+msgstr "त्रुटीनिवारन नीवडलेली सतर्कता"
+
+#: ../gui/browser.glade.h:10
+msgid "Delete Selected Alerts"
+msgstr "नीवडलेली सतर्कता नष्ट करा"
+
+#: ../gui/browser.glade.h:13
+msgid "<b>SELinux has detected a problem.</b>"
+msgstr "<b>SELinux ला अडचण आढळली.</b>"
+
+#: ../gui/browser.glade.h:16
+msgid "Turn on alert pop-ups."
+msgstr "सतर्कता पॉपअप्स् सुरू करा."
+
+#: ../gui/browser.glade.h:18
+msgid "Turn off alert pop-ups."
+msgstr "सतर्कता पॉपअप्स् बंद करा."
+
+#: ../gui/browser.glade.h:21
+msgid "On this file:"
+msgstr "या फाइलवरील:"
+
+#: ../gui/browser.glade.h:22
+msgid "label"
+msgstr "लेबल"
+
+#: ../gui/browser.glade.h:23
+msgid ""
+"Read alert troubleshoot information.  May require administrative privileges "
+"to remedy."
+msgstr ""
+"सतर्कता त्रुटीनिवारन माहिती वाचा.  उपाय म्हणून प्रशासकिय परवानगी कदाचित "
+"आवश्यक ठरेल."
+
+#: ../gui/browser.glade.h:25
+msgid "Email alert to system administrator."
+msgstr "प्रणाली प्रशासकाला सतर्कता ईमेल करा."
+
+#: ../gui/browser.glade.h:29
+msgid "Delete current alert from the database."
+msgstr "डाटाबेसपासून सध्याची सतर्कता नष्ट करा."
+
+#: ../gui/browser.glade.h:30
+msgid "Show previous alert."
+msgstr "मागील सतर्कता दाखवा."
+
+#: ../gui/browser.glade.h:32
+msgid "Show next alert."
+msgstr "पुढची सतर्कता दाखवा."
+
+#: ../gui/browser.glade.h:34
+msgid "List all alerts in the database."
+msgstr "सर्व सतर्कताची सूची डाटाबेसमध्ये दाखवा."
+
+#: ../gui/bug_report.glade.h:1
+msgid "Review and Submit Bug Report"
+msgstr "बग अहवालचे पुनरावलोकन करा व सादर करा"
+
+#: ../gui/bug_report.glade.h:2
+msgid "<span size='large' weight='bold'>Review and Submit Bug Report</span>"
+msgstr ""
+"<span size='large' weight='bold'>बग अहवालाचे पुनरावलोकन करा व सादर करा</"
+"span>"
+
+#: ../gui/bug_report.glade.h:3
+msgid ""
+"You may wish to review the error output that will be included in this bug "
+"report and modify it to exclude any sensitive data below."
+msgstr ""
+"या बग अहवालात समाविष्टीत करण्याजोगी त्रुटी आऊटपुटचे अवलोकन व खालील संवदेनशील "
+"डाटा वगळण्याकरीता योग्य संपादन करणे तुम्हाला आवडेल."
+
+#: ../gui/bug_report.glade.h:4
+msgid "Included error output:"
+msgstr "समाविष्टीत त्रुटी आऊटपुट:"
+
+#: ../gui/bug_report.glade.h:5
+msgid "Submit Report"
+msgstr "अहवाल सादर करा"
+
+#: ../gui/fail_dialog.glade.h:2 ../gui/success_dialog.glade.h:2
+msgid ""
+"This operation was completed.  The quick brown fox jumped over the lazy dog."
+msgstr "हे कार्य पूर्ण झाले.  The quick brown fox jumped over the lazy dog."
+
+#: ../gui/success_dialog.glade.h:1
+msgid "Success!"
+msgstr "यशस्वी!"
+
+#: ../gui/success_dialog.glade.h:3
+msgid "button"
+msgstr "बटन"

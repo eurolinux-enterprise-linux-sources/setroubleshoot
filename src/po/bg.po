@@ -1,0 +1,836 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# 
+# Translators:
+# Alexander Todorov <atodorov@redhat.com>, 2008
+# Boris Yakimov <borisyakimov@ymail.com>, 2012
+# Dimitris Glezos <glezos@transifex.com>, 2011
+# Valentin Laskov <laskov@festa.bg>, 2012-2013
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-01-15 16:27+0100\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2013-12-08 03:14-0500\n"
+"Last-Translator: Valentin Laskov <laskov@festa.bg>\n"
+"Language-Team: Bulgarian (http://www.transifex.com/projects/p/fedora/"
+"language/bg/)\n"
+"Language: bg\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Zanata 3.8.3\n"
+
+#: ../setroubleshoot.desktop.in.h:1
+msgid "SELinux Troubleshooter"
+msgstr "SELinux коректор"
+
+#: ../setroubleshoot.desktop.in.h:2
+msgid "Troubleshoot SELinux access denials"
+msgstr "Отстраняване на проблеми със SELinux забрани"
+
+#: ../setroubleshoot.desktop.in.h:3
+msgid "policy;security;selinux;avc;permission;mac;alert;sealert;"
+msgstr "policy;security;selinux;avc;permission;mac;alert;sealert;"
+
+#: ../src/setroubleshoot/audit_data.py:903
+#, python-format
+msgid "port %s"
+msgstr "порт %s"
+
+#: ../src/setroubleshoot/audit_data.py:905
+#: ../src/setroubleshoot/browser.py:747 ../src/setroubleshoot/browser.py:822
+#: ../src/setroubleshoot/rpc.py:528 ../src/setroubleshoot/util.py:229
+msgid "Unknown"
+msgstr "Непознат"
+
+#: ../src/setroubleshoot/audit_data.py:995
+#, python-format
+msgid "%s \n"
+"**** Invalid AVC allowed in current policy ***\n"
+msgstr "%s\n"
+"**** Невалидно AVC, разрешено в сегашната политика ***\n"
+
+#: ../src/setroubleshoot/audit_data.py:997
+#, python-format
+msgid ""
+"%s \n"
+"**** Invalid AVC dontaudited in current policy.  'semodule -B' will turn on "
+"dontaudit rules. ***\n"
+msgstr ""
+"%s\n"
+"****Невалидно AVC, непроверявано в сегашната политика. 'semodule -B' ще "
+"включи НеПроверявай правилата. ***\n"
+
+#: ../src/setroubleshoot/audit_data.py:999
+msgid "Must call policy_init first"
+msgstr "Първо трябва да се извика policy_init."
+
+#: ../src/setroubleshoot/audit_data.py:1001
+#, python-format
+msgid "%s \n"
+"**** Invalid AVC bad target context. ***\n"
+msgstr "%s\n"
+"**** Невалидно AVC, грешен контекст на дестинацията . ***\n"
+
+#: ../src/setroubleshoot/audit_data.py:1003
+#, python-format
+msgid "%s \n"
+"**** Invalid AVC bad source context. ***\n"
+msgstr "%s\n"
+"**** Невалидно AVC грешен контекст на източника. ***\n"
+
+#: ../src/setroubleshoot/audit_data.py:1005
+#, python-format
+msgid "%s \n"
+"**** Invalid AVC bad type class ***\n"
+msgstr "%s\n"
+"**** Невалидно AVC грешен тип клас ***\n"
+
+#: ../src/setroubleshoot/audit_data.py:1007
+#, python-format
+msgid "%s \n"
+"**** Invalid AVC bad permission ***\n"
+msgstr "%s\n"
+"**** Невалидно AVC грешни позволения ***\n"
+
+#: ../src/setroubleshoot/audit_data.py:1009
+msgid "Error during access vector computation"
+msgstr "Грешка по време на изчисляване на вектор за достъп"
+
+#: ../src/setroubleshoot/browser.py:171 ../gui/browser.glade.h:12
+msgid "SELinux Alert Browser"
+msgstr "SELinux Браузър за Аларми"
+
+#: ../src/setroubleshoot/browser.py:175 ../gui/browser.glade.h:19
+msgid "The source process:"
+msgstr "Процесът източник:"
+
+#: ../src/setroubleshoot/browser.py:180 ../gui/browser.glade.h:15
+msgid "Yes"
+msgstr "Да"
+
+#: ../src/setroubleshoot/browser.py:182 ../gui/browser.glade.h:17
+msgid "No"
+msgstr "Не"
+
+#: ../src/setroubleshoot/browser.py:187 ../gui/browser.glade.h:20
+msgid "Attempted this access:"
+msgstr "Опит за достъпване:"
+
+#: ../src/setroubleshoot/browser.py:201 ../gui/browser.glade.h:11
+msgid "SETroubleshoot Details Window"
+msgstr "SETroubleshoot Прозорец с детайли"
+
+#: ../src/setroubleshoot/browser.py:204 ../gui/browser.glade.h:14
+msgid "Would you like to receive alerts?"
+msgstr "Бихте ли искали да получавате аларми ?"
+
+#: ../src/setroubleshoot/browser.py:208 ../gui/browser.glade.h:24
+msgid "Notify Admin"
+msgstr "Уведоми Админ-а"
+
+#: ../src/setroubleshoot/browser.py:211 ../src/setroubleshoot/browser.py:217
+#: ../gui/browser.glade.h:8
+msgid "Troubleshoot"
+msgstr "Разследване на неизправности"
+
+#: ../src/setroubleshoot/browser.py:214 ../gui/browser.glade.h:26
+msgid "Details"
+msgstr "Детайли"
+
+#: ../src/setroubleshoot/browser.py:221 ../gui/browser.glade.h:7
+msgid "SETroubleshoot Alert List"
+msgstr "SETroubleshoot Списък с Аларми"
+
+#: ../src/setroubleshoot/browser.py:223 ../gui/browser.glade.h:33
+msgid "List All Alerts"
+msgstr "Списък с всички аларми"
+
+#: ../src/setroubleshoot/browser.py:270
+msgid "#"
+msgstr "#"
+
+#: ../src/setroubleshoot/browser.py:270
+msgid "Source Process"
+msgstr "Процес източник "
+
+#: ../src/setroubleshoot/browser.py:270
+msgid "Attempted Access"
+msgstr "Опит за достъп"
+
+#: ../src/setroubleshoot/browser.py:270
+msgid "On this"
+msgstr "На това"
+
+#: ../src/setroubleshoot/browser.py:270
+msgid "Occurred"
+msgstr "Настъпи"
+
+#: ../src/setroubleshoot/browser.py:270 ../src/run_cmd.py:406
+msgid "Status"
+msgstr "Статус"
+
+#: ../src/setroubleshoot/browser.py:344 ../src/setroubleshoot/browser.py:786
+#: ../src/setroubleshoot/browser.py:830
+msgid "Notify"
+msgstr "Уведоми"
+
+#: ../src/setroubleshoot/browser.py:345
+msgid "Notify alert in the future."
+msgstr "В бъдеще съобщавай за аларми."
+
+#: ../src/setroubleshoot/browser.py:348 ../src/setroubleshoot/browser.py:788
+#: ../src/setroubleshoot/browser.py:828 ../gui/browser.glade.h:27
+msgid "Ignore"
+msgstr "Игнорирай"
+
+#: ../src/setroubleshoot/browser.py:349 ../gui/browser.glade.h:28
+msgid "Ignore alert in the future."
+msgstr "Игнорирай тази аларма в бъдеще"
+
+#: ../src/setroubleshoot/browser.py:385
+msgid "<b>If you were trying to...</b>"
+msgstr "<b>Ако се опитвахте да...</b>"
+
+#: ../src/setroubleshoot/browser.py:394
+msgid "<b>Then this is the solution.</b>"
+msgstr "<b>Тогава това е решението.</b>"
+
+#: ../src/setroubleshoot/browser.py:413 ../src/setroubleshoot/browser.py:549
+msgid "If "
+msgstr "Ако "
+
+#: ../src/setroubleshoot/browser.py:501
+msgid "Plugin\n"
+"Details"
+msgstr "Plugin\n"
+"Детаили"
+
+#: ../src/setroubleshoot/browser.py:516
+msgid "Report\n"
+"Bug"
+msgstr "Доклад\n"
+"Бъг"
+
+#: ../src/setroubleshoot/browser.py:544
+#, python-format
+msgid "Plugin: %s "
+msgstr "Plugin: %s "
+
+#: ../src/setroubleshoot/browser.py:611
+msgid "Unable to grant access."
+msgstr "Не може да се предостави достъп."
+
+#: ../src/setroubleshoot/browser.py:642 ../src/setroubleshoot/browser.py:784
+#, python-format
+msgid "Alert %d of %d"
+msgstr "Тревога %d на %d"
+
+#: ../src/setroubleshoot/browser.py:767
+#, python-format
+msgid "On this %s:"
+msgstr "На това %s:"
+
+#: ../src/setroubleshoot/browser.py:815 ../src/setroubleshoot/browser.py:821
+#: ../src/setroubleshoot/signature.py:391
+msgid "N/A"
+msgstr "Не е достъпно"
+
+#: ../src/setroubleshoot/browser.py:862 ../src/setroubleshoot/browser.py:863
+#: ../gui/browser.glade.h:31
+msgid "No Alerts"
+msgstr "Без сигнали"
+
+#: ../src/setroubleshoot/browser.py:881
+msgid "SELinux has detected a problem."
+msgstr "SELinux засече проблем."
+
+#: ../src/setroubleshoot/browser.py:987
+msgid "Sealert Error"
+msgstr "Sealert грешка"
+
+#: ../src/setroubleshoot/browser.py:998
+msgid "Sealert Message"
+msgstr "Sealert съобщение"
+
+#. -----------------------------------------------------------------------------
+#: ../src/setroubleshoot/errcode.py:71
+msgid "signature not found"
+msgstr "сигнатурата не е намерена"
+
+#: ../src/setroubleshoot/errcode.py:72
+msgid "multiple signatures matched"
+msgstr "съвпадат няколко сигнатури"
+
+#: ../src/setroubleshoot/errcode.py:73
+msgid "id not found"
+msgstr "не е намерено id"
+
+#: ../src/setroubleshoot/errcode.py:74
+msgid "database not found"
+msgstr "не е намерена базата данни"
+
+#: ../src/setroubleshoot/errcode.py:75
+msgid "item is not a member"
+msgstr "елементът не е член"
+
+#: ../src/setroubleshoot/errcode.py:76
+msgid "illegal to change user"
+msgstr "не е редно да се променя потребителя"
+
+#: ../src/setroubleshoot/errcode.py:77
+msgid "method not found"
+msgstr "методът не е намерен"
+
+#: ../src/setroubleshoot/errcode.py:78
+msgid "cannot create GUI"
+msgstr "не може да се създаде ГПИ"
+
+#: ../src/setroubleshoot/errcode.py:79
+msgid "value unknown"
+msgstr "непозната стойност"
+
+#: ../src/setroubleshoot/errcode.py:80
+msgid "cannot open file"
+msgstr "не може да се отвори файла"
+
+#: ../src/setroubleshoot/errcode.py:81
+msgid "invalid email address"
+msgstr "невалиден имейл адрес"
+
+#. gobject IO Errors
+#: ../src/setroubleshoot/errcode.py:84
+msgid "socket error"
+msgstr "грешка в сокет"
+
+#: ../src/setroubleshoot/errcode.py:85
+msgid "connection has been broken"
+msgstr "връзката се счупи"
+
+#: ../src/setroubleshoot/errcode.py:86
+msgid "Invalid request. The file descriptor is not open"
+msgstr "Невалидна заявка. Файловия дескриптор не е отворен"
+
+#: ../src/setroubleshoot/errcode.py:88
+msgid "insufficient permission to modify user"
+msgstr "недостатъчни права за редактиране на потребител"
+
+#: ../src/setroubleshoot/errcode.py:89
+msgid "authentication failed"
+msgstr "провал при удостоверяване"
+
+#: ../src/setroubleshoot/errcode.py:90
+msgid "user prohibited"
+msgstr "Забранено за този потребител"
+
+#: ../src/setroubleshoot/errcode.py:91
+msgid "not authenticated"
+msgstr "не удостоверен"
+
+#: ../src/setroubleshoot/errcode.py:92
+msgid "user lookup failed"
+msgstr "Търсенето на този потребител се провали"
+
+#: ../src/setroubleshoot/gui_utils.py:53 ../src/sealert:531
+#, c-format, python-format
+msgid "Opps, %s hit an error!"
+msgstr "Опаа, %s попадна на грешка!"
+
+#: ../src/setroubleshoot/gui_utils.py:55 ../gui/fail_dialog.glade.h:1
+msgid "Error"
+msgstr "Грешка"
+
+#: ../src/setroubleshoot/Plugin.py:81
+msgid ""
+"you want to allow $SOURCE_BASE_PATH to have $ACCESS access on the "
+"$TARGET_BASE_PATH $TARGET_CLASS"
+msgstr ""
+"искате да позволите на $SOURCE_BASE_PATH да има $ACCESS достъп до "
+"$TARGET_BASE_PATH $TARGET_CLASS"
+
+#: ../src/run_cmd.py:172
+msgid "Input: "
+msgstr "Вход: "
+
+#: ../src/run_cmd.py:255
+msgid "Enter Password"
+msgstr "Въведете парола"
+
+#: ../src/run_cmd.py:268
+msgid "Password: "
+msgstr "Парола: "
+
+#: ../src/run_cmd.py:367
+msgid "SELinux Fix"
+msgstr "SELinux fix"
+
+#: ../src/run_cmd.py:378
+msgid "Command"
+msgstr "Команда"
+
+#: ../src/run_cmd.py:388
+msgid "Run Command"
+msgstr "Стартирай команда"
+
+#: ../src/run_cmd.py:391
+msgid "Stop Command"
+msgstr "Спри команда"
+
+#: ../src/run_cmd.py:413
+msgid "Warning: You are responsible for verifying this command is correct"
+msgstr "Внимание: Вие сте отговорни да проверите дали тази команда е правилна"
+
+#: ../src/run_cmd.py:455
+msgid "Not Run Yet"
+msgstr "Не е стартирано още"
+
+#: ../src/run_cmd.py:466
+msgid "Running..."
+msgstr "Работи..."
+
+#: ../src/run_cmd.py:481
+#, python-format
+msgid "Interrupted, exit on signal %d"
+msgstr "Прекъснато, излизане при сигнал %d"
+
+#: ../src/run_cmd.py:483
+msgid "Success"
+msgstr "Успех"
+
+#: ../src/run_cmd.py:485
+#, python-format
+msgid "Failed, exit status = %d"
+msgstr "Неуспешно, статус на завършване = %d"
+
+#: ../src/run_cmd.py:487
+msgid "Done: "
+msgstr "Готово: "
+
+#: ../src/setroubleshoot/server.py:191
+#, python-format
+msgid " For complete SELinux messages. run sealert -l %s"
+msgstr " За цялостни SELinux съобщения. стартирайте sealert -l %s"
+
+#: ../src/setroubleshoot/server.py:377
+#, python-format
+msgid "The user (%s) cannot modify data for (%s)"
+msgstr "Потребителят (%s) не може да променя данни за (%s)"
+
+#: ../src/setroubleshoot/server.py:440 ../src/sealert:291
+msgid "Started"
+msgstr "Стартирано"
+
+#: ../src/setroubleshoot/server.py:487
+msgid "AVC"
+msgstr "AVC"
+
+#: ../src/setroubleshoot/server.py:553
+msgid "Audit Listener"
+msgstr "Одит слушател"
+
+#: ../src/setroubleshoot/signature.py:74
+msgid "Never Ignore"
+msgstr "Никога не игнорирай"
+
+#: ../src/setroubleshoot/signature.py:75
+msgid "Ignore Always"
+msgstr "Игнорирай винаги"
+
+#: ../src/setroubleshoot/signature.py:76
+msgid "Ignore After First Alert"
+msgstr "Игнорирай след първата тревога"
+
+#: ../src/setroubleshoot/signature.py:193
+msgid "directory"
+msgstr "директория"
+
+#: ../src/setroubleshoot/signature.py:194
+msgid "semaphore"
+msgstr "семафор"
+
+#: ../src/setroubleshoot/signature.py:195
+msgid "shared memory"
+msgstr "споделена памет"
+
+#: ../src/setroubleshoot/signature.py:196
+msgid "message queue"
+msgstr "опашка на съобщенията"
+
+#: ../src/setroubleshoot/signature.py:197
+msgid "message"
+msgstr "съобщение"
+
+#: ../src/setroubleshoot/signature.py:198
+msgid "file"
+msgstr "файл"
+
+#: ../src/setroubleshoot/signature.py:199
+msgid "socket"
+msgstr "сокет"
+
+#: ../src/setroubleshoot/signature.py:200
+msgid "process"
+msgstr "процес"
+
+#: ../src/setroubleshoot/signature.py:201
+msgid "filesystem"
+msgstr "файлова система"
+
+#: ../src/setroubleshoot/signature.py:202
+msgid "node"
+msgstr "node"
+
+#: ../src/setroubleshoot/signature.py:203
+msgid "capability"
+msgstr "способност"
+
+#: ../src/setroubleshoot/signature.py:376
+#, python-format
+msgid "%s has a permissive type (%s). This access was not denied."
+msgstr "%s  е разрешен тип (%s). Този достъп не е бил отказан."
+
+#: ../src/setroubleshoot/signature.py:379
+msgid "SELinux is in permissive mode. This access was not denied."
+msgstr "SELinux е в разрешителен режим. Този достъп не е бил отказан."
+
+#: ../src/setroubleshoot/signature.py:432
+#, python-format
+msgid "SELinux is preventing %s from using the %s access on a process."
+msgstr "SELinux попречи на %s да използва достъп %s върху процес."
+
+#: ../src/setroubleshoot/signature.py:432
+#, python-format
+msgid "SELinux is preventing %s from using the '%s' accesses on a process."
+msgstr ""
+"SELinux попречи на %s да използва многократно достъп '%s' върху процес."
+
+#: ../src/setroubleshoot/signature.py:435
+#, python-format
+msgid "SELinux is preventing %s from using the %s capability."
+msgstr "SELinux попречи на %s да използва %s способността."
+
+#: ../src/setroubleshoot/signature.py:435
+#, python-format
+msgid "SELinux is preventing %s from using the '%s' capabilities."
+msgstr "SELinux попречи на %s да използва '%s' способностите."
+
+#: ../src/setroubleshoot/signature.py:437
+#, python-format
+msgid "SELinux is preventing %s from %s access on the %s labeled %s."
+msgstr "SELinux предпазва %s от достъп %s на %s с етикет %s."
+
+#: ../src/setroubleshoot/signature.py:437
+#, python-format
+msgid "SELinux is preventing %s from '%s' accesses on the %s labeled %s."
+msgstr "SELinux предпазва %s от достъп '%s' на %s с етикет %s."
+
+#: ../src/setroubleshoot/signature.py:438
+#, python-format
+msgid "SELinux is preventing %s from %s access on the %s %s."
+msgstr "SELinux предпазва %s от достъп %s на %s %s."
+
+#: ../src/setroubleshoot/signature.py:438
+#, python-format
+msgid "SELinux is preventing %s from '%s' accesses on the %s %s."
+msgstr "SELinux предпазва %s от многократен достъп '%s' на %s %s."
+
+#: ../src/setroubleshoot/signature.py:469
+msgid "Additional Information:\n"
+msgstr "Допълнителна информация:\n"
+
+#: ../src/setroubleshoot/signature.py:470
+msgid "Source Context"
+msgstr "Контекст на източника"
+
+#: ../src/setroubleshoot/signature.py:471
+msgid "Target Context"
+msgstr "Целеви контекст"
+
+#: ../src/setroubleshoot/signature.py:472
+msgid "Target Objects"
+msgstr "Целеви обекти"
+
+#: ../src/setroubleshoot/signature.py:473
+msgid "Source"
+msgstr "Източник"
+
+#: ../src/setroubleshoot/signature.py:474
+msgid "Source Path"
+msgstr "Път на източника"
+
+#: ../src/setroubleshoot/signature.py:475
+msgid "Port"
+msgstr "Порт"
+
+#: ../src/setroubleshoot/signature.py:477
+#: ../src/setroubleshoot/signature.py:479
+msgid "Host"
+msgstr "Хост"
+
+#: ../src/setroubleshoot/signature.py:480
+msgid "Source RPM Packages"
+msgstr "Изходни RPM пакети"
+
+#: ../src/setroubleshoot/signature.py:481
+msgid "Target RPM Packages"
+msgstr "Целеви RPM пакети"
+
+#: ../src/setroubleshoot/signature.py:482
+msgid "Policy RPM"
+msgstr "RPM с политика"
+
+#: ../src/setroubleshoot/signature.py:483
+msgid "Selinux Enabled"
+msgstr "Selinux е разрешен"
+
+#: ../src/setroubleshoot/signature.py:484
+msgid "Policy Type"
+msgstr "Тип политика"
+
+#: ../src/setroubleshoot/signature.py:485
+msgid "Enforcing Mode"
+msgstr "Насилствен режим"
+
+#: ../src/setroubleshoot/signature.py:487
+#: ../src/setroubleshoot/signature.py:489
+msgid "Host Name"
+msgstr "Име на хост"
+
+#: ../src/setroubleshoot/signature.py:494
+#: ../src/setroubleshoot/signature.py:496
+msgid "Platform"
+msgstr "Платформа"
+
+#: ../src/setroubleshoot/signature.py:497
+msgid "Alert Count"
+msgstr "Брой тревоги"
+
+#: ../src/setroubleshoot/signature.py:499
+msgid "First Seen"
+msgstr "Видяно за първи път"
+
+#: ../src/setroubleshoot/signature.py:500
+msgid "Last Seen"
+msgstr "Видяно за последно"
+
+#: ../src/setroubleshoot/signature.py:501
+msgid "Local ID"
+msgstr "Локално ID"
+
+#: ../src/setroubleshoot/signature.py:503
+msgid "Raw Audit Messages"
+msgstr "Сурови одит съобщения"
+
+#: ../src/setroubleshoot/signature.py:557
+#, python-format
+msgid "\n"
+"\n"
+"*****  Plugin %s (%.4s confidence) suggests   "
+msgstr "\n"
+"\n"
+"*****  Плъгинът %s (%.4s confidence) предлага   "
+
+#: ../src/setroubleshoot/signature.py:560
+msgid "*"
+msgstr "*"
+
+#: ../src/setroubleshoot/signature.py:561
+msgid "\n"
+msgstr "\n"
+
+#: ../src/setroubleshoot/signature.py:563
+msgid "\n"
+"If "
+msgstr "\n"
+"Ако"
+
+#: ../src/setroubleshoot/signature.py:565
+msgid "\n"
+"Then "
+msgstr "\n"
+"Тогава"
+
+#: ../src/setroubleshoot/signature.py:568
+msgid "\n"
+"Do\n"
+msgstr "\n"
+"Направи\n"
+
+#: ../src/setroubleshoot/signature.py:570
+msgid "\n"
+"\n"
+msgstr "\n"
+"\n"
+
+#: ../src/updater.py:18
+#, python-format
+msgid "current: %s "
+msgstr "сегашен: %s "
+
+#: ../src/updater.py:27
+#, python-format
+msgid "newer: %s "
+msgstr "по-нов: %s "
+
+#: ../src/seapplet.c:189
+msgid "New SELinux security alert"
+msgstr "Ново предупреждение за сигурността от SELinux"
+
+#: ../src/seapplet.c:189
+msgid "AVC denial, click icon to view"
+msgstr "AVC забрана, цъкнете иконата за преглед"
+
+#: ../src/seapplet.c:195 ../src/seapplet.c:246
+msgid "Dismiss"
+msgstr "Отхвърли"
+
+#: ../src/seapplet.c:205 ../src/seapplet.c:256
+msgid "Show"
+msgstr "Покажи"
+
+#. set tooltip
+#: ../src/seapplet.c:440 ../src/sealert:64
+msgid "SELinux AVC denial, click to view"
+msgstr "SELinux AVC забрана, цъкнете за преглед"
+
+#: ../src/sealert:103
+msgid "SELinux not enabled, sealert will not run on non SELinux systems"
+msgstr "SELinux не е включен, sealert няма да работи на не-SELinux системи"
+
+#: ../src/sealert:150
+msgid "Not fixable."
+msgstr "Не е поправимо."
+
+#: ../src/sealert:157
+#, c-format
+msgid "Successfully ran %s"
+msgstr "Успешно пусна %s"
+
+#: ../src/sealert:162
+#, c-format
+msgid "Plugin %s not valid for %s id"
+msgstr "Плъгинът %s е невалиден за %s id"
+
+#: ../src/setroubleshootd:73
+msgid "SELinux not enabled, setroubleshootd exiting..."
+msgstr "SELinux не е разрешен, setroubleshootd излиза..."
+
+#: ../src/setroubleshootd:105
+#, c-format
+msgid "fork #1 failed: %d (%s)"
+msgstr "стартирането на #1 се провали: %d (%s)"
+
+#: ../gui/browser.glade.h:1
+msgid ""
+"Copyright (c) 2010 \n"
+"Thomas Liu <tliu@redhat.com>\n"
+"Máirín Duffy <duffy@redhat.com>\n"
+"Daniel Walsh <dwalsh@redhat.com>\n"
+"John Dennis <jdennis@redhat.com>\n"
+msgstr ""
+"Copyright (c) 2010 \n"
+"Thomas Liu <tliu@redhat.com>\n"
+"Máirín Duffy <duffy@redhat.com>\n"
+"Daniel Walsh <dwalsh@redhat.com>\n"
+"John Dennis <jdennis@redhat.com>\n"
+"Превод: Валентин Ласков\n"
+
+#: ../gui/browser.glade.h:9
+msgid "Troubleshoot selected alert"
+msgstr "Разследване на избраната аларма"
+
+#: ../gui/browser.glade.h:10
+msgid "Delete Selected Alerts"
+msgstr "Изтрий избраните аларми"
+
+#: ../gui/browser.glade.h:13
+msgid "<b>SELinux has detected a problem.</b>"
+msgstr "<b>SELinux засече проблем.</b>"
+
+#: ../gui/browser.glade.h:16
+msgid "Turn on alert pop-ups."
+msgstr "Включване на pop-up за алармите."
+
+#: ../gui/browser.glade.h:18
+msgid "Turn off alert pop-ups."
+msgstr "Изключване на pop-up за алармите."
+
+#: ../gui/browser.glade.h:21
+msgid "On this file:"
+msgstr "На този файл:"
+
+#: ../gui/browser.glade.h:22
+msgid "label"
+msgstr "етикет"
+
+#: ../gui/browser.glade.h:23
+msgid ""
+"Read alert troubleshoot information.  May require administrative privileges "
+"to remedy."
+msgstr ""
+"Прочетете информацията за разследване на алармата.  Може да изисква "
+"административни права за отстраняване на проблема."
+
+#: ../gui/browser.glade.h:25
+msgid "Email alert to system administrator."
+msgstr "Имейл предупреждение до системния администратор."
+
+#: ../gui/browser.glade.h:29
+msgid "Delete current alert from the database."
+msgstr "Изтрий тази аларма от базата данни"
+
+#: ../gui/browser.glade.h:30
+msgid "Show previous alert."
+msgstr "Покажи предишната аларма."
+
+#: ../gui/browser.glade.h:32
+msgid "Show next alert."
+msgstr "Покажи следващата аларма."
+
+#: ../gui/browser.glade.h:34
+msgid "List all alerts in the database."
+msgstr "Списък с всички аларми в базата данни"
+
+#: ../gui/bug_report.glade.h:1
+msgid "Review and Submit Bug Report"
+msgstr "Преглед и Подаване на доклад за грешка"
+
+#: ../gui/bug_report.glade.h:2
+msgid "<span size='large' weight='bold'>Review and Submit Bug Report</span>"
+msgstr ""
+"<span size='large' weight='bold'>Преглед и Подаване на доклад за грешка</"
+"span>"
+
+#: ../gui/bug_report.glade.h:3
+msgid ""
+"You may wish to review the error output that will be included in this bug "
+"report and modify it to exclude any sensitive data below."
+msgstr ""
+"Може би ще желаете да преразгледате изхода на грешката, който ще бъде "
+"включен в доклада за този бъг и да го преразгледате, за да се изтрият "
+"всякакви лични данни по-долу."
+
+#: ../gui/bug_report.glade.h:4
+msgid "Included error output:"
+msgstr "Включен изход на грешка:"
+
+#: ../gui/bug_report.glade.h:5
+msgid "Submit Report"
+msgstr "Подай доклада"
+
+#: ../gui/fail_dialog.glade.h:2 ../gui/success_dialog.glade.h:2
+msgid ""
+"This operation was completed.  The quick brown fox jumped over the lazy dog."
+msgstr ""
+"Тази операция е завършена.  Бързата кафява лисица прескочи мързеливото куче."
+
+#: ../gui/success_dialog.glade.h:1
+msgid "Success!"
+msgstr "Успех!"
+
+#: ../gui/success_dialog.glade.h:3
+msgid "button"
+msgstr "бутон"

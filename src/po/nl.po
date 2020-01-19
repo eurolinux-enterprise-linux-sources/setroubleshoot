@@ -1,0 +1,834 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# 
+# Translators:
+# Dimitris Glezos <glezos@transifex.com>, 2011
+# Geert Warrink <geert.warrink@onsnet.nu>, 2009-2013
+# Peter van Egdom <p.van.egdom@gmail.com>, 2007, 2008, 2009
+# Richard E. van der Luit <nippur@fedoraproject.org>, 2012
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-01-15 16:27+0100\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2013-11-20 06:29-0500\n"
+"Last-Translator: Geert Warrink <geert.warrink@onsnet.nu>\n"
+"Language-Team: Dutch (http://www.transifex.com/projects/p/fedora/language/nl/"
+")\n"
+"Language: nl\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Zanata 3.8.3\n"
+
+#: ../setroubleshoot.desktop.in.h:1
+msgid "SELinux Troubleshooter"
+msgstr "SELinux probleemoplosser"
+
+#: ../setroubleshoot.desktop.in.h:2
+msgid "Troubleshoot SELinux access denials"
+msgstr "Los SELinux toegangsweigeringen op"
+
+#: ../setroubleshoot.desktop.in.h:3
+msgid "policy;security;selinux;avc;permission;mac;alert;sealert;"
+msgstr "policy;security;selinux;avc;permission;mac;alert;sealert;"
+
+#: ../src/setroubleshoot/audit_data.py:903
+#, python-format
+msgid "port %s"
+msgstr "poort %s"
+
+#: ../src/setroubleshoot/audit_data.py:905
+#: ../src/setroubleshoot/browser.py:747 ../src/setroubleshoot/browser.py:822
+#: ../src/setroubleshoot/rpc.py:528 ../src/setroubleshoot/util.py:229
+msgid "Unknown"
+msgstr "Onbekend"
+
+#: ../src/setroubleshoot/audit_data.py:995
+#, python-format
+msgid "%s \n"
+"**** Invalid AVC allowed in current policy ***\n"
+msgstr "%s \n"
+"**** Ongeldige AVC toegestaan in huidige tactiek ***\n"
+
+#: ../src/setroubleshoot/audit_data.py:997
+#, python-format
+msgid ""
+"%s \n"
+"**** Invalid AVC dontaudited in current policy.  'semodule -B' will turn on "
+"dontaudit rules. ***\n"
+msgstr ""
+"%s \n"
+"**** Ongeldige AVC dontaudited in huidige tactiek.  'semodule -B' zal "
+"dontaudit-regels aanzetten. ***\n"
+
+#: ../src/setroubleshoot/audit_data.py:999
+msgid "Must call policy_init first"
+msgstr "policy_init moet eerst aangeroepen worden"
+
+#: ../src/setroubleshoot/audit_data.py:1001
+#, python-format
+msgid "%s \n"
+"**** Invalid AVC bad target context. ***\n"
+msgstr "%s \n"
+"**** Ongeldige AVC slechte doelcontext. ***\n"
+
+#: ../src/setroubleshoot/audit_data.py:1003
+#, python-format
+msgid "%s \n"
+"**** Invalid AVC bad source context. ***\n"
+msgstr "%s \n"
+"**** Ongeldig AVC slechte broncontext. ***\n"
+
+#: ../src/setroubleshoot/audit_data.py:1005
+#, python-format
+msgid "%s \n"
+"**** Invalid AVC bad type class ***\n"
+msgstr "%s \n"
+"**** Ongeldige AVC slecht typeklasse ***\n"
+
+#: ../src/setroubleshoot/audit_data.py:1007
+#, python-format
+msgid "%s \n"
+"**** Invalid AVC bad permission ***\n"
+msgstr "%s \n"
+"**** Ongeldige AVC slechte toestemming ***\n"
+
+#: ../src/setroubleshoot/audit_data.py:1009
+msgid "Error during access vector computation"
+msgstr "Fout tijdens toegangsvectorberekening"
+
+#: ../src/setroubleshoot/browser.py:171 ../gui/browser.glade.h:12
+msgid "SELinux Alert Browser"
+msgstr "SELinux Waarschuwingen Browser"
+
+#: ../src/setroubleshoot/browser.py:175 ../gui/browser.glade.h:19
+msgid "The source process:"
+msgstr "Het bronproces:"
+
+#: ../src/setroubleshoot/browser.py:180 ../gui/browser.glade.h:15
+msgid "Yes"
+msgstr "Ja"
+
+#: ../src/setroubleshoot/browser.py:182 ../gui/browser.glade.h:17
+msgid "No"
+msgstr "Geen"
+
+#: ../src/setroubleshoot/browser.py:187 ../gui/browser.glade.h:20
+msgid "Attempted this access:"
+msgstr "Deze toegang werd geprobeerd:"
+
+#: ../src/setroubleshoot/browser.py:201 ../gui/browser.glade.h:11
+msgid "SETroubleshoot Details Window"
+msgstr "Setroubleshoot detailsvenster"
+
+#: ../src/setroubleshoot/browser.py:204 ../gui/browser.glade.h:14
+msgid "Would you like to receive alerts?"
+msgstr "Wil je waarschuwingen ontvangen?"
+
+#: ../src/setroubleshoot/browser.py:208 ../gui/browser.glade.h:24
+msgid "Notify Admin"
+msgstr "Geef bericht aan beheerder"
+
+#: ../src/setroubleshoot/browser.py:211 ../src/setroubleshoot/browser.py:217
+#: ../gui/browser.glade.h:8
+msgid "Troubleshoot"
+msgstr "Troubleshoot"
+
+#: ../src/setroubleshoot/browser.py:214 ../gui/browser.glade.h:26
+msgid "Details"
+msgstr "Details"
+
+#: ../src/setroubleshoot/browser.py:221 ../gui/browser.glade.h:7
+msgid "SETroubleshoot Alert List"
+msgstr "SETroubleshoot waarschuwingenlijst"
+
+#: ../src/setroubleshoot/browser.py:223 ../gui/browser.glade.h:33
+msgid "List All Alerts"
+msgstr "Laat alle waarschuwingen zien"
+
+#: ../src/setroubleshoot/browser.py:270
+msgid "#"
+msgstr "#"
+
+#: ../src/setroubleshoot/browser.py:270
+msgid "Source Process"
+msgstr "Bron proces"
+
+#: ../src/setroubleshoot/browser.py:270
+msgid "Attempted Access"
+msgstr "Poging tot toegang"
+
+#: ../src/setroubleshoot/browser.py:270
+msgid "On this"
+msgstr "Op dit"
+
+#: ../src/setroubleshoot/browser.py:270
+msgid "Occurred"
+msgstr "Opgetreden"
+
+#: ../src/setroubleshoot/browser.py:270 ../src/run_cmd.py:406
+msgid "Status"
+msgstr "Status"
+
+#: ../src/setroubleshoot/browser.py:344 ../src/setroubleshoot/browser.py:786
+#: ../src/setroubleshoot/browser.py:830
+msgid "Notify"
+msgstr "Kennisgeven"
+
+#: ../src/setroubleshoot/browser.py:345
+msgid "Notify alert in the future."
+msgstr "Informeer in de toekomst over waarschuwingen."
+
+#: ../src/setroubleshoot/browser.py:348 ../src/setroubleshoot/browser.py:788
+#: ../src/setroubleshoot/browser.py:828 ../gui/browser.glade.h:27
+msgid "Ignore"
+msgstr "Negeren"
+
+#: ../src/setroubleshoot/browser.py:349 ../gui/browser.glade.h:28
+msgid "Ignore alert in the future."
+msgstr "Waarschuwing in de toekomst negeren."
+
+#: ../src/setroubleshoot/browser.py:385
+msgid "<b>If you were trying to...</b>"
+msgstr "<b>Als je probeerde...</b>"
+
+#: ../src/setroubleshoot/browser.py:394
+msgid "<b>Then this is the solution.</b>"
+msgstr "<b>Dan is dit de oplossing.</b>"
+
+#: ../src/setroubleshoot/browser.py:413 ../src/setroubleshoot/browser.py:549
+msgid "If "
+msgstr "Als "
+
+#: ../src/setroubleshoot/browser.py:501
+msgid "Plugin\n"
+"Details"
+msgstr "Plug-in\n"
+"details"
+
+#: ../src/setroubleshoot/browser.py:516
+msgid "Report\n"
+"Bug"
+msgstr "Rapporteer\n"
+"fout"
+
+#: ../src/setroubleshoot/browser.py:544
+#, python-format
+msgid "Plugin: %s "
+msgstr "Plug-in: %s "
+
+#: ../src/setroubleshoot/browser.py:611
+msgid "Unable to grant access."
+msgstr "Niet in staat toegang te geven."
+
+#: ../src/setroubleshoot/browser.py:642 ../src/setroubleshoot/browser.py:784
+#, python-format
+msgid "Alert %d of %d"
+msgstr "Waarschuwing %d van %d"
+
+#: ../src/setroubleshoot/browser.py:767
+#, python-format
+msgid "On this %s:"
+msgstr "Voor deze %s:"
+
+#: ../src/setroubleshoot/browser.py:815 ../src/setroubleshoot/browser.py:821
+#: ../src/setroubleshoot/signature.py:391
+msgid "N/A"
+msgstr "N.v.t."
+
+#: ../src/setroubleshoot/browser.py:862 ../src/setroubleshoot/browser.py:863
+#: ../gui/browser.glade.h:31
+msgid "No Alerts"
+msgstr "Geen waarschuwingen"
+
+#: ../src/setroubleshoot/browser.py:881
+msgid "SELinux has detected a problem."
+msgstr "SELinux heeft een probleem ontdekt."
+
+#: ../src/setroubleshoot/browser.py:987
+msgid "Sealert Error"
+msgstr "Sealert fout"
+
+#: ../src/setroubleshoot/browser.py:998
+msgid "Sealert Message"
+msgstr "Sealert boodschap"
+
+#. -----------------------------------------------------------------------------
+#: ../src/setroubleshoot/errcode.py:71
+msgid "signature not found"
+msgstr "ondertekening niet gevonden"
+
+#: ../src/setroubleshoot/errcode.py:72
+msgid "multiple signatures matched"
+msgstr "meervoudige ondertekeningen pasten bij elkaar"
+
+#: ../src/setroubleshoot/errcode.py:73
+msgid "id not found"
+msgstr "id niet gevonden"
+
+#: ../src/setroubleshoot/errcode.py:74
+msgid "database not found"
+msgstr "database niet gevonden"
+
+#: ../src/setroubleshoot/errcode.py:75
+msgid "item is not a member"
+msgstr "item is geen onderdeel"
+
+#: ../src/setroubleshoot/errcode.py:76
+msgid "illegal to change user"
+msgstr "illegaal om gebruiker te veranderen"
+
+#: ../src/setroubleshoot/errcode.py:77
+msgid "method not found"
+msgstr "methode niet gevonden"
+
+#: ../src/setroubleshoot/errcode.py:78
+msgid "cannot create GUI"
+msgstr "kan GUI niet aanmaken"
+
+#: ../src/setroubleshoot/errcode.py:79
+msgid "value unknown"
+msgstr "waarde onbekend"
+
+#: ../src/setroubleshoot/errcode.py:80
+msgid "cannot open file"
+msgstr "kan bestand niet openen"
+
+#: ../src/setroubleshoot/errcode.py:81
+msgid "invalid email address"
+msgstr "ongeldig email adres"
+
+#. gobject IO Errors
+#: ../src/setroubleshoot/errcode.py:84
+msgid "socket error"
+msgstr "socket fout"
+
+#: ../src/setroubleshoot/errcode.py:85
+msgid "connection has been broken"
+msgstr "verbinding is verbroken"
+
+#: ../src/setroubleshoot/errcode.py:86
+msgid "Invalid request. The file descriptor is not open"
+msgstr "Ongeldig verzoek. De bestandsdescriptor is niet open"
+
+#: ../src/setroubleshoot/errcode.py:88
+msgid "insufficient permission to modify user"
+msgstr "onvoldoende rechten om gebruiker te wijzigen"
+
+#: ../src/setroubleshoot/errcode.py:89
+msgid "authentication failed"
+msgstr "authenticatie faalde"
+
+#: ../src/setroubleshoot/errcode.py:90
+msgid "user prohibited"
+msgstr "gebruiker verboden"
+
+#: ../src/setroubleshoot/errcode.py:91
+msgid "not authenticated"
+msgstr "niet geauthenticeerd"
+
+#: ../src/setroubleshoot/errcode.py:92
+msgid "user lookup failed"
+msgstr "opzoeken gebruiker faalde"
+
+#: ../src/setroubleshoot/gui_utils.py:53 ../src/sealert:531
+#, c-format, python-format
+msgid "Opps, %s hit an error!"
+msgstr "Oeps, %s loopt tegen een fout aan!"
+
+#: ../src/setroubleshoot/gui_utils.py:55 ../gui/fail_dialog.glade.h:1
+msgid "Error"
+msgstr "Fout"
+
+#: ../src/setroubleshoot/Plugin.py:81
+msgid ""
+"you want to allow $SOURCE_BASE_PATH to have $ACCESS access on the "
+"$TARGET_BASE_PATH $TARGET_CLASS"
+msgstr ""
+"je $SOURCE_BASE_PATH wilt toestaan om $ACCESS toegang te hebben tot de "
+"$TARGET_BASE_PATH $TARGET_CLASS"
+
+#: ../src/run_cmd.py:172
+msgid "Input: "
+msgstr "Input: "
+
+#: ../src/run_cmd.py:255
+msgid "Enter Password"
+msgstr "Vul wachtwoord in"
+
+#: ../src/run_cmd.py:268
+msgid "Password: "
+msgstr "Wachtwoord: "
+
+#: ../src/run_cmd.py:367
+msgid "SELinux Fix"
+msgstr "SELinux reparatie"
+
+#: ../src/run_cmd.py:378
+msgid "Command"
+msgstr "Commando"
+
+#: ../src/run_cmd.py:388
+msgid "Run Command"
+msgstr "Voer commando uit"
+
+#: ../src/run_cmd.py:391
+msgid "Stop Command"
+msgstr "Stop commando"
+
+#: ../src/run_cmd.py:413
+msgid "Warning: You are responsible for verifying this command is correct"
+msgstr ""
+"Waarschuwing: Jij bent verantwoordelijk voor het verifiëren van de "
+"correctheid van dit commando"
+
+#: ../src/run_cmd.py:455
+msgid "Not Run Yet"
+msgstr "Nog niet uitgevoerd"
+
+#: ../src/run_cmd.py:466
+msgid "Running..."
+msgstr "Uitvoeren..."
+
+#: ../src/run_cmd.py:481
+#, python-format
+msgid "Interrupted, exit on signal %d"
+msgstr "Onderbroken, exit op signaal %d"
+
+#: ../src/run_cmd.py:483
+msgid "Success"
+msgstr "Succes"
+
+#: ../src/run_cmd.py:485
+#, python-format
+msgid "Failed, exit status = %d"
+msgstr "Mislukt, exit status = %d"
+
+#: ../src/run_cmd.py:487
+msgid "Done: "
+msgstr "Klaar: "
+
+#: ../src/setroubleshoot/server.py:191
+#, python-format
+msgid " For complete SELinux messages. run sealert -l %s"
+msgstr " Voor complete SELinux-boodschappen, voer sealert -l %s uit"
+
+#: ../src/setroubleshoot/server.py:377
+#, python-format
+msgid "The user (%s) cannot modify data for (%s)"
+msgstr "De gebruiker (%s) kan geen data veranderen voor (%s)"
+
+#: ../src/setroubleshoot/server.py:440 ../src/sealert:291
+msgid "Started"
+msgstr "Gestart"
+
+#: ../src/setroubleshoot/server.py:487
+msgid "AVC"
+msgstr "AVC"
+
+#: ../src/setroubleshoot/server.py:553
+msgid "Audit Listener"
+msgstr "Audit luisteraar"
+
+#: ../src/setroubleshoot/signature.py:74
+msgid "Never Ignore"
+msgstr "Nooit negeren"
+
+#: ../src/setroubleshoot/signature.py:75
+msgid "Ignore Always"
+msgstr "Altijd negeren"
+
+#: ../src/setroubleshoot/signature.py:76
+msgid "Ignore After First Alert"
+msgstr "Negeer na eerste waarschuwing"
+
+#: ../src/setroubleshoot/signature.py:193
+msgid "directory"
+msgstr "map"
+
+#: ../src/setroubleshoot/signature.py:194
+msgid "semaphore"
+msgstr "semafoor"
+
+#: ../src/setroubleshoot/signature.py:195
+msgid "shared memory"
+msgstr "gedeeld geheugen"
+
+#: ../src/setroubleshoot/signature.py:196
+msgid "message queue"
+msgstr "wachtrij meldingen"
+
+#: ../src/setroubleshoot/signature.py:197
+msgid "message"
+msgstr "melding"
+
+#: ../src/setroubleshoot/signature.py:198
+msgid "file"
+msgstr "bestand"
+
+#: ../src/setroubleshoot/signature.py:199
+msgid "socket"
+msgstr "socket"
+
+#: ../src/setroubleshoot/signature.py:200
+msgid "process"
+msgstr "proces"
+
+#: ../src/setroubleshoot/signature.py:201
+msgid "filesystem"
+msgstr "bestandssysteem"
+
+#: ../src/setroubleshoot/signature.py:202
+msgid "node"
+msgstr "node"
+
+#: ../src/setroubleshoot/signature.py:203
+msgid "capability"
+msgstr "mogelijkheid "
+
+#: ../src/setroubleshoot/signature.py:376
+#, python-format
+msgid "%s has a permissive type (%s). This access was not denied."
+msgstr "%s heeft een toelatend type (%s). Deze toegang was niet verboden."
+
+#: ../src/setroubleshoot/signature.py:379
+msgid "SELinux is in permissive mode. This access was not denied."
+msgstr "SELinux is in de toelatende modus. Deze toegang werd niet geweigerd."
+
+#: ../src/setroubleshoot/signature.py:432
+#, python-format
+msgid "SELinux is preventing %s from using the %s access on a process."
+msgstr "SELinux belet %s om de %s toegang tot een proces te gebruiken."
+
+#: ../src/setroubleshoot/signature.py:432
+#, python-format
+msgid "SELinux is preventing %s from using the '%s' accesses on a process."
+msgstr "SELinux belet %s om de '%s' toegang tot een proces te gebruiken."
+
+#: ../src/setroubleshoot/signature.py:435
+#, python-format
+msgid "SELinux is preventing %s from using the %s capability."
+msgstr "SELinux belet %s om de %s mogelijkheid te gebruiken."
+
+#: ../src/setroubleshoot/signature.py:435
+#, python-format
+msgid "SELinux is preventing %s from using the '%s' capabilities."
+msgstr "SELinux belet %s om de '%s' mogelijkheden te gebruiken."
+
+#: ../src/setroubleshoot/signature.py:437
+#, python-format
+msgid "SELinux is preventing %s from %s access on the %s labeled %s."
+msgstr "SELinux belet %s %s toegang voor de %s gelabeld met %s."
+
+#: ../src/setroubleshoot/signature.py:437
+#, python-format
+msgid "SELinux is preventing %s from '%s' accesses on the %s labeled %s."
+msgstr "SELinux belet %s '%s' toegang tot de %s gelabeld met %s."
+
+#: ../src/setroubleshoot/signature.py:438
+#, python-format
+msgid "SELinux is preventing %s from %s access on the %s %s."
+msgstr "SELinux belet %s %s toegang op %s %s."
+
+#: ../src/setroubleshoot/signature.py:438
+#, python-format
+msgid "SELinux is preventing %s from '%s' accesses on the %s %s."
+msgstr "SELinux belet %s '%s' toegang op %s %s."
+
+#: ../src/setroubleshoot/signature.py:469
+msgid "Additional Information:\n"
+msgstr "Aanvullende informatie:\n"
+
+#: ../src/setroubleshoot/signature.py:470
+msgid "Source Context"
+msgstr "Broncontext"
+
+#: ../src/setroubleshoot/signature.py:471
+msgid "Target Context"
+msgstr "Doelcontext"
+
+#: ../src/setroubleshoot/signature.py:472
+msgid "Target Objects"
+msgstr "Doelobjecten"
+
+#: ../src/setroubleshoot/signature.py:473
+msgid "Source"
+msgstr "Bron"
+
+#: ../src/setroubleshoot/signature.py:474
+msgid "Source Path"
+msgstr "Bronpad"
+
+#: ../src/setroubleshoot/signature.py:475
+msgid "Port"
+msgstr "Poort"
+
+#: ../src/setroubleshoot/signature.py:477
+#: ../src/setroubleshoot/signature.py:479
+msgid "Host"
+msgstr "Host"
+
+#: ../src/setroubleshoot/signature.py:480
+msgid "Source RPM Packages"
+msgstr "Bron RPM-pakketten"
+
+#: ../src/setroubleshoot/signature.py:481
+msgid "Target RPM Packages"
+msgstr "Doel RPM-pakketten"
+
+#: ../src/setroubleshoot/signature.py:482
+msgid "Policy RPM"
+msgstr "Beleid RPM"
+
+#: ../src/setroubleshoot/signature.py:483
+msgid "Selinux Enabled"
+msgstr "SELinux aangezet"
+
+#: ../src/setroubleshoot/signature.py:484
+msgid "Policy Type"
+msgstr "Beleidstype"
+
+#: ../src/setroubleshoot/signature.py:485
+msgid "Enforcing Mode"
+msgstr "Afdwingende modus"
+
+#: ../src/setroubleshoot/signature.py:487
+#: ../src/setroubleshoot/signature.py:489
+msgid "Host Name"
+msgstr "Hostnaam"
+
+#: ../src/setroubleshoot/signature.py:494
+#: ../src/setroubleshoot/signature.py:496
+msgid "Platform"
+msgstr "Platform"
+
+#: ../src/setroubleshoot/signature.py:497
+msgid "Alert Count"
+msgstr "Aantal waarschuwingen"
+
+#: ../src/setroubleshoot/signature.py:499
+msgid "First Seen"
+msgstr "Eerst gezien op"
+
+#: ../src/setroubleshoot/signature.py:500
+msgid "Last Seen"
+msgstr "Laatst gezien op"
+
+#: ../src/setroubleshoot/signature.py:501
+msgid "Local ID"
+msgstr "Locale ID"
+
+#: ../src/setroubleshoot/signature.py:503
+msgid "Raw Audit Messages"
+msgstr "Onbewerkte auditboodschappen"
+
+#: ../src/setroubleshoot/signature.py:557
+#, python-format
+msgid "\n"
+"\n"
+"*****  Plugin %s (%.4s confidence) suggests   "
+msgstr "\n"
+"\n"
+"*****  Plugin %s (met %.4s vertrouwen) suggereert   "
+
+#: ../src/setroubleshoot/signature.py:560
+msgid "*"
+msgstr "*"
+
+#: ../src/setroubleshoot/signature.py:561
+msgid "\n"
+msgstr "\n"
+
+#: ../src/setroubleshoot/signature.py:563
+msgid "\n"
+"If "
+msgstr "\n"
+"Als "
+
+#: ../src/setroubleshoot/signature.py:565
+msgid "\n"
+"Then "
+msgstr "\n"
+"Dan "
+
+#: ../src/setroubleshoot/signature.py:568
+msgid "\n"
+"Do\n"
+msgstr "\n"
+"Doe\n"
+
+#: ../src/setroubleshoot/signature.py:570
+msgid "\n"
+"\n"
+msgstr "\n"
+"\n"
+
+#: ../src/updater.py:18
+#, python-format
+msgid "current: %s "
+msgstr "huidige: %s "
+
+#: ../src/updater.py:27
+#, python-format
+msgid "newer: %s "
+msgstr "nieuwere: %s "
+
+#: ../src/seapplet.c:189
+msgid "New SELinux security alert"
+msgstr "Nieuwe SELinux beveiligingswaarschuwing"
+
+#: ../src/seapplet.c:189
+msgid "AVC denial, click icon to view"
+msgstr "AVC-weigering, klik op icoon om te bekijken"
+
+#: ../src/seapplet.c:195 ../src/seapplet.c:246
+msgid "Dismiss"
+msgstr "Verwerp"
+
+#: ../src/seapplet.c:205 ../src/seapplet.c:256
+msgid "Show"
+msgstr "Laat zien"
+
+#. set tooltip
+#: ../src/seapplet.c:440 ../src/sealert:64
+msgid "SELinux AVC denial, click to view"
+msgstr "SELinux AVC-weigering, klik om te bekijken"
+
+#: ../src/sealert:103
+msgid "SELinux not enabled, sealert will not run on non SELinux systems"
+msgstr "SELinux niet aangezet, sealert draait niet op niet-SELinux systemen"
+
+#: ../src/sealert:150
+msgid "Not fixable."
+msgstr "Niet te repareren."
+
+#: ../src/sealert:157
+#, c-format
+msgid "Successfully ran %s"
+msgstr "%s succesvol uitgevoerd"
+
+#: ../src/sealert:162
+#, c-format
+msgid "Plugin %s not valid for %s id"
+msgstr "Plug-in %s niet geldig voor %s id"
+
+#: ../src/setroubleshootd:73
+msgid "SELinux not enabled, setroubleshootd exiting..."
+msgstr "SELinux is niet aangezet, setroubleshootd gaat afsluiten..."
+
+#: ../src/setroubleshootd:105
+#, c-format
+msgid "fork #1 failed: %d (%s)"
+msgstr "afsplitsen #1 faalde: %d (%s)"
+
+#: ../gui/browser.glade.h:1
+msgid ""
+"Copyright (c) 2010 \n"
+"Thomas Liu <tliu@redhat.com>\n"
+"Máirín Duffy <duffy@redhat.com>\n"
+"Daniel Walsh <dwalsh@redhat.com>\n"
+"John Dennis <jdennis@redhat.com>\n"
+msgstr ""
+"Copyright (c) 2009 \n"
+"Thomas Liu <tliu@redhat.com>\n"
+"Máirín Duffy <duffy@redhat.com>\n"
+"Daniel Walsh <dwalsh@redhat.com>\n"
+"John Dennis <jdennis@redhat.com>\n"
+
+#: ../gui/browser.glade.h:9
+msgid "Troubleshoot selected alert"
+msgstr "Waarschuwing geselecteerd door Troubleshoot"
+
+#: ../gui/browser.glade.h:10
+msgid "Delete Selected Alerts"
+msgstr "Verwijder geselecteerde waarschuwingen"
+
+#: ../gui/browser.glade.h:13
+msgid "<b>SELinux has detected a problem.</b>"
+msgstr "<b>SELinux heeft een probleem gedetecteerd.</b>"
+
+#: ../gui/browser.glade.h:16
+msgid "Turn on alert pop-ups."
+msgstr "Zet alle waarschuwingspop-ups aan."
+
+#: ../gui/browser.glade.h:18
+msgid "Turn off alert pop-ups."
+msgstr "Zet alle waarschuwingspop-ups uit."
+
+#: ../gui/browser.glade.h:21
+msgid "On this file:"
+msgstr "Over dit bestand:"
+
+#: ../gui/browser.glade.h:22
+msgid "label"
+msgstr "label"
+
+#: ../gui/browser.glade.h:23
+msgid ""
+"Read alert troubleshoot information.  May require administrative privileges "
+"to remedy."
+msgstr ""
+"Lees informatie over het oplossen van de waarschuwing.  Beheerrechten kunnen "
+"nodig zijn om het te verhelpen."
+
+#: ../gui/browser.glade.h:25
+msgid "Email alert to system administrator."
+msgstr "Email waarschuwing naar de systeembeheerder."
+
+#: ../gui/browser.glade.h:29
+msgid "Delete current alert from the database."
+msgstr "Verwijder huidige waarschuwing uit de database."
+
+#: ../gui/browser.glade.h:30
+msgid "Show previous alert."
+msgstr "Laat vorige waarschuwing zien."
+
+#: ../gui/browser.glade.h:32
+msgid "Show next alert."
+msgstr "Laat volgende waarschuwing zien."
+
+#: ../gui/browser.glade.h:34
+msgid "List all alerts in the database."
+msgstr "Laat alle waarschuwingen in de database zien."
+
+#: ../gui/bug_report.glade.h:1
+msgid "Review and Submit Bug Report"
+msgstr "Bekijk en dien een foutrapport in"
+
+#: ../gui/bug_report.glade.h:2
+msgid "<span size='large' weight='bold'>Review and Submit Bug Report</span>"
+msgstr ""
+"<span size='large' weight='bold'>Bekijk en dien een foutrapport in</span>"
+
+#: ../gui/bug_report.glade.h:3
+msgid ""
+"You may wish to review the error output that will be included in this bug "
+"report and modify it to exclude any sensitive data below."
+msgstr ""
+"Je wilt de fout-output, die aan dit foutrapport toegevoegd wordt, misschien "
+"bekijken en veranderen om gevoelige data te verwijderen."
+
+#: ../gui/bug_report.glade.h:4
+msgid "Included error output:"
+msgstr "Bijgesloten fout-output:"
+
+#: ../gui/bug_report.glade.h:5
+msgid "Submit Report"
+msgstr "Dien rapport in"
+
+#: ../gui/fail_dialog.glade.h:2 ../gui/success_dialog.glade.h:2
+msgid ""
+"This operation was completed.  The quick brown fox jumped over the lazy dog."
+msgstr ""
+"Deze bewerking is klaar.  The quick brown fox jumped over the lazy dog."
+
+#: ../gui/success_dialog.glade.h:1
+msgid "Success!"
+msgstr "Succes!"
+
+#: ../gui/success_dialog.glade.h:3
+msgid "button"
+msgstr "knop"

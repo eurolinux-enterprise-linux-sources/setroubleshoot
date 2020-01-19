@@ -1,0 +1,800 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# 
+# Translators:
+# Dimitris Glezos <glezos@transifex.com>, 2011
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-01-15 16:27+0100\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2013-11-20 06:29-0500\n"
+"Last-Translator: dwalsh <dwalsh@redhat.com>\n"
+"Language-Team: Greek (http://www.transifex.com/projects/p/fedora/language/el/"
+")\n"
+"Language: el\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Zanata 3.8.3\n"
+
+#: ../setroubleshoot.desktop.in.h:1
+msgid "SELinux Troubleshooter"
+msgstr ""
+
+#: ../setroubleshoot.desktop.in.h:2
+msgid "Troubleshoot SELinux access denials"
+msgstr ""
+
+#: ../setroubleshoot.desktop.in.h:3
+msgid "policy;security;selinux;avc;permission;mac;alert;sealert;"
+msgstr ""
+
+#: ../src/setroubleshoot/audit_data.py:903
+#, python-format
+msgid "port %s"
+msgstr ""
+
+#: ../src/setroubleshoot/audit_data.py:905
+#: ../src/setroubleshoot/browser.py:747 ../src/setroubleshoot/browser.py:822
+#: ../src/setroubleshoot/rpc.py:528 ../src/setroubleshoot/util.py:229
+msgid "Unknown"
+msgstr "Άγνωστο"
+
+#: ../src/setroubleshoot/audit_data.py:995
+#, python-format
+msgid "%s \n"
+"**** Invalid AVC allowed in current policy ***\n"
+msgstr ""
+
+#: ../src/setroubleshoot/audit_data.py:997
+#, python-format
+msgid ""
+"%s \n"
+"**** Invalid AVC dontaudited in current policy.  'semodule -B' will turn on "
+"dontaudit rules. ***\n"
+msgstr ""
+
+#: ../src/setroubleshoot/audit_data.py:999
+msgid "Must call policy_init first"
+msgstr ""
+
+#: ../src/setroubleshoot/audit_data.py:1001
+#, python-format
+msgid "%s \n"
+"**** Invalid AVC bad target context. ***\n"
+msgstr ""
+
+#: ../src/setroubleshoot/audit_data.py:1003
+#, python-format
+msgid "%s \n"
+"**** Invalid AVC bad source context. ***\n"
+msgstr ""
+
+#: ../src/setroubleshoot/audit_data.py:1005
+#, python-format
+msgid "%s \n"
+"**** Invalid AVC bad type class ***\n"
+msgstr ""
+
+#: ../src/setroubleshoot/audit_data.py:1007
+#, python-format
+msgid "%s \n"
+"**** Invalid AVC bad permission ***\n"
+msgstr ""
+
+#: ../src/setroubleshoot/audit_data.py:1009
+msgid "Error during access vector computation"
+msgstr ""
+
+#: ../src/setroubleshoot/browser.py:171 ../gui/browser.glade.h:12
+msgid "SELinux Alert Browser"
+msgstr ""
+
+#: ../src/setroubleshoot/browser.py:175 ../gui/browser.glade.h:19
+msgid "The source process:"
+msgstr ""
+
+#: ../src/setroubleshoot/browser.py:180 ../gui/browser.glade.h:15
+msgid "Yes"
+msgstr ""
+
+#: ../src/setroubleshoot/browser.py:182 ../gui/browser.glade.h:17
+msgid "No"
+msgstr ""
+
+#: ../src/setroubleshoot/browser.py:187 ../gui/browser.glade.h:20
+msgid "Attempted this access:"
+msgstr ""
+
+#: ../src/setroubleshoot/browser.py:201 ../gui/browser.glade.h:11
+msgid "SETroubleshoot Details Window"
+msgstr ""
+
+#: ../src/setroubleshoot/browser.py:204 ../gui/browser.glade.h:14
+msgid "Would you like to receive alerts?"
+msgstr ""
+
+#: ../src/setroubleshoot/browser.py:208 ../gui/browser.glade.h:24
+msgid "Notify Admin"
+msgstr ""
+
+#: ../src/setroubleshoot/browser.py:211 ../src/setroubleshoot/browser.py:217
+#: ../gui/browser.glade.h:8
+msgid "Troubleshoot"
+msgstr ""
+
+#: ../src/setroubleshoot/browser.py:214 ../gui/browser.glade.h:26
+msgid "Details"
+msgstr ""
+
+#: ../src/setroubleshoot/browser.py:221 ../gui/browser.glade.h:7
+msgid "SETroubleshoot Alert List"
+msgstr ""
+
+#: ../src/setroubleshoot/browser.py:223 ../gui/browser.glade.h:33
+msgid "List All Alerts"
+msgstr ""
+
+#: ../src/setroubleshoot/browser.py:270
+msgid "#"
+msgstr ""
+
+#: ../src/setroubleshoot/browser.py:270
+msgid "Source Process"
+msgstr ""
+
+#: ../src/setroubleshoot/browser.py:270
+msgid "Attempted Access"
+msgstr ""
+
+#: ../src/setroubleshoot/browser.py:270
+msgid "On this"
+msgstr ""
+
+#: ../src/setroubleshoot/browser.py:270
+msgid "Occurred"
+msgstr ""
+
+#: ../src/setroubleshoot/browser.py:270 ../src/run_cmd.py:406
+msgid "Status"
+msgstr "Κατάσταση"
+
+#: ../src/setroubleshoot/browser.py:344 ../src/setroubleshoot/browser.py:786
+#: ../src/setroubleshoot/browser.py:830
+msgid "Notify"
+msgstr ""
+
+#: ../src/setroubleshoot/browser.py:345
+msgid "Notify alert in the future."
+msgstr ""
+
+#: ../src/setroubleshoot/browser.py:348 ../src/setroubleshoot/browser.py:788
+#: ../src/setroubleshoot/browser.py:828 ../gui/browser.glade.h:27
+msgid "Ignore"
+msgstr ""
+
+#: ../src/setroubleshoot/browser.py:349 ../gui/browser.glade.h:28
+msgid "Ignore alert in the future."
+msgstr ""
+
+#: ../src/setroubleshoot/browser.py:385
+msgid "<b>If you were trying to...</b>"
+msgstr ""
+
+#: ../src/setroubleshoot/browser.py:394
+msgid "<b>Then this is the solution.</b>"
+msgstr ""
+
+#: ../src/setroubleshoot/browser.py:413 ../src/setroubleshoot/browser.py:549
+msgid "If "
+msgstr ""
+
+#: ../src/setroubleshoot/browser.py:501
+msgid "Plugin\n"
+"Details"
+msgstr ""
+
+#: ../src/setroubleshoot/browser.py:516
+msgid "Report\n"
+"Bug"
+msgstr ""
+
+#: ../src/setroubleshoot/browser.py:544
+#, python-format
+msgid "Plugin: %s "
+msgstr ""
+
+#: ../src/setroubleshoot/browser.py:611
+msgid "Unable to grant access."
+msgstr ""
+
+#: ../src/setroubleshoot/browser.py:642 ../src/setroubleshoot/browser.py:784
+#, python-format
+msgid "Alert %d of %d"
+msgstr ""
+
+#: ../src/setroubleshoot/browser.py:767
+#, python-format
+msgid "On this %s:"
+msgstr ""
+
+#: ../src/setroubleshoot/browser.py:815 ../src/setroubleshoot/browser.py:821
+#: ../src/setroubleshoot/signature.py:391
+msgid "N/A"
+msgstr ""
+
+#: ../src/setroubleshoot/browser.py:862 ../src/setroubleshoot/browser.py:863
+#: ../gui/browser.glade.h:31
+msgid "No Alerts"
+msgstr ""
+
+#: ../src/setroubleshoot/browser.py:881
+msgid "SELinux has detected a problem."
+msgstr ""
+
+#: ../src/setroubleshoot/browser.py:987
+msgid "Sealert Error"
+msgstr ""
+
+#: ../src/setroubleshoot/browser.py:998
+msgid "Sealert Message"
+msgstr ""
+
+#. -----------------------------------------------------------------------------
+#: ../src/setroubleshoot/errcode.py:71
+msgid "signature not found"
+msgstr ""
+
+#: ../src/setroubleshoot/errcode.py:72
+msgid "multiple signatures matched"
+msgstr ""
+
+#: ../src/setroubleshoot/errcode.py:73
+msgid "id not found"
+msgstr ""
+
+#: ../src/setroubleshoot/errcode.py:74
+msgid "database not found"
+msgstr ""
+
+#: ../src/setroubleshoot/errcode.py:75
+msgid "item is not a member"
+msgstr ""
+
+#: ../src/setroubleshoot/errcode.py:76
+msgid "illegal to change user"
+msgstr ""
+
+#: ../src/setroubleshoot/errcode.py:77
+msgid "method not found"
+msgstr ""
+
+#: ../src/setroubleshoot/errcode.py:78
+msgid "cannot create GUI"
+msgstr ""
+
+#: ../src/setroubleshoot/errcode.py:79
+msgid "value unknown"
+msgstr ""
+
+#: ../src/setroubleshoot/errcode.py:80
+msgid "cannot open file"
+msgstr ""
+
+#: ../src/setroubleshoot/errcode.py:81
+msgid "invalid email address"
+msgstr ""
+
+#. gobject IO Errors
+#: ../src/setroubleshoot/errcode.py:84
+msgid "socket error"
+msgstr ""
+
+#: ../src/setroubleshoot/errcode.py:85
+msgid "connection has been broken"
+msgstr ""
+
+#: ../src/setroubleshoot/errcode.py:86
+msgid "Invalid request. The file descriptor is not open"
+msgstr ""
+
+#: ../src/setroubleshoot/errcode.py:88
+msgid "insufficient permission to modify user"
+msgstr ""
+
+#: ../src/setroubleshoot/errcode.py:89
+msgid "authentication failed"
+msgstr "αποτυχία πιστοποίησης"
+
+#: ../src/setroubleshoot/errcode.py:90
+msgid "user prohibited"
+msgstr ""
+
+#: ../src/setroubleshoot/errcode.py:91
+msgid "not authenticated"
+msgstr ""
+
+#: ../src/setroubleshoot/errcode.py:92
+msgid "user lookup failed"
+msgstr ""
+
+#: ../src/setroubleshoot/gui_utils.py:53 ../src/sealert:531
+#, c-format, python-format
+msgid "Opps, %s hit an error!"
+msgstr ""
+
+#: ../src/setroubleshoot/gui_utils.py:55 ../gui/fail_dialog.glade.h:1
+msgid "Error"
+msgstr "Σφάλμα"
+
+#: ../src/setroubleshoot/Plugin.py:81
+msgid ""
+"you want to allow $SOURCE_BASE_PATH to have $ACCESS access on the "
+"$TARGET_BASE_PATH $TARGET_CLASS"
+msgstr ""
+
+#: ../src/run_cmd.py:172
+msgid "Input: "
+msgstr ""
+
+#: ../src/run_cmd.py:255
+msgid "Enter Password"
+msgstr "Εισάγετε συνθηματικό:"
+
+#: ../src/run_cmd.py:268
+msgid "Password: "
+msgstr "Συνθηματικό:"
+
+#: ../src/run_cmd.py:367
+msgid "SELinux Fix"
+msgstr ""
+
+#: ../src/run_cmd.py:378
+msgid "Command"
+msgstr ""
+
+#: ../src/run_cmd.py:388
+msgid "Run Command"
+msgstr ""
+
+#: ../src/run_cmd.py:391
+msgid "Stop Command"
+msgstr ""
+
+#: ../src/run_cmd.py:413
+msgid "Warning: You are responsible for verifying this command is correct"
+msgstr ""
+
+#: ../src/run_cmd.py:455
+msgid "Not Run Yet"
+msgstr ""
+
+#: ../src/run_cmd.py:466
+msgid "Running..."
+msgstr ""
+
+#: ../src/run_cmd.py:481
+#, python-format
+msgid "Interrupted, exit on signal %d"
+msgstr ""
+
+#: ../src/run_cmd.py:483
+msgid "Success"
+msgstr "Επιτυχία"
+
+#: ../src/run_cmd.py:485
+#, python-format
+msgid "Failed, exit status = %d"
+msgstr ""
+
+#: ../src/run_cmd.py:487
+msgid "Done: "
+msgstr ""
+
+#: ../src/setroubleshoot/server.py:191
+#, python-format
+msgid " For complete SELinux messages. run sealert -l %s"
+msgstr ""
+
+#: ../src/setroubleshoot/server.py:377
+#, python-format
+msgid "The user (%s) cannot modify data for (%s)"
+msgstr ""
+
+#: ../src/setroubleshoot/server.py:440 ../src/sealert:291
+msgid "Started"
+msgstr ""
+
+#: ../src/setroubleshoot/server.py:487
+msgid "AVC"
+msgstr "AVC"
+
+#: ../src/setroubleshoot/server.py:553
+msgid "Audit Listener"
+msgstr ""
+
+#: ../src/setroubleshoot/signature.py:74
+msgid "Never Ignore"
+msgstr ""
+
+#: ../src/setroubleshoot/signature.py:75
+msgid "Ignore Always"
+msgstr "Παράβλεψη πάντα"
+
+#: ../src/setroubleshoot/signature.py:76
+msgid "Ignore After First Alert"
+msgstr ""
+
+#: ../src/setroubleshoot/signature.py:193
+msgid "directory"
+msgstr ""
+
+#: ../src/setroubleshoot/signature.py:194
+msgid "semaphore"
+msgstr ""
+
+#: ../src/setroubleshoot/signature.py:195
+msgid "shared memory"
+msgstr ""
+
+#: ../src/setroubleshoot/signature.py:196
+msgid "message queue"
+msgstr ""
+
+#: ../src/setroubleshoot/signature.py:197
+msgid "message"
+msgstr ""
+
+#: ../src/setroubleshoot/signature.py:198
+msgid "file"
+msgstr ""
+
+#: ../src/setroubleshoot/signature.py:199
+msgid "socket"
+msgstr ""
+
+#: ../src/setroubleshoot/signature.py:200
+msgid "process"
+msgstr ""
+
+#: ../src/setroubleshoot/signature.py:201
+msgid "filesystem"
+msgstr ""
+
+#: ../src/setroubleshoot/signature.py:202
+msgid "node"
+msgstr ""
+
+#: ../src/setroubleshoot/signature.py:203
+msgid "capability"
+msgstr ""
+
+#: ../src/setroubleshoot/signature.py:376
+#, python-format
+msgid "%s has a permissive type (%s). This access was not denied."
+msgstr ""
+
+#: ../src/setroubleshoot/signature.py:379
+msgid "SELinux is in permissive mode. This access was not denied."
+msgstr ""
+
+#: ../src/setroubleshoot/signature.py:432
+#, python-format
+msgid "SELinux is preventing %s from using the %s access on a process."
+msgstr ""
+
+#: ../src/setroubleshoot/signature.py:432
+#, python-format
+msgid "SELinux is preventing %s from using the '%s' accesses on a process."
+msgstr ""
+
+#: ../src/setroubleshoot/signature.py:435
+#, python-format
+msgid "SELinux is preventing %s from using the %s capability."
+msgstr ""
+
+#: ../src/setroubleshoot/signature.py:435
+#, python-format
+msgid "SELinux is preventing %s from using the '%s' capabilities."
+msgstr ""
+
+#: ../src/setroubleshoot/signature.py:437
+#, python-format
+msgid "SELinux is preventing %s from %s access on the %s labeled %s."
+msgstr ""
+
+#: ../src/setroubleshoot/signature.py:437
+#, python-format
+msgid "SELinux is preventing %s from '%s' accesses on the %s labeled %s."
+msgstr ""
+
+#: ../src/setroubleshoot/signature.py:438
+#, python-format
+msgid "SELinux is preventing %s from %s access on the %s %s."
+msgstr ""
+
+#: ../src/setroubleshoot/signature.py:438
+#, python-format
+msgid "SELinux is preventing %s from '%s' accesses on the %s %s."
+msgstr ""
+
+#: ../src/setroubleshoot/signature.py:469
+msgid "Additional Information:\n"
+msgstr ""
+
+#: ../src/setroubleshoot/signature.py:470
+msgid "Source Context"
+msgstr ""
+
+#: ../src/setroubleshoot/signature.py:471
+msgid "Target Context"
+msgstr ""
+
+#: ../src/setroubleshoot/signature.py:472
+msgid "Target Objects"
+msgstr ""
+
+#: ../src/setroubleshoot/signature.py:473
+msgid "Source"
+msgstr ""
+
+#: ../src/setroubleshoot/signature.py:474
+msgid "Source Path"
+msgstr ""
+
+#: ../src/setroubleshoot/signature.py:475
+msgid "Port"
+msgstr "Θύρα"
+
+#: ../src/setroubleshoot/signature.py:477
+#: ../src/setroubleshoot/signature.py:479
+msgid "Host"
+msgstr ""
+
+#: ../src/setroubleshoot/signature.py:480
+msgid "Source RPM Packages"
+msgstr ""
+
+#: ../src/setroubleshoot/signature.py:481
+msgid "Target RPM Packages"
+msgstr ""
+
+#: ../src/setroubleshoot/signature.py:482
+msgid "Policy RPM"
+msgstr ""
+
+#: ../src/setroubleshoot/signature.py:483
+msgid "Selinux Enabled"
+msgstr ""
+
+#: ../src/setroubleshoot/signature.py:484
+msgid "Policy Type"
+msgstr ""
+
+#: ../src/setroubleshoot/signature.py:485
+msgid "Enforcing Mode"
+msgstr ""
+
+#: ../src/setroubleshoot/signature.py:487
+#: ../src/setroubleshoot/signature.py:489
+msgid "Host Name"
+msgstr ""
+
+#: ../src/setroubleshoot/signature.py:494
+#: ../src/setroubleshoot/signature.py:496
+msgid "Platform"
+msgstr ""
+
+#: ../src/setroubleshoot/signature.py:497
+msgid "Alert Count"
+msgstr ""
+
+#: ../src/setroubleshoot/signature.py:499
+msgid "First Seen"
+msgstr ""
+
+#: ../src/setroubleshoot/signature.py:500
+msgid "Last Seen"
+msgstr ""
+
+#: ../src/setroubleshoot/signature.py:501
+msgid "Local ID"
+msgstr ""
+
+#: ../src/setroubleshoot/signature.py:503
+msgid "Raw Audit Messages"
+msgstr ""
+
+#: ../src/setroubleshoot/signature.py:557
+#, python-format
+msgid "\n"
+"\n"
+"*****  Plugin %s (%.4s confidence) suggests   "
+msgstr ""
+
+#: ../src/setroubleshoot/signature.py:560
+msgid "*"
+msgstr ""
+
+#: ../src/setroubleshoot/signature.py:561
+msgid "\n"
+msgstr ""
+
+#: ../src/setroubleshoot/signature.py:563
+msgid "\n"
+"If "
+msgstr ""
+
+#: ../src/setroubleshoot/signature.py:565
+msgid "\n"
+"Then "
+msgstr ""
+
+#: ../src/setroubleshoot/signature.py:568
+msgid "\n"
+"Do\n"
+msgstr ""
+
+#: ../src/setroubleshoot/signature.py:570
+msgid "\n"
+"\n"
+msgstr ""
+
+#: ../src/updater.py:18
+#, python-format
+msgid "current: %s "
+msgstr ""
+
+#: ../src/updater.py:27
+#, python-format
+msgid "newer: %s "
+msgstr ""
+
+#: ../src/seapplet.c:189
+msgid "New SELinux security alert"
+msgstr ""
+
+#: ../src/seapplet.c:189
+msgid "AVC denial, click icon to view"
+msgstr ""
+
+#: ../src/seapplet.c:195 ../src/seapplet.c:246
+msgid "Dismiss"
+msgstr "Απόρριψη"
+
+#: ../src/seapplet.c:205 ../src/seapplet.c:256
+msgid "Show"
+msgstr "Εμφάνιση"
+
+#. set tooltip
+#: ../src/seapplet.c:440 ../src/sealert:64
+msgid "SELinux AVC denial, click to view"
+msgstr ""
+
+#: ../src/sealert:103
+msgid "SELinux not enabled, sealert will not run on non SELinux systems"
+msgstr ""
+
+#: ../src/sealert:150
+msgid "Not fixable."
+msgstr ""
+
+#: ../src/sealert:157
+#, c-format
+msgid "Successfully ran %s"
+msgstr ""
+
+#: ../src/sealert:162
+#, c-format
+msgid "Plugin %s not valid for %s id"
+msgstr ""
+
+#: ../src/setroubleshootd:73
+msgid "SELinux not enabled, setroubleshootd exiting..."
+msgstr ""
+
+#: ../src/setroubleshootd:105
+#, c-format
+msgid "fork #1 failed: %d (%s)"
+msgstr ""
+
+#: ../gui/browser.glade.h:1
+msgid ""
+"Copyright (c) 2010 \n"
+"Thomas Liu <tliu@redhat.com>\n"
+"Máirín Duffy <duffy@redhat.com>\n"
+"Daniel Walsh <dwalsh@redhat.com>\n"
+"John Dennis <jdennis@redhat.com>\n"
+msgstr ""
+
+#: ../gui/browser.glade.h:9
+msgid "Troubleshoot selected alert"
+msgstr ""
+
+#: ../gui/browser.glade.h:10
+msgid "Delete Selected Alerts"
+msgstr ""
+
+#: ../gui/browser.glade.h:13
+msgid "<b>SELinux has detected a problem.</b>"
+msgstr ""
+
+#: ../gui/browser.glade.h:16
+msgid "Turn on alert pop-ups."
+msgstr ""
+
+#: ../gui/browser.glade.h:18
+msgid "Turn off alert pop-ups."
+msgstr ""
+
+#: ../gui/browser.glade.h:21
+msgid "On this file:"
+msgstr ""
+
+#: ../gui/browser.glade.h:22
+msgid "label"
+msgstr ""
+
+#: ../gui/browser.glade.h:23
+msgid ""
+"Read alert troubleshoot information.  May require administrative privileges "
+"to remedy."
+msgstr ""
+
+#: ../gui/browser.glade.h:25
+msgid "Email alert to system administrator."
+msgstr ""
+
+#: ../gui/browser.glade.h:29
+msgid "Delete current alert from the database."
+msgstr ""
+
+#: ../gui/browser.glade.h:30
+msgid "Show previous alert."
+msgstr ""
+
+#: ../gui/browser.glade.h:32
+msgid "Show next alert."
+msgstr ""
+
+#: ../gui/browser.glade.h:34
+msgid "List all alerts in the database."
+msgstr ""
+
+#: ../gui/bug_report.glade.h:1
+msgid "Review and Submit Bug Report"
+msgstr ""
+
+#: ../gui/bug_report.glade.h:2
+msgid "<span size='large' weight='bold'>Review and Submit Bug Report</span>"
+msgstr ""
+
+#: ../gui/bug_report.glade.h:3
+msgid ""
+"You may wish to review the error output that will be included in this bug "
+"report and modify it to exclude any sensitive data below."
+msgstr ""
+
+#: ../gui/bug_report.glade.h:4
+msgid "Included error output:"
+msgstr ""
+
+#: ../gui/bug_report.glade.h:5
+msgid "Submit Report"
+msgstr ""
+
+#: ../gui/fail_dialog.glade.h:2 ../gui/success_dialog.glade.h:2
+msgid ""
+"This operation was completed.  The quick brown fox jumped over the lazy dog."
+msgstr ""
+
+#: ../gui/success_dialog.glade.h:1
+msgid "Success!"
+msgstr "Επιτυχία!"
+
+#: ../gui/success_dialog.glade.h:3
+msgid "button"
+msgstr ""

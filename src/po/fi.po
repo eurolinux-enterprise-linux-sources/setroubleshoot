@@ -1,0 +1,830 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# 
+# Translators:
+# Dimitris Glezos <glezos@transifex.com>, 2011
+# Juhani Numminen <juhaninumminen0@gmail.com>, 2013
+# Ville-Pekka Vainio <vpivaini@cs.helsinki.fi>, 2011
+# Ville-Pekka Vainio <vpvainio@iki.fi>, 2012
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-01-15 16:27+0100\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2013-11-20 06:29-0500\n"
+"Last-Translator: dwalsh <dwalsh@redhat.com>\n"
+"Language-Team: Finnish (http://www.transifex.com/projects/p/fedora/language/"
+"fi/)\n"
+"Language: fi\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Zanata 3.8.3\n"
+
+#: ../setroubleshoot.desktop.in.h:1
+msgid "SELinux Troubleshooter"
+msgstr "SELinux-ongelmanratkaisin"
+
+#: ../setroubleshoot.desktop.in.h:2
+msgid "Troubleshoot SELinux access denials"
+msgstr "Ratkaise SELinuxin pääsyesto-ongelmia"
+
+#: ../setroubleshoot.desktop.in.h:3
+msgid "policy;security;selinux;avc;permission;mac;alert;sealert;"
+msgstr ""
+
+#: ../src/setroubleshoot/audit_data.py:903
+#, python-format
+msgid "port %s"
+msgstr "portti %s"
+
+#: ../src/setroubleshoot/audit_data.py:905
+#: ../src/setroubleshoot/browser.py:747 ../src/setroubleshoot/browser.py:822
+#: ../src/setroubleshoot/rpc.py:528 ../src/setroubleshoot/util.py:229
+msgid "Unknown"
+msgstr "Tuntematon"
+
+#: ../src/setroubleshoot/audit_data.py:995
+#, python-format
+msgid "%s \n"
+"**** Invalid AVC allowed in current policy ***\n"
+msgstr "%s \n"
+"**** Virheellinen AVC, sallittu nykyisessä käytännössä ***\n"
+
+#: ../src/setroubleshoot/audit_data.py:997
+#, python-format
+msgid ""
+"%s \n"
+"**** Invalid AVC dontaudited in current policy.  'semodule -B' will turn on "
+"dontaudit rules. ***\n"
+msgstr ""
+"%s \n"
+"**** Virheellinen AVC, dontaudited nykyisessä käytännössä.  ”semodule -B” "
+"ottaa käyttöön dontaudit-säännöt. ***\n"
+
+#: ../src/setroubleshoot/audit_data.py:999
+msgid "Must call policy_init first"
+msgstr "policy_init:iä on kutsuttava ensin"
+
+#: ../src/setroubleshoot/audit_data.py:1001
+#, python-format
+msgid "%s \n"
+"**** Invalid AVC bad target context. ***\n"
+msgstr "%s \n"
+"**** Virheellinen AVC, virheellinen kohdekonteksti. ***\n"
+
+#: ../src/setroubleshoot/audit_data.py:1003
+#, python-format
+msgid "%s \n"
+"**** Invalid AVC bad source context. ***\n"
+msgstr "%s \n"
+"**** Virheellinen AVC, virheellinen lähdekonteksti. ***\n"
+
+#: ../src/setroubleshoot/audit_data.py:1005
+#, python-format
+msgid "%s \n"
+"**** Invalid AVC bad type class ***\n"
+msgstr "%s \n"
+"**** Virheellinen AVC, virheellinen tyyppiluokka ***\n"
+
+#: ../src/setroubleshoot/audit_data.py:1007
+#, python-format
+msgid "%s \n"
+"**** Invalid AVC bad permission ***\n"
+msgstr "%s \n"
+"**** Virheellinen AVC, virheellinen käyttöoikeus ***\n"
+
+#: ../src/setroubleshoot/audit_data.py:1009
+msgid "Error during access vector computation"
+msgstr "Virhe pääsyvektorilaskennassa"
+
+#: ../src/setroubleshoot/browser.py:171 ../gui/browser.glade.h:12
+msgid "SELinux Alert Browser"
+msgstr "SELinux-varoitusselain"
+
+#: ../src/setroubleshoot/browser.py:175 ../gui/browser.glade.h:19
+msgid "The source process:"
+msgstr "Lähdeprosessi:"
+
+#: ../src/setroubleshoot/browser.py:180 ../gui/browser.glade.h:15
+msgid "Yes"
+msgstr "Kyllä"
+
+#: ../src/setroubleshoot/browser.py:182 ../gui/browser.glade.h:17
+msgid "No"
+msgstr "Ei"
+
+#: ../src/setroubleshoot/browser.py:187 ../gui/browser.glade.h:20
+msgid "Attempted this access:"
+msgstr "Yritti tätä käyttöä:"
+
+#: ../src/setroubleshoot/browser.py:201 ../gui/browser.glade.h:11
+msgid "SETroubleshoot Details Window"
+msgstr "SETroubleshootin lisätietoikkuna"
+
+#: ../src/setroubleshoot/browser.py:204 ../gui/browser.glade.h:14
+msgid "Would you like to receive alerts?"
+msgstr "Haluatko vastaanottaa varoituksia?"
+
+#: ../src/setroubleshoot/browser.py:208 ../gui/browser.glade.h:24
+msgid "Notify Admin"
+msgstr "Ilmoita ylläpitäjälle"
+
+#: ../src/setroubleshoot/browser.py:211 ../src/setroubleshoot/browser.py:217
+#: ../gui/browser.glade.h:8
+msgid "Troubleshoot"
+msgstr "Vianetsintä"
+
+#: ../src/setroubleshoot/browser.py:214 ../gui/browser.glade.h:26
+msgid "Details"
+msgstr "Lisätietoja"
+
+#: ../src/setroubleshoot/browser.py:221 ../gui/browser.glade.h:7
+msgid "SETroubleshoot Alert List"
+msgstr "SETroubleshoot-varoitusluettelo"
+
+#: ../src/setroubleshoot/browser.py:223 ../gui/browser.glade.h:33
+msgid "List All Alerts"
+msgstr "Luettele kaikki varoitukset"
+
+#: ../src/setroubleshoot/browser.py:270
+msgid "#"
+msgstr "#"
+
+#: ../src/setroubleshoot/browser.py:270
+msgid "Source Process"
+msgstr "Lähdeprosessi"
+
+#: ../src/setroubleshoot/browser.py:270
+msgid "Attempted Access"
+msgstr "Yritetty käyttö"
+
+#: ../src/setroubleshoot/browser.py:270
+msgid "On this"
+msgstr "Tällä"
+
+#: ../src/setroubleshoot/browser.py:270
+msgid "Occurred"
+msgstr "Tapahtui"
+
+#: ../src/setroubleshoot/browser.py:270 ../src/run_cmd.py:406
+msgid "Status"
+msgstr "Tila"
+
+#: ../src/setroubleshoot/browser.py:344 ../src/setroubleshoot/browser.py:786
+#: ../src/setroubleshoot/browser.py:830
+msgid "Notify"
+msgstr "Ilmoita"
+
+#: ../src/setroubleshoot/browser.py:345
+msgid "Notify alert in the future."
+msgstr "Huomauta varoituksesta jatkossa."
+
+#: ../src/setroubleshoot/browser.py:348 ../src/setroubleshoot/browser.py:788
+#: ../src/setroubleshoot/browser.py:828 ../gui/browser.glade.h:27
+msgid "Ignore"
+msgstr "Ohita"
+
+#: ../src/setroubleshoot/browser.py:349 ../gui/browser.glade.h:28
+msgid "Ignore alert in the future."
+msgstr "Ohita varoitus jatkossa"
+
+#: ../src/setroubleshoot/browser.py:385
+msgid "<b>If you were trying to...</b>"
+msgstr "<b>Jos yritit...</b>"
+
+#: ../src/setroubleshoot/browser.py:394
+msgid "<b>Then this is the solution.</b>"
+msgstr "<b>niin tässä on ratkaisu.</b>"
+
+#: ../src/setroubleshoot/browser.py:413 ../src/setroubleshoot/browser.py:549
+msgid "If "
+msgstr "Jos "
+
+#: ../src/setroubleshoot/browser.py:501
+msgid "Plugin\n"
+"Details"
+msgstr "Liitännäisen\n"
+"tiedot"
+
+#: ../src/setroubleshoot/browser.py:516
+msgid "Report\n"
+"Bug"
+msgstr "Ilmoita\n"
+"ohjelmavirheestä"
+
+#: ../src/setroubleshoot/browser.py:544
+#, python-format
+msgid "Plugin: %s "
+msgstr "Liitännäinen: %s"
+
+#: ../src/setroubleshoot/browser.py:611
+msgid "Unable to grant access."
+msgstr "Käyttöoikeutta ei voida antaa."
+
+#: ../src/setroubleshoot/browser.py:642 ../src/setroubleshoot/browser.py:784
+#, python-format
+msgid "Alert %d of %d"
+msgstr "Varoitus %d/%d"
+
+#: ../src/setroubleshoot/browser.py:767
+#, python-format
+msgid "On this %s:"
+msgstr "Tällä %s:llä:"
+
+#: ../src/setroubleshoot/browser.py:815 ../src/setroubleshoot/browser.py:821
+#: ../src/setroubleshoot/signature.py:391
+msgid "N/A"
+msgstr "Ei saatavilla"
+
+#: ../src/setroubleshoot/browser.py:862 ../src/setroubleshoot/browser.py:863
+#: ../gui/browser.glade.h:31
+msgid "No Alerts"
+msgstr "Ei varoituksia"
+
+#: ../src/setroubleshoot/browser.py:881
+msgid "SELinux has detected a problem."
+msgstr "SELinux on havainnut ongelman."
+
+#: ../src/setroubleshoot/browser.py:987
+msgid "Sealert Error"
+msgstr "SEalert-virhe"
+
+#: ../src/setroubleshoot/browser.py:998
+msgid "Sealert Message"
+msgstr "Sealertin viesti"
+
+#. -----------------------------------------------------------------------------
+#: ../src/setroubleshoot/errcode.py:71
+msgid "signature not found"
+msgstr "allekirjoitusta ei löydy"
+
+#: ../src/setroubleshoot/errcode.py:72
+msgid "multiple signatures matched"
+msgstr "useat allekirjoitukset vastaavat"
+
+#: ../src/setroubleshoot/errcode.py:73
+msgid "id not found"
+msgstr "tunnistetta ei löydy"
+
+#: ../src/setroubleshoot/errcode.py:74
+msgid "database not found"
+msgstr "tietokantaa ei löydy"
+
+#: ../src/setroubleshoot/errcode.py:75
+msgid "item is not a member"
+msgstr "nimike ei ole jäsen"
+
+#: ../src/setroubleshoot/errcode.py:76
+msgid "illegal to change user"
+msgstr "käyttäjää vaihtaminen ei ole sallittua"
+
+#: ../src/setroubleshoot/errcode.py:77
+msgid "method not found"
+msgstr "metodia ei löydy"
+
+#: ../src/setroubleshoot/errcode.py:78
+msgid "cannot create GUI"
+msgstr "graafista käyttöliittymää ei voida luoda"
+
+#: ../src/setroubleshoot/errcode.py:79
+msgid "value unknown"
+msgstr "tuntematon arvo"
+
+#: ../src/setroubleshoot/errcode.py:80
+msgid "cannot open file"
+msgstr "tiedostoa ei voida avata"
+
+#: ../src/setroubleshoot/errcode.py:81
+msgid "invalid email address"
+msgstr "virheellinen sähköpostiosoite"
+
+#. gobject IO Errors
+#: ../src/setroubleshoot/errcode.py:84
+msgid "socket error"
+msgstr "pistokevirhe"
+
+#: ../src/setroubleshoot/errcode.py:85
+msgid "connection has been broken"
+msgstr "yhteys katkesi"
+
+#: ../src/setroubleshoot/errcode.py:86
+msgid "Invalid request. The file descriptor is not open"
+msgstr "Virheellinen pyyntö. Tiedostokuvaaja ei ole avoinna"
+
+#: ../src/setroubleshoot/errcode.py:88
+msgid "insufficient permission to modify user"
+msgstr "käyttäjän muokkaamiseen ei ole riittävästi oikeuksia"
+
+#: ../src/setroubleshoot/errcode.py:89
+msgid "authentication failed"
+msgstr "tunnistautuminen epäonnistui"
+
+#: ../src/setroubleshoot/errcode.py:90
+msgid "user prohibited"
+msgstr "käyttäjällä ei ole käyttöoikeuksia"
+
+#: ../src/setroubleshoot/errcode.py:91
+msgid "not authenticated"
+msgstr "ei tunnistauduttu"
+
+#: ../src/setroubleshoot/errcode.py:92
+msgid "user lookup failed"
+msgstr "käyttäjäkysely epäonnistui"
+
+#: ../src/setroubleshoot/gui_utils.py:53 ../src/sealert:531
+#, c-format, python-format
+msgid "Opps, %s hit an error!"
+msgstr "%s-virhe"
+
+#: ../src/setroubleshoot/gui_utils.py:55 ../gui/fail_dialog.glade.h:1
+msgid "Error"
+msgstr "Virhe"
+
+#: ../src/setroubleshoot/Plugin.py:81
+msgid ""
+"you want to allow $SOURCE_BASE_PATH to have $ACCESS access on the "
+"$TARGET_BASE_PATH $TARGET_CLASS"
+msgstr ""
+"haluat sallia lähteelle $SOURCE_BASE_PATH pääsyn $ACCESS kohteeseen "
+"$TARGET_BASE_PATH $TARGET_CLASS"
+
+#: ../src/run_cmd.py:172
+msgid "Input: "
+msgstr "Syöte: "
+
+#: ../src/run_cmd.py:255
+msgid "Enter Password"
+msgstr "Anna salasana"
+
+#: ../src/run_cmd.py:268
+msgid "Password: "
+msgstr "Salasana: "
+
+#: ../src/run_cmd.py:367
+msgid "SELinux Fix"
+msgstr "SELinux-korjaus"
+
+#: ../src/run_cmd.py:378
+msgid "Command"
+msgstr "Komento"
+
+#: ../src/run_cmd.py:388
+msgid "Run Command"
+msgstr "Suorita komento"
+
+#: ../src/run_cmd.py:391
+msgid "Stop Command"
+msgstr "Pysäytä komento"
+
+#: ../src/run_cmd.py:413
+msgid "Warning: You are responsible for verifying this command is correct"
+msgstr "Varoitus: Varmista että tämä komento on oikein"
+
+#: ../src/run_cmd.py:455
+msgid "Not Run Yet"
+msgstr "Ei ole vielä suoritettu"
+
+#: ../src/run_cmd.py:466
+msgid "Running..."
+msgstr "Suoritetaan..."
+
+#: ../src/run_cmd.py:481
+#, python-format
+msgid "Interrupted, exit on signal %d"
+msgstr "Keskeytetty signaalilla %d"
+
+#: ../src/run_cmd.py:483
+msgid "Success"
+msgstr "Onnistui"
+
+#: ../src/run_cmd.py:485
+#, python-format
+msgid "Failed, exit status = %d"
+msgstr "Epäonnistui, lopetustila %d"
+
+#: ../src/run_cmd.py:487
+msgid "Done: "
+msgstr "Valmis: "
+
+#: ../src/setroubleshoot/server.py:191
+#, python-format
+msgid " For complete SELinux messages. run sealert -l %s"
+msgstr " suorita sealert -l %s kaikkien SELinux-viestien saamiseksi"
+
+#: ../src/setroubleshoot/server.py:377
+#, python-format
+msgid "The user (%s) cannot modify data for (%s)"
+msgstr "Käyttäjä (%s) ei voi muokata käyttäjän (%s) tietoja"
+
+#: ../src/setroubleshoot/server.py:440 ../src/sealert:291
+msgid "Started"
+msgstr "Aloitettu"
+
+#: ../src/setroubleshoot/server.py:487
+msgid "AVC"
+msgstr "Pääsyvektorivälimuisti"
+
+#: ../src/setroubleshoot/server.py:553
+msgid "Audit Listener"
+msgstr "Tarkastuskuuntelija"
+
+#: ../src/setroubleshoot/signature.py:74
+msgid "Never Ignore"
+msgstr "Älä ohita koskaan"
+
+#: ../src/setroubleshoot/signature.py:75
+msgid "Ignore Always"
+msgstr "Ohita aina"
+
+#: ../src/setroubleshoot/signature.py:76
+msgid "Ignore After First Alert"
+msgstr "Ohita ensimmäisen varoituksen jälkeen"
+
+#: ../src/setroubleshoot/signature.py:193
+msgid "directory"
+msgstr "hakemisto"
+
+#: ../src/setroubleshoot/signature.py:194
+msgid "semaphore"
+msgstr "semafori"
+
+#: ../src/setroubleshoot/signature.py:195
+msgid "shared memory"
+msgstr "jaettu muisti"
+
+#: ../src/setroubleshoot/signature.py:196
+msgid "message queue"
+msgstr "viestijono"
+
+#: ../src/setroubleshoot/signature.py:197
+msgid "message"
+msgstr "viesti"
+
+#: ../src/setroubleshoot/signature.py:198
+msgid "file"
+msgstr "tiedosto"
+
+#: ../src/setroubleshoot/signature.py:199
+msgid "socket"
+msgstr "pistoke"
+
+#: ../src/setroubleshoot/signature.py:200
+msgid "process"
+msgstr "prosessi"
+
+#: ../src/setroubleshoot/signature.py:201
+msgid "filesystem"
+msgstr "tiedostojärjestelmä"
+
+#: ../src/setroubleshoot/signature.py:202
+msgid "node"
+msgstr "solmu"
+
+#: ../src/setroubleshoot/signature.py:203
+msgid "capability"
+msgstr "ominaisuus"
+
+#: ../src/setroubleshoot/signature.py:376
+#, python-format
+msgid "%s has a permissive type (%s). This access was not denied."
+msgstr "Lähteellä %s on salliva tyyppi (%s). Tätä käyttöä ei estetty."
+
+#: ../src/setroubleshoot/signature.py:379
+msgid "SELinux is in permissive mode. This access was not denied."
+msgstr "SELinux on sallivassa tilassa. Tätä käyttöä ei estetty."
+
+#: ../src/setroubleshoot/signature.py:432
+#, python-format
+msgid "SELinux is preventing %s from using the %s access on a process."
+msgstr ""
+
+#: ../src/setroubleshoot/signature.py:432
+#, python-format
+msgid "SELinux is preventing %s from using the '%s' accesses on a process."
+msgstr ""
+
+#: ../src/setroubleshoot/signature.py:435
+#, python-format
+msgid "SELinux is preventing %s from using the %s capability."
+msgstr ""
+
+#: ../src/setroubleshoot/signature.py:435
+#, python-format
+msgid "SELinux is preventing %s from using the '%s' capabilities."
+msgstr ""
+
+#: ../src/setroubleshoot/signature.py:437
+#, python-format
+msgid "SELinux is preventing %s from %s access on the %s labeled %s."
+msgstr ""
+
+#: ../src/setroubleshoot/signature.py:437
+#, python-format
+msgid "SELinux is preventing %s from '%s' accesses on the %s labeled %s."
+msgstr ""
+
+#: ../src/setroubleshoot/signature.py:438
+#, python-format
+msgid "SELinux is preventing %s from %s access on the %s %s."
+msgstr ""
+
+#: ../src/setroubleshoot/signature.py:438
+#, python-format
+msgid "SELinux is preventing %s from '%s' accesses on the %s %s."
+msgstr ""
+
+#: ../src/setroubleshoot/signature.py:469
+msgid "Additional Information:\n"
+msgstr "Lisätiedot:\n"
+
+#: ../src/setroubleshoot/signature.py:470
+msgid "Source Context"
+msgstr "Lähdekonteksti"
+
+#: ../src/setroubleshoot/signature.py:471
+msgid "Target Context"
+msgstr "Kohdekonteksti"
+
+#: ../src/setroubleshoot/signature.py:472
+msgid "Target Objects"
+msgstr "Kohdeobjektit"
+
+#: ../src/setroubleshoot/signature.py:473
+msgid "Source"
+msgstr "Lähde"
+
+#: ../src/setroubleshoot/signature.py:474
+msgid "Source Path"
+msgstr "Lähteen polku"
+
+#: ../src/setroubleshoot/signature.py:475
+msgid "Port"
+msgstr "Portti"
+
+#: ../src/setroubleshoot/signature.py:477
+#: ../src/setroubleshoot/signature.py:479
+msgid "Host"
+msgstr "Kone"
+
+#: ../src/setroubleshoot/signature.py:480
+msgid "Source RPM Packages"
+msgstr "Lähteen RPM-paketit"
+
+#: ../src/setroubleshoot/signature.py:481
+msgid "Target RPM Packages"
+msgstr "Kohteen RPM-paketit"
+
+#: ../src/setroubleshoot/signature.py:482
+msgid "Policy RPM"
+msgstr "Käytännön RPM"
+
+#: ../src/setroubleshoot/signature.py:483
+msgid "Selinux Enabled"
+msgstr "SELinux käytössä"
+
+#: ../src/setroubleshoot/signature.py:484
+msgid "Policy Type"
+msgstr "Käytännön tyyppi"
+
+#: ../src/setroubleshoot/signature.py:485
+msgid "Enforcing Mode"
+msgstr "Toimeenpanotila"
+
+#: ../src/setroubleshoot/signature.py:487
+#: ../src/setroubleshoot/signature.py:489
+msgid "Host Name"
+msgstr "Konenimi"
+
+#: ../src/setroubleshoot/signature.py:494
+#: ../src/setroubleshoot/signature.py:496
+msgid "Platform"
+msgstr "Alusta"
+
+#: ../src/setroubleshoot/signature.py:497
+msgid "Alert Count"
+msgstr "Varoitusten määrä"
+
+#: ../src/setroubleshoot/signature.py:499
+msgid "First Seen"
+msgstr "Ensimmäinen"
+
+#: ../src/setroubleshoot/signature.py:500
+msgid "Last Seen"
+msgstr "Viimeisin"
+
+#: ../src/setroubleshoot/signature.py:501
+msgid "Local ID"
+msgstr "Paikallinen tunniste"
+
+#: ../src/setroubleshoot/signature.py:503
+msgid "Raw Audit Messages"
+msgstr "Muokkaamattomat tarkastusviestit"
+
+#: ../src/setroubleshoot/signature.py:557
+#, python-format
+msgid "\n"
+"\n"
+"*****  Plugin %s (%.4s confidence) suggests   "
+msgstr ""
+
+#: ../src/setroubleshoot/signature.py:560
+msgid "*"
+msgstr "*"
+
+#: ../src/setroubleshoot/signature.py:561
+msgid "\n"
+msgstr "\n"
+
+#: ../src/setroubleshoot/signature.py:563
+msgid "\n"
+"If "
+msgstr "\n"
+"Jos "
+
+#: ../src/setroubleshoot/signature.py:565
+msgid "\n"
+"Then "
+msgstr "\n"
+"Niin "
+
+#: ../src/setroubleshoot/signature.py:568
+msgid "\n"
+"Do\n"
+msgstr "\n"
+"Tee\n"
+
+#: ../src/setroubleshoot/signature.py:570
+msgid "\n"
+"\n"
+msgstr "\n"
+"\n"
+
+#: ../src/updater.py:18
+#, python-format
+msgid "current: %s "
+msgstr "nykyinen: %s"
+
+#: ../src/updater.py:27
+#, python-format
+msgid "newer: %s "
+msgstr "uudempi: %s"
+
+#: ../src/seapplet.c:189
+msgid "New SELinux security alert"
+msgstr "Uusi SELinux-turvallisuusvaroitus"
+
+#: ../src/seapplet.c:189
+msgid "AVC denial, click icon to view"
+msgstr "AVC-esto, näytä napsauttamalla kuvaketta"
+
+#: ../src/seapplet.c:195 ../src/seapplet.c:246
+msgid "Dismiss"
+msgstr "Hylkää"
+
+#: ../src/seapplet.c:205 ../src/seapplet.c:256
+msgid "Show"
+msgstr "Näytä"
+
+#. set tooltip
+#: ../src/seapplet.c:440 ../src/sealert:64
+msgid "SELinux AVC denial, click to view"
+msgstr "SELinuxin AVC-esto, näytä napsauttamalla"
+
+#: ../src/sealert:103
+msgid "SELinux not enabled, sealert will not run on non SELinux systems"
+msgstr "SELinux ei ole käytössä, sealertia ei suoriteta"
+
+#: ../src/sealert:150
+msgid "Not fixable."
+msgstr "Ei korjattavissa."
+
+#: ../src/sealert:157
+#, c-format
+msgid "Successfully ran %s"
+msgstr "Komennon %s suoritus onnistui"
+
+#: ../src/sealert:162
+#, c-format
+msgid "Plugin %s not valid for %s id"
+msgstr "Liitännäinen %s on virheellinen tunnukselle %s"
+
+#: ../src/setroubleshootd:73
+msgid "SELinux not enabled, setroubleshootd exiting..."
+msgstr "SELinux ei ole käytössä, setroubleshootd lopettaa..."
+
+#: ../src/setroubleshootd:105
+#, c-format
+msgid "fork #1 failed: %d (%s)"
+msgstr "fork #1 epäonnistui: %d (%s)"
+
+#: ../gui/browser.glade.h:1
+msgid ""
+"Copyright (c) 2010 \n"
+"Thomas Liu <tliu@redhat.com>\n"
+"Máirín Duffy <duffy@redhat.com>\n"
+"Daniel Walsh <dwalsh@redhat.com>\n"
+"John Dennis <jdennis@redhat.com>\n"
+msgstr ""
+"Tekijänoikeudet (c) 2010 \n"
+"Thomas Liu <tliu@redhat.com>\n"
+"Máirín Duffy <duffy@redhat.com>\n"
+"Daniel Walsh <dwalsh@redhat.com>\n"
+"John Dennis <jdennis@redhat.com>\n"
+
+#: ../gui/browser.glade.h:9
+msgid "Troubleshoot selected alert"
+msgstr "Tee vianetsintä valitusta varoituksesta"
+
+#: ../gui/browser.glade.h:10
+msgid "Delete Selected Alerts"
+msgstr "Poista valitut varoitukset"
+
+#: ../gui/browser.glade.h:13
+msgid "<b>SELinux has detected a problem.</b>"
+msgstr "<b>SELinux on havainnut ongelman.</b>"
+
+#: ../gui/browser.glade.h:16
+msgid "Turn on alert pop-ups."
+msgstr "Ottaa käyttöön varoitusten ponnahdusikkunat."
+
+#: ../gui/browser.glade.h:18
+msgid "Turn off alert pop-ups."
+msgstr "Poista käytöstä varoitusten ponnahdusikkunat."
+
+#: ../gui/browser.glade.h:21
+msgid "On this file:"
+msgstr "Tässä tiedostossa:"
+
+#: ../gui/browser.glade.h:22
+msgid "label"
+msgstr "nimiö"
+
+#: ../gui/browser.glade.h:23
+msgid ""
+"Read alert troubleshoot information.  May require administrative privileges "
+"to remedy."
+msgstr ""
+"Lue varoituksen ratkaisutiedot. Ongelman korjaaminen saattaa vaatia "
+"ylläpitäjän oikeuksia."
+
+#: ../gui/browser.glade.h:25
+msgid "Email alert to system administrator."
+msgstr "Lähetä varoitus sähköpostilla järjestelmän ylläpitäjälle."
+
+#: ../gui/browser.glade.h:29
+msgid "Delete current alert from the database."
+msgstr "Poista nykyinen varoitus tietokannasta."
+
+#: ../gui/browser.glade.h:30
+msgid "Show previous alert."
+msgstr "Näytä edellinen varoitus."
+
+#: ../gui/browser.glade.h:32
+msgid "Show next alert."
+msgstr "Näytä seuraava varoitus."
+
+#: ../gui/browser.glade.h:34
+msgid "List all alerts in the database."
+msgstr "Luettele kaikki tietokannassa olevat varoitukset."
+
+#: ../gui/bug_report.glade.h:1
+msgid "Review and Submit Bug Report"
+msgstr "Tarkista ja lähetä vikailmoitus"
+
+#: ../gui/bug_report.glade.h:2
+msgid "<span size='large' weight='bold'>Review and Submit Bug Report</span>"
+msgstr ""
+"<span size='large' weight='bold'>Tarkista ja lähetä vikailmoitus</span>"
+
+#: ../gui/bug_report.glade.h:3
+msgid ""
+"You may wish to review the error output that will be included in this bug "
+"report and modify it to exclude any sensitive data below."
+msgstr ""
+"Kannattaa tarkistaa vikailmoitukseen liitetty virhetuloste ja muokata sitä "
+"niin, ettei siinä ole mitään yksityistä tietoa. Tämä voidaan tehdä alla "
+"olevassa tekstikentässä."
+
+#: ../gui/bug_report.glade.h:4
+msgid "Included error output:"
+msgstr "Mukaan liitettävä virhetuloste:"
+
+#: ../gui/bug_report.glade.h:5
+msgid "Submit Report"
+msgstr "Lähetä ilmoitus"
+
+#: ../gui/fail_dialog.glade.h:2 ../gui/success_dialog.glade.h:2
+msgid ""
+"This operation was completed.  The quick brown fox jumped over the lazy dog."
+msgstr "Tämä toiminto onnistui."
+
+#: ../gui/success_dialog.glade.h:1
+msgid "Success!"
+msgstr "Onnistui!"
+
+#: ../gui/success_dialog.glade.h:3
+msgid "button"
+msgstr "painike"
