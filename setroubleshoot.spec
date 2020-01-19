@@ -1,16 +1,19 @@
 Summary: Helps troubleshoot SELinux problems
 Name: setroubleshoot
-Version: 3.2.27.2
+Version: 3.2.28
 Release: 3%{?dist}
 License: GPLv2+
 Group: Applications/System
-URL: https://fedorahosted.org/setroubleshoot
-Source0: https://fedorahosted.org/releases/s/e/setroubleshoot/%{name}-%{version}.tar.gz
+URL: https://pagure.io/setroubleshoot
+Source0: https://releases.pagure.org/setroubleshoot/%{name}-%{version}.tar.gz
 Source1: %{name}.tmpfiles
-# fedora-selinu/setroubleshoot
-# $ git format-patch setroubleshoot-%{version}...master
+# $ git clone https://pagure.io/setroubleshoot.git
+# $ cd setroubleshoot
+# $ git format-patch setroubleshoot-%{version}...origin/stable -- framework
 # $ declare -i p=1; for i in 00*.patch; do echo Patch$p: $i; p=p+1; done
-Patch1: 0001-framework-Update-translations-from-https-fedora.zana.patch
+Patch1: 0001-framework-improve-obtaining-AVC-object-path.patch
+# https://bugzilla.redhat.com/show_bug.cgi?id=1449665
+Patch100: setroubleshoot-po.patch
 BuildRequires: perl-XML-Parser
 BuildRequires: libcap-ng-devel
 BuildRequires: intltool gettext python
@@ -184,6 +187,19 @@ rm -rf %{buildroot}
 %doc AUTHORS COPYING ChangeLog DBUS.md NEWS README TODO
 
 %changelog
+* Thu May 25 2017 Petr Lautrbach <plautrba@redhat.com> - 3.2.28-3
+- Update translations.
+
+* Mon Apr 10 2017 Petr Lautrbach <plautrba@redhat.com> - 3.2.28-2
+- Improve obtaining AVC object path (#1343641)
+
+* Mon Mar 27 2017 Petr Lautrbach <plautrba@redhat.com> - 3.2.28-1
+- Fix sealert message for capability2
+- Spelling fixes
+- sealert - provide a better error message when SELinux is disabled (#1420084)
+- Fix report problem summary string (#1343397)
+- Update setroubleshootd.8 (#1348140)
+
 * Fri Jul 01 2016 Petr Lautrbach <plautrba@redhat.com> - 3.2.27.2-3
 - Translations updated from https://fedora.zanata.org/project/view/setroubleshoot
 

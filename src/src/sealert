@@ -514,10 +514,10 @@ class ScanLogfile:
 
     def output_results(self):
         sigs = self.analyzer.database.query_alerts('*')
-        seperator = '-'*80 + '\n'
+        separator = '-'*80 + '\n'
         print "\nfound %d alerts in %s" % (len(sigs.signature_list), self.analyzer.logfile_path)
         for siginfo in sigs.signature_list:
-            print seperator
+            print separator
             print siginfo.format_text()
             print siginfo.format_details()
 
@@ -686,6 +686,9 @@ if __name__ == '__main__':
                 sys.exit(3)
             except ProgramError, e:
                 print >> sys.stderr, e.strerror
+                sys.exit(3)
+            except ValueError, e:
+                print("SELinux is disabled or we can't open a policy file")
                 sys.exit(3)
                 
         elif invocation_style == 'fix':

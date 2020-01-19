@@ -1,0 +1,4188 @@
+diff --git a/framework/po/de.po b/framework/po/de.po
+index c9d5042..4aeead3 100644
+--- a/framework/po/de.po
++++ b/framework/po/de.po
+@@ -18,22 +18,22 @@
+ # sknirT omiT <moc.tahder@sknirtt>, 2010
+ # Thomas Spura <tomspur@fedoraproject.org>, 2008, 2009
+ # Timo Trinks <ttrinks@redhat.com>, 2006, 2007
+-# Roman Spirgi <rspirgi@gmail.com>, 2015. #zanata
++# Petr Lautrbach <plautrba@redhat.com>, 2017. #zanata
+ msgid ""
+ msgstr ""
+ "Project-Id-Version: PACKAGE VERSION\n"
+ "Report-Msgid-Bugs-To: \n"
+-"POT-Creation-Date: 2016-04-15 20:42+0200\n"
++"POT-Creation-Date: 2017-05-15 11:21+0200\n"
+ "MIME-Version: 1.0\n"
+ "Content-Type: text/plain; charset=UTF-8\n"
+ "Content-Transfer-Encoding: 8bit\n"
+-"PO-Revision-Date: 2015-05-15 04:18-0400\n"
+-"Last-Translator: Roman Spirgi <rspirgi@gmail.com>\n"
++"PO-Revision-Date: 2017-05-15 09:21+0000\n"
++"Last-Translator: Copied by Zanata <copied-by-zanata@zanata.org>\n"
+ "Language-Team: German (http://www.transifex.com/projects/p/fedora/language/"
+ "de/)\n"
+ "Language: de\n"
+ "Plural-Forms: nplurals=2; plural=(n != 1);\n"
+-"X-Generator: Zanata 3.8.4\n"
++"X-Generator: Zanata 4.1.1\n"
+ 
+ #: ../setroubleshoot.desktop.in.h:1
+ msgid "SELinux Troubleshooter"
+@@ -47,25 +47,25 @@ msgstr "Fehler in SELinux-Zugriffsverweigerungen suchen"
+ msgid "policy;security;selinux;avc;permission;mac;alert;sealert;"
+ msgstr "Richtlinie;Sicherheit;selinux;avc;Berechtigung;mac;alert;sealert;"
+ 
+-#: ../src/setroubleshoot/audit_data.py:903
++#: ../src/setroubleshoot/audit_data.py:912
+ #, python-format
+ msgid "port %s"
+ msgstr "Port %s"
+ 
+-#: ../src/setroubleshoot/audit_data.py:905 ../src/setroubleshoot/browser.py:747
++#: ../src/setroubleshoot/audit_data.py:914 ../src/setroubleshoot/browser.py:747
+ #: ../src/setroubleshoot/browser.py:822 ../src/setroubleshoot/rpc.py:528
+-#: ../src/setroubleshoot/util.py:229
++#: ../src/setroubleshoot/util.py:242
+ msgid "Unknown"
+ msgstr "Unbekannt"
+ 
+-#: ../src/setroubleshoot/audit_data.py:995
++#: ../src/setroubleshoot/audit_data.py:1004
+ #, python-format
+ msgid "%s \n"
+ "**** Invalid AVC allowed in current policy ***\n"
+ msgstr "%s \n"
+ "**** Ungültige AVC in aktueller Richtlinie erlaubt ***\n"
+ 
+-#: ../src/setroubleshoot/audit_data.py:997
++#: ../src/setroubleshoot/audit_data.py:1006
+ #, python-format
+ msgid ""
+ "%s \n"
+@@ -76,39 +76,39 @@ msgstr ""
+ "**** Ungültiges AVC dontaudited in der bestehenden Richtlinie.  'semodule -"
+ "B' wird auf dontaudit-Regeln angewendet. ***\n"
+ 
+-#: ../src/setroubleshoot/audit_data.py:999
++#: ../src/setroubleshoot/audit_data.py:1008
+ msgid "Must call policy_init first"
+ msgstr "Zuerst muss policy_init aufgerufen werden"
+ 
+-#: ../src/setroubleshoot/audit_data.py:1001
++#: ../src/setroubleshoot/audit_data.py:1010
+ #, python-format
+ msgid "%s \n"
+ "**** Invalid AVC bad target context. ***\n"
+ msgstr "%s \n"
+ "**** ungültige AVC falscher Zielkontext ***\n"
+ 
+-#: ../src/setroubleshoot/audit_data.py:1003
++#: ../src/setroubleshoot/audit_data.py:1012
+ #, python-format
+ msgid "%s \n"
+ "**** Invalid AVC bad source context. ***\n"
+ msgstr "%s \n"
+ "**** ungültige AVC falscher Quellkontext ***\n"
+ 
+-#: ../src/setroubleshoot/audit_data.py:1005
++#: ../src/setroubleshoot/audit_data.py:1014
+ #, python-format
+ msgid "%s \n"
+ "**** Invalid AVC bad type class ***\n"
+ msgstr "%s \n"
+ "**** ungültige AVC falsche Typklasse ***\n"
+ 
+-#: ../src/setroubleshoot/audit_data.py:1007
++#: ../src/setroubleshoot/audit_data.py:1016
+ #, python-format
+ msgid "%s \n"
+ "**** Invalid AVC bad permission ***\n"
+ msgstr "%s \n"
+ "**** ungültige AVC falsche Zugriffsberechtigung ***\n"
+ 
+-#: ../src/setroubleshoot/audit_data.py:1009
++#: ../src/setroubleshoot/audit_data.py:1018
+ msgid "Error during access vector computation"
+ msgstr "Fehler während der Berechnung des Zugriffsvektors"
+ 
+@@ -212,6 +212,7 @@ msgid "<b>Then this is the solution.</b>"
+ msgstr "<b>Erklärungen</b>"
+ 
+ #: ../src/setroubleshoot/browser.py:413 ../src/setroubleshoot/browser.py:549
++#: ../src/setroubleshoot/server.py:578
+ msgid "If "
+ msgstr "Wenn "
+ 
+@@ -246,7 +247,7 @@ msgid "On this %s:"
+ msgstr "auf %s zuzugreifen."
+ 
+ #: ../src/setroubleshoot/browser.py:815 ../src/setroubleshoot/browser.py:821
+-#: ../src/setroubleshoot/signature.py:391
++#: ../src/setroubleshoot/signature.py:397
+ msgid "N/A"
+ msgstr "nicht verfügbar"
+ 
+@@ -345,7 +346,7 @@ msgstr "Nicht authentifiziert"
+ msgid "user lookup failed"
+ msgstr "Benutzersuche fehlgeschlagen"
+ 
+-#: ../src/setroubleshoot/gui_utils.py:53 ../src/sealert:531
++#: ../src/setroubleshoot/gui_utils.py:53 ../src/sealert:536
+ #, c-format, python-format
+ msgid "Opps, %s hit an error!"
+ msgstr "Opps, %s hat einen Fehler gefunden!"
+@@ -362,25 +363,25 @@ msgstr ""
+ "Sie $SOURCE_BASE_PATH den Zugriff $ACCESS auf $TARGET_BASE_PATH "
+ "$TARGET_CLASS erlauben wollen"
+ 
+-#: ../src/setroubleshoot/server.py:191
++#: ../src/setroubleshoot/server.py:211
+ #, python-format
+-msgid " For complete SELinux messages. run sealert -l %s"
+-msgstr "Für ausführliche SELinux-Meldungen führen Sie sealert -l %s aus"
++msgid " For complete SELinux messages run: sealert -l %s"
++msgstr ""
+ 
+-#: ../src/setroubleshoot/server.py:377
++#: ../src/setroubleshoot/server.py:398
+ #, python-format
+ msgid "The user (%s) cannot modify data for (%s)"
+ msgstr "Der Benutzer (%s) kann keine Daten für (%s) ändern."
+ 
+-#: ../src/setroubleshoot/server.py:440 ../src/sealert:291
++#: ../src/setroubleshoot/server.py:462 ../src/sealert:296
+ msgid "Started"
+ msgstr "Gestartet"
+ 
+-#: ../src/setroubleshoot/server.py:487
++#: ../src/setroubleshoot/server.py:660
+ msgid "AVC"
+ msgstr "AVC"
+ 
+-#: ../src/setroubleshoot/server.py:553
++#: ../src/setroubleshoot/server.py:726
+ msgid "Audit Listener"
+ msgstr "Audit-Listener"
+ 
+@@ -440,150 +441,154 @@ msgstr "Knoten"
+ msgid "capability"
+ msgstr "Fähigkeit"
+ 
+-#: ../src/setroubleshoot/signature.py:376
++#: ../src/setroubleshoot/signature.py:204
++msgid "capability2"
++msgstr ""
++
++#: ../src/setroubleshoot/signature.py:381
+ #, python-format
+ msgid "%s has a permissive type (%s). This access was not denied."
+ msgstr ""
+ "%s hat einen zugelassenen Typ (%s). Dieser Zugriff wurde nicht verweigert."
+ 
+-#: ../src/setroubleshoot/signature.py:379
++#: ../src/setroubleshoot/signature.py:384
+ msgid "SELinux is in permissive mode. This access was not denied."
+ msgstr "SELinux ist im Toleranzmodus. Dieser Zugriff wurde nicht verwehrt."
+ 
+-#: ../src/setroubleshoot/signature.py:432
++#: ../src/setroubleshoot/signature.py:438
+ #, python-format
+ msgid "SELinux is preventing %s from using the %s access on a process."
+ msgstr ""
+ "SELinux hindert %s daran, mit »%s«-Zugriff auf einen Prozess zuzugreifen."
+ 
+-#: ../src/setroubleshoot/signature.py:432
++#: ../src/setroubleshoot/signature.py:438
+ #, python-format
+ msgid "SELinux is preventing %s from using the '%s' accesses on a process."
+ msgstr ""
+ "SELinux hindert %s daran, mit »%s«-Zugriffen auf einen Prozess zuzugreifen."
+ 
+-#: ../src/setroubleshoot/signature.py:435
++#: ../src/setroubleshoot/signature.py:441
+ #, python-format
+ msgid "SELinux is preventing %s from using the %s capability."
+ msgstr "SELinux hindert %s daran, die %s-Fähigkeit zu verwenden."
+ 
+-#: ../src/setroubleshoot/signature.py:435
++#: ../src/setroubleshoot/signature.py:441
+ #, python-format
+ msgid "SELinux is preventing %s from using the '%s' capabilities."
+ msgstr "SELinux hindert %s daran, die »%s«-Fähigkeiten zu verwenden."
+ 
+-#: ../src/setroubleshoot/signature.py:437
++#: ../src/setroubleshoot/signature.py:443
+ #, python-format
+ msgid "SELinux is preventing %s from %s access on the %s labeled %s."
+ msgstr ""
+ "SELinux hindert %s daran, mit %s-Zugriff auf %s zuzugreifen - gekennzeichnet "
+ "als %s."
+ 
+-#: ../src/setroubleshoot/signature.py:437
++#: ../src/setroubleshoot/signature.py:443
+ #, python-format
+ msgid "SELinux is preventing %s from '%s' accesses on the %s labeled %s."
+ msgstr ""
+ "SELinux hindert %s daran, mit '%s'-Zugriffen auf %s zuzugreifen - "
+ "gekennzeichnet als %s."
+ 
+-#: ../src/setroubleshoot/signature.py:438
++#: ../src/setroubleshoot/signature.py:444
+ #, python-format
+ msgid "SELinux is preventing %s from %s access on the %s %s."
+ msgstr "SELinux hindert %s daran, mit %s-Zugriff auf %s %s zuzugreifen."
+ 
+-#: ../src/setroubleshoot/signature.py:438
++#: ../src/setroubleshoot/signature.py:444
+ #, python-format
+ msgid "SELinux is preventing %s from '%s' accesses on the %s %s."
+ msgstr "SELinux hindert %s daran, mit »%s«-Zugriffen auf %s %s zuzugreifen."
+ 
+-#: ../src/setroubleshoot/signature.py:469
++#: ../src/setroubleshoot/signature.py:475
+ msgid "Additional Information:\n"
+ msgstr "zusätzliche Information:\n"
+ 
+-#: ../src/setroubleshoot/signature.py:470
++#: ../src/setroubleshoot/signature.py:476
+ msgid "Source Context"
+ msgstr "Quellkontext"
+ 
+-#: ../src/setroubleshoot/signature.py:471
++#: ../src/setroubleshoot/signature.py:477
+ msgid "Target Context"
+ msgstr "Zielkontext"
+ 
+-#: ../src/setroubleshoot/signature.py:472
++#: ../src/setroubleshoot/signature.py:478
+ msgid "Target Objects"
+ msgstr "Zielobjekte"
+ 
+-#: ../src/setroubleshoot/signature.py:473
++#: ../src/setroubleshoot/signature.py:479
+ msgid "Source"
+ msgstr "Quelle"
+ 
+-#: ../src/setroubleshoot/signature.py:474
++#: ../src/setroubleshoot/signature.py:480
+ msgid "Source Path"
+ msgstr "Quellpfad"
+ 
+-#: ../src/setroubleshoot/signature.py:475
++#: ../src/setroubleshoot/signature.py:481
+ msgid "Port"
+ msgstr "Port"
+ 
+-#: ../src/setroubleshoot/signature.py:477
+-#: ../src/setroubleshoot/signature.py:479
++#: ../src/setroubleshoot/signature.py:483
++#: ../src/setroubleshoot/signature.py:485
+ msgid "Host"
+ msgstr "Host"
+ 
+-#: ../src/setroubleshoot/signature.py:480
++#: ../src/setroubleshoot/signature.py:486
+ msgid "Source RPM Packages"
+ msgstr "RPM-Pakete der Quelle"
+ 
+-#: ../src/setroubleshoot/signature.py:481
++#: ../src/setroubleshoot/signature.py:487
+ msgid "Target RPM Packages"
+ msgstr "RPM-Pakete des Ziels"
+ 
+-#: ../src/setroubleshoot/signature.py:482
++#: ../src/setroubleshoot/signature.py:488
+ msgid "Policy RPM"
+ msgstr "Richtlinien-RPM"
+ 
+-#: ../src/setroubleshoot/signature.py:483
++#: ../src/setroubleshoot/signature.py:489
+ msgid "Selinux Enabled"
+ msgstr "SELinux aktiviert"
+ 
+-#: ../src/setroubleshoot/signature.py:484
++#: ../src/setroubleshoot/signature.py:490
+ msgid "Policy Type"
+ msgstr "Richtlinientyp"
+ 
+-#: ../src/setroubleshoot/signature.py:485
++#: ../src/setroubleshoot/signature.py:491
+ msgid "Enforcing Mode"
+ msgstr "Enforcing-Modus"
+ 
+-#: ../src/setroubleshoot/signature.py:487
+-#: ../src/setroubleshoot/signature.py:489
++#: ../src/setroubleshoot/signature.py:493
++#: ../src/setroubleshoot/signature.py:495
+ msgid "Host Name"
+ msgstr "Rechnername"
+ 
+-#: ../src/setroubleshoot/signature.py:494
+-#: ../src/setroubleshoot/signature.py:496
++#: ../src/setroubleshoot/signature.py:500
++#: ../src/setroubleshoot/signature.py:502
+ msgid "Platform"
+ msgstr "Plattform"
+ 
+-#: ../src/setroubleshoot/signature.py:497
++#: ../src/setroubleshoot/signature.py:503
+ msgid "Alert Count"
+ msgstr "Anzahl der Alarme"
+ 
+-#: ../src/setroubleshoot/signature.py:499
++#: ../src/setroubleshoot/signature.py:505
+ msgid "First Seen"
+ msgstr "Zuerst gesehen"
+ 
+-#: ../src/setroubleshoot/signature.py:500
++#: ../src/setroubleshoot/signature.py:506
+ msgid "Last Seen"
+ msgstr "Zuletzt gesehen"
+ 
+-#: ../src/setroubleshoot/signature.py:501
++#: ../src/setroubleshoot/signature.py:507
+ msgid "Local ID"
+ msgstr "Lokale ID"
+ 
+-#: ../src/setroubleshoot/signature.py:503
++#: ../src/setroubleshoot/signature.py:509
+ msgid "Raw Audit Messages"
+ msgstr "Raw-Audit-Meldungen"
+ 
+-#: ../src/setroubleshoot/signature.py:557
++#: ../src/setroubleshoot/signature.py:563
+ #, python-format
+ msgid "\n"
+ "\n"
+@@ -592,33 +597,33 @@ msgstr "\n"
+ "\n"
+ "*****  Plugin %s (%.4s Wahrscheinlichkeit) schlägt vor    "
+ 
+-#: ../src/setroubleshoot/signature.py:560
++#: ../src/setroubleshoot/signature.py:566
+ msgid "*"
+ msgstr "*"
+ 
+-#: ../src/setroubleshoot/signature.py:561
++#: ../src/setroubleshoot/signature.py:567
+ msgid "\n"
+ msgstr "\n"
+ 
+-#: ../src/setroubleshoot/signature.py:563
++#: ../src/setroubleshoot/signature.py:569
+ msgid "\n"
+ "If "
+ msgstr "\n"
+ "Wenn"
+ 
+-#: ../src/setroubleshoot/signature.py:565
++#: ../src/setroubleshoot/signature.py:571
+ msgid "\n"
+ "Then "
+ msgstr "\n"
+ "Dann"
+ 
+-#: ../src/setroubleshoot/signature.py:568
++#: ../src/setroubleshoot/signature.py:574
+ msgid "\n"
+ "Do\n"
+ msgstr "\n"
+ "Ausführen\n"
+ 
+-#: ../src/setroubleshoot/signature.py:570
++#: ../src/setroubleshoot/signature.py:576
+ msgid "\n"
+ "\n"
+ msgstr "\n"
+@@ -655,21 +660,21 @@ msgstr "Anzeigen"
+ msgid "SELinux AVC denial, click to view"
+ msgstr "SELinux AVC-Ablehnung, zur Anzeige klicken"
+ 
+-#: ../src/sealert:103
++#: ../src/sealert:106
+ msgid "SELinux not enabled, sealert will not run on non SELinux systems"
+ msgstr ""
+ "SELinux ist deaktiviert, Sealert läuft auf Nicht-SELinux-Systemen nicht."
+ 
+-#: ../src/sealert:150
++#: ../src/sealert:153
+ msgid "Not fixable."
+ msgstr "Nicht korrigierbar."
+ 
+-#: ../src/sealert:157
++#: ../src/sealert:160
+ #, c-format
+ msgid "Successfully ran %s"
+ msgstr "%s erfolgreich gelaufen"
+ 
+-#: ../src/sealert:162
++#: ../src/sealert:167
+ #, c-format
+ msgid "Plugin %s not valid for %s id"
+ msgstr "Plugin %s nicht gültig für %s id"
+diff --git a/framework/po/es.po b/framework/po/es.po
+index 4a1fb79..afa0f75 100644
+--- a/framework/po/es.po
++++ b/framework/po/es.po
+@@ -12,23 +12,22 @@
+ # Fernando Gonzalez Blanco <fgonz@fedoraproject.org>, 2009
+ # Daniel Cabrera <logan@fedoraproject.org>, 2011
+ # Manuel Ospina <mospina@redhat.com>, 2006
+-# Alex Puchades <alex94puchades@gmail.com>, 2015. #zanata
+-# Máximo Castañeda Riloba <mcrcctm@gmail.com>, 2015. #zanata
++# Petr Lautrbach <plautrba@redhat.com>, 2017. #zanata
+ msgid ""
+ msgstr ""
+ "Project-Id-Version: PACKAGE VERSION\n"
+ "Report-Msgid-Bugs-To: \n"
+-"POT-Creation-Date: 2016-04-15 20:42+0200\n"
++"POT-Creation-Date: 2017-05-15 11:21+0200\n"
+ "MIME-Version: 1.0\n"
+ "Content-Type: text/plain; charset=UTF-8\n"
+ "Content-Transfer-Encoding: 8bit\n"
+-"PO-Revision-Date: 2015-09-02 03:35-0400\n"
+-"Last-Translator: Máximo Castañeda Riloba <mcrcctm@gmail.com>\n"
++"PO-Revision-Date: 2017-05-15 09:21+0000\n"
++"Last-Translator: Copied by Zanata <copied-by-zanata@zanata.org>\n"
+ "Language-Team: Spanish (http://www.transifex.com/projects/p/fedora/language/"
+ "es/)\n"
+ "Language: es\n"
+ "Plural-Forms: nplurals=2; plural=(n != 1);\n"
+-"X-Generator: Zanata 3.8.4\n"
++"X-Generator: Zanata 4.1.1\n"
+ 
+ #: ../setroubleshoot.desktop.in.h:1
+ msgid "SELinux Troubleshooter"
+@@ -42,25 +41,25 @@ msgstr "Solucionar negaciones de acceso de SELinux"
+ msgid "policy;security;selinux;avc;permission;mac;alert;sealert;"
+ msgstr "policy;security;selinux;avc;permission;mac;alert;sealert;"
+ 
+-#: ../src/setroubleshoot/audit_data.py:903
++#: ../src/setroubleshoot/audit_data.py:912
+ #, python-format
+ msgid "port %s"
+ msgstr "puerto %s"
+ 
+-#: ../src/setroubleshoot/audit_data.py:905 ../src/setroubleshoot/browser.py:747
++#: ../src/setroubleshoot/audit_data.py:914 ../src/setroubleshoot/browser.py:747
+ #: ../src/setroubleshoot/browser.py:822 ../src/setroubleshoot/rpc.py:528
+-#: ../src/setroubleshoot/util.py:229
++#: ../src/setroubleshoot/util.py:242
+ msgid "Unknown"
+ msgstr "Desconocido"
+ 
+-#: ../src/setroubleshoot/audit_data.py:995
++#: ../src/setroubleshoot/audit_data.py:1004
+ #, python-format
+ msgid "%s \n"
+ "**** Invalid AVC allowed in current policy ***\n"
+ msgstr "%s \n"
+ "**** AVC inválido pero permitido en la política actual ***\n"
+ 
+-#: ../src/setroubleshoot/audit_data.py:997
++#: ../src/setroubleshoot/audit_data.py:1006
+ #, python-format
+ msgid ""
+ "%s \n"
+@@ -71,39 +70,39 @@ msgstr ""
+ "**** AVC inválido no auditado en la política actual.  'semodule -B' iniciará "
+ "reglas de no auditación. ***\n"
+ 
+-#: ../src/setroubleshoot/audit_data.py:999
++#: ../src/setroubleshoot/audit_data.py:1008
+ msgid "Must call policy_init first"
+ msgstr "Primero debe invocarse policy_init"
+ 
+-#: ../src/setroubleshoot/audit_data.py:1001
++#: ../src/setroubleshoot/audit_data.py:1010
+ #, python-format
+ msgid "%s \n"
+ "**** Invalid AVC bad target context. ***\n"
+ msgstr "%s \n"
+ "**** Contexto AVC de destino incorrecto no válido. ***\n"
+ 
+-#: ../src/setroubleshoot/audit_data.py:1003
++#: ../src/setroubleshoot/audit_data.py:1012
+ #, python-format
+ msgid "%s \n"
+ "**** Invalid AVC bad source context. ***\n"
+ msgstr "%s \n"
+ "**** Contexto AVC de fuente incorrecta no válido. ***\n"
+ 
+-#: ../src/setroubleshoot/audit_data.py:1005
++#: ../src/setroubleshoot/audit_data.py:1014
+ #, python-format
+ msgid "%s \n"
+ "**** Invalid AVC bad type class ***\n"
+ msgstr "%s \n"
+ "**** Clase AVC de tipo incorrecto no válida ***\n"
+ 
+-#: ../src/setroubleshoot/audit_data.py:1007
++#: ../src/setroubleshoot/audit_data.py:1016
+ #, python-format
+ msgid "%s \n"
+ "**** Invalid AVC bad permission ***\n"
+ msgstr "%s \n"
+ "**** Permiso incorrecto AVC no válido. ***\n"
+ 
+-#: ../src/setroubleshoot/audit_data.py:1009
++#: ../src/setroubleshoot/audit_data.py:1018
+ msgid "Error during access vector computation"
+ msgstr "Error durante el cómputo del vector de acceso"
+ 
+@@ -207,6 +206,7 @@ msgid "<b>Then this is the solution.</b>"
+ msgstr "<b>Entonces ésta es la solución.</b>"
+ 
+ #: ../src/setroubleshoot/browser.py:413 ../src/setroubleshoot/browser.py:549
++#: ../src/setroubleshoot/server.py:578
+ msgid "If "
+ msgstr "Si "
+ 
+@@ -242,7 +242,7 @@ msgid "On this %s:"
+ msgstr "En esta %s:"
+ 
+ #: ../src/setroubleshoot/browser.py:815 ../src/setroubleshoot/browser.py:821
+-#: ../src/setroubleshoot/signature.py:391
++#: ../src/setroubleshoot/signature.py:397
+ msgid "N/A"
+ msgstr "N/A"
+ 
+@@ -341,7 +341,7 @@ msgstr "no autenticado"
+ msgid "user lookup failed"
+ msgstr "falló la búsqueda de usuario"
+ 
+-#: ../src/setroubleshoot/gui_utils.py:53 ../src/sealert:531
++#: ../src/setroubleshoot/gui_utils.py:53 ../src/sealert:536
+ #, c-format, python-format
+ msgid "Opps, %s hit an error!"
+ msgstr "¡Ups, %s produjo un error!"
+@@ -358,25 +358,25 @@ msgstr ""
+ "desea permitir que $SOURCE_BASE_PATH tenga acceso $ACCESS al "
+ "$TARGET_BASE_PATH $TARGET_CLASS"
+ 
+-#: ../src/setroubleshoot/server.py:191
++#: ../src/setroubleshoot/server.py:211
+ #, python-format
+-msgid " For complete SELinux messages. run sealert -l %s"
+-msgstr " Si quiere los mensajes de SELinux completos, ejecute sealert -l %s"
++msgid " For complete SELinux messages run: sealert -l %s"
++msgstr ""
+ 
+-#: ../src/setroubleshoot/server.py:377
++#: ../src/setroubleshoot/server.py:398
+ #, python-format
+ msgid "The user (%s) cannot modify data for (%s)"
+ msgstr "El usuario (%s) no puede modificar los datos de (%s)"
+ 
+-#: ../src/setroubleshoot/server.py:440 ../src/sealert:291
++#: ../src/setroubleshoot/server.py:462 ../src/sealert:296
+ msgid "Started"
+ msgstr "Iniciado"
+ 
+-#: ../src/setroubleshoot/server.py:487
++#: ../src/setroubleshoot/server.py:660
+ msgid "AVC"
+ msgstr "AVC"
+ 
+-#: ../src/setroubleshoot/server.py:553
++#: ../src/setroubleshoot/server.py:726
+ msgid "Audit Listener"
+ msgstr "Detectos de avisos"
+ 
+@@ -436,147 +436,151 @@ msgstr "nodo"
+ msgid "capability"
+ msgstr "capacidad"
+ 
+-#: ../src/setroubleshoot/signature.py:376
++#: ../src/setroubleshoot/signature.py:204
++msgid "capability2"
++msgstr ""
++
++#: ../src/setroubleshoot/signature.py:381
+ #, python-format
+ msgid "%s has a permissive type (%s). This access was not denied."
+ msgstr "%s es un tipo permisivo (%s). Este acceso no fue denegado."
+ 
+-#: ../src/setroubleshoot/signature.py:379
++#: ../src/setroubleshoot/signature.py:384
+ msgid "SELinux is in permissive mode. This access was not denied."
+ msgstr ""
+ "SELinux se encuentra funcionando en modo permisivo. Este acceso no fue "
+ "denegado."
+ 
+-#: ../src/setroubleshoot/signature.py:432
++#: ../src/setroubleshoot/signature.py:438
+ #, python-format
+ msgid "SELinux is preventing %s from using the %s access on a process."
+ msgstr "SELinux está bloqueando a %s el acceso para %s sobre un proceso."
+ 
+-#: ../src/setroubleshoot/signature.py:432
++#: ../src/setroubleshoot/signature.py:438
+ #, python-format
+ msgid "SELinux is preventing %s from using the '%s' accesses on a process."
+ msgstr "SELinux está negando a %s  el acceso '%s' sobre un proceso."
+ 
+-#: ../src/setroubleshoot/signature.py:435
++#: ../src/setroubleshoot/signature.py:441
+ #, python-format
+ msgid "SELinux is preventing %s from using the %s capability."
+ msgstr "SELinux está negando a %s el uso de la capacidad de %s."
+ 
+-#: ../src/setroubleshoot/signature.py:435
++#: ../src/setroubleshoot/signature.py:441
+ #, python-format
+ msgid "SELinux is preventing %s from using the '%s' capabilities."
+ msgstr "SELinux está negando a %s el uso de las capacidades '%s'."
+ 
+-#: ../src/setroubleshoot/signature.py:437
++#: ../src/setroubleshoot/signature.py:443
+ #, python-format
+ msgid "SELinux is preventing %s from %s access on the %s labeled %s."
+ msgstr ""
+ "SELinux esta previniendo acceso de %s desde %s  a %s etiquetado con %s."
+ 
+-#: ../src/setroubleshoot/signature.py:437
++#: ../src/setroubleshoot/signature.py:443
+ #, python-format
+ msgid "SELinux is preventing %s from '%s' accesses on the %s labeled %s."
+ msgstr ""
+ "SELinux esta previniendo accesos de %s desde '%s' a %s etiquetado con %s."
+ 
+-#: ../src/setroubleshoot/signature.py:438
++#: ../src/setroubleshoot/signature.py:444
+ #, python-format
+ msgid "SELinux is preventing %s from %s access on the %s %s."
+ msgstr "SELinux está negando a %s de %s el acceso a %s %s."
+ 
+-#: ../src/setroubleshoot/signature.py:438
++#: ../src/setroubleshoot/signature.py:444
+ #, python-format
+ msgid "SELinux is preventing %s from '%s' accesses on the %s %s."
+ msgstr "SELinux está negando a %s de '%s' el acceso a %s %s."
+ 
+-#: ../src/setroubleshoot/signature.py:469
++#: ../src/setroubleshoot/signature.py:475
+ msgid "Additional Information:\n"
+ msgstr "Información adicional:\n"
+ 
+-#: ../src/setroubleshoot/signature.py:470
++#: ../src/setroubleshoot/signature.py:476
+ msgid "Source Context"
+ msgstr "Contexto Fuente"
+ 
+-#: ../src/setroubleshoot/signature.py:471
++#: ../src/setroubleshoot/signature.py:477
+ msgid "Target Context"
+ msgstr "Contexto Destino"
+ 
+-#: ../src/setroubleshoot/signature.py:472
++#: ../src/setroubleshoot/signature.py:478
+ msgid "Target Objects"
+ msgstr "Objetos Destino"
+ 
+-#: ../src/setroubleshoot/signature.py:473
++#: ../src/setroubleshoot/signature.py:479
+ msgid "Source"
+ msgstr "Fuente"
+ 
+-#: ../src/setroubleshoot/signature.py:474
++#: ../src/setroubleshoot/signature.py:480
+ msgid "Source Path"
+ msgstr "Dirección de Fuente"
+ 
+-#: ../src/setroubleshoot/signature.py:475
++#: ../src/setroubleshoot/signature.py:481
+ msgid "Port"
+ msgstr "Puerto"
+ 
+-#: ../src/setroubleshoot/signature.py:477
+-#: ../src/setroubleshoot/signature.py:479
++#: ../src/setroubleshoot/signature.py:483
++#: ../src/setroubleshoot/signature.py:485
+ msgid "Host"
+ msgstr "Nombre de Equipo"
+ 
+-#: ../src/setroubleshoot/signature.py:480
++#: ../src/setroubleshoot/signature.py:486
+ msgid "Source RPM Packages"
+ msgstr "Paquetes RPM Fuentes"
+ 
+-#: ../src/setroubleshoot/signature.py:481
++#: ../src/setroubleshoot/signature.py:487
+ msgid "Target RPM Packages"
+ msgstr "Paquetes RPM Destinos"
+ 
+-#: ../src/setroubleshoot/signature.py:482
++#: ../src/setroubleshoot/signature.py:488
+ msgid "Policy RPM"
+ msgstr "RPM de Políticas"
+ 
+-#: ../src/setroubleshoot/signature.py:483
++#: ../src/setroubleshoot/signature.py:489
+ msgid "Selinux Enabled"
+ msgstr "SELinux activado"
+ 
+-#: ../src/setroubleshoot/signature.py:484
++#: ../src/setroubleshoot/signature.py:490
+ msgid "Policy Type"
+ msgstr "Tipo de política"
+ 
+-#: ../src/setroubleshoot/signature.py:485
++#: ../src/setroubleshoot/signature.py:491
+ msgid "Enforcing Mode"
+ msgstr "Modo impositivo"
+ 
+-#: ../src/setroubleshoot/signature.py:487
+-#: ../src/setroubleshoot/signature.py:489
++#: ../src/setroubleshoot/signature.py:493
++#: ../src/setroubleshoot/signature.py:495
+ msgid "Host Name"
+ msgstr "Nombre de equipo"
+ 
+-#: ../src/setroubleshoot/signature.py:494
+-#: ../src/setroubleshoot/signature.py:496
++#: ../src/setroubleshoot/signature.py:500
++#: ../src/setroubleshoot/signature.py:502
+ msgid "Platform"
+ msgstr "Plataforma"
+ 
+-#: ../src/setroubleshoot/signature.py:497
++#: ../src/setroubleshoot/signature.py:503
+ msgid "Alert Count"
+ msgstr "Cantidad de alertas"
+ 
+-#: ../src/setroubleshoot/signature.py:499
++#: ../src/setroubleshoot/signature.py:505
+ msgid "First Seen"
+ msgstr "Visto por primera vez"
+ 
+-#: ../src/setroubleshoot/signature.py:500
++#: ../src/setroubleshoot/signature.py:506
+ msgid "Last Seen"
+ msgstr "Visto por última vez"
+ 
+-#: ../src/setroubleshoot/signature.py:501
++#: ../src/setroubleshoot/signature.py:507
+ msgid "Local ID"
+ msgstr "ID local"
+ 
+-#: ../src/setroubleshoot/signature.py:503
++#: ../src/setroubleshoot/signature.py:509
+ msgid "Raw Audit Messages"
+ msgstr "Mensajes raw de aviso"
+ 
+-#: ../src/setroubleshoot/signature.py:557
++#: ../src/setroubleshoot/signature.py:563
+ #, python-format
+ msgid "\n"
+ "\n"
+@@ -585,33 +589,33 @@ msgstr "\n"
+ "\n"
+ "*****  El complemento %s (%.4s confidence) sugiere"
+ 
+-#: ../src/setroubleshoot/signature.py:560
++#: ../src/setroubleshoot/signature.py:566
+ msgid "*"
+ msgstr "*"
+ 
+-#: ../src/setroubleshoot/signature.py:561
++#: ../src/setroubleshoot/signature.py:567
+ msgid "\n"
+ msgstr "\n"
+ 
+-#: ../src/setroubleshoot/signature.py:563
++#: ../src/setroubleshoot/signature.py:569
+ msgid "\n"
+ "If "
+ msgstr "\n"
+ "Si "
+ 
+-#: ../src/setroubleshoot/signature.py:565
++#: ../src/setroubleshoot/signature.py:571
+ msgid "\n"
+ "Then "
+ msgstr "\n"
+ "Entonces"
+ 
+-#: ../src/setroubleshoot/signature.py:568
++#: ../src/setroubleshoot/signature.py:574
+ msgid "\n"
+ "Do\n"
+ msgstr "\n"
+ "Hacer\n"
+ 
+-#: ../src/setroubleshoot/signature.py:570
++#: ../src/setroubleshoot/signature.py:576
+ msgid "\n"
+ "\n"
+ msgstr "\n"
+@@ -648,22 +652,22 @@ msgstr "Mostrar"
+ msgid "SELinux AVC denial, click to view"
+ msgstr "Negación AVC de SELinux, pulse para ver"
+ 
+-#: ../src/sealert:103
++#: ../src/sealert:106
+ msgid "SELinux not enabled, sealert will not run on non SELinux systems"
+ msgstr ""
+ "SELinux no está habilitado, sealert no será ejecutado sobre sistemas que no "
+ "ejecuten SELinux"
+ 
+-#: ../src/sealert:150
++#: ../src/sealert:153
+ msgid "Not fixable."
+ msgstr "No corregible."
+ 
+-#: ../src/sealert:157
++#: ../src/sealert:160
+ #, c-format
+ msgid "Successfully ran %s"
+ msgstr "Ejecutó %s con éxito"
+ 
+-#: ../src/sealert:162
++#: ../src/sealert:167
+ #, c-format
+ msgid "Plugin %s not valid for %s id"
+ msgstr "El complemento %s no es válido para el id %s"
+diff --git a/framework/po/fr.po b/framework/po/fr.po
+index 9466499..e21ef26 100644
+--- a/framework/po/fr.po
++++ b/framework/po/fr.po
+@@ -18,21 +18,22 @@
+ # Sam Friedmann <sam.friedmann@redhat.com>, 2009
+ # Thomas Canniot <mrtom@fedoraproject.org>, 2007,2010
+ # Thomas Canniot <thomas.canniot@laposte.net>, 2007
++# Petr Lautrbach <plautrba@redhat.com>, 2017. #zanata
+ msgid ""
+ msgstr ""
+ "Project-Id-Version: PACKAGE VERSION\n"
+ "Report-Msgid-Bugs-To: \n"
+-"POT-Creation-Date: 2016-04-15 20:42+0200\n"
++"POT-Creation-Date: 2017-05-15 11:21+0200\n"
+ "MIME-Version: 1.0\n"
+ "Content-Type: text/plain; charset=UTF-8\n"
+ "Content-Transfer-Encoding: 8bit\n"
+-"PO-Revision-Date: 2013-11-20 06:29-0500\n"
+-"Last-Translator: Jérôme Fenal <jfenal@gmail.com>\n"
++"PO-Revision-Date: 2017-05-15 09:21+0000\n"
++"Last-Translator: Copied by Zanata <copied-by-zanata@zanata.org>\n"
+ "Language-Team: French (http://www.transifex.com/projects/p/fedora/language/"
+ "fr/)\n"
+ "Language: fr\n"
+ "Plural-Forms: nplurals=2; plural=(n > 1);\n"
+-"X-Generator: Zanata 3.8.4\n"
++"X-Generator: Zanata 4.1.1\n"
+ 
+ #: ../setroubleshoot.desktop.in.h:1
+ msgid "SELinux Troubleshooter"
+@@ -46,25 +47,25 @@ msgstr "Visualise les refus d'accès de SELinux"
+ msgid "policy;security;selinux;avc;permission;mac;alert;sealert;"
+ msgstr "policy;security;selinux;avc;permission;mac;alert;sealert;"
+ 
+-#: ../src/setroubleshoot/audit_data.py:903
++#: ../src/setroubleshoot/audit_data.py:912
+ #, python-format
+ msgid "port %s"
+ msgstr "port %s"
+ 
+-#: ../src/setroubleshoot/audit_data.py:905 ../src/setroubleshoot/browser.py:747
++#: ../src/setroubleshoot/audit_data.py:914 ../src/setroubleshoot/browser.py:747
+ #: ../src/setroubleshoot/browser.py:822 ../src/setroubleshoot/rpc.py:528
+-#: ../src/setroubleshoot/util.py:229
++#: ../src/setroubleshoot/util.py:242
+ msgid "Unknown"
+ msgstr "Inconnu"
+ 
+-#: ../src/setroubleshoot/audit_data.py:995
++#: ../src/setroubleshoot/audit_data.py:1004
+ #, python-format
+ msgid "%s \n"
+ "**** Invalid AVC allowed in current policy ***\n"
+ msgstr "%s \n"
+ "**** AVC incorrect autorisé dans la stratégie actuelle ***\n"
+ 
+-#: ../src/setroubleshoot/audit_data.py:997
++#: ../src/setroubleshoot/audit_data.py:1006
+ #, python-format
+ msgid ""
+ "%s \n"
+@@ -75,39 +76,39 @@ msgstr ""
+ "**** AVC incorrect marqué à ignorer (dontaudit) dans la stratégie actuelle.  "
+ "'semodule -B' activera les règles marquées comme « dontaudit ». ***\n"
+ 
+-#: ../src/setroubleshoot/audit_data.py:999
++#: ../src/setroubleshoot/audit_data.py:1008
+ msgid "Must call policy_init first"
+ msgstr "Il faut appeller policy_init en premier"
+ 
+-#: ../src/setroubleshoot/audit_data.py:1001
++#: ../src/setroubleshoot/audit_data.py:1010
+ #, python-format
+ msgid "%s \n"
+ "**** Invalid AVC bad target context. ***\n"
+ msgstr "%s \n"
+ "**** AVC incorrect. Mauvais contexte cible. ***\n"
+ 
+-#: ../src/setroubleshoot/audit_data.py:1003
++#: ../src/setroubleshoot/audit_data.py:1012
+ #, python-format
+ msgid "%s \n"
+ "**** Invalid AVC bad source context. ***\n"
+ msgstr "%s \n"
+ "**** AVC incorrect. Mauvais contexte source. ***\n"
+ 
+-#: ../src/setroubleshoot/audit_data.py:1005
++#: ../src/setroubleshoot/audit_data.py:1014
+ #, python-format
+ msgid "%s \n"
+ "**** Invalid AVC bad type class ***\n"
+ msgstr "%s \n"
+ "**** AVC incorrect. Mauvais type de classe. ***\n"
+ 
+-#: ../src/setroubleshoot/audit_data.py:1007
++#: ../src/setroubleshoot/audit_data.py:1016
+ #, python-format
+ msgid "%s \n"
+ "**** Invalid AVC bad permission ***\n"
+ msgstr "%s \n"
+ "**** AVC incorrect. Mauvaises permissions. ***\n"
+ 
+-#: ../src/setroubleshoot/audit_data.py:1009
++#: ../src/setroubleshoot/audit_data.py:1018
+ msgid "Error during access vector computation"
+ msgstr "Erreur lors du calcul du vecteur d'accès"
+ 
+@@ -211,6 +212,7 @@ msgid "<b>Then this is the solution.</b>"
+ msgstr "<b>Alors ceci est la bonne solution.</b>"
+ 
+ #: ../src/setroubleshoot/browser.py:413 ../src/setroubleshoot/browser.py:549
++#: ../src/setroubleshoot/server.py:578
+ msgid "If "
+ msgstr "Si "
+ 
+@@ -246,7 +248,7 @@ msgid "On this %s:"
+ msgstr "sur ce %s :"
+ 
+ #: ../src/setroubleshoot/browser.py:815 ../src/setroubleshoot/browser.py:821
+-#: ../src/setroubleshoot/signature.py:391
++#: ../src/setroubleshoot/signature.py:397
+ msgid "N/A"
+ msgstr "N/A"
+ 
+@@ -345,7 +347,7 @@ msgstr "non authentifié"
+ msgid "user lookup failed"
+ msgstr "la recherche de l'utilisateur a échoué"
+ 
+-#: ../src/setroubleshoot/gui_utils.py:53 ../src/sealert:531
++#: ../src/setroubleshoot/gui_utils.py:53 ../src/sealert:536
+ #, c-format, python-format
+ msgid "Opps, %s hit an error!"
+ msgstr "Oups, %s a rencontré une erreur !"
+@@ -362,25 +364,25 @@ msgstr ""
+ "vous souhaitez autoriser $SOURCE_BASE_PATH à accéder à $ACCESS sur "
+ "$TARGET_BASE_PATH $TARGET_CLASS"
+ 
+-#: ../src/setroubleshoot/server.py:191
++#: ../src/setroubleshoot/server.py:211
+ #, python-format
+-msgid " For complete SELinux messages. run sealert -l %s"
+-msgstr "Pour des messages SELinux exhaustifs, lancez sealert -l %s"
++msgid " For complete SELinux messages run: sealert -l %s"
++msgstr ""
+ 
+-#: ../src/setroubleshoot/server.py:377
++#: ../src/setroubleshoot/server.py:398
+ #, python-format
+ msgid "The user (%s) cannot modify data for (%s)"
+ msgstr "L'utilisateur (%s) ne peut modifier les données de (%s)"
+ 
+-#: ../src/setroubleshoot/server.py:440 ../src/sealert:291
++#: ../src/setroubleshoot/server.py:462 ../src/sealert:296
+ msgid "Started"
+ msgstr "Démarré"
+ 
+-#: ../src/setroubleshoot/server.py:487
++#: ../src/setroubleshoot/server.py:660
+ msgid "AVC"
+ msgstr "AVC"
+ 
+-#: ../src/setroubleshoot/server.py:553
++#: ../src/setroubleshoot/server.py:726
+ msgid "Audit Listener"
+ msgstr "Écouteur d'audit"
+ 
+@@ -440,143 +442,147 @@ msgstr "nœud"
+ msgid "capability"
+ msgstr "capacité"
+ 
+-#: ../src/setroubleshoot/signature.py:376
++#: ../src/setroubleshoot/signature.py:204
++msgid "capability2"
++msgstr ""
++
++#: ../src/setroubleshoot/signature.py:381
+ #, python-format
+ msgid "%s has a permissive type (%s). This access was not denied."
+ msgstr "%s a un type permissif (%s). Cet accès n'a pas été refusé."
+ 
+-#: ../src/setroubleshoot/signature.py:379
++#: ../src/setroubleshoot/signature.py:384
+ msgid "SELinux is in permissive mode. This access was not denied."
+ msgstr "SELinux est en mode permissif. Cet accès n'a pas été interdit."
+ 
+-#: ../src/setroubleshoot/signature.py:432
++#: ../src/setroubleshoot/signature.py:438
+ #, python-format
+ msgid "SELinux is preventing %s from using the %s access on a process."
+ msgstr "SELinux interdit à %s d'utiliser l'accès %s sur un processus."
+ 
+-#: ../src/setroubleshoot/signature.py:432
++#: ../src/setroubleshoot/signature.py:438
+ #, python-format
+ msgid "SELinux is preventing %s from using the '%s' accesses on a process."
+ msgstr "SELinux interdit à %s d'utiliser les accès « %s » sur un processus."
+ 
+-#: ../src/setroubleshoot/signature.py:435
++#: ../src/setroubleshoot/signature.py:441
+ #, python-format
+ msgid "SELinux is preventing %s from using the %s capability."
+ msgstr "FIXME SELinux interdit à %s d'utiliser la capacité %s."
+ 
+-#: ../src/setroubleshoot/signature.py:435
++#: ../src/setroubleshoot/signature.py:441
+ #, python-format
+ msgid "SELinux is preventing %s from using the '%s' capabilities."
+ msgstr "FIXME SELinux interdit à %s d'utiliser les capacités « %s »."
+ 
+-#: ../src/setroubleshoot/signature.py:437
++#: ../src/setroubleshoot/signature.py:443
+ #, python-format
+ msgid "SELinux is preventing %s from %s access on the %s labeled %s."
+ msgstr "SELinux empêche %s l'accès en %s sur l'objet %s étiqueté %s."
+ 
+-#: ../src/setroubleshoot/signature.py:437
++#: ../src/setroubleshoot/signature.py:443
+ #, python-format
+ msgid "SELinux is preventing %s from '%s' accesses on the %s labeled %s."
+ msgstr "SELinux empêche %s les accès en « %s » sur l'objet %s étiqueté %s."
+ 
+-#: ../src/setroubleshoot/signature.py:438
++#: ../src/setroubleshoot/signature.py:444
+ #, python-format
+ msgid "SELinux is preventing %s from %s access on the %s %s."
+ msgstr "SELinux interdit à %s d'utiliser l'accès %s sur le %s %s."
+ 
+-#: ../src/setroubleshoot/signature.py:438
++#: ../src/setroubleshoot/signature.py:444
+ #, python-format
+ msgid "SELinux is preventing %s from '%s' accesses on the %s %s."
+ msgstr "SELinux interdit à %s d'utiliser les accès « %s » sur le %s %s."
+ 
+-#: ../src/setroubleshoot/signature.py:469
++#: ../src/setroubleshoot/signature.py:475
+ msgid "Additional Information:\n"
+ msgstr "Informations complémentaires :\n"
+ 
+-#: ../src/setroubleshoot/signature.py:470
++#: ../src/setroubleshoot/signature.py:476
+ msgid "Source Context"
+ msgstr "Contexte source "
+ 
+-#: ../src/setroubleshoot/signature.py:471
++#: ../src/setroubleshoot/signature.py:477
+ msgid "Target Context"
+ msgstr "Contexte cible "
+ 
+-#: ../src/setroubleshoot/signature.py:472
++#: ../src/setroubleshoot/signature.py:478
+ msgid "Target Objects"
+ msgstr "Objets du contexte "
+ 
+-#: ../src/setroubleshoot/signature.py:473
++#: ../src/setroubleshoot/signature.py:479
+ msgid "Source"
+ msgstr "Source "
+ 
+-#: ../src/setroubleshoot/signature.py:474
++#: ../src/setroubleshoot/signature.py:480
+ msgid "Source Path"
+ msgstr "Chemin de la source "
+ 
+-#: ../src/setroubleshoot/signature.py:475
++#: ../src/setroubleshoot/signature.py:481
+ msgid "Port"
+ msgstr "Port "
+ 
+-#: ../src/setroubleshoot/signature.py:477
+-#: ../src/setroubleshoot/signature.py:479
++#: ../src/setroubleshoot/signature.py:483
++#: ../src/setroubleshoot/signature.py:485
+ msgid "Host"
+ msgstr "Hôte "
+ 
+-#: ../src/setroubleshoot/signature.py:480
++#: ../src/setroubleshoot/signature.py:486
+ msgid "Source RPM Packages"
+ msgstr "Paquets RPM source "
+ 
+-#: ../src/setroubleshoot/signature.py:481
++#: ../src/setroubleshoot/signature.py:487
+ msgid "Target RPM Packages"
+ msgstr "Paquets RPM cible "
+ 
+-#: ../src/setroubleshoot/signature.py:482
++#: ../src/setroubleshoot/signature.py:488
+ msgid "Policy RPM"
+ msgstr "RPM de la statégie "
+ 
+-#: ../src/setroubleshoot/signature.py:483
++#: ../src/setroubleshoot/signature.py:489
+ msgid "Selinux Enabled"
+ msgstr "Selinux activé "
+ 
+-#: ../src/setroubleshoot/signature.py:484
++#: ../src/setroubleshoot/signature.py:490
+ msgid "Policy Type"
+ msgstr "Type de stratégie "
+ 
+-#: ../src/setroubleshoot/signature.py:485
++#: ../src/setroubleshoot/signature.py:491
+ msgid "Enforcing Mode"
+ msgstr "Mode strict "
+ 
+-#: ../src/setroubleshoot/signature.py:487
+-#: ../src/setroubleshoot/signature.py:489
++#: ../src/setroubleshoot/signature.py:493
++#: ../src/setroubleshoot/signature.py:495
+ msgid "Host Name"
+ msgstr "Nom de l'hôte "
+ 
+-#: ../src/setroubleshoot/signature.py:494
+-#: ../src/setroubleshoot/signature.py:496
++#: ../src/setroubleshoot/signature.py:500
++#: ../src/setroubleshoot/signature.py:502
+ msgid "Platform"
+ msgstr "Plateforme "
+ 
+-#: ../src/setroubleshoot/signature.py:497
++#: ../src/setroubleshoot/signature.py:503
+ msgid "Alert Count"
+ msgstr "Compteur d'alertes "
+ 
+-#: ../src/setroubleshoot/signature.py:499
++#: ../src/setroubleshoot/signature.py:505
+ msgid "First Seen"
+ msgstr "Première alerte "
+ 
+-#: ../src/setroubleshoot/signature.py:500
++#: ../src/setroubleshoot/signature.py:506
+ msgid "Last Seen"
+ msgstr "Dernière alerte "
+ 
+-#: ../src/setroubleshoot/signature.py:501
++#: ../src/setroubleshoot/signature.py:507
+ msgid "Local ID"
+ msgstr "ID local "
+ 
+-#: ../src/setroubleshoot/signature.py:503
++#: ../src/setroubleshoot/signature.py:509
+ msgid "Raw Audit Messages"
+ msgstr "Messages d'audit bruts "
+ 
+-#: ../src/setroubleshoot/signature.py:557
++#: ../src/setroubleshoot/signature.py:563
+ #, python-format
+ msgid "\n"
+ "\n"
+@@ -585,33 +591,33 @@ msgstr "\n"
+ "\n"
+ "*****  Le greffon %s (%.4s de confiance) suggère   "
+ 
+-#: ../src/setroubleshoot/signature.py:560
++#: ../src/setroubleshoot/signature.py:566
+ msgid "*"
+ msgstr "*"
+ 
+-#: ../src/setroubleshoot/signature.py:561
++#: ../src/setroubleshoot/signature.py:567
+ msgid "\n"
+ msgstr "\n"
+ 
+-#: ../src/setroubleshoot/signature.py:563
++#: ../src/setroubleshoot/signature.py:569
+ msgid "\n"
+ "If "
+ msgstr "\n"
+ "Si "
+ 
+-#: ../src/setroubleshoot/signature.py:565
++#: ../src/setroubleshoot/signature.py:571
+ msgid "\n"
+ "Then "
+ msgstr "\n"
+ "Alors "
+ 
+-#: ../src/setroubleshoot/signature.py:568
++#: ../src/setroubleshoot/signature.py:574
+ msgid "\n"
+ "Do\n"
+ msgstr "\n"
+ "Faire\n"
+ 
+-#: ../src/setroubleshoot/signature.py:570
++#: ../src/setroubleshoot/signature.py:576
+ msgid "\n"
+ "\n"
+ msgstr "\n"
+@@ -649,22 +655,22 @@ msgstr "Afficher"
+ msgid "SELinux AVC denial, click to view"
+ msgstr "Refus d'accès AVC par SELinux. Cliquez pour voir"
+ 
+-#: ../src/sealert:103
++#: ../src/sealert:106
+ msgid "SELinux not enabled, sealert will not run on non SELinux systems"
+ msgstr ""
+ "SELinux n'est pas activé, sealert ne fonctionnera pas sur un système sans "
+ "SELinux"
+ 
+-#: ../src/sealert:150
++#: ../src/sealert:153
+ msgid "Not fixable."
+ msgstr "N'est pas réparable."
+ 
+-#: ../src/sealert:157
++#: ../src/sealert:160
+ #, c-format
+ msgid "Successfully ran %s"
+ msgstr "A exécuté %s avec succès"
+ 
+-#: ../src/sealert:162
++#: ../src/sealert:167
+ #, c-format
+ msgid "Plugin %s not valid for %s id"
+ msgstr "Plugin %s incorrect pour l'id %s"
+diff --git a/framework/po/it.po b/framework/po/it.po
+index c5cd919..b1e61ea 100644
+--- a/framework/po/it.po
++++ b/framework/po/it.po
+@@ -14,21 +14,22 @@
+ # massimo81 <mhacknetxp@hotmail.com>, 2013
+ # Silvio Pierro <perplesso82@gmail.com>, 2012
+ # Silvio Pierro <perplesso82@gmail.com>, 2008-2009,2013
++# Petr Lautrbach <plautrba@redhat.com>, 2017. #zanata
+ msgid ""
+ msgstr ""
+ "Project-Id-Version: PACKAGE VERSION\n"
+ "Report-Msgid-Bugs-To: \n"
+-"POT-Creation-Date: 2016-04-15 20:42+0200\n"
++"POT-Creation-Date: 2017-05-15 11:21+0200\n"
+ "MIME-Version: 1.0\n"
+ "Content-Type: text/plain; charset=UTF-8\n"
+ "Content-Transfer-Encoding: 8bit\n"
+-"PO-Revision-Date: 2013-11-20 06:29-0500\n"
+-"Last-Translator: Silvio Pierro <perplesso82@gmail.com>\n"
++"PO-Revision-Date: 2017-05-15 09:22+0000\n"
++"Last-Translator: Copied by Zanata <copied-by-zanata@zanata.org>\n"
+ "Language-Team: Italian (http://www.transifex.com/projects/p/fedora/language/"
+ "it/)\n"
+ "Language: it\n"
+ "Plural-Forms: nplurals=2; plural=(n != 1);\n"
+-"X-Generator: Zanata 3.8.4\n"
++"X-Generator: Zanata 4.1.1\n"
+ 
+ #: ../setroubleshoot.desktop.in.h:1
+ msgid "SELinux Troubleshooter"
+@@ -42,25 +43,25 @@ msgstr "Risoluzione problemi SELinux accessi rifiutati"
+ msgid "policy;security;selinux;avc;permission;mac;alert;sealert;"
+ msgstr "policy;security;selinux;avc;permission;mac;alert;sealert;"
+ 
+-#: ../src/setroubleshoot/audit_data.py:903
++#: ../src/setroubleshoot/audit_data.py:912
+ #, python-format
+ msgid "port %s"
+ msgstr "porte %s"
+ 
+-#: ../src/setroubleshoot/audit_data.py:905 ../src/setroubleshoot/browser.py:747
++#: ../src/setroubleshoot/audit_data.py:914 ../src/setroubleshoot/browser.py:747
+ #: ../src/setroubleshoot/browser.py:822 ../src/setroubleshoot/rpc.py:528
+-#: ../src/setroubleshoot/util.py:229
++#: ../src/setroubleshoot/util.py:242
+ msgid "Unknown"
+ msgstr "Sconosciuto"
+ 
+-#: ../src/setroubleshoot/audit_data.py:995
++#: ../src/setroubleshoot/audit_data.py:1004
+ #, python-format
+ msgid "%s \n"
+ "**** Invalid AVC allowed in current policy ***\n"
+ msgstr "%s \n"
+ "**** AVC non valido consentito nella politica attuale ***\n"
+ 
+-#: ../src/setroubleshoot/audit_data.py:997
++#: ../src/setroubleshoot/audit_data.py:1006
+ #, python-format
+ msgid ""
+ "%s \n"
+@@ -71,39 +72,39 @@ msgstr ""
+ "**** AVC non valido nell'attuale politica di dontaudit.  'semodule -B' "
+ "abilita le regole dontaudit. ***\n"
+ 
+-#: ../src/setroubleshoot/audit_data.py:999
++#: ../src/setroubleshoot/audit_data.py:1008
+ msgid "Must call policy_init first"
+ msgstr "Evocare prima policy_init"
+ 
+-#: ../src/setroubleshoot/audit_data.py:1001
++#: ../src/setroubleshoot/audit_data.py:1010
+ #, python-format
+ msgid "%s \n"
+ "**** Invalid AVC bad target context. ***\n"
+ msgstr "%s \n"
+ "**** AVC non valido in cattivo contesto target. ***\n"
+ 
+-#: ../src/setroubleshoot/audit_data.py:1003
++#: ../src/setroubleshoot/audit_data.py:1012
+ #, python-format
+ msgid "%s \n"
+ "**** Invalid AVC bad source context. ***\n"
+ msgstr "%s \n"
+ "**** AVC non valido in cattivo contesto sorgente. ***\n"
+ 
+-#: ../src/setroubleshoot/audit_data.py:1005
++#: ../src/setroubleshoot/audit_data.py:1014
+ #, python-format
+ msgid "%s \n"
+ "**** Invalid AVC bad type class ***\n"
+ msgstr "%s \n"
+ "**** AVC non valido in cattivo tipo di classe ***\n"
+ 
+-#: ../src/setroubleshoot/audit_data.py:1007
++#: ../src/setroubleshoot/audit_data.py:1016
+ #, python-format
+ msgid "%s \n"
+ "**** Invalid AVC bad permission ***\n"
+ msgstr "%s \n"
+ "**** AVC non valido in cattivo permesso ***\n"
+ 
+-#: ../src/setroubleshoot/audit_data.py:1009
++#: ../src/setroubleshoot/audit_data.py:1018
+ msgid "Error during access vector computation"
+ msgstr "Errore durante il calcolo del vettore di accesso"
+ 
+@@ -207,6 +208,7 @@ msgid "<b>Then this is the solution.</b>"
+ msgstr "<b>Allora la soluzione è questa.</b>"
+ 
+ #: ../src/setroubleshoot/browser.py:413 ../src/setroubleshoot/browser.py:549
++#: ../src/setroubleshoot/server.py:578
+ msgid "If "
+ msgstr "Se "
+ 
+@@ -242,7 +244,7 @@ msgid "On this %s:"
+ msgstr "Su questo %s:"
+ 
+ #: ../src/setroubleshoot/browser.py:815 ../src/setroubleshoot/browser.py:821
+-#: ../src/setroubleshoot/signature.py:391
++#: ../src/setroubleshoot/signature.py:397
+ msgid "N/A"
+ msgstr "N/A"
+ 
+@@ -341,7 +343,7 @@ msgstr "non autenticato"
+ msgid "user lookup failed"
+ msgstr "lookup utente fallito"
+ 
+-#: ../src/setroubleshoot/gui_utils.py:53 ../src/sealert:531
++#: ../src/setroubleshoot/gui_utils.py:53 ../src/sealert:536
+ #, c-format, python-format
+ msgid "Opps, %s hit an error!"
+ msgstr "Opps, %s ha incontrato un errore!"
+@@ -358,25 +360,25 @@ msgstr ""
+ "si desidera abilitare $SOURCE_BASE_PATH ad avere accesso $ACCESS al "
+ "$TARGET_BASE_PATH $TARGET_CLASS"
+ 
+-#: ../src/setroubleshoot/server.py:191
++#: ../src/setroubleshoot/server.py:211
+ #, python-format
+-msgid " For complete SELinux messages. run sealert -l %s"
+-msgstr "Per i messaggi SELinux completi, eseguire sealert -l %s"
++msgid " For complete SELinux messages run: sealert -l %s"
++msgstr ""
+ 
+-#: ../src/setroubleshoot/server.py:377
++#: ../src/setroubleshoot/server.py:398
+ #, python-format
+ msgid "The user (%s) cannot modify data for (%s)"
+ msgstr "L'utente (%s) non può modificare i dati per (%s)"
+ 
+-#: ../src/setroubleshoot/server.py:440 ../src/sealert:291
++#: ../src/setroubleshoot/server.py:462 ../src/sealert:296
+ msgid "Started"
+ msgstr "Avviato"
+ 
+-#: ../src/setroubleshoot/server.py:487
++#: ../src/setroubleshoot/server.py:660
+ msgid "AVC"
+ msgstr "AVC"
+ 
+-#: ../src/setroubleshoot/server.py:553
++#: ../src/setroubleshoot/server.py:726
+ msgid "Audit Listener"
+ msgstr "Ascoltatore audit"
+ 
+@@ -436,145 +438,149 @@ msgstr "nodo"
+ msgid "capability"
+ msgstr "capacità"
+ 
+-#: ../src/setroubleshoot/signature.py:376
++#: ../src/setroubleshoot/signature.py:204
++msgid "capability2"
++msgstr ""
++
++#: ../src/setroubleshoot/signature.py:381
+ #, python-format
+ msgid "%s has a permissive type (%s). This access was not denied."
+ msgstr ""
+ "%s presenta una tipologia permissiva (%s). Questo accesso non è stato negato."
+ ""
+ 
+-#: ../src/setroubleshoot/signature.py:379
++#: ../src/setroubleshoot/signature.py:384
+ msgid "SELinux is in permissive mode. This access was not denied."
+ msgstr "SELinux è in modalità permissiva. L'accesso non è stato negato."
+ 
+-#: ../src/setroubleshoot/signature.py:432
++#: ../src/setroubleshoot/signature.py:438
+ #, python-format
+ msgid "SELinux is preventing %s from using the %s access on a process."
+ msgstr "SELinux impedisce a %s un accesso %s su un processo."
+ 
+-#: ../src/setroubleshoot/signature.py:432
++#: ../src/setroubleshoot/signature.py:438
+ #, python-format
+ msgid "SELinux is preventing %s from using the '%s' accesses on a process."
+ msgstr "SELinux impedisce a %s accessi '%s' su un processo."
+ 
+-#: ../src/setroubleshoot/signature.py:435
++#: ../src/setroubleshoot/signature.py:441
+ #, python-format
+ msgid "SELinux is preventing %s from using the %s capability."
+ msgstr "SELinux impedisce a %s di utilizzare la capacità %s."
+ 
+-#: ../src/setroubleshoot/signature.py:435
++#: ../src/setroubleshoot/signature.py:441
+ #, python-format
+ msgid "SELinux is preventing %s from using the '%s' capabilities."
+ msgstr "SELinux impedisce a %s di utilizzare le capacità '%s'."
+ 
+-#: ../src/setroubleshoot/signature.py:437
++#: ../src/setroubleshoot/signature.py:443
+ #, python-format
+ msgid "SELinux is preventing %s from %s access on the %s labeled %s."
+ msgstr "SELinux sta impedendo a %s dall'accesso %s sul %s con etichetta %s."
+ 
+-#: ../src/setroubleshoot/signature.py:437
++#: ../src/setroubleshoot/signature.py:443
+ #, python-format
+ msgid "SELinux is preventing %s from '%s' accesses on the %s labeled %s."
+ msgstr "SELinux sta impedendo %s dagli accessi '%s' sul %s con etichetta %s."
+ 
+-#: ../src/setroubleshoot/signature.py:438
++#: ../src/setroubleshoot/signature.py:444
+ #, python-format
+ msgid "SELinux is preventing %s from %s access on the %s %s."
+ msgstr "SELinux impedisce a %s un accesso %s su %s %s."
+ 
+-#: ../src/setroubleshoot/signature.py:438
++#: ../src/setroubleshoot/signature.py:444
+ #, python-format
+ msgid "SELinux is preventing %s from '%s' accesses on the %s %s."
+ msgstr "SELinux impedisce a %s accessi '%s' su %s %s."
+ 
+-#: ../src/setroubleshoot/signature.py:469
++#: ../src/setroubleshoot/signature.py:475
+ msgid "Additional Information:\n"
+ msgstr "Informazioni addizionali:\n"
+ 
+-#: ../src/setroubleshoot/signature.py:470
++#: ../src/setroubleshoot/signature.py:476
+ msgid "Source Context"
+ msgstr "Contesto della sorgente"
+ 
+-#: ../src/setroubleshoot/signature.py:471
++#: ../src/setroubleshoot/signature.py:477
+ msgid "Target Context"
+ msgstr "Contesto target"
+ 
+-#: ../src/setroubleshoot/signature.py:472
++#: ../src/setroubleshoot/signature.py:478
+ msgid "Target Objects"
+ msgstr "Oggetti target"
+ 
+-#: ../src/setroubleshoot/signature.py:473
++#: ../src/setroubleshoot/signature.py:479
+ msgid "Source"
+ msgstr "Sorgente"
+ 
+-#: ../src/setroubleshoot/signature.py:474
++#: ../src/setroubleshoot/signature.py:480
+ msgid "Source Path"
+ msgstr "Percorso della sorgente"
+ 
+-#: ../src/setroubleshoot/signature.py:475
++#: ../src/setroubleshoot/signature.py:481
+ msgid "Port"
+ msgstr "Porta"
+ 
+-#: ../src/setroubleshoot/signature.py:477
+-#: ../src/setroubleshoot/signature.py:479
++#: ../src/setroubleshoot/signature.py:483
++#: ../src/setroubleshoot/signature.py:485
+ msgid "Host"
+ msgstr "Host"
+ 
+-#: ../src/setroubleshoot/signature.py:480
++#: ../src/setroubleshoot/signature.py:486
+ msgid "Source RPM Packages"
+ msgstr "Sorgente Pacchetti RPM"
+ 
+-#: ../src/setroubleshoot/signature.py:481
++#: ../src/setroubleshoot/signature.py:487
+ msgid "Target RPM Packages"
+ msgstr "Pacchetti RPM target"
+ 
+-#: ../src/setroubleshoot/signature.py:482
++#: ../src/setroubleshoot/signature.py:488
+ msgid "Policy RPM"
+ msgstr "RPM della policy"
+ 
+-#: ../src/setroubleshoot/signature.py:483
++#: ../src/setroubleshoot/signature.py:489
+ msgid "Selinux Enabled"
+ msgstr "Selinux abilitato"
+ 
+-#: ../src/setroubleshoot/signature.py:484
++#: ../src/setroubleshoot/signature.py:490
+ msgid "Policy Type"
+ msgstr "Tipo di politica"
+ 
+-#: ../src/setroubleshoot/signature.py:485
++#: ../src/setroubleshoot/signature.py:491
+ msgid "Enforcing Mode"
+ msgstr "Modalità Enforcing"
+ 
+-#: ../src/setroubleshoot/signature.py:487
+-#: ../src/setroubleshoot/signature.py:489
++#: ../src/setroubleshoot/signature.py:493
++#: ../src/setroubleshoot/signature.py:495
+ msgid "Host Name"
+ msgstr "Host Name"
+ 
+-#: ../src/setroubleshoot/signature.py:494
+-#: ../src/setroubleshoot/signature.py:496
++#: ../src/setroubleshoot/signature.py:500
++#: ../src/setroubleshoot/signature.py:502
+ msgid "Platform"
+ msgstr "Piattaforma"
+ 
+-#: ../src/setroubleshoot/signature.py:497
++#: ../src/setroubleshoot/signature.py:503
+ msgid "Alert Count"
+ msgstr "Conteggio avvisi"
+ 
+-#: ../src/setroubleshoot/signature.py:499
++#: ../src/setroubleshoot/signature.py:505
+ msgid "First Seen"
+ msgstr "Primo visto"
+ 
+-#: ../src/setroubleshoot/signature.py:500
++#: ../src/setroubleshoot/signature.py:506
+ msgid "Last Seen"
+ msgstr "Ultimo visto"
+ 
+-#: ../src/setroubleshoot/signature.py:501
++#: ../src/setroubleshoot/signature.py:507
+ msgid "Local ID"
+ msgstr "ID locale"
+ 
+-#: ../src/setroubleshoot/signature.py:503
++#: ../src/setroubleshoot/signature.py:509
+ msgid "Raw Audit Messages"
+ msgstr "Messaggi Raw Audit"
+ 
+-#: ../src/setroubleshoot/signature.py:557
++#: ../src/setroubleshoot/signature.py:563
+ #, python-format
+ msgid "\n"
+ "\n"
+@@ -584,33 +590,33 @@ msgstr "\n"
+ "⏎\n"
+ "***** Plugin %s(%.4s confidenza) suggerisce"
+ 
+-#: ../src/setroubleshoot/signature.py:560
++#: ../src/setroubleshoot/signature.py:566
+ msgid "*"
+ msgstr "*"
+ 
+-#: ../src/setroubleshoot/signature.py:561
++#: ../src/setroubleshoot/signature.py:567
+ msgid "\n"
+ msgstr "\n"
+ 
+-#: ../src/setroubleshoot/signature.py:563
++#: ../src/setroubleshoot/signature.py:569
+ msgid "\n"
+ "If "
+ msgstr "\n"
+ "Se "
+ 
+-#: ../src/setroubleshoot/signature.py:565
++#: ../src/setroubleshoot/signature.py:571
+ msgid "\n"
+ "Then "
+ msgstr "\n"
+ "Quindi "
+ 
+-#: ../src/setroubleshoot/signature.py:568
++#: ../src/setroubleshoot/signature.py:574
+ msgid "\n"
+ "Do\n"
+ msgstr "\n"
+ "Fai\n"
+ 
+-#: ../src/setroubleshoot/signature.py:570
++#: ../src/setroubleshoot/signature.py:576
+ msgid "\n"
+ "\n"
+ msgstr "\n"
+@@ -647,21 +653,21 @@ msgstr "Mostra"
+ msgid "SELinux AVC denial, click to view"
+ msgstr "Rifiuto AVC di SELinux, fare click per vedere"
+ 
+-#: ../src/sealert:103
++#: ../src/sealert:106
+ msgid "SELinux not enabled, sealert will not run on non SELinux systems"
+ msgstr ""
+ "SELinux non è abilitato, sealert non funzionerà su sistemi non SELinux"
+ 
+-#: ../src/sealert:150
++#: ../src/sealert:153
+ msgid "Not fixable."
+ msgstr "Non riparabile."
+ 
+-#: ../src/sealert:157
++#: ../src/sealert:160
+ #, c-format
+ msgid "Successfully ran %s"
+ msgstr "%s eseguito con successo"
+ 
+-#: ../src/sealert:162
++#: ../src/sealert:167
+ #, c-format
+ msgid "Plugin %s not valid for %s id"
+ msgstr "Il plugin %s non è valido per l'id %s"
+diff --git a/framework/po/ja.po b/framework/po/ja.po
+index 341a07e..5d0c2cb 100644
+--- a/framework/po/ja.po
++++ b/framework/po/ja.po
+@@ -12,22 +12,23 @@
+ # Noriko Mizumoto <noriko@redhat.com>, 2006, 2008
+ # Tomoyuki KATO <tomo@dream.daynight.jp>, 2011-2013
+ # 高一人参 @欠陥遺伝子 <www.carrotsoft@gmail.com>, 2011
+-# Noriko Mizumoto <noriko@redhat.com>, 2016. #zanata
++# Petr Lautrbach <plautrba@redhat.com>, 2017. #zanata
++# kmoriguc <kmoriguc@redhat.com>, 2017. #zanata
+ msgid ""
+ msgstr ""
+ "Project-Id-Version: PACKAGE VERSION\n"
+ "Report-Msgid-Bugs-To: \n"
+-"POT-Creation-Date: 2016-04-15 20:42+0200\n"
++"POT-Creation-Date: 2017-05-15 11:21+0200\n"
+ "MIME-Version: 1.0\n"
+ "Content-Type: text/plain; charset=UTF-8\n"
+ "Content-Transfer-Encoding: 8bit\n"
+-"PO-Revision-Date: 2016-01-14 11:04-0500\n"
+-"Last-Translator: Noriko Mizumoto <noriko@redhat.com>\n"
++"PO-Revision-Date: 2017-05-17 10:59+0000\n"
++"Last-Translator: kmoriguc <kmoriguc@redhat.com>\n"
+ "Language-Team: Japanese (http://www.transifex.com/projects/p/fedora/language/"
+ "ja/)\n"
+ "Language: ja\n"
+ "Plural-Forms: nplurals=1; plural=0;\n"
+-"X-Generator: Zanata 3.8.4\n"
++"X-Generator: Zanata 4.1.1\n"
+ 
+ #: ../setroubleshoot.desktop.in.h:1
+ msgid "SELinux Troubleshooter"
+@@ -41,25 +42,25 @@ msgstr "SELinux アクセス拒否のトラブルシューティング"
+ msgid "policy;security;selinux;avc;permission;mac;alert;sealert;"
+ msgstr "policy;security;selinux;avc;permission;mac;alert;sealert;"
+ 
+-#: ../src/setroubleshoot/audit_data.py:903
++#: ../src/setroubleshoot/audit_data.py:912
+ #, python-format
+ msgid "port %s"
+ msgstr "ポート %s"
+ 
+-#: ../src/setroubleshoot/audit_data.py:905 ../src/setroubleshoot/browser.py:747
++#: ../src/setroubleshoot/audit_data.py:914 ../src/setroubleshoot/browser.py:747
+ #: ../src/setroubleshoot/browser.py:822 ../src/setroubleshoot/rpc.py:528
+-#: ../src/setroubleshoot/util.py:229
++#: ../src/setroubleshoot/util.py:242
+ msgid "Unknown"
+ msgstr "不明"
+ 
+-#: ../src/setroubleshoot/audit_data.py:995
++#: ../src/setroubleshoot/audit_data.py:1004
+ #, python-format
+ msgid "%s \n"
+ "**** Invalid AVC allowed in current policy ***\n"
+ msgstr "%s \n"
+ "**** 無効な AVC が現在のポリシーで許可されています ***\n"
+ 
+-#: ../src/setroubleshoot/audit_data.py:997
++#: ../src/setroubleshoot/audit_data.py:1006
+ #, python-format
+ msgid ""
+ "%s \n"
+@@ -70,39 +71,39 @@ msgstr ""
+ "**** 無効な AVC が現在のポリシーで dontaudit されています。  'semodule -B' が dontaudit "
+ "ルールをオンにします。 ***\n"
+ 
+-#: ../src/setroubleshoot/audit_data.py:999
++#: ../src/setroubleshoot/audit_data.py:1008
+ msgid "Must call policy_init first"
+ msgstr "policy_init を最初にコールしなければなりません"
+ 
+-#: ../src/setroubleshoot/audit_data.py:1001
++#: ../src/setroubleshoot/audit_data.py:1010
+ #, python-format
+ msgid "%s \n"
+ "**** Invalid AVC bad target context. ***\n"
+ msgstr "%s \n"
+ "**** 無効な AVC 不正ターゲットコンテキストです。 ***\n"
+ 
+-#: ../src/setroubleshoot/audit_data.py:1003
++#: ../src/setroubleshoot/audit_data.py:1012
+ #, python-format
+ msgid "%s \n"
+ "**** Invalid AVC bad source context. ***\n"
+ msgstr "%s \n"
+ "**** 無効な AVC 不正ソースコンテキストです。 ***\n"
+ 
+-#: ../src/setroubleshoot/audit_data.py:1005
++#: ../src/setroubleshoot/audit_data.py:1014
+ #, python-format
+ msgid "%s \n"
+ "**** Invalid AVC bad type class ***\n"
+ msgstr "%s \n"
+ "**** 無効な AVC 不正タイプクラスです ***\n"
+ 
+-#: ../src/setroubleshoot/audit_data.py:1007
++#: ../src/setroubleshoot/audit_data.py:1016
+ #, python-format
+ msgid "%s \n"
+ "**** Invalid AVC bad permission ***\n"
+ msgstr "%s \n"
+ "**** 無効な AVC 不正認可です ***\n"
+ 
+-#: ../src/setroubleshoot/audit_data.py:1009
++#: ../src/setroubleshoot/audit_data.py:1018
+ msgid "Error during access vector computation"
+ msgstr "アクセスベクターの演算時にエラーが発生しました"
+ 
+@@ -206,6 +207,7 @@ msgid "<b>Then this is the solution.</b>"
+ msgstr "<b>これが解決策です</b>"
+ 
+ #: ../src/setroubleshoot/browser.py:413 ../src/setroubleshoot/browser.py:549
++#: ../src/setroubleshoot/server.py:578
+ msgid "If "
+ msgstr "もし"
+ 
+@@ -241,7 +243,7 @@ msgid "On this %s:"
+ msgstr "対象 %s:"
+ 
+ #: ../src/setroubleshoot/browser.py:815 ../src/setroubleshoot/browser.py:821
+-#: ../src/setroubleshoot/signature.py:391
++#: ../src/setroubleshoot/signature.py:397
+ msgid "N/A"
+ msgstr "N/A"
+ 
+@@ -340,7 +342,7 @@ msgstr "認証されていません"
+ msgid "user lookup failed"
+ msgstr "ユーザーの検索に失敗しました"
+ 
+-#: ../src/setroubleshoot/gui_utils.py:53 ../src/sealert:531
++#: ../src/setroubleshoot/gui_utils.py:53 ../src/sealert:536
+ #, c-format, python-format
+ msgid "Opps, %s hit an error!"
+ msgstr "%s  がエラーです!"
+@@ -357,25 +359,25 @@ msgstr ""
+ "$TARGET_BASE_PATH $TARGET_CLASS に "
+ "$ACCESSアクセスをするために、$SOURCE_BASE_PATHを許可しますか?"
+ 
+-#: ../src/setroubleshoot/server.py:191
++#: ../src/setroubleshoot/server.py:211
+ #, python-format
+-msgid " For complete SELinux messages. run sealert -l %s"
++msgid " For complete SELinux messages run: sealert -l %s"
+ msgstr "完全な SELinux メッセージを見るには、sealert -l %s を実行します"
+ 
+-#: ../src/setroubleshoot/server.py:377
++#: ../src/setroubleshoot/server.py:398
+ #, python-format
+ msgid "The user (%s) cannot modify data for (%s)"
+ msgstr "ユーザー(%s) は (%s) 用のデータを修正できません。"
+ 
+-#: ../src/setroubleshoot/server.py:440 ../src/sealert:291
++#: ../src/setroubleshoot/server.py:462 ../src/sealert:296
+ msgid "Started"
+ msgstr "開始済み"
+ 
+-#: ../src/setroubleshoot/server.py:487
++#: ../src/setroubleshoot/server.py:660
+ msgid "AVC"
+ msgstr "AVC"
+ 
+-#: ../src/setroubleshoot/server.py:553
++#: ../src/setroubleshoot/server.py:726
+ msgid "Audit Listener"
+ msgstr "リスナーの監査"
+ 
+@@ -433,145 +435,149 @@ msgstr "ノード"
+ 
+ #: ../src/setroubleshoot/signature.py:203
+ msgid "capability"
+-msgstr "能力"
++msgstr "機能"
+ 
+-#: ../src/setroubleshoot/signature.py:376
++#: ../src/setroubleshoot/signature.py:204
++msgid "capability2"
++msgstr "機能2"
++
++#: ../src/setroubleshoot/signature.py:381
+ #, python-format
+ msgid "%s has a permissive type (%s). This access was not denied."
+ msgstr "%s は許容タイプ (%s) を持ちます。このアクセスは拒否されませんでした。"
+ 
+-#: ../src/setroubleshoot/signature.py:379
++#: ../src/setroubleshoot/signature.py:384
+ msgid "SELinux is in permissive mode. This access was not denied."
+ msgstr "SELinuxはpermissiveモードです。このアクセスは拒否されませんでした。"
+ 
+-#: ../src/setroubleshoot/signature.py:432
++#: ../src/setroubleshoot/signature.py:438
+ #, python-format
+ msgid "SELinux is preventing %s from using the %s access on a process."
+ msgstr "SELinux により %s がプロセスにおいて %s アクセスを使用できません"
+ 
+-#: ../src/setroubleshoot/signature.py:432
++#: ../src/setroubleshoot/signature.py:438
+ #, python-format
+ msgid "SELinux is preventing %s from using the '%s' accesses on a process."
+ msgstr "SELinux により %s がプロセスにおいて '%s' アクセスを使用できません"
+ 
+-#: ../src/setroubleshoot/signature.py:435
++#: ../src/setroubleshoot/signature.py:441
+ #, python-format
+ msgid "SELinux is preventing %s from using the %s capability."
+ msgstr "SELinux により %s が %s 能力を使用できません"
+ 
+-#: ../src/setroubleshoot/signature.py:435
++#: ../src/setroubleshoot/signature.py:441
+ #, python-format
+ msgid "SELinux is preventing %s from using the '%s' capabilities."
+ msgstr "SELinux により %s が '%s' 能力を使用できません"
+ 
+-#: ../src/setroubleshoot/signature.py:437
++#: ../src/setroubleshoot/signature.py:443
+ #, python-format
+ msgid "SELinux is preventing %s from %s access on the %s labeled %s."
+ msgstr "%4$s のラベルが付いた %3$s での %1$s による %2$s アクセスが SELinux により阻止されています。"
+ 
+-#: ../src/setroubleshoot/signature.py:437
++#: ../src/setroubleshoot/signature.py:443
+ #, python-format
+ msgid "SELinux is preventing %s from '%s' accesses on the %s labeled %s."
+ msgstr "SELinux により %s が '%s' アクセスを %s のラベルがついた %s で拒否されました。"
+ 
+-#: ../src/setroubleshoot/signature.py:438
++#: ../src/setroubleshoot/signature.py:444
+ #, python-format
+ msgid "SELinux is preventing %s from %s access on the %s %s."
+ msgstr "SELinux により %s が %s アクセスを %s %s においてできません"
+ 
+-#: ../src/setroubleshoot/signature.py:438
++#: ../src/setroubleshoot/signature.py:444
+ #, python-format
+ msgid "SELinux is preventing %s from '%s' accesses on the %s %s."
+ msgstr "SELinux により %s が '%s' アクセスを %s %s においてできません"
+ 
+-#: ../src/setroubleshoot/signature.py:469
++#: ../src/setroubleshoot/signature.py:475
+ msgid "Additional Information:\n"
+ msgstr "追加情報:\n"
+ 
+-#: ../src/setroubleshoot/signature.py:470
++#: ../src/setroubleshoot/signature.py:476
+ msgid "Source Context"
+ msgstr "ソースコンテキスト"
+ 
+-#: ../src/setroubleshoot/signature.py:471
++#: ../src/setroubleshoot/signature.py:477
+ msgid "Target Context"
+ msgstr "ターゲットコンテキスト"
+ 
+-#: ../src/setroubleshoot/signature.py:472
++#: ../src/setroubleshoot/signature.py:478
+ msgid "Target Objects"
+ msgstr "ターゲットオブジェクト"
+ 
+-#: ../src/setroubleshoot/signature.py:473
++#: ../src/setroubleshoot/signature.py:479
+ msgid "Source"
+ msgstr "ソース"
+ 
+-#: ../src/setroubleshoot/signature.py:474
++#: ../src/setroubleshoot/signature.py:480
+ msgid "Source Path"
+ msgstr "ソースパス"
+ 
+-#: ../src/setroubleshoot/signature.py:475
++#: ../src/setroubleshoot/signature.py:481
+ msgid "Port"
+ msgstr "ポート"
+ 
+-#: ../src/setroubleshoot/signature.py:477
+-#: ../src/setroubleshoot/signature.py:479
++#: ../src/setroubleshoot/signature.py:483
++#: ../src/setroubleshoot/signature.py:485
+ msgid "Host"
+ msgstr "ホスト"
+ 
+-#: ../src/setroubleshoot/signature.py:480
++#: ../src/setroubleshoot/signature.py:486
+ msgid "Source RPM Packages"
+ msgstr "ソース RPM パッケージ"
+ 
+-#: ../src/setroubleshoot/signature.py:481
++#: ../src/setroubleshoot/signature.py:487
+ msgid "Target RPM Packages"
+ msgstr "ターゲット RPM パッケージ"
+ 
+-#: ../src/setroubleshoot/signature.py:482
++#: ../src/setroubleshoot/signature.py:488
+ msgid "Policy RPM"
+ msgstr "ポリシー RPM"
+ 
+-#: ../src/setroubleshoot/signature.py:483
++#: ../src/setroubleshoot/signature.py:489
+ msgid "Selinux Enabled"
+ msgstr "Selinux 有効化"
+ 
+-#: ../src/setroubleshoot/signature.py:484
++#: ../src/setroubleshoot/signature.py:490
+ msgid "Policy Type"
+ msgstr "ポリシータイプ"
+ 
+-#: ../src/setroubleshoot/signature.py:485
++#: ../src/setroubleshoot/signature.py:491
+ msgid "Enforcing Mode"
+ msgstr "強制モード"
+ 
+-#: ../src/setroubleshoot/signature.py:487
+-#: ../src/setroubleshoot/signature.py:489
++#: ../src/setroubleshoot/signature.py:493
++#: ../src/setroubleshoot/signature.py:495
+ msgid "Host Name"
+ msgstr "ホスト名"
+ 
+-#: ../src/setroubleshoot/signature.py:494
+-#: ../src/setroubleshoot/signature.py:496
++#: ../src/setroubleshoot/signature.py:500
++#: ../src/setroubleshoot/signature.py:502
+ msgid "Platform"
+ msgstr "プラットフォーム"
+ 
+-#: ../src/setroubleshoot/signature.py:497
++#: ../src/setroubleshoot/signature.py:503
+ msgid "Alert Count"
+ msgstr "通知カウント"
+ 
+-#: ../src/setroubleshoot/signature.py:499
++#: ../src/setroubleshoot/signature.py:505
+ msgid "First Seen"
+ msgstr "最初の画面"
+ 
+-#: ../src/setroubleshoot/signature.py:500
++#: ../src/setroubleshoot/signature.py:506
+ msgid "Last Seen"
+ msgstr "最後の画面"
+ 
+-#: ../src/setroubleshoot/signature.py:501
++#: ../src/setroubleshoot/signature.py:507
+ msgid "Local ID"
+ msgstr "ローカル ID"
+ 
+-#: ../src/setroubleshoot/signature.py:503
++#: ../src/setroubleshoot/signature.py:509
+ msgid "Raw Audit Messages"
+ msgstr "生の監査メッセージ"
+ 
+-#: ../src/setroubleshoot/signature.py:557
++#: ../src/setroubleshoot/signature.py:563
+ #, python-format
+ msgid "\n"
+ "\n"
+@@ -580,33 +586,33 @@ msgstr "\n"
+ "\n"
+ "*****  プラグイン %s (%.4s 信頼性) による示唆"
+ 
+-#: ../src/setroubleshoot/signature.py:560
++#: ../src/setroubleshoot/signature.py:566
+ msgid "*"
+ msgstr "*"
+ 
+-#: ../src/setroubleshoot/signature.py:561
++#: ../src/setroubleshoot/signature.py:567
+ msgid "\n"
+ msgstr "\n"
+ 
+-#: ../src/setroubleshoot/signature.py:563
++#: ../src/setroubleshoot/signature.py:569
+ msgid "\n"
+ "If "
+ msgstr "\n"
+ "次のような場合: "
+ 
+-#: ../src/setroubleshoot/signature.py:565
++#: ../src/setroubleshoot/signature.py:571
+ msgid "\n"
+ "Then "
+ msgstr "\n"
+ "このようにします: "
+ 
+-#: ../src/setroubleshoot/signature.py:568
++#: ../src/setroubleshoot/signature.py:574
+ msgid "\n"
+ "Do\n"
+ msgstr "\n"
+ "そして、以下を実行します: \n"
+ 
+-#: ../src/setroubleshoot/signature.py:570
++#: ../src/setroubleshoot/signature.py:576
+ msgid "\n"
+ "\n"
+ msgstr "\n"
+@@ -643,20 +649,20 @@ msgstr "表示"
+ msgid "SELinux AVC denial, click to view"
+ msgstr "SELinux AVC 拒否、クリックして表示"
+ 
+-#: ../src/sealert:103
++#: ../src/sealert:106
+ msgid "SELinux not enabled, sealert will not run on non SELinux systems"
+ msgstr "SELinux が有効化されていません。sealert は SELinux が有効なシステム以外では動作しません。"
+ 
+-#: ../src/sealert:150
++#: ../src/sealert:153
+ msgid "Not fixable."
+ msgstr "修正不可です。"
+ 
+-#: ../src/sealert:157
++#: ../src/sealert:160
+ #, c-format
+ msgid "Successfully ran %s"
+ msgstr "%s を正常に実行しました。"
+ 
+-#: ../src/sealert:162
++#: ../src/sealert:167
+ #, c-format
+ msgid "Plugin %s not valid for %s id"
+ msgstr "プラグイン %s は %s id には認められていません。"
+diff --git a/framework/po/ko.po b/framework/po/ko.po
+index 8041a69..bbe0e92 100644
+--- a/framework/po/ko.po
++++ b/framework/po/ko.po
+@@ -8,22 +8,22 @@
+ # eukim <eukim@redhat.com>, 2012
+ # bardisch <kwb0128@gmail.com>, 2011
+ #   <raypoatssium@gmail.com>, 2011,2013
+-# Eun-Ju Kim <eukim@redhat.com>, 2016. #zanata
++# Petr Lautrbach <plautrba@redhat.com>, 2017. #zanata
+ msgid ""
+ msgstr ""
+ "Project-Id-Version: PACKAGE VERSION\n"
+ "Report-Msgid-Bugs-To: \n"
+-"POT-Creation-Date: 2016-04-15 20:42+0200\n"
++"POT-Creation-Date: 2017-05-15 11:21+0200\n"
+ "MIME-Version: 1.0\n"
+ "Content-Type: text/plain; charset=UTF-8\n"
+ "Content-Transfer-Encoding: 8bit\n"
+-"PO-Revision-Date: 2016-03-31 01:27-0400\n"
+-"Last-Translator: Eun-Ju Kim <eukim@redhat.com>\n"
++"PO-Revision-Date: 2017-05-15 09:21+0000\n"
++"Last-Translator: Copied by Zanata <copied-by-zanata@zanata.org>\n"
+ "Language-Team: Korean (http://www.transifex.com/projects/p/fedora/language/"
+ "ko/)\n"
+ "Language: ko\n"
+ "Plural-Forms: nplurals=1; plural=0;\n"
+-"X-Generator: Zanata 3.8.4\n"
++"X-Generator: Zanata 4.1.1\n"
+ 
+ #: ../setroubleshoot.desktop.in.h:1
+ msgid "SELinux Troubleshooter"
+@@ -37,25 +37,25 @@ msgstr "SELinux 액세스 거부 문제 해결 "
+ msgid "policy;security;selinux;avc;permission;mac;alert;sealert;"
+ msgstr "policy;security;selinux;avc;permission;mac;alert;sealert;"
+ 
+-#: ../src/setroubleshoot/audit_data.py:903
++#: ../src/setroubleshoot/audit_data.py:912
+ #, python-format
+ msgid "port %s"
+ msgstr "포트 %s"
+ 
+-#: ../src/setroubleshoot/audit_data.py:905 ../src/setroubleshoot/browser.py:747
++#: ../src/setroubleshoot/audit_data.py:914 ../src/setroubleshoot/browser.py:747
+ #: ../src/setroubleshoot/browser.py:822 ../src/setroubleshoot/rpc.py:528
+-#: ../src/setroubleshoot/util.py:229
++#: ../src/setroubleshoot/util.py:242
+ msgid "Unknown"
+ msgstr "알려지지 않음"
+ 
+-#: ../src/setroubleshoot/audit_data.py:995
++#: ../src/setroubleshoot/audit_data.py:1004
+ #, python-format
+ msgid "%s \n"
+ "**** Invalid AVC allowed in current policy ***\n"
+ msgstr "%s \n"
+ "**** 잘못된 AVC가 현재 정책에서 허용되어 있습니다 ***\n"
+ 
+-#: ../src/setroubleshoot/audit_data.py:997
++#: ../src/setroubleshoot/audit_data.py:1006
+ #, python-format
+ msgid ""
+ "%s \n"
+@@ -66,39 +66,39 @@ msgstr ""
+ "**** 잘못된 AVC가 현재 정책에서 dontaudit되었습니다. 'semodule -B'는 dontaudit 규칙을 활성화하게 됩니다."
+ " ***\n"
+ 
+-#: ../src/setroubleshoot/audit_data.py:999
++#: ../src/setroubleshoot/audit_data.py:1008
+ msgid "Must call policy_init first"
+ msgstr "반드시 policy_init이 먼저 호출돼야합니다."
+ 
+-#: ../src/setroubleshoot/audit_data.py:1001
++#: ../src/setroubleshoot/audit_data.py:1010
+ #, python-format
+ msgid "%s \n"
+ "**** Invalid AVC bad target context. ***\n"
+ msgstr "%s \n"
+ "**** 잘못된 AVC 잘못된 대상 문맥. ***\n"
+ 
+-#: ../src/setroubleshoot/audit_data.py:1003
++#: ../src/setroubleshoot/audit_data.py:1012
+ #, python-format
+ msgid "%s \n"
+ "**** Invalid AVC bad source context. ***\n"
+ msgstr "%s \n"
+ "**** 잘못된 AVC 잘못된 소스 문맥  ***\n"
+ 
+-#: ../src/setroubleshoot/audit_data.py:1005
++#: ../src/setroubleshoot/audit_data.py:1014
+ #, python-format
+ msgid "%s \n"
+ "**** Invalid AVC bad type class ***\n"
+ msgstr "%s \n"
+ "**** 잘못된 AVC 잘못된 유형 클래스 ***\n"
+ 
+-#: ../src/setroubleshoot/audit_data.py:1007
++#: ../src/setroubleshoot/audit_data.py:1016
+ #, python-format
+ msgid "%s \n"
+ "**** Invalid AVC bad permission ***\n"
+ msgstr "%s \n"
+ "**** 잘못된 AVC 잘못된 권한 ***\n"
+ 
+-#: ../src/setroubleshoot/audit_data.py:1009
++#: ../src/setroubleshoot/audit_data.py:1018
+ msgid "Error during access vector computation"
+ msgstr "액세스 벡터 연산시 오류 발생 "
+ 
+@@ -202,6 +202,7 @@ msgid "<b>Then this is the solution.</b>"
+ msgstr "<b>이 방법이 그 해답일 것입니다.</b>"
+ 
+ #: ../src/setroubleshoot/browser.py:413 ../src/setroubleshoot/browser.py:549
++#: ../src/setroubleshoot/server.py:578
+ msgid "If "
+ msgstr "가정 "
+ 
+@@ -237,7 +238,7 @@ msgid "On this %s:"
+ msgstr "%s 에서: "
+ 
+ #: ../src/setroubleshoot/browser.py:815 ../src/setroubleshoot/browser.py:821
+-#: ../src/setroubleshoot/signature.py:391
++#: ../src/setroubleshoot/signature.py:397
+ msgid "N/A"
+ msgstr "없음"
+ 
+@@ -336,7 +337,7 @@ msgstr "인증되지 않음 "
+ msgid "user lookup failed"
+ msgstr "사용자 검색 실패 "
+ 
+-#: ../src/setroubleshoot/gui_utils.py:53 ../src/sealert:531
++#: ../src/setroubleshoot/gui_utils.py:53 ../src/sealert:536
+ #, c-format, python-format
+ msgid "Opps, %s hit an error!"
+ msgstr "%s이(가) 오류를 발생시켰습니다!  "
+@@ -353,25 +354,25 @@ msgstr ""
+ "$ACCESS 접근 권한을 위해 $TARGET_BASE_PATH의 $TARGET_CLASS에 접근하여 $SOURCE_BASE를 허가하고자 "
+ "합니다."
+ 
+-#: ../src/setroubleshoot/server.py:191
++#: ../src/setroubleshoot/server.py:211
+ #, python-format
+-msgid " For complete SELinux messages. run sealert -l %s"
+-msgstr "완전한 SELinux 메시지를 보려면 sealert -l %s 을(를) 실행합니다 "
++msgid " For complete SELinux messages run: sealert -l %s"
++msgstr ""
+ 
+-#: ../src/setroubleshoot/server.py:377
++#: ../src/setroubleshoot/server.py:398
+ #, python-format
+ msgid "The user (%s) cannot modify data for (%s)"
+ msgstr "사용자 (%s)는 (%s)에 대한 데이터를 수정할 수 없습니다  "
+ 
+-#: ../src/setroubleshoot/server.py:440 ../src/sealert:291
++#: ../src/setroubleshoot/server.py:462 ../src/sealert:296
+ msgid "Started"
+ msgstr "시작 "
+ 
+-#: ../src/setroubleshoot/server.py:487
++#: ../src/setroubleshoot/server.py:660
+ msgid "AVC"
+ msgstr "AVC"
+ 
+-#: ../src/setroubleshoot/server.py:553
++#: ../src/setroubleshoot/server.py:726
+ msgid "Audit Listener"
+ msgstr "청취자 감사 "
+ 
+@@ -431,143 +432,147 @@ msgstr "노드"
+ msgid "capability"
+ msgstr "기능 "
+ 
+-#: ../src/setroubleshoot/signature.py:376
++#: ../src/setroubleshoot/signature.py:204
++msgid "capability2"
++msgstr ""
++
++#: ../src/setroubleshoot/signature.py:381
+ #, python-format
+ msgid "%s has a permissive type (%s). This access was not denied."
+ msgstr "%s은(는) 허용 유형 (%s)이 있습니다. 이 액세스는 거부되지 않습니다.       "
+ 
+-#: ../src/setroubleshoot/signature.py:379
++#: ../src/setroubleshoot/signature.py:384
+ msgid "SELinux is in permissive mode. This access was not denied."
+ msgstr "SELinux가 허용 모드입니다. 이 접근은 거부되지 않습니다."
+ 
+-#: ../src/setroubleshoot/signature.py:432
++#: ../src/setroubleshoot/signature.py:438
+ #, python-format
+ msgid "SELinux is preventing %s from using the %s access on a process."
+ msgstr "SELinux는 프로세스에서 %s가 %s 액세스를 사용하지 못하게 합니다."
+ 
+-#: ../src/setroubleshoot/signature.py:432
++#: ../src/setroubleshoot/signature.py:438
+ #, python-format
+ msgid "SELinux is preventing %s from using the '%s' accesses on a process."
+ msgstr "SELinux는 프로세스에서 %s가 '%s' 액세스를 사용하지 못하게 합니다."
+ 
+-#: ../src/setroubleshoot/signature.py:435
++#: ../src/setroubleshoot/signature.py:441
+ #, python-format
+ msgid "SELinux is preventing %s from using the %s capability."
+ msgstr "SELinux는 %s가 %s 기능을 사용하지 못하게 합니다."
+ 
+-#: ../src/setroubleshoot/signature.py:435
++#: ../src/setroubleshoot/signature.py:441
+ #, python-format
+ msgid "SELinux is preventing %s from using the '%s' capabilities."
+ msgstr "SELinux는 %s가 '%s' 기능을 사용하지 못하게 합니다."
+ 
+-#: ../src/setroubleshoot/signature.py:437
++#: ../src/setroubleshoot/signature.py:443
+ #, python-format
+ msgid "SELinux is preventing %s from %s access on the %s labeled %s."
+ msgstr "SELinux는 %s (%s로/으로 레이블됨)에서 %s가 %s 액세스하지 못하게 합니다."
+ 
+-#: ../src/setroubleshoot/signature.py:437
++#: ../src/setroubleshoot/signature.py:443
+ #, python-format
+ msgid "SELinux is preventing %s from '%s' accesses on the %s labeled %s."
+ msgstr "SELinux는 %s (%s로/으로 레이블됨)에서 %s가 '%s' 액세스하지 못하게 합니다."
+ 
+-#: ../src/setroubleshoot/signature.py:438
++#: ../src/setroubleshoot/signature.py:444
+ #, python-format
+ msgid "SELinux is preventing %s from %s access on the %s %s."
+ msgstr "SELinux는 %s %s에서 %s가 %s 액세스하지 못하게 합니다."
+ 
+-#: ../src/setroubleshoot/signature.py:438
++#: ../src/setroubleshoot/signature.py:444
+ #, python-format
+ msgid "SELinux is preventing %s from '%s' accesses on the %s %s."
+ msgstr "SELinux는 %s %s에서 %s가 '%s' 액세스하지 못하게 합니다."
+ 
+-#: ../src/setroubleshoot/signature.py:469
++#: ../src/setroubleshoot/signature.py:475
+ msgid "Additional Information:\n"
+ msgstr "추가 정보:\n"
+ 
+-#: ../src/setroubleshoot/signature.py:470
++#: ../src/setroubleshoot/signature.py:476
+ msgid "Source Context"
+ msgstr "소스 문맥"
+ 
+-#: ../src/setroubleshoot/signature.py:471
++#: ../src/setroubleshoot/signature.py:477
+ msgid "Target Context"
+ msgstr "대상 문맥"
+ 
+-#: ../src/setroubleshoot/signature.py:472
++#: ../src/setroubleshoot/signature.py:478
+ msgid "Target Objects"
+ msgstr "대상 객체"
+ 
+-#: ../src/setroubleshoot/signature.py:473
++#: ../src/setroubleshoot/signature.py:479
+ msgid "Source"
+ msgstr "소스 "
+ 
+-#: ../src/setroubleshoot/signature.py:474
++#: ../src/setroubleshoot/signature.py:480
+ msgid "Source Path"
+ msgstr "소스 경로 "
+ 
+-#: ../src/setroubleshoot/signature.py:475
++#: ../src/setroubleshoot/signature.py:481
+ msgid "Port"
+ msgstr "포트 "
+ 
+-#: ../src/setroubleshoot/signature.py:477
+-#: ../src/setroubleshoot/signature.py:479
++#: ../src/setroubleshoot/signature.py:483
++#: ../src/setroubleshoot/signature.py:485
+ msgid "Host"
+ msgstr "호스트 "
+ 
+-#: ../src/setroubleshoot/signature.py:480
++#: ../src/setroubleshoot/signature.py:486
+ msgid "Source RPM Packages"
+ msgstr "소스 RPM 패키지 "
+ 
+-#: ../src/setroubleshoot/signature.py:481
++#: ../src/setroubleshoot/signature.py:487
+ msgid "Target RPM Packages"
+ msgstr "대상 RPM 패키지 "
+ 
+-#: ../src/setroubleshoot/signature.py:482
++#: ../src/setroubleshoot/signature.py:488
+ msgid "Policy RPM"
+ msgstr "정책 RPM"
+ 
+-#: ../src/setroubleshoot/signature.py:483
++#: ../src/setroubleshoot/signature.py:489
+ msgid "Selinux Enabled"
+ msgstr "Selinux 활성화"
+ 
+-#: ../src/setroubleshoot/signature.py:484
++#: ../src/setroubleshoot/signature.py:490
+ msgid "Policy Type"
+ msgstr "정책 유형"
+ 
+-#: ../src/setroubleshoot/signature.py:485
++#: ../src/setroubleshoot/signature.py:491
+ msgid "Enforcing Mode"
+ msgstr "강제 모드"
+ 
+-#: ../src/setroubleshoot/signature.py:487
+-#: ../src/setroubleshoot/signature.py:489
++#: ../src/setroubleshoot/signature.py:493
++#: ../src/setroubleshoot/signature.py:495
+ msgid "Host Name"
+ msgstr "호스트명"
+ 
+-#: ../src/setroubleshoot/signature.py:494
+-#: ../src/setroubleshoot/signature.py:496
++#: ../src/setroubleshoot/signature.py:500
++#: ../src/setroubleshoot/signature.py:502
+ msgid "Platform"
+ msgstr "플랫폼"
+ 
+-#: ../src/setroubleshoot/signature.py:497
++#: ../src/setroubleshoot/signature.py:503
+ msgid "Alert Count"
+ msgstr "통지 카운트"
+ 
+-#: ../src/setroubleshoot/signature.py:499
++#: ../src/setroubleshoot/signature.py:505
+ msgid "First Seen"
+ msgstr "초기 화면 "
+ 
+-#: ../src/setroubleshoot/signature.py:500
++#: ../src/setroubleshoot/signature.py:506
+ msgid "Last Seen"
+ msgstr "마지막 화면 "
+ 
+-#: ../src/setroubleshoot/signature.py:501
++#: ../src/setroubleshoot/signature.py:507
+ msgid "Local ID"
+ msgstr "로컬 ID "
+ 
+-#: ../src/setroubleshoot/signature.py:503
++#: ../src/setroubleshoot/signature.py:509
+ msgid "Raw Audit Messages"
+ msgstr "원 감사 메세지"
+ 
+-#: ../src/setroubleshoot/signature.py:557
++#: ../src/setroubleshoot/signature.py:563
+ #, python-format
+ msgid "\n"
+ "\n"
+@@ -576,33 +581,33 @@ msgstr "\n"
+ "\n"
+ "*****  플러그인 %s (%.4s confidence) 제안   "
+ 
+-#: ../src/setroubleshoot/signature.py:560
++#: ../src/setroubleshoot/signature.py:566
+ msgid "*"
+ msgstr "*"
+ 
+-#: ../src/setroubleshoot/signature.py:561
++#: ../src/setroubleshoot/signature.py:567
+ msgid "\n"
+ msgstr "\n"
+ 
+-#: ../src/setroubleshoot/signature.py:563
++#: ../src/setroubleshoot/signature.py:569
+ msgid "\n"
+ "If "
+ msgstr "\n"
+ "If "
+ 
+-#: ../src/setroubleshoot/signature.py:565
++#: ../src/setroubleshoot/signature.py:571
+ msgid "\n"
+ "Then "
+ msgstr "\n"
+ "Then "
+ 
+-#: ../src/setroubleshoot/signature.py:568
++#: ../src/setroubleshoot/signature.py:574
+ msgid "\n"
+ "Do\n"
+ msgstr "\n"
+ "Do\n"
+ 
+-#: ../src/setroubleshoot/signature.py:570
++#: ../src/setroubleshoot/signature.py:576
+ msgid "\n"
+ "\n"
+ msgstr "\n"
+@@ -639,20 +644,20 @@ msgstr "보기 "
+ msgid "SELinux AVC denial, click to view"
+ msgstr "SELinux AVC 거부, 클릭하여 보기 "
+ 
+-#: ../src/sealert:103
++#: ../src/sealert:106
+ msgid "SELinux not enabled, sealert will not run on non SELinux systems"
+ msgstr "SELinux가 활성화되어있지 않습니다. sealert는 SELinux 시스템에서만 작동합니다."
+ 
+-#: ../src/sealert:150
++#: ../src/sealert:153
+ msgid "Not fixable."
+ msgstr "수정할 수 없음  "
+ 
+-#: ../src/sealert:157
++#: ../src/sealert:160
+ #, c-format
+ msgid "Successfully ran %s"
+ msgstr "성공적으로 %s 실행  "
+ 
+-#: ../src/sealert:162
++#: ../src/sealert:167
+ #, c-format
+ msgid "Plugin %s not valid for %s id"
+ msgstr "플러그인 %s가 플러그인 %s에 유효하지 않습니다."
+diff --git a/framework/po/pt_BR.po b/framework/po/pt_BR.po
+index 9b3a06e..3136f75 100644
+--- a/framework/po/pt_BR.po
++++ b/framework/po/pt_BR.po
+@@ -16,22 +16,22 @@
+ # Teseu <teseu@linux-fedora.org>, 2007
+ # Teseu <tuliomac@gmail.com>, 2013
+ # vitorvilas <vitor@vitorvilasboas.com.br>, 2009
+-# Maria Andrada <msuppesd@redhat.com>, 2016. #zanata
++# Petr Lautrbach <plautrba@redhat.com>, 2017. #zanata
+ msgid ""
+ msgstr ""
+ "Project-Id-Version: PACKAGE VERSION\n"
+ "Report-Msgid-Bugs-To: \n"
+-"POT-Creation-Date: 2016-04-15 20:42+0200\n"
++"POT-Creation-Date: 2017-05-15 11:21+0200\n"
+ "MIME-Version: 1.0\n"
+ "Content-Type: text/plain; charset=UTF-8\n"
+ "Content-Transfer-Encoding: 8bit\n"
+-"PO-Revision-Date: 2016-03-30 10:04-0400\n"
+-"Last-Translator: Maria Andrada <msuppesd@redhat.com>\n"
++"PO-Revision-Date: 2017-05-15 09:22+0000\n"
++"Last-Translator: Copied by Zanata <copied-by-zanata@zanata.org>\n"
+ "Language-Team: Portuguese (Brazil) (http://www.transifex.com/projects/p/"
+ "fedora/language/pt_BR/)\n"
+ "Language: pt-BR\n"
+ "Plural-Forms: nplurals=2; plural=(n > 1);\n"
+-"X-Generator: Zanata 3.8.4\n"
++"X-Generator: Zanata 4.1.1\n"
+ 
+ #: ../setroubleshoot.desktop.in.h:1
+ msgid "SELinux Troubleshooter"
+@@ -45,25 +45,25 @@ msgstr "Solucione problemas das negações de acesso do SELinux"
+ msgid "policy;security;selinux;avc;permission;mac;alert;sealert;"
+ msgstr "policy;security;selinux;avc;permission;mac;alert;sealert;"
+ 
+-#: ../src/setroubleshoot/audit_data.py:903
++#: ../src/setroubleshoot/audit_data.py:912
+ #, python-format
+ msgid "port %s"
+ msgstr "porta %s"
+ 
+-#: ../src/setroubleshoot/audit_data.py:905 ../src/setroubleshoot/browser.py:747
++#: ../src/setroubleshoot/audit_data.py:914 ../src/setroubleshoot/browser.py:747
+ #: ../src/setroubleshoot/browser.py:822 ../src/setroubleshoot/rpc.py:528
+-#: ../src/setroubleshoot/util.py:229
++#: ../src/setroubleshoot/util.py:242
+ msgid "Unknown"
+ msgstr "Desconhecido"
+ 
+-#: ../src/setroubleshoot/audit_data.py:995
++#: ../src/setroubleshoot/audit_data.py:1004
+ #, python-format
+ msgid "%s \n"
+ "**** Invalid AVC allowed in current policy ***\n"
+ msgstr "%s \n"
+ "**** Permissão AVC inválida na política atual ***\n"
+ 
+-#: ../src/setroubleshoot/audit_data.py:997
++#: ../src/setroubleshoot/audit_data.py:1006
+ #, python-format
+ msgid ""
+ "%s \n"
+@@ -74,39 +74,39 @@ msgstr ""
+ "****AVC dontaudited inválido na política atual. 'semodule -B' habilitará as "
+ "regras dontaudit***\n"
+ 
+-#: ../src/setroubleshoot/audit_data.py:999
++#: ../src/setroubleshoot/audit_data.py:1008
+ msgid "Must call policy_init first"
+ msgstr "É necessário chamar a policy_init primeiro"
+ 
+-#: ../src/setroubleshoot/audit_data.py:1001
++#: ../src/setroubleshoot/audit_data.py:1010
+ #, python-format
+ msgid "%s \n"
+ "**** Invalid AVC bad target context. ***\n"
+ msgstr "%s \n"
+ "**** AVC inválido contexto do alvo com problemas. ***\n"
+ 
+-#: ../src/setroubleshoot/audit_data.py:1003
++#: ../src/setroubleshoot/audit_data.py:1012
+ #, python-format
+ msgid "%s \n"
+ "**** Invalid AVC bad source context. ***\n"
+ msgstr "%s \n"
+ "**** AVC inválido contexto da fonte com problemas. ***\n"
+ 
+-#: ../src/setroubleshoot/audit_data.py:1005
++#: ../src/setroubleshoot/audit_data.py:1014
+ #, python-format
+ msgid "%s \n"
+ "**** Invalid AVC bad type class ***\n"
+ msgstr "%s \n"
+ "**** AVC inválido tipo de classe errado  ***\n"
+ 
+-#: ../src/setroubleshoot/audit_data.py:1007
++#: ../src/setroubleshoot/audit_data.py:1016
+ #, python-format
+ msgid "%s \n"
+ "**** Invalid AVC bad permission ***\n"
+ msgstr "%s \n"
+ "**** AVC inválido permissão com problemas ***\n"
+ 
+-#: ../src/setroubleshoot/audit_data.py:1009
++#: ../src/setroubleshoot/audit_data.py:1018
+ msgid "Error during access vector computation"
+ msgstr "Erro durante a computação do vetor de acesso."
+ 
+@@ -210,6 +210,7 @@ msgid "<b>Then this is the solution.</b>"
+ msgstr "<b>Então esta é a solução.</b>"
+ 
+ #: ../src/setroubleshoot/browser.py:413 ../src/setroubleshoot/browser.py:549
++#: ../src/setroubleshoot/server.py:578
+ msgid "If "
+ msgstr "Se"
+ 
+@@ -245,7 +246,7 @@ msgid "On this %s:"
+ msgstr "Em %s:"
+ 
+ #: ../src/setroubleshoot/browser.py:815 ../src/setroubleshoot/browser.py:821
+-#: ../src/setroubleshoot/signature.py:391
++#: ../src/setroubleshoot/signature.py:397
+ msgid "N/A"
+ msgstr "N/A"
+ 
+@@ -344,7 +345,7 @@ msgstr "não autenticado"
+ msgid "user lookup failed"
+ msgstr "falha na busca de usuário"
+ 
+-#: ../src/setroubleshoot/gui_utils.py:53 ../src/sealert:531
++#: ../src/setroubleshoot/gui_utils.py:53 ../src/sealert:536
+ #, c-format, python-format
+ msgid "Opps, %s hit an error!"
+ msgstr "Ops, %s encontrou um erro!"
+@@ -361,25 +362,25 @@ msgstr ""
+ "Você quer permitir que $SOURCE_BASE_PATH tenha acesso $ACCESS no "
+ "$TARGET_BASE_PATH $TARGET_CLASS"
+ 
+-#: ../src/setroubleshoot/server.py:191
++#: ../src/setroubleshoot/server.py:211
+ #, python-format
+-msgid " For complete SELinux messages. run sealert -l %s"
+-msgstr " Para obter mensagens completas do SELinux, execute um sealert -I%s"
++msgid " For complete SELinux messages run: sealert -l %s"
++msgstr ""
+ 
+-#: ../src/setroubleshoot/server.py:377
++#: ../src/setroubleshoot/server.py:398
+ #, python-format
+ msgid "The user (%s) cannot modify data for (%s)"
+ msgstr "O usuário (%s) não pode modificar dados para (%s)"
+ 
+-#: ../src/setroubleshoot/server.py:440 ../src/sealert:291
++#: ../src/setroubleshoot/server.py:462 ../src/sealert:296
+ msgid "Started"
+ msgstr "Iniciado"
+ 
+-#: ../src/setroubleshoot/server.py:487
++#: ../src/setroubleshoot/server.py:660
+ msgid "AVC"
+ msgstr "AVC"
+ 
+-#: ../src/setroubleshoot/server.py:553
++#: ../src/setroubleshoot/server.py:726
+ msgid "Audit Listener"
+ msgstr "Auditor Audit"
+ 
+@@ -439,145 +440,149 @@ msgstr "nó"
+ msgid "capability"
+ msgstr "capacidade"
+ 
+-#: ../src/setroubleshoot/signature.py:376
++#: ../src/setroubleshoot/signature.py:204
++msgid "capability2"
++msgstr ""
++
++#: ../src/setroubleshoot/signature.py:381
+ #, python-format
+ msgid "%s has a permissive type (%s). This access was not denied."
+ msgstr "%s tem um tipo permissivo (%s). Esse acesso não foi negado."
+ 
+-#: ../src/setroubleshoot/signature.py:379
++#: ../src/setroubleshoot/signature.py:384
+ msgid "SELinux is in permissive mode. This access was not denied."
+ msgstr "O SELinux está em modo permissivo. Esse acesso não foi negado."
+ 
+-#: ../src/setroubleshoot/signature.py:432
++#: ../src/setroubleshoot/signature.py:438
+ #, python-format
+ msgid "SELinux is preventing %s from using the %s access on a process."
+ msgstr "O SELinux está impedindo que o %s use o acesso ao %s em um processo."
+ 
+-#: ../src/setroubleshoot/signature.py:432
++#: ../src/setroubleshoot/signature.py:438
+ #, python-format
+ msgid "SELinux is preventing %s from using the '%s' accesses on a process."
+ msgstr ""
+ "O SELinux está impedindo que o %s use o acesso ao \"%s\" em um processo."
+ 
+-#: ../src/setroubleshoot/signature.py:435
++#: ../src/setroubleshoot/signature.py:441
+ #, python-format
+ msgid "SELinux is preventing %s from using the %s capability."
+ msgstr "O SELinux está impedindo que o %s use um recurso do %s."
+ 
+-#: ../src/setroubleshoot/signature.py:435
++#: ../src/setroubleshoot/signature.py:441
+ #, python-format
+ msgid "SELinux is preventing %s from using the '%s' capabilities."
+ msgstr "O SELinux está impedindo que o %s use os recursos do \"%s\""
+ 
+-#: ../src/setroubleshoot/signature.py:437
++#: ../src/setroubleshoot/signature.py:443
+ #, python-format
+ msgid "SELinux is preventing %s from %s access on the %s labeled %s."
+ msgstr "SELinux está impedindo que %s de  %s de acessar %s rotulados como %s."
+ 
+-#: ../src/setroubleshoot/signature.py:437
++#: ../src/setroubleshoot/signature.py:443
+ #, python-format
+ msgid "SELinux is preventing %s from '%s' accesses on the %s labeled %s."
+ msgstr ""
+ "SELinux está impedindo que %s de '%s' de acessar em %s rotulados como %s."
+ 
+-#: ../src/setroubleshoot/signature.py:438
++#: ../src/setroubleshoot/signature.py:444
+ #, python-format
+ msgid "SELinux is preventing %s from %s access on the %s %s."
+ msgstr "O SELinux está impedindo que o %s acesse o %s no %s %s."
+ 
+-#: ../src/setroubleshoot/signature.py:438
++#: ../src/setroubleshoot/signature.py:444
+ #, python-format
+ msgid "SELinux is preventing %s from '%s' accesses on the %s %s."
+ msgstr "O SELinux está impedindo que o %s acesse os \"%s\" no %s %s."
+ 
+-#: ../src/setroubleshoot/signature.py:469
++#: ../src/setroubleshoot/signature.py:475
+ msgid "Additional Information:\n"
+ msgstr "Informação adicional:\n"
+ 
+-#: ../src/setroubleshoot/signature.py:470
++#: ../src/setroubleshoot/signature.py:476
+ msgid "Source Context"
+ msgstr "Contexto de origem"
+ 
+-#: ../src/setroubleshoot/signature.py:471
++#: ../src/setroubleshoot/signature.py:477
+ msgid "Target Context"
+ msgstr "Contexto de destino"
+ 
+-#: ../src/setroubleshoot/signature.py:472
++#: ../src/setroubleshoot/signature.py:478
+ msgid "Target Objects"
+ msgstr "Objetos de destino"
+ 
+-#: ../src/setroubleshoot/signature.py:473
++#: ../src/setroubleshoot/signature.py:479
+ msgid "Source"
+ msgstr "Origem"
+ 
+-#: ../src/setroubleshoot/signature.py:474
++#: ../src/setroubleshoot/signature.py:480
+ msgid "Source Path"
+ msgstr "Caminho da origem"
+ 
+-#: ../src/setroubleshoot/signature.py:475
++#: ../src/setroubleshoot/signature.py:481
+ msgid "Port"
+ msgstr "Porta"
+ 
+-#: ../src/setroubleshoot/signature.py:477
+-#: ../src/setroubleshoot/signature.py:479
++#: ../src/setroubleshoot/signature.py:483
++#: ../src/setroubleshoot/signature.py:485
+ msgid "Host"
+ msgstr "Máquina"
+ 
+-#: ../src/setroubleshoot/signature.py:480
++#: ../src/setroubleshoot/signature.py:486
+ msgid "Source RPM Packages"
+ msgstr "Pacotes RPM de origem"
+ 
+-#: ../src/setroubleshoot/signature.py:481
++#: ../src/setroubleshoot/signature.py:487
+ msgid "Target RPM Packages"
+ msgstr "Pacotes RPM de destino"
+ 
+-#: ../src/setroubleshoot/signature.py:482
++#: ../src/setroubleshoot/signature.py:488
+ msgid "Policy RPM"
+ msgstr "RPM da política"
+ 
+-#: ../src/setroubleshoot/signature.py:483
++#: ../src/setroubleshoot/signature.py:489
+ msgid "Selinux Enabled"
+ msgstr "Selinux habilitado"
+ 
+-#: ../src/setroubleshoot/signature.py:484
++#: ../src/setroubleshoot/signature.py:490
+ msgid "Policy Type"
+ msgstr "Tipo de política"
+ 
+-#: ../src/setroubleshoot/signature.py:485
++#: ../src/setroubleshoot/signature.py:491
+ msgid "Enforcing Mode"
+ msgstr "Modo reforçado"
+ 
+-#: ../src/setroubleshoot/signature.py:487
+-#: ../src/setroubleshoot/signature.py:489
++#: ../src/setroubleshoot/signature.py:493
++#: ../src/setroubleshoot/signature.py:495
+ msgid "Host Name"
+ msgstr "Nome da máquina"
+ 
+-#: ../src/setroubleshoot/signature.py:494
+-#: ../src/setroubleshoot/signature.py:496
++#: ../src/setroubleshoot/signature.py:500
++#: ../src/setroubleshoot/signature.py:502
+ msgid "Platform"
+ msgstr "Plataforma"
+ 
+-#: ../src/setroubleshoot/signature.py:497
++#: ../src/setroubleshoot/signature.py:503
+ msgid "Alert Count"
+ msgstr "Contador de alertas"
+ 
+-#: ../src/setroubleshoot/signature.py:499
++#: ../src/setroubleshoot/signature.py:505
+ msgid "First Seen"
+ msgstr "Visto pela primeira vez em"
+ 
+-#: ../src/setroubleshoot/signature.py:500
++#: ../src/setroubleshoot/signature.py:506
+ msgid "Last Seen"
+ msgstr "Visto pela última vez em"
+ 
+-#: ../src/setroubleshoot/signature.py:501
++#: ../src/setroubleshoot/signature.py:507
+ msgid "Local ID"
+ msgstr "ID local"
+ 
+-#: ../src/setroubleshoot/signature.py:503
++#: ../src/setroubleshoot/signature.py:509
+ msgid "Raw Audit Messages"
+ msgstr "Mensagens de auditoria não processadas"
+ 
+-#: ../src/setroubleshoot/signature.py:557
++#: ../src/setroubleshoot/signature.py:563
+ #, python-format
+ msgid "\n"
+ "\n"
+@@ -586,33 +591,33 @@ msgstr "\n"
+ "\n"
+ "*****  Plugin %s (confiança %.4s) sugere  "
+ 
+-#: ../src/setroubleshoot/signature.py:560
++#: ../src/setroubleshoot/signature.py:566
+ msgid "*"
+ msgstr "*"
+ 
+-#: ../src/setroubleshoot/signature.py:561
++#: ../src/setroubleshoot/signature.py:567
+ msgid "\n"
+ msgstr "\n"
+ 
+-#: ../src/setroubleshoot/signature.py:563
++#: ../src/setroubleshoot/signature.py:569
+ msgid "\n"
+ "If "
+ msgstr "\n"
+ "Se"
+ 
+-#: ../src/setroubleshoot/signature.py:565
++#: ../src/setroubleshoot/signature.py:571
+ msgid "\n"
+ "Then "
+ msgstr "\n"
+ "Então"
+ 
+-#: ../src/setroubleshoot/signature.py:568
++#: ../src/setroubleshoot/signature.py:574
+ msgid "\n"
+ "Do\n"
+ msgstr "\n"
+ "Faça\n"
+ 
+-#: ../src/setroubleshoot/signature.py:570
++#: ../src/setroubleshoot/signature.py:576
+ msgid "\n"
+ "\n"
+ msgstr "\n"
+@@ -649,21 +654,21 @@ msgstr "Mostrar"
+ msgid "SELinux AVC denial, click to view"
+ msgstr "Negação de AVC de SELinux, clique aqui para visualizar"
+ 
+-#: ../src/sealert:103
++#: ../src/sealert:106
+ msgid "SELinux not enabled, sealert will not run on non SELinux systems"
+ msgstr ""
+ "SELinux não habilitado, sealert não será executado em sistemas sem SELinux"
+ 
+-#: ../src/sealert:150
++#: ../src/sealert:153
+ msgid "Not fixable."
+ msgstr "Não pode ser corrigido."
+ 
+-#: ../src/sealert:157
++#: ../src/sealert:160
+ #, c-format
+ msgid "Successfully ran %s"
+ msgstr "%s executado com sucesso"
+ 
+-#: ../src/sealert:162
++#: ../src/sealert:167
+ #, c-format
+ msgid "Plugin %s not valid for %s id"
+ msgstr "Plugin %s não é válido para o id %s "
+diff --git a/framework/po/ru.po b/framework/po/ru.po
+index 277605f..fb15672 100644
+--- a/framework/po/ru.po
++++ b/framework/po/ru.po
+@@ -15,24 +15,23 @@
+ # Yulia <yulia.poyarkova@redhat.com>, 2013
+ # Yulia <yulia.poyarkova@redhat.com>, 2012
+ # Игорь Горбунов <igor.gorbounov@gmail.com>, 2011,2013
+-# yuliya <ypoyarko@redhat.com>, 2015. #zanata
+-# yuliya <ypoyarko@redhat.com>, 2016. #zanata
++# Petr Lautrbach <plautrba@redhat.com>, 2017. #zanata
+ msgid ""
+ msgstr ""
+ "Project-Id-Version: PACKAGE VERSION\n"
+ "Report-Msgid-Bugs-To: \n"
+-"POT-Creation-Date: 2016-04-15 20:42+0200\n"
++"POT-Creation-Date: 2017-05-15 11:21+0200\n"
+ "MIME-Version: 1.0\n"
+ "Content-Type: text/plain; charset=UTF-8\n"
+ "Content-Transfer-Encoding: 8bit\n"
+-"PO-Revision-Date: 2016-03-30 08:45-0400\n"
+-"Last-Translator: yuliya <ypoyarko@redhat.com>\n"
++"PO-Revision-Date: 2017-05-15 09:21+0000\n"
++"Last-Translator: Copied by Zanata <copied-by-zanata@zanata.org>\n"
+ "Language-Team: Russian (http://www.transifex.com/projects/p/fedora/language/"
+ "ru/)\n"
+ "Language: ru\n"
+ "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
+ "n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+-"X-Generator: Zanata 3.8.4\n"
++"X-Generator: Zanata 4.1.1\n"
+ 
+ #: ../setroubleshoot.desktop.in.h:1
+ msgid "SELinux Troubleshooter"
+@@ -46,25 +45,25 @@ msgstr "Диагностика отказов SELinux"
+ msgid "policy;security;selinux;avc;permission;mac;alert;sealert;"
+ msgstr "policy;security;selinux;avc;permission;mac;alert;sealert;"
+ 
+-#: ../src/setroubleshoot/audit_data.py:903
++#: ../src/setroubleshoot/audit_data.py:912
+ #, python-format
+ msgid "port %s"
+ msgstr "порт %s"
+ 
+-#: ../src/setroubleshoot/audit_data.py:905 ../src/setroubleshoot/browser.py:747
++#: ../src/setroubleshoot/audit_data.py:914 ../src/setroubleshoot/browser.py:747
+ #: ../src/setroubleshoot/browser.py:822 ../src/setroubleshoot/rpc.py:528
+-#: ../src/setroubleshoot/util.py:229
++#: ../src/setroubleshoot/util.py:242
+ msgid "Unknown"
+ msgstr "Неизвестно"
+ 
+-#: ../src/setroubleshoot/audit_data.py:995
++#: ../src/setroubleshoot/audit_data.py:1004
+ #, python-format
+ msgid "%s \n"
+ "**** Invalid AVC allowed in current policy ***\n"
+ msgstr "%s \n"
+ "**** Неверный AVC допускается текущим регламентом ***\n"
+ 
+-#: ../src/setroubleshoot/audit_data.py:997
++#: ../src/setroubleshoot/audit_data.py:1006
+ #, python-format
+ msgid ""
+ "%s \n"
+@@ -75,39 +74,39 @@ msgstr ""
+ "**** Неверный AVC пропускается текущим регламентом. Команда «semodule -B» "
+ "включает аудит правил с флагом «dontaudit». ***\n"
+ 
+-#: ../src/setroubleshoot/audit_data.py:999
++#: ../src/setroubleshoot/audit_data.py:1008
+ msgid "Must call policy_init first"
+ msgstr "Сначала требуется вызвать policy_init"
+ 
+-#: ../src/setroubleshoot/audit_data.py:1001
++#: ../src/setroubleshoot/audit_data.py:1010
+ #, python-format
+ msgid "%s \n"
+ "**** Invalid AVC bad target context. ***\n"
+ msgstr "%s \n"
+ "**** Неверный AVC плохой целевой контекст. ***\n"
+ 
+-#: ../src/setroubleshoot/audit_data.py:1003
++#: ../src/setroubleshoot/audit_data.py:1012
+ #, python-format
+ msgid "%s \n"
+ "**** Invalid AVC bad source context. ***\n"
+ msgstr "%s \n"
+ "**** Неверный AVC плохой исходный контекст. ***\n"
+ 
+-#: ../src/setroubleshoot/audit_data.py:1005
++#: ../src/setroubleshoot/audit_data.py:1014
+ #, python-format
+ msgid "%s \n"
+ "**** Invalid AVC bad type class ***\n"
+ msgstr "%s \n"
+ "**** Неверный AVC плохой тип класса ***\n"
+ 
+-#: ../src/setroubleshoot/audit_data.py:1007
++#: ../src/setroubleshoot/audit_data.py:1016
+ #, python-format
+ msgid "%s \n"
+ "**** Invalid AVC bad permission ***\n"
+ msgstr "%s \n"
+ "**** Неверный AVC плохие права доступа ***\n"
+ 
+-#: ../src/setroubleshoot/audit_data.py:1009
++#: ../src/setroubleshoot/audit_data.py:1018
+ msgid "Error during access vector computation"
+ msgstr "Ошибка при вычислении вектора доступа"
+ 
+@@ -211,6 +210,7 @@ msgid "<b>Then this is the solution.</b>"
+ msgstr "<b>Решение:</b>"
+ 
+ #: ../src/setroubleshoot/browser.py:413 ../src/setroubleshoot/browser.py:549
++#: ../src/setroubleshoot/server.py:578
+ msgid "If "
+ msgstr "Если "
+ 
+@@ -246,7 +246,7 @@ msgid "On this %s:"
+ msgstr "К %s:"
+ 
+ #: ../src/setroubleshoot/browser.py:815 ../src/setroubleshoot/browser.py:821
+-#: ../src/setroubleshoot/signature.py:391
++#: ../src/setroubleshoot/signature.py:397
+ msgid "N/A"
+ msgstr "Нет"
+ 
+@@ -345,7 +345,7 @@ msgstr "не авторизован"
+ msgid "user lookup failed"
+ msgstr "ошибка при поиске пользователя"
+ 
+-#: ../src/setroubleshoot/gui_utils.py:53 ../src/sealert:531
++#: ../src/setroubleshoot/gui_utils.py:53 ../src/sealert:536
+ #, c-format, python-format
+ msgid "Opps, %s hit an error!"
+ msgstr "Ошибка %s!"
+@@ -362,26 +362,25 @@ msgstr ""
+ "вы хотите предоставить $SOURCE_BASE_PATH доступ $ACCESS к $TARGET_BASE_PATH "
+ "$TARGET_CLASS"
+ 
+-#: ../src/setroubleshoot/server.py:191
++#: ../src/setroubleshoot/server.py:211
+ #, python-format
+-msgid " For complete SELinux messages. run sealert -l %s"
++msgid " For complete SELinux messages run: sealert -l %s"
+ msgstr ""
+-"Чтобы показать полный список сообщений SELinux, выполните sealert -l %s"
+ 
+-#: ../src/setroubleshoot/server.py:377
++#: ../src/setroubleshoot/server.py:398
+ #, python-format
+ msgid "The user (%s) cannot modify data for (%s)"
+ msgstr "Пользователь (%s) не может изменять данные для (%s)"
+ 
+-#: ../src/setroubleshoot/server.py:440 ../src/sealert:291
++#: ../src/setroubleshoot/server.py:462 ../src/sealert:296
+ msgid "Started"
+ msgstr "Началось"
+ 
+-#: ../src/setroubleshoot/server.py:487
++#: ../src/setroubleshoot/server.py:660
+ msgid "AVC"
+ msgstr "AVC"
+ 
+-#: ../src/setroubleshoot/server.py:553
++#: ../src/setroubleshoot/server.py:726
+ msgid "Audit Listener"
+ msgstr "Прослушивает аудит"
+ 
+@@ -441,143 +440,147 @@ msgstr "узел"
+ msgid "capability"
+ msgstr "возможность"
+ 
+-#: ../src/setroubleshoot/signature.py:376
++#: ../src/setroubleshoot/signature.py:204
++msgid "capability2"
++msgstr ""
++
++#: ../src/setroubleshoot/signature.py:381
+ #, python-format
+ msgid "%s has a permissive type (%s). This access was not denied."
+ msgstr "%s запущен в разрешающем режиме (%s). Доступ не был запрещён."
+ 
+-#: ../src/setroubleshoot/signature.py:379
++#: ../src/setroubleshoot/signature.py:384
+ msgid "SELinux is in permissive mode. This access was not denied."
+ msgstr "SELinux в разрешающем режиме. Доступ не был запрещён."
+ 
+-#: ../src/setroubleshoot/signature.py:432
++#: ../src/setroubleshoot/signature.py:438
+ #, python-format
+ msgid "SELinux is preventing %s from using the %s access on a process."
+ msgstr "SELinux запрещает %s доступ %s к процессу."
+ 
+-#: ../src/setroubleshoot/signature.py:432
++#: ../src/setroubleshoot/signature.py:438
+ #, python-format
+ msgid "SELinux is preventing %s from using the '%s' accesses on a process."
+ msgstr "SELinux запрещает %s методы доступа '%s' к процессу."
+ 
+-#: ../src/setroubleshoot/signature.py:435
++#: ../src/setroubleshoot/signature.py:441
+ #, python-format
+ msgid "SELinux is preventing %s from using the %s capability."
+ msgstr "SELinux запрещает %s использовать возможность %s."
+ 
+-#: ../src/setroubleshoot/signature.py:435
++#: ../src/setroubleshoot/signature.py:441
+ #, python-format
+ msgid "SELinux is preventing %s from using the '%s' capabilities."
+ msgstr "SELinux запрещает %s использовать возможности '%s'."
+ 
+-#: ../src/setroubleshoot/signature.py:437
++#: ../src/setroubleshoot/signature.py:443
+ #, python-format
+ msgid "SELinux is preventing %s from %s access on the %s labeled %s."
+ msgstr "SELinux не допускает для %s доступ %s к %s с меткой %s."
+ 
+-#: ../src/setroubleshoot/signature.py:437
++#: ../src/setroubleshoot/signature.py:443
+ #, python-format
+ msgid "SELinux is preventing %s from '%s' accesses on the %s labeled %s."
+ msgstr "SELinux не допускает для %s доступы '%s' к %s с меткой %s."
+ 
+-#: ../src/setroubleshoot/signature.py:438
++#: ../src/setroubleshoot/signature.py:444
+ #, python-format
+ msgid "SELinux is preventing %s from %s access on the %s %s."
+ msgstr "SELinux запрещает %s доступ %s к %s %s."
+ 
+-#: ../src/setroubleshoot/signature.py:438
++#: ../src/setroubleshoot/signature.py:444
+ #, python-format
+ msgid "SELinux is preventing %s from '%s' accesses on the %s %s."
+ msgstr "SELinux запрещает %s методы доступа '%s' к %s %s."
+ 
+-#: ../src/setroubleshoot/signature.py:469
++#: ../src/setroubleshoot/signature.py:475
+ msgid "Additional Information:\n"
+ msgstr "Дополнительные сведения:\n"
+ 
+-#: ../src/setroubleshoot/signature.py:470
++#: ../src/setroubleshoot/signature.py:476
+ msgid "Source Context"
+ msgstr "Исходный контекст"
+ 
+-#: ../src/setroubleshoot/signature.py:471
++#: ../src/setroubleshoot/signature.py:477
+ msgid "Target Context"
+ msgstr "Целевой контекст"
+ 
+-#: ../src/setroubleshoot/signature.py:472
++#: ../src/setroubleshoot/signature.py:478
+ msgid "Target Objects"
+ msgstr "Целевые объекты"
+ 
+-#: ../src/setroubleshoot/signature.py:473
++#: ../src/setroubleshoot/signature.py:479
+ msgid "Source"
+ msgstr "Источник"
+ 
+-#: ../src/setroubleshoot/signature.py:474
++#: ../src/setroubleshoot/signature.py:480
+ msgid "Source Path"
+ msgstr "Путь к источнику"
+ 
+-#: ../src/setroubleshoot/signature.py:475
++#: ../src/setroubleshoot/signature.py:481
+ msgid "Port"
+ msgstr "Порт"
+ 
+-#: ../src/setroubleshoot/signature.py:477
+-#: ../src/setroubleshoot/signature.py:479
++#: ../src/setroubleshoot/signature.py:483
++#: ../src/setroubleshoot/signature.py:485
+ msgid "Host"
+ msgstr "Узел"
+ 
+-#: ../src/setroubleshoot/signature.py:480
++#: ../src/setroubleshoot/signature.py:486
+ msgid "Source RPM Packages"
+ msgstr "Исходные пакеты RPM"
+ 
+-#: ../src/setroubleshoot/signature.py:481
++#: ../src/setroubleshoot/signature.py:487
+ msgid "Target RPM Packages"
+ msgstr "Целевые пакеты RPM"
+ 
+-#: ../src/setroubleshoot/signature.py:482
++#: ../src/setroubleshoot/signature.py:488
+ msgid "Policy RPM"
+ msgstr "Пакет регламента"
+ 
+-#: ../src/setroubleshoot/signature.py:483
++#: ../src/setroubleshoot/signature.py:489
+ msgid "Selinux Enabled"
+ msgstr "SELinux активен"
+ 
+-#: ../src/setroubleshoot/signature.py:484
++#: ../src/setroubleshoot/signature.py:490
+ msgid "Policy Type"
+ msgstr "Тип регламента"
+ 
+-#: ../src/setroubleshoot/signature.py:485
++#: ../src/setroubleshoot/signature.py:491
+ msgid "Enforcing Mode"
+ msgstr "Режим"
+ 
+-#: ../src/setroubleshoot/signature.py:487
+-#: ../src/setroubleshoot/signature.py:489
++#: ../src/setroubleshoot/signature.py:493
++#: ../src/setroubleshoot/signature.py:495
+ msgid "Host Name"
+ msgstr "Имя узла"
+ 
+-#: ../src/setroubleshoot/signature.py:494
+-#: ../src/setroubleshoot/signature.py:496
++#: ../src/setroubleshoot/signature.py:500
++#: ../src/setroubleshoot/signature.py:502
+ msgid "Platform"
+ msgstr "Платформа"
+ 
+-#: ../src/setroubleshoot/signature.py:497
++#: ../src/setroubleshoot/signature.py:503
+ msgid "Alert Count"
+ msgstr "Счетчик уведомлений"
+ 
+-#: ../src/setroubleshoot/signature.py:499
++#: ../src/setroubleshoot/signature.py:505
+ msgid "First Seen"
+ msgstr "Впервые обнаружено"
+ 
+-#: ../src/setroubleshoot/signature.py:500
++#: ../src/setroubleshoot/signature.py:506
+ msgid "Last Seen"
+ msgstr "В последний раз"
+ 
+-#: ../src/setroubleshoot/signature.py:501
++#: ../src/setroubleshoot/signature.py:507
+ msgid "Local ID"
+ msgstr "Локальный ID"
+ 
+-#: ../src/setroubleshoot/signature.py:503
++#: ../src/setroubleshoot/signature.py:509
+ msgid "Raw Audit Messages"
+ msgstr "Построчный вывод сообщений аудита"
+ 
+-#: ../src/setroubleshoot/signature.py:557
++#: ../src/setroubleshoot/signature.py:563
+ #, python-format
+ msgid "\n"
+ "\n"
+@@ -586,33 +589,33 @@ msgstr "\n"
+ "\n"
+ "*****  Модуль %s предлагает (точность %.4s)  "
+ 
+-#: ../src/setroubleshoot/signature.py:560
++#: ../src/setroubleshoot/signature.py:566
+ msgid "*"
+ msgstr "*"
+ 
+-#: ../src/setroubleshoot/signature.py:561
++#: ../src/setroubleshoot/signature.py:567
+ msgid "\n"
+ msgstr "\n"
+ 
+-#: ../src/setroubleshoot/signature.py:563
++#: ../src/setroubleshoot/signature.py:569
+ msgid "\n"
+ "If "
+ msgstr "\n"
+ "Если "
+ 
+-#: ../src/setroubleshoot/signature.py:565
++#: ../src/setroubleshoot/signature.py:571
+ msgid "\n"
+ "Then "
+ msgstr "\n"
+ "То "
+ 
+-#: ../src/setroubleshoot/signature.py:568
++#: ../src/setroubleshoot/signature.py:574
+ msgid "\n"
+ "Do\n"
+ msgstr "\n"
+ "Сделать\n"
+ 
+-#: ../src/setroubleshoot/signature.py:570
++#: ../src/setroubleshoot/signature.py:576
+ msgid "\n"
+ "\n"
+ msgstr "\n"
+@@ -649,21 +652,21 @@ msgstr "Показать"
+ msgid "SELinux AVC denial, click to view"
+ msgstr "Отказ AVC SELinix. Нажмите для просмотра"
+ 
+-#: ../src/sealert:103
++#: ../src/sealert:106
+ msgid "SELinux not enabled, sealert will not run on non SELinux systems"
+ msgstr ""
+ "SELinux не активирован, sealert не будет работать на системах без SELinux"
+ 
+-#: ../src/sealert:150
++#: ../src/sealert:153
+ msgid "Not fixable."
+ msgstr "Не подлежит исправлению."
+ 
+-#: ../src/sealert:157
++#: ../src/sealert:160
+ #, c-format
+ msgid "Successfully ran %s"
+ msgstr "Успешно запущен %s"
+ 
+-#: ../src/sealert:162
++#: ../src/sealert:167
+ #, c-format
+ msgid "Plugin %s not valid for %s id"
+ msgstr "Модуль %s недействителен для id %s"
+diff --git a/framework/po/zh_CN.po b/framework/po/zh_CN.po
+index 454955e..76a3c03 100644
+--- a/framework/po/zh_CN.po
++++ b/framework/po/zh_CN.po
+@@ -11,22 +11,22 @@
+ # Wei Liu <LLIU@REDHAT.COM>, 2012-2013
+ # Xi Huang <xhuang@redhat.com>, 2006
+ # yusuf <yusufma77@yahoo.com>, 2011
+-# Tian Shixiong <tiansworld@gmail.com>, 2016. #zanata
++# Petr Lautrbach <plautrba@redhat.com>, 2017. #zanata
+ msgid ""
+ msgstr ""
+ "Project-Id-Version: PACKAGE VERSION\n"
+ "Report-Msgid-Bugs-To: \n"
+-"POT-Creation-Date: 2016-04-15 20:42+0200\n"
++"POT-Creation-Date: 2017-05-15 11:21+0200\n"
+ "MIME-Version: 1.0\n"
+ "Content-Type: text/plain; charset=UTF-8\n"
+ "Content-Transfer-Encoding: 8bit\n"
+-"PO-Revision-Date: 2016-05-28 06:05-0400\n"
+-"Last-Translator: Tian Shixiong <tiansworld@gmail.com>\n"
++"PO-Revision-Date: 2017-05-15 10:09+0000\n"
++"Last-Translator: Copied by Zanata <copied-by-zanata@zanata.org>\n"
+ "Language-Team: Chinese (China) (http://www.transifex.com/projects/p/fedora/"
+ "language/zh_CN/)\n"
+-"Language: zh-CN\n"
++"Language: zh-Hans\n"
+ "Plural-Forms: nplurals=1; plural=0;\n"
+-"X-Generator: Zanata 3.8.4\n"
++"X-Generator: Zanata 4.1.1\n"
+ 
+ #: ../setroubleshoot.desktop.in.h:1
+ msgid "SELinux Troubleshooter"
+@@ -40,25 +40,25 @@ msgstr "对 SELinux 拒绝的访问进行故障排除"
+ msgid "policy;security;selinux;avc;permission;mac;alert;sealert;"
+ msgstr "policy;security;selinux;avc;permission;mac;alert;sealert;"
+ 
+-#: ../src/setroubleshoot/audit_data.py:903
++#: ../src/setroubleshoot/audit_data.py:912
+ #, python-format
+ msgid "port %s"
+ msgstr "端口 %s"
+ 
+-#: ../src/setroubleshoot/audit_data.py:905 ../src/setroubleshoot/browser.py:747
++#: ../src/setroubleshoot/audit_data.py:914 ../src/setroubleshoot/browser.py:747
+ #: ../src/setroubleshoot/browser.py:822 ../src/setroubleshoot/rpc.py:528
+-#: ../src/setroubleshoot/util.py:229
++#: ../src/setroubleshoot/util.py:242
+ msgid "Unknown"
+ msgstr "未知"
+ 
+-#: ../src/setroubleshoot/audit_data.py:995
++#: ../src/setroubleshoot/audit_data.py:1004
+ #, python-format
+ msgid "%s \n"
+ "**** Invalid AVC allowed in current policy ***\n"
+ msgstr "%s \n"
+ "**** 目前策略中允许了无效的 AVC ***\n"
+ 
+-#: ../src/setroubleshoot/audit_data.py:997
++#: ../src/setroubleshoot/audit_data.py:1006
+ #, python-format
+ msgid ""
+ "%s \n"
+@@ -68,39 +68,39 @@ msgstr ""
+ "%s \n"
+ "**** 已经在目前策略中 dontaudited 了无效的 AVC。'semodule -B' 将会打开 dontaudit 规则。 ***\n"
+ 
+-#: ../src/setroubleshoot/audit_data.py:999
++#: ../src/setroubleshoot/audit_data.py:1008
+ msgid "Must call policy_init first"
+ msgstr "必须首先调用 policy_init"
+ 
+-#: ../src/setroubleshoot/audit_data.py:1001
++#: ../src/setroubleshoot/audit_data.py:1010
+ #, python-format
+ msgid "%s \n"
+ "**** Invalid AVC bad target context. ***\n"
+ msgstr "%s \n"
+ "**** 无效的 AVC，目标上下文无效。 ***\n"
+ 
+-#: ../src/setroubleshoot/audit_data.py:1003
++#: ../src/setroubleshoot/audit_data.py:1012
+ #, python-format
+ msgid "%s \n"
+ "**** Invalid AVC bad source context. ***\n"
+ msgstr "%s \n"
+ "**** 无效的 AVC，源上下文无效。 ***\n"
+ 
+-#: ../src/setroubleshoot/audit_data.py:1005
++#: ../src/setroubleshoot/audit_data.py:1014
+ #, python-format
+ msgid "%s \n"
+ "**** Invalid AVC bad type class ***\n"
+ msgstr "%s \n"
+ "**** 无效的 AVC，类别类型无效 ***\n"
+ 
+-#: ../src/setroubleshoot/audit_data.py:1007
++#: ../src/setroubleshoot/audit_data.py:1016
+ #, python-format
+ msgid "%s \n"
+ "**** Invalid AVC bad permission ***\n"
+ msgstr "%s \n"
+ "**** 无效的 AVC，权限无效 ***\n"
+ 
+-#: ../src/setroubleshoot/audit_data.py:1009
++#: ../src/setroubleshoot/audit_data.py:1018
+ msgid "Error during access vector computation"
+ msgstr "访问矢量运算时出错"
+ 
+@@ -204,6 +204,7 @@ msgid "<b>Then this is the solution.</b>"
+ msgstr "<b>那么这是解决方案。</b>"
+ 
+ #: ../src/setroubleshoot/browser.py:413 ../src/setroubleshoot/browser.py:549
++#: ../src/setroubleshoot/server.py:578
+ msgid "If "
+ msgstr "如果"
+ 
+@@ -239,7 +240,7 @@ msgid "On this %s:"
+ msgstr "关于此 %s："
+ 
+ #: ../src/setroubleshoot/browser.py:815 ../src/setroubleshoot/browser.py:821
+-#: ../src/setroubleshoot/signature.py:391
++#: ../src/setroubleshoot/signature.py:397
+ msgid "N/A"
+ msgstr "不可用"
+ 
+@@ -338,7 +339,7 @@ msgstr "没有认证"
+ msgid "user lookup failed"
+ msgstr "查找用户失败"
+ 
+-#: ../src/setroubleshoot/gui_utils.py:53 ../src/sealert:531
++#: ../src/setroubleshoot/gui_utils.py:53 ../src/sealert:536
+ #, c-format, python-format
+ msgid "Opps, %s hit an error!"
+ msgstr "哟，%s 出现错误！"
+@@ -354,25 +355,25 @@ msgid ""
+ msgstr ""
+ "您想要允许 $SOURCE_BASE_PATH 在 $TARGET_BASE_PATH $TARGET_CLASS 上拥有 $ACCESS 访问权限"
+ 
+-#: ../src/setroubleshoot/server.py:191
++#: ../src/setroubleshoot/server.py:211
+ #, python-format
+-msgid " For complete SELinux messages. run sealert -l %s"
+-msgstr "如需要完整的 SELinux 信息，请运行 sealert -l %s"
++msgid " For complete SELinux messages run: sealert -l %s"
++msgstr ""
+ 
+-#: ../src/setroubleshoot/server.py:377
++#: ../src/setroubleshoot/server.py:398
+ #, python-format
+ msgid "The user (%s) cannot modify data for (%s)"
+ msgstr "用户 (%s) 无法为 (%s) 修改数据"
+ 
+-#: ../src/setroubleshoot/server.py:440 ../src/sealert:291
++#: ../src/setroubleshoot/server.py:462 ../src/sealert:296
+ msgid "Started"
+ msgstr "已启动"
+ 
+-#: ../src/setroubleshoot/server.py:487
++#: ../src/setroubleshoot/server.py:660
+ msgid "AVC"
+ msgstr "AVC"
+ 
+-#: ../src/setroubleshoot/server.py:553
++#: ../src/setroubleshoot/server.py:726
+ msgid "Audit Listener"
+ msgstr "核查侦听程序"
+ 
+@@ -432,143 +433,147 @@ msgstr "节点"
+ msgid "capability"
+ msgstr "权能"
+ 
+-#: ../src/setroubleshoot/signature.py:376
++#: ../src/setroubleshoot/signature.py:204
++msgid "capability2"
++msgstr ""
++
++#: ../src/setroubleshoot/signature.py:381
+ #, python-format
+ msgid "%s has a permissive type (%s). This access was not denied."
+ msgstr "%s 有一个容许类型 (%s)。此访问未被拒绝。"
+ 
+-#: ../src/setroubleshoot/signature.py:379
++#: ../src/setroubleshoot/signature.py:384
+ msgid "SELinux is in permissive mode. This access was not denied."
+ msgstr "SELinux 在 permissive 模式。此访问未被拒绝。"
+ 
+-#: ../src/setroubleshoot/signature.py:432
++#: ../src/setroubleshoot/signature.py:438
+ #, python-format
+ msgid "SELinux is preventing %s from using the %s access on a process."
+ msgstr "SELinux 正在阻止 %s 在进程中使用 %s 访问。"
+ 
+-#: ../src/setroubleshoot/signature.py:432
++#: ../src/setroubleshoot/signature.py:438
+ #, python-format
+ msgid "SELinux is preventing %s from using the '%s' accesses on a process."
+ msgstr "SELinux 正在阻止 %s 在进程中使用 %s 访问。"
+ 
+-#: ../src/setroubleshoot/signature.py:435
++#: ../src/setroubleshoot/signature.py:441
+ #, python-format
+ msgid "SELinux is preventing %s from using the %s capability."
+ msgstr "SELinux 正在阻止 %s 使用 %s 功能。"
+ 
+-#: ../src/setroubleshoot/signature.py:435
++#: ../src/setroubleshoot/signature.py:441
+ #, python-format
+ msgid "SELinux is preventing %s from using the '%s' capabilities."
+ msgstr "SELinux 正在阻止 %s 使用 '%s' 功能。"
+ 
+-#: ../src/setroubleshoot/signature.py:437
++#: ../src/setroubleshoot/signature.py:443
+ #, python-format
+ msgid "SELinux is preventing %s from %s access on the %s labeled %s."
+ msgstr "SELinux is preventing %s from %s access on the %s labeled %s."
+ 
+-#: ../src/setroubleshoot/signature.py:437
++#: ../src/setroubleshoot/signature.py:443
+ #, python-format
+ msgid "SELinux is preventing %s from '%s' accesses on the %s labeled %s."
+ msgstr "SELinux is preventing %s from '%s' accesses on the %s labeled %s."
+ 
+-#: ../src/setroubleshoot/signature.py:438
++#: ../src/setroubleshoot/signature.py:444
+ #, python-format
+ msgid "SELinux is preventing %s from %s access on the %s %s."
+ msgstr "SELinux is preventing %s from %s access on the %s %s."
+ 
+-#: ../src/setroubleshoot/signature.py:438
++#: ../src/setroubleshoot/signature.py:444
+ #, python-format
+ msgid "SELinux is preventing %s from '%s' accesses on the %s %s."
+ msgstr "SELinux is preventing %s from '%s' accesses on the %s %s."
+ 
+-#: ../src/setroubleshoot/signature.py:469
++#: ../src/setroubleshoot/signature.py:475
+ msgid "Additional Information:\n"
+ msgstr "更多信息:\n"
+ 
+-#: ../src/setroubleshoot/signature.py:470
++#: ../src/setroubleshoot/signature.py:476
+ msgid "Source Context"
+ msgstr "源环境 (Context)"
+ 
+-#: ../src/setroubleshoot/signature.py:471
++#: ../src/setroubleshoot/signature.py:477
+ msgid "Target Context"
+ msgstr "目标环境"
+ 
+-#: ../src/setroubleshoot/signature.py:472
++#: ../src/setroubleshoot/signature.py:478
+ msgid "Target Objects"
+ msgstr "目标对象"
+ 
+-#: ../src/setroubleshoot/signature.py:473
++#: ../src/setroubleshoot/signature.py:479
+ msgid "Source"
+ msgstr "源"
+ 
+-#: ../src/setroubleshoot/signature.py:474
++#: ../src/setroubleshoot/signature.py:480
+ msgid "Source Path"
+ msgstr "源路径"
+ 
+-#: ../src/setroubleshoot/signature.py:475
++#: ../src/setroubleshoot/signature.py:481
+ msgid "Port"
+ msgstr "端口"
+ 
+-#: ../src/setroubleshoot/signature.py:477
+-#: ../src/setroubleshoot/signature.py:479
++#: ../src/setroubleshoot/signature.py:483
++#: ../src/setroubleshoot/signature.py:485
+ msgid "Host"
+ msgstr "主机"
+ 
+-#: ../src/setroubleshoot/signature.py:480
++#: ../src/setroubleshoot/signature.py:486
+ msgid "Source RPM Packages"
+ msgstr "源 RPM 软件包"
+ 
+-#: ../src/setroubleshoot/signature.py:481
++#: ../src/setroubleshoot/signature.py:487
+ msgid "Target RPM Packages"
+ msgstr "目标 RPM 软件包"
+ 
+-#: ../src/setroubleshoot/signature.py:482
++#: ../src/setroubleshoot/signature.py:488
+ msgid "Policy RPM"
+ msgstr "策略 RPM"
+ 
+-#: ../src/setroubleshoot/signature.py:483
++#: ../src/setroubleshoot/signature.py:489
+ msgid "Selinux Enabled"
+ msgstr "Selinux 已启用"
+ 
+-#: ../src/setroubleshoot/signature.py:484
++#: ../src/setroubleshoot/signature.py:490
+ msgid "Policy Type"
+ msgstr "策略类型"
+ 
+-#: ../src/setroubleshoot/signature.py:485
++#: ../src/setroubleshoot/signature.py:491
+ msgid "Enforcing Mode"
+ msgstr "强制模式"
+ 
+-#: ../src/setroubleshoot/signature.py:487
+-#: ../src/setroubleshoot/signature.py:489
++#: ../src/setroubleshoot/signature.py:493
++#: ../src/setroubleshoot/signature.py:495
+ msgid "Host Name"
+ msgstr "主机名"
+ 
+-#: ../src/setroubleshoot/signature.py:494
+-#: ../src/setroubleshoot/signature.py:496
++#: ../src/setroubleshoot/signature.py:500
++#: ../src/setroubleshoot/signature.py:502
+ msgid "Platform"
+ msgstr "平台"
+ 
+-#: ../src/setroubleshoot/signature.py:497
++#: ../src/setroubleshoot/signature.py:503
+ msgid "Alert Count"
+ msgstr "警报计数"
+ 
+-#: ../src/setroubleshoot/signature.py:499
++#: ../src/setroubleshoot/signature.py:505
+ msgid "First Seen"
+ msgstr "第一个"
+ 
+-#: ../src/setroubleshoot/signature.py:500
++#: ../src/setroubleshoot/signature.py:506
+ msgid "Last Seen"
+ msgstr "最后一个"
+ 
+-#: ../src/setroubleshoot/signature.py:501
++#: ../src/setroubleshoot/signature.py:507
+ msgid "Local ID"
+ msgstr "本地 ID"
+ 
+-#: ../src/setroubleshoot/signature.py:503
++#: ../src/setroubleshoot/signature.py:509
+ msgid "Raw Audit Messages"
+ msgstr "原始核查信息"
+ 
+-#: ../src/setroubleshoot/signature.py:557
++#: ../src/setroubleshoot/signature.py:563
+ #, python-format
+ msgid "\n"
+ "\n"
+@@ -577,33 +582,33 @@ msgstr "\n"
+ "\n"
+ "*****  插件 %s (%.4s 置信度) 建议  "
+ 
+-#: ../src/setroubleshoot/signature.py:560
++#: ../src/setroubleshoot/signature.py:566
+ msgid "*"
+ msgstr "*"
+ 
+-#: ../src/setroubleshoot/signature.py:561
++#: ../src/setroubleshoot/signature.py:567
+ msgid "\n"
+ msgstr "\n"
+ 
+-#: ../src/setroubleshoot/signature.py:563
++#: ../src/setroubleshoot/signature.py:569
+ msgid "\n"
+ "If "
+ msgstr "\n"
+ "If "
+ 
+-#: ../src/setroubleshoot/signature.py:565
++#: ../src/setroubleshoot/signature.py:571
+ msgid "\n"
+ "Then "
+ msgstr "\n"
+ "Then "
+ 
+-#: ../src/setroubleshoot/signature.py:568
++#: ../src/setroubleshoot/signature.py:574
+ msgid "\n"
+ "Do\n"
+ msgstr "\n"
+ "Do\n"
+ 
+-#: ../src/setroubleshoot/signature.py:570
++#: ../src/setroubleshoot/signature.py:576
+ msgid "\n"
+ "\n"
+ msgstr "\n"
+@@ -640,20 +645,20 @@ msgstr "显示"
+ msgid "SELinux AVC denial, click to view"
+ msgstr "SELinux AVC 拒绝信息，点击查看"
+ 
+-#: ../src/sealert:103
++#: ../src/sealert:106
+ msgid "SELinux not enabled, sealert will not run on non SELinux systems"
+ msgstr "SELinux 没有启用，sealert 无法在非 SELinux 系统上运行"
+ 
+-#: ../src/sealert:150
++#: ../src/sealert:153
+ msgid "Not fixable."
+ msgstr "无法修复。"
+ 
+-#: ../src/sealert:157
++#: ../src/sealert:160
+ #, c-format
+ msgid "Successfully ran %s"
+ msgstr "成功运行 %s"
+ 
+-#: ../src/sealert:162
++#: ../src/sealert:167
+ #, c-format
+ msgid "Plugin %s not valid for %s id"
+ msgstr "插件 %s 对 %s id 无效"
+diff --git a/framework/po/zh_TW.po b/framework/po/zh_TW.po
+index 862cfd9..5fb5554 100644
+--- a/framework/po/zh_TW.po
++++ b/framework/po/zh_TW.po
+@@ -8,21 +8,22 @@
+ # Dimitris Glezos <glezos@transifex.com>, 2011
+ # Terry Chuang <tchuang@redhat.com>, 2008, 2009, 2012
+ # Walter Cheuk <wwycheuk@gmail.com>, 2006
++# Petr Lautrbach <plautrba@redhat.com>, 2017. #zanata
+ msgid ""
+ msgstr ""
+ "Project-Id-Version: PACKAGE VERSION\n"
+ "Report-Msgid-Bugs-To: \n"
+-"POT-Creation-Date: 2016-04-15 20:42+0200\n"
++"POT-Creation-Date: 2017-05-15 11:21+0200\n"
+ "MIME-Version: 1.0\n"
+ "Content-Type: text/plain; charset=UTF-8\n"
+ "Content-Transfer-Encoding: 8bit\n"
+-"PO-Revision-Date: 2013-11-20 06:29-0500\n"
+-"Last-Translator: Cheng-Chia Tseng <pswo10680@gmail.com>\n"
++"PO-Revision-Date: 2017-05-15 10:09+0000\n"
++"Last-Translator: Copied by Zanata <copied-by-zanata@zanata.org>\n"
+ "Language-Team: Chinese (Taiwan) (http://www.transifex.com/projects/p/fedora/"
+ "language/zh_TW/)\n"
+-"Language: zh-TW\n"
++"Language: zh-Hant\n"
+ "Plural-Forms: nplurals=1; plural=0;\n"
+-"X-Generator: Zanata 3.8.4\n"
++"X-Generator: Zanata 4.1.1\n"
+ 
+ #: ../setroubleshoot.desktop.in.h:1
+ msgid "SELinux Troubleshooter"
+@@ -36,25 +37,25 @@ msgstr "為 SELinux 被拒絕存取進行疑難排解"
+ msgid "policy;security;selinux;avc;permission;mac;alert;sealert;"
+ msgstr "policy;security;selinux;avc;permission;mac;alert;sealert;"
+ 
+-#: ../src/setroubleshoot/audit_data.py:903
++#: ../src/setroubleshoot/audit_data.py:912
+ #, python-format
+ msgid "port %s"
+ msgstr "連接埠 %s"
+ 
+-#: ../src/setroubleshoot/audit_data.py:905 ../src/setroubleshoot/browser.py:747
++#: ../src/setroubleshoot/audit_data.py:914 ../src/setroubleshoot/browser.py:747
+ #: ../src/setroubleshoot/browser.py:822 ../src/setroubleshoot/rpc.py:528
+-#: ../src/setroubleshoot/util.py:229
++#: ../src/setroubleshoot/util.py:242
+ msgid "Unknown"
+ msgstr "未知"
+ 
+-#: ../src/setroubleshoot/audit_data.py:995
++#: ../src/setroubleshoot/audit_data.py:1004
+ #, python-format
+ msgid "%s \n"
+ "**** Invalid AVC allowed in current policy ***\n"
+ msgstr "%s \n"
+ "**** 目前方針中允許了無效的 AVC ***\n"
+ 
+-#: ../src/setroubleshoot/audit_data.py:997
++#: ../src/setroubleshoot/audit_data.py:1006
+ #, python-format
+ msgid ""
+ "%s \n"
+@@ -64,39 +65,39 @@ msgstr ""
+ "%s \n"
+ "**** 已在目前的方針中 dontaudited 了無效的 AVC。'semodule -B' 將會開啟 dontaudit 規則。***\n"
+ 
+-#: ../src/setroubleshoot/audit_data.py:999
++#: ../src/setroubleshoot/audit_data.py:1008
+ msgid "Must call policy_init first"
+ msgstr "必須先呼叫 policy_init"
+ 
+-#: ../src/setroubleshoot/audit_data.py:1001
++#: ../src/setroubleshoot/audit_data.py:1010
+ #, python-format
+ msgid "%s \n"
+ "**** Invalid AVC bad target context. ***\n"
+ msgstr "%s \n"
+ "**** 無效的 AVC，目標情境不良。***\n"
+ 
+-#: ../src/setroubleshoot/audit_data.py:1003
++#: ../src/setroubleshoot/audit_data.py:1012
+ #, python-format
+ msgid "%s \n"
+ "**** Invalid AVC bad source context. ***\n"
+ msgstr "%s \n"
+ "**** 無效的 AVC，來源情境不良。***\n"
+ 
+-#: ../src/setroubleshoot/audit_data.py:1005
++#: ../src/setroubleshoot/audit_data.py:1014
+ #, python-format
+ msgid "%s \n"
+ "**** Invalid AVC bad type class ***\n"
+ msgstr "%s \n"
+ "**** 無效的 AVC，類別類型不良。***\n"
+ 
+-#: ../src/setroubleshoot/audit_data.py:1007
++#: ../src/setroubleshoot/audit_data.py:1016
+ #, python-format
+ msgid "%s \n"
+ "**** Invalid AVC bad permission ***\n"
+ msgstr "%s \n"
+ "**** 無效的 AVC，權限不良。***\n"
+ 
+-#: ../src/setroubleshoot/audit_data.py:1009
++#: ../src/setroubleshoot/audit_data.py:1018
+ msgid "Error during access vector computation"
+ msgstr "存取向量運算時發生了錯誤"
+ 
+@@ -200,6 +201,7 @@ msgid "<b>Then this is the solution.</b>"
+ msgstr "<b>那這是解決方案。</b>"
+ 
+ #: ../src/setroubleshoot/browser.py:413 ../src/setroubleshoot/browser.py:549
++#: ../src/setroubleshoot/server.py:578
+ msgid "If "
+ msgstr "若"
+ 
+@@ -235,7 +237,7 @@ msgid "On this %s:"
+ msgstr "這個 %s："
+ 
+ #: ../src/setroubleshoot/browser.py:815 ../src/setroubleshoot/browser.py:821
+-#: ../src/setroubleshoot/signature.py:391
++#: ../src/setroubleshoot/signature.py:397
+ msgid "N/A"
+ msgstr "無法使用"
+ 
+@@ -334,7 +336,7 @@ msgstr "未驗證"
+ msgid "user lookup failed"
+ msgstr "使用者搜尋失敗"
+ 
+-#: ../src/setroubleshoot/gui_utils.py:53 ../src/sealert:531
++#: ../src/setroubleshoot/gui_utils.py:53 ../src/sealert:536
+ #, c-format, python-format
+ msgid "Opps, %s hit an error!"
+ msgstr "噢，%s 遇到了錯誤！"
+@@ -350,25 +352,25 @@ msgid ""
+ msgstr ""
+ "您想要允許 $SOURCE_BASE_PATH 對 $TARGET_BASE_PATH $TARGET_CLASS 有 $ACCESS 存取權"
+ 
+-#: ../src/setroubleshoot/server.py:191
++#: ../src/setroubleshoot/server.py:211
+ #, python-format
+-msgid " For complete SELinux messages. run sealert -l %s"
+-msgstr " 若要檢視完整的 SELinux 訊息，請執行 sealert -l %s"
++msgid " For complete SELinux messages run: sealert -l %s"
++msgstr ""
+ 
+-#: ../src/setroubleshoot/server.py:377
++#: ../src/setroubleshoot/server.py:398
+ #, python-format
+ msgid "The user (%s) cannot modify data for (%s)"
+ msgstr "使用者 (%s) 無法修改 (%s) 的資料"
+ 
+-#: ../src/setroubleshoot/server.py:440 ../src/sealert:291
++#: ../src/setroubleshoot/server.py:462 ../src/sealert:296
+ msgid "Started"
+ msgstr "已啟用"
+ 
+-#: ../src/setroubleshoot/server.py:487
++#: ../src/setroubleshoot/server.py:660
+ msgid "AVC"
+ msgstr "AVC"
+ 
+-#: ../src/setroubleshoot/server.py:553
++#: ../src/setroubleshoot/server.py:726
+ msgid "Audit Listener"
+ msgstr "稽核監聽者"
+ 
+@@ -428,143 +430,147 @@ msgstr "節點"
+ msgid "capability"
+ msgstr "能力"
+ 
+-#: ../src/setroubleshoot/signature.py:376
++#: ../src/setroubleshoot/signature.py:204
++msgid "capability2"
++msgstr ""
++
++#: ../src/setroubleshoot/signature.py:381
+ #, python-format
+ msgid "%s has a permissive type (%s). This access was not denied."
+ msgstr "%s 目前處於寬鬆模式 (%s)。這次存取未被拒絕。"
+ 
+-#: ../src/setroubleshoot/signature.py:379
++#: ../src/setroubleshoot/signature.py:384
+ msgid "SELinux is in permissive mode. This access was not denied."
+ msgstr "SELinux 為許可模式。這個存取不會被拒絕。"
+ 
+-#: ../src/setroubleshoot/signature.py:432
++#: ../src/setroubleshoot/signature.py:438
+ #, python-format
+ msgid "SELinux is preventing %s from using the %s access on a process."
+ msgstr "SELinux 防止 %s 在程序上使用 %s 存取。"
+ 
+-#: ../src/setroubleshoot/signature.py:432
++#: ../src/setroubleshoot/signature.py:438
+ #, python-format
+ msgid "SELinux is preventing %s from using the '%s' accesses on a process."
+ msgstr "SELinux 防止 %s 在程序上使用「%s」存取。"
+ 
+-#: ../src/setroubleshoot/signature.py:435
++#: ../src/setroubleshoot/signature.py:441
+ #, python-format
+ msgid "SELinux is preventing %s from using the %s capability."
+ msgstr "SELinux 防止 %s 使用 %s 的功能。"
+ 
+-#: ../src/setroubleshoot/signature.py:435
++#: ../src/setroubleshoot/signature.py:441
+ #, python-format
+ msgid "SELinux is preventing %s from using the '%s' capabilities."
+ msgstr "SELinux 防止 %s 使用「%s」的功能。"
+ 
+-#: ../src/setroubleshoot/signature.py:437
++#: ../src/setroubleshoot/signature.py:443
+ #, python-format
+ msgid "SELinux is preventing %s from %s access on the %s labeled %s."
+ msgstr "SELinux 防止 %s 進行 %s 存取於標籤為 %s 的 %s。"
+ 
+-#: ../src/setroubleshoot/signature.py:437
++#: ../src/setroubleshoot/signature.py:443
+ #, python-format
+ msgid "SELinux is preventing %s from '%s' accesses on the %s labeled %s."
+ msgstr "SELinux 防止 %s 進行「%s」存取於標籤為 %s 的 %s。"
+ 
+-#: ../src/setroubleshoot/signature.py:438
++#: ../src/setroubleshoot/signature.py:444
+ #, python-format
+ msgid "SELinux is preventing %s from %s access on the %s %s."
+ msgstr "SELinux 防止 %s 進行 %s 存取於 %s %s 上。"
+ 
+-#: ../src/setroubleshoot/signature.py:438
++#: ../src/setroubleshoot/signature.py:444
+ #, python-format
+ msgid "SELinux is preventing %s from '%s' accesses on the %s %s."
+ msgstr "SELinux 防止 %s 進行「%s」存取於 %s %s 上。"
+ 
+-#: ../src/setroubleshoot/signature.py:469
++#: ../src/setroubleshoot/signature.py:475
+ msgid "Additional Information:\n"
+ msgstr "額外資訊：\n"
+ 
+-#: ../src/setroubleshoot/signature.py:470
++#: ../src/setroubleshoot/signature.py:476
+ msgid "Source Context"
+ msgstr "來源情境"
+ 
+-#: ../src/setroubleshoot/signature.py:471
++#: ../src/setroubleshoot/signature.py:477
+ msgid "Target Context"
+ msgstr "目標情境"
+ 
+-#: ../src/setroubleshoot/signature.py:472
++#: ../src/setroubleshoot/signature.py:478
+ msgid "Target Objects"
+ msgstr "目標物件"
+ 
+-#: ../src/setroubleshoot/signature.py:473
++#: ../src/setroubleshoot/signature.py:479
+ msgid "Source"
+ msgstr "來源"
+ 
+-#: ../src/setroubleshoot/signature.py:474
++#: ../src/setroubleshoot/signature.py:480
+ msgid "Source Path"
+ msgstr "來源路徑"
+ 
+-#: ../src/setroubleshoot/signature.py:475
++#: ../src/setroubleshoot/signature.py:481
+ msgid "Port"
+ msgstr "連接埠"
+ 
+-#: ../src/setroubleshoot/signature.py:477
+-#: ../src/setroubleshoot/signature.py:479
++#: ../src/setroubleshoot/signature.py:483
++#: ../src/setroubleshoot/signature.py:485
+ msgid "Host"
+ msgstr "主機"
+ 
+-#: ../src/setroubleshoot/signature.py:480
++#: ../src/setroubleshoot/signature.py:486
+ msgid "Source RPM Packages"
+ msgstr "來源 RPM 套件"
+ 
+-#: ../src/setroubleshoot/signature.py:481
++#: ../src/setroubleshoot/signature.py:487
+ msgid "Target RPM Packages"
+ msgstr "目標 RPM 套件"
+ 
+-#: ../src/setroubleshoot/signature.py:482
++#: ../src/setroubleshoot/signature.py:488
+ msgid "Policy RPM"
+ msgstr "方針 RPM"
+ 
+-#: ../src/setroubleshoot/signature.py:483
++#: ../src/setroubleshoot/signature.py:489
+ msgid "Selinux Enabled"
+ msgstr "Selinux 已啟用"
+ 
+-#: ../src/setroubleshoot/signature.py:484
++#: ../src/setroubleshoot/signature.py:490
+ msgid "Policy Type"
+ msgstr "方針類型"
+ 
+-#: ../src/setroubleshoot/signature.py:485
++#: ../src/setroubleshoot/signature.py:491
+ msgid "Enforcing Mode"
+ msgstr "強制模式"
+ 
+-#: ../src/setroubleshoot/signature.py:487
+-#: ../src/setroubleshoot/signature.py:489
++#: ../src/setroubleshoot/signature.py:493
++#: ../src/setroubleshoot/signature.py:495
+ msgid "Host Name"
+ msgstr "主機名稱"
+ 
+-#: ../src/setroubleshoot/signature.py:494
+-#: ../src/setroubleshoot/signature.py:496
++#: ../src/setroubleshoot/signature.py:500
++#: ../src/setroubleshoot/signature.py:502
+ msgid "Platform"
+ msgstr "平台"
+ 
+-#: ../src/setroubleshoot/signature.py:497
++#: ../src/setroubleshoot/signature.py:503
+ msgid "Alert Count"
+ msgstr "警示計數"
+ 
+-#: ../src/setroubleshoot/signature.py:499
++#: ../src/setroubleshoot/signature.py:505
+ msgid "First Seen"
+ msgstr "第一次看見"
+ 
+-#: ../src/setroubleshoot/signature.py:500
++#: ../src/setroubleshoot/signature.py:506
+ msgid "Last Seen"
+ msgstr "最後一次看見"
+ 
+-#: ../src/setroubleshoot/signature.py:501
++#: ../src/setroubleshoot/signature.py:507
+ msgid "Local ID"
+ msgstr "本地 ID"
+ 
+-#: ../src/setroubleshoot/signature.py:503
++#: ../src/setroubleshoot/signature.py:509
+ msgid "Raw Audit Messages"
+ msgstr "原始稽核訊息"
+ 
+-#: ../src/setroubleshoot/signature.py:557
++#: ../src/setroubleshoot/signature.py:563
+ #, python-format
+ msgid "\n"
+ "\n"
+@@ -573,33 +579,33 @@ msgstr "\n"
+ "\n"
+ "*****  插件 %s (%.4s 信賴度) 項建議   "
+ 
+-#: ../src/setroubleshoot/signature.py:560
++#: ../src/setroubleshoot/signature.py:566
+ msgid "*"
+ msgstr "*"
+ 
+-#: ../src/setroubleshoot/signature.py:561
++#: ../src/setroubleshoot/signature.py:567
+ msgid "\n"
+ msgstr "\n"
+ 
+-#: ../src/setroubleshoot/signature.py:563
++#: ../src/setroubleshoot/signature.py:569
+ msgid "\n"
+ "If "
+ msgstr "\n"
+ "如果 "
+ 
+-#: ../src/setroubleshoot/signature.py:565
++#: ../src/setroubleshoot/signature.py:571
+ msgid "\n"
+ "Then "
+ msgstr "\n"
+ "接著 "
+ 
+-#: ../src/setroubleshoot/signature.py:568
++#: ../src/setroubleshoot/signature.py:574
+ msgid "\n"
+ "Do\n"
+ msgstr "\n"
+ "執行\n"
+ 
+-#: ../src/setroubleshoot/signature.py:570
++#: ../src/setroubleshoot/signature.py:576
+ msgid "\n"
+ "\n"
+ msgstr "\n"
+@@ -636,20 +642,20 @@ msgstr "顯示"
+ msgid "SELinux AVC denial, click to view"
+ msgstr "SELinux AVC 否定，請點選以進行檢視"
+ 
+-#: ../src/sealert:103
++#: ../src/sealert:106
+ msgid "SELinux not enabled, sealert will not run on non SELinux systems"
+ msgstr "SELinux 未啟用，sealert 無法在沒有 SELinux 的系統上執行"
+ 
+-#: ../src/sealert:150
++#: ../src/sealert:153
+ msgid "Not fixable."
+ msgstr "無法修復。"
+ 
+-#: ../src/sealert:157
++#: ../src/sealert:160
+ #, c-format
+ msgid "Successfully ran %s"
+ msgstr "成功地執行了 %s"
+ 
+-#: ../src/sealert:162
++#: ../src/sealert:167
+ #, c-format
+ msgid "Plugin %s not valid for %s id"
+ msgstr "%s 插件對於 %s id 無效"
